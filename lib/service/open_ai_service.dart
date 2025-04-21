@@ -110,32 +110,32 @@ class OpenAiService {
     }
   }
 
-  Future<String> describeMore(Question question) async {
-    final prompt = '''
-    You are an expert KPSS (Public Personnel Selection Examination) tutor.
-    
-    Provide a detailed explanation of the following KPSS topic and question:
-    
-    Topic: ${question.konu}
-    Question: ${question.soru}
-    Options: ${question.secenekler.map((e) => e).join(', ')}
-    Correct Answer Index: ${question.cevap}
-    Explanation provided: ${question.aciklama}
-    
-    Include:
-    - Core concepts and definitions related to this KPSS topic
-    - Detailed explanation of why the correct answer is right
-    - Why each wrong option is incorrect
-    - Important historical context or background information
-    - Key relationships to other KPSS topics
-    - Common question patterns in KPSS exams on this topic
-    - Memory techniques for remembering critical information
-    
-    Format your response in clear, structured Turkish that would be helpful for a KPSS candidate.
-    ''';
+  // Future<String> describeMore(Question question) async {
+  //   final prompt = '''
+  //   You are an expert KPSS (Public Personnel Selection Examination) tutor.
 
-    return await _sendRequest(prompt);
-  }
+  //   Provide a detailed explanation of the following KPSS topic and question:
+
+  //   Topic: ${question.konu}
+  //   Question: ${question.soru}
+  //   Options: ${question.secenekler.map((e) => e).join(', ')}
+  //   Correct Answer Index: ${question.cevap}
+  //   Explanation provided: ${question.aciklama}
+
+  //   Include:
+  //   - Core concepts and definitions related to this KPSS topic
+  //   - Detailed explanation of why the correct answer is right
+  //   - Why each wrong option is incorrect
+  //   - Important historical context or background information
+  //   - Key relationships to other KPSS topics
+  //   - Common question patterns in KPSS exams on this topic
+  //   - Memory techniques for remembering critical information
+
+  //   Format your response in clear, structured Turkish that would be helpful for a KPSS candidate.
+  //   ''';
+
+  //   return await _sendRequest(prompt);
+  // }
 
   Future<String> getTopicCheatSheet(
     String topic, {

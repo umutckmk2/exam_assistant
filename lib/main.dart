@@ -4,7 +4,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:osym/service/auth_service.dart';
 
+import 'auth/auth_page.dart';
 import 'firebase_options.dart';
 import 'router/app_router.dart';
 import 'service/open_ai_service.dart';
@@ -40,14 +42,30 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      title: 'KPSS AI Asistan',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        useMaterial3: true,
-      ),
-      routerConfig: appRouter,
+    return StreamBuilder(
+      stream: AuthService().authStateChanges,
+      builder: (context, snapshot) {
+        if (snapshot.hasData && snapshot.data != null) {
+          return MaterialApp.router(
+            debugShowCheckedModeBanner: false,
+            title: 'KPSS AI Asistan',
+            theme: ThemeData(
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+              useMaterial3: true,
+            ),
+            routerConfig: appRouter,
+          );
+        }
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'KPSS AI Asistan',
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+            useMaterial3: true,
+          ),
+          home: const AuthPage(),
+        );
+      },
     );
   }
 }

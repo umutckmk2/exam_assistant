@@ -71,6 +71,7 @@ class MyAccountPage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton.icon(
                     onPressed: () {
+                      context.go('/');
                       AuthService().signOut();
                     },
                     icon: const Icon(Icons.logout),

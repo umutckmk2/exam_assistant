@@ -71,7 +71,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
             orElse:
                 () => Question(
                   id: 0,
-                  konu: 'Unknown',
+                  ders: 'Unknown',
                   soru: '',
                   cevap: 0,
                   aciklama: '',
@@ -114,26 +114,26 @@ class _StatisticsPageState extends State<StatisticsPage> {
               ).millisecondsSinceEpoch;
 
           // Initialize map for this lesson if not exists
-          if (!lessonAnswersByDay.containsKey(question.konu)) {
-            lessonAnswersByDay[question.konu] = {};
+          if (!lessonAnswersByDay.containsKey(question.ders)) {
+            lessonAnswersByDay[question.ders] = {};
           }
 
           // Initialize or update stats for this day
-          if (!lessonAnswersByDay[question.konu]!.containsKey(dayTimestamp)) {
-            lessonAnswersByDay[question.konu]![dayTimestamp] = AnswerStats(
+          if (!lessonAnswersByDay[question.ders]!.containsKey(dayTimestamp)) {
+            lessonAnswersByDay[question.ders]![dayTimestamp] = AnswerStats(
               0,
               0,
             );
           }
 
-          final stats = lessonAnswersByDay[question.konu]![dayTimestamp]!;
+          final stats = lessonAnswersByDay[question.ders]![dayTimestamp]!;
           if (isCorrect) {
-            lessonAnswersByDay[question.konu]![dayTimestamp] = AnswerStats(
+            lessonAnswersByDay[question.ders]![dayTimestamp] = AnswerStats(
               stats.correct + 1,
               stats.incorrect,
             );
           } else {
-            lessonAnswersByDay[question.konu]![dayTimestamp] = AnswerStats(
+            lessonAnswersByDay[question.ders]![dayTimestamp] = AnswerStats(
               stats.correct,
               stats.incorrect + 1,
             );

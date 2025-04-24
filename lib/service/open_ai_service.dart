@@ -61,7 +61,7 @@ class OpenAiService {
     Generate a similar KPSS question to the following, but with different wording, context, and values:
     
     Question ID: ${question.id}
-    Topic: ${question.konu}
+    Topic: ${question.ders}
     Question: ${question.soru}
     Options: ${question.secenekler.map((e) => e).join(', ')}
     Correct Answer Index: ${question.cevap}
@@ -77,7 +77,7 @@ class OpenAiService {
     
     Return your response in valid JSON format like this:
     {
-      "konu": "${question.konu}",
+      "ders": "${question.ders}",
       "soru": "Your new question text here",
       "cevap": 0, // index of correct answer (0-4, corresponding to A-E)
       "aciklama": "Detailed explanation of the correct answer",
@@ -116,7 +116,7 @@ class OpenAiService {
 
   //   Provide a detailed explanation of the following KPSS topic and question:
 
-  //   Topic: ${question.konu}
+  //   Topic: ${question.ders}
   //   Question: ${question.soru}
   //   Options: ${question.secenekler.map((e) => e).join(', ')}
   //   Correct Answer Index: ${question.cevap}

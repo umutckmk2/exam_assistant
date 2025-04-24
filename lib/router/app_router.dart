@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -11,19 +10,6 @@ import '../pages/statistics_page.dart';
 final GoRouter appRouter = GoRouter(
   initialLocation: '/',
   debugLogDiagnostics: true,
-  redirect: (context, state) {
-    final isLoggedIn = FirebaseAuth.instance.currentUser != null;
-
-    if (!isLoggedIn && state.fullPath != '/auth') {
-      return '/auth';
-    }
-
-    if (isLoggedIn && state.fullPath == '/auth') {
-      return '/';
-    }
-
-    return null;
-  },
   routes: [
     GoRoute(
       path: '/',

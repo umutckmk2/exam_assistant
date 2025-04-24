@@ -63,14 +63,14 @@ class _AuthPageState extends State<AuthPage> {
 
       final userDoc = await _usersCol.doc(user?.uid).get();
 
+      final createdAt = DateTime.now().millisecondsSinceEpoch ~/ 1000;
+
       if (!userDoc.exists) {
         await _usersCol.doc(user?.uid).set({
           'email': user?.email,
-          'updatedAt': DateTime.now().millisecondsSinceEpoch ~/ 1000,
-          'createdAt': DateTime.now().millisecondsSinceEpoch ~/ 1000,
-          'lastLogin': DateTime.now().millisecondsSinceEpoch ~/ 1000,
-          'coin': 1000,
-          'point': 50,
+          'updatedAt': createdAt,
+          'createdAt': createdAt,
+          'lastLogin': createdAt,
         });
       } else {
         await _usersCol.doc(user?.uid).update({

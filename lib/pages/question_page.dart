@@ -53,7 +53,7 @@ class _QuestionPageState extends State<QuestionPage> {
         _questions
             .where(
               (q) =>
-                  q.konu.toLowerCase() == widget.topic.toLowerCase() &&
+                  q.ders.toLowerCase() == widget.topic.toLowerCase() &&
                   !solvedQuestionIds.contains("${q.id}"),
             )
             .toList();
@@ -274,38 +274,6 @@ class _QuestionPageState extends State<QuestionPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            child: ElevatedButton.icon(
-                              onPressed:
-                                  _isGeneratingCheatSheet || _question == null
-                                      ? null
-                                      : _generateTopicCheatSheet,
-                              icon:
-                                  _isGeneratingCheatSheet
-                                      ? const SizedBox(
-                                        width: 16,
-                                        height: 16,
-                                        child: CircularProgressIndicator(
-                                          strokeWidth: 2,
-                                          color: Colors.amber,
-                                        ),
-                                      )
-                                      : const Icon(Icons.auto_awesome),
-                              label: Text(
-                                _isGeneratingCheatSheet
-                                    ? 'Hazırlanıyor...'
-                                    : 'Konu Özeti',
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.amber,
-                                foregroundColor: Colors.black87,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
                       const SizedBox(height: 16),
                       Card(
                         elevation: 4,

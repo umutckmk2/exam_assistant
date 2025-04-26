@@ -7,6 +7,7 @@ import '../pages/lessons_page.dart';
 import '../pages/my_account_page.dart';
 import '../pages/question_page.dart';
 import '../pages/statistics_page.dart';
+import '../pages/topics_page.dart';
 
 final GoRouter appRouter = GoRouter(
   initialLocation: '/',
@@ -28,11 +29,17 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) => const MyAccountPage(),
     ),
     GoRoute(
-      path: '/question/:topic',
+      path: '/question/:categoryId/:lessonId/:topicId',
       name: 'question',
       builder: (context, state) {
-        final topic = state.pathParameters['topic'] ?? '';
-        return QuestionPage(topic: topic);
+        final categoryId = state.pathParameters['categoryId'] ?? '';
+        final lessonId = state.pathParameters['lessonId'] ?? '';
+        final topicId = state.pathParameters['topicId'] ?? '';
+        return QuestionPage(
+          categoryId: categoryId,
+          lessonId: lessonId,
+          topicId: topicId,
+        );
       },
     ),
     GoRoute(
@@ -47,6 +54,15 @@ final GoRouter appRouter = GoRouter(
         final categoryId = state.pathParameters['categoryId'] ?? '';
         final categoryName = state.pathParameters['categoryName'] ?? '';
         return LessonsPage(categoryId: categoryId, categoryName: categoryName);
+      },
+    ),
+    GoRoute(
+      path: '/category/:categoryId/lessons/:lessonId/topics',
+      name: 'topics',
+      builder: (context, state) {
+        final categoryId = state.pathParameters['categoryId'] ?? '';
+        final lessonId = state.pathParameters['lessonId'] ?? '';
+        return TopicsPage(categoryId: categoryId, lessonId: lessonId);
       },
     ),
   ],

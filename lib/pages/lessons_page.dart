@@ -106,7 +106,11 @@ class _LessonsPageState extends State<LessonsPage> {
               borderRadius: BorderRadius.circular(12),
             ),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                context.push(
+                  '/category/${widget.categoryId}/lessons/${lesson['id']}/topics',
+                );
+              },
               borderRadius: BorderRadius.circular(12),
               child: Padding(
                 padding: const EdgeInsets.all(16.0),

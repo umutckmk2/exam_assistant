@@ -37,10 +37,6 @@ class TopicService {
   Future<List<Map>> getTopics() async {
     await _openBox();
 
-    if (_box.values.isNotEmpty) {
-      return _box.values.toList();
-    }
-
     final qs =
         await FirebaseFirestore.instance
             .collection('category')
@@ -49,18 +45,50 @@ class TopicService {
             .doc(lessonId)
             .collection('topics')
             .get();
-    final topics = qs.docs.map((doc) => {"id": doc.id, ...doc.data()}).toList();
+    final topics = <Map>[];
+
+    for (final doc in qs.docs) {
+      final topic = {
+        "id": doc.id,
+        ...doc.data(),
+        "lessonId": lessonId,
+        "categoryId": categoryId,
+      };
+      topics.add(topic);
+    }
 
     for (var topic in topics) {
       await _box.put(topic['id'], topic);
     }
 
-    await FirebaseFirestore.instance
-        .collection('category')
-        .doc(categoryId)
-        .collection('lessons')
-        .doc(lessonId)
-        .update({"numberOfTopics": topics.length});
     return topics;
+  }
+
+  Future<Map> getTopic(String topicId) async {
+    await _openBox();
+
+    if (_box.containsKey(topicId)) {
+      return _box.get(topicId)!;
+    }
+
+    final ds =
+        await FirebaseFirestore.instance
+            .collection('category')
+            .doc(categoryId)
+            .collection('lessons')
+            .doc(lessonId)
+            .collection('topics')
+            .doc(topicId)
+            .get();
+    final topic = ds.data();
+
+    await _box.put(topicId, {
+      "id": topicId,
+      ...topic!,
+      "lessonId": lessonId,
+      "categoryId": categoryId,
+    });
+
+    return topic;
   }
 }

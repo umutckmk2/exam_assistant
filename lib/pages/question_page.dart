@@ -1,333 +1,128 @@
 import 'dart:convert';
-import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:go_router/go_router.dart';
+import 'package:flutter/services.dart';
 
-import '../model/question_model.dart';
-import '../service/open_ai_service.dart';
-import '../widgets/answer_option.dart';
+import '../service/topic_service.dart';
+import 'web_view_page.dart';
 
 class QuestionPage extends StatefulWidget {
-  final String topic;
+  final String topicId;
+  final String lessonId;
+  final String categoryId;
 
-  const QuestionPage({super.key, required this.topic});
+  const QuestionPage({
+    super.key,
+    required this.topicId,
+    required this.lessonId,
+    required this.categoryId,
+  });
 
   @override
   State<QuestionPage> createState() => _QuestionPageState();
 }
 
 class _QuestionPageState extends State<QuestionPage> {
-  Question? _question;
-  final bool _isLoading = true;
-  int? _selectedAnswerIndex;
-  bool _showResult = false;
-  bool _isGeneratingAiQuestion = false;
-  bool _isGeneratingCheatSheet = false;
-  String? _cheatSheetContent;
-  final List<Question> _questions = [];
-  final ScrollController _scrollController = ScrollController();
+  Map? _topic;
+  bool _isLoading = true;
+  String examUrl =
+      'https://ogmmateryal.eba.gov.tr/soru-bankasi/matematik/test?s=9&d=0&u=0&k=2862&id=5959,5961,5963,5968,5972,23383,23384,23385,23386,23387&p=1&t=css&ks=0&os=0&zs=0';
+
+  Future<void> _getTopic() async {
+    final topicService = TopicService(widget.lessonId, widget.categoryId);
+    final topic = await topicService.getTopic(widget.topicId);
+
+    _getTopicUrlsFromAssets(topic);
+
+    _topic = topic;
+    _isLoading = false;
+    setState(() {});
+  }
+
+  Future<void> _getTopicUrlsFromAssets(Map topic) async {
+    final topicUrlsFromAssets = await rootBundle.loadString(
+      'assets/topics_questions.json',
+    );
+    final topicUrls = jsonDecode(topicUrlsFromAssets) as Map;
+
+    print("topicUrls: ${widget.topicId}");
+
+    var questionIds = [];
+
+    var subTopicIds = [];
+
+    for (final url in topicUrls.keys) {
+      final id = url.split('id=').last;
+
+      if (topic['subTopicIds'] == null || topic['subTopicIds'].isEmpty) {
+        continue;
+      }
+
+      for (final topic in topic['subTopicIds']) {
+        if (topic == id) {
+          final questions = topicUrls[url]['questions'];
+          for (final question in questions) {
+            if (question['cevap'] < 6) {
+              questionIds.add(question['id']);
+            }
+          }
+        }
+      }
+    }
+
+    examUrl =
+        "https://ogmmateryal.eba.gov.tr/soru-bankasi/${widget.lessonId}/test?s=${int.tryParse(widget.categoryId)! - 3}&u=0&k=${topic['subTopicIds'].join(',')}&id=${questionIds.join(',')}&t=css&ks=0&os=0&zs=0";
+    print("examUrl: $examUrl");
+  }
 
   @override
   void initState() {
     super.initState();
-    _loadRandomQuestion();
-  }
-
-  Future<void> _loadRandomQuestion() async {}
-
-  Future<void> _generateSimilarQuestion() async {
-    setState(() {
-      _isGeneratingAiQuestion = true;
-    });
-
-    try {
-      final question = await OpenAiService().generateSimilarQuestion(
-        _question!,
-      );
-
-      final questionJson = jsonDecode(question);
-      final questionModel = Question.fromJson({
-        ...questionJson,
-        "id": _question!.id + Random().nextInt(1000000),
-        "bolum": "KPSS",
-      });
-
-      _question = questionModel;
-      _selectedAnswerIndex = null;
-      _showResult = false;
-    } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(SnackBar(content: Text('Soru oluşturulurken hata: $e')));
-      }
-    } finally {
-      if (mounted) {
-        setState(() {
-          _isGeneratingAiQuestion = false;
-        });
-      }
-    }
-  }
-
-  Future<void> _generateTopicCheatSheet() async {
-    if (_question == null) return;
-
-    setState(() {
-      _isGeneratingCheatSheet = true;
-    });
-
-    try {
-      final cheatSheet = await OpenAiService().getTopicCheatSheet(
-        widget.topic,
-        relatedQuestion: _question,
-      );
-
-      setState(() {
-        _cheatSheetContent = cheatSheet;
-      });
-
-      _showCheatSheetDialog();
-    } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Konu özeti oluşturulurken hata: $e')),
-        );
-      }
-    } finally {
-      if (mounted) {
-        setState(() {
-          _isGeneratingCheatSheet = false;
-        });
-      }
-    }
-  }
-
-  void _showCheatSheetDialog() {
-    if (_cheatSheetContent == null) return;
-
-    showDialog(
-      context: context,
-      builder:
-          (context) => Dialog(
-            insetPadding: const EdgeInsets.all(16),
-            child: Container(
-              width: double.infinity,
-              constraints: const BoxConstraints(maxHeight: 600),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  AppBar(
-                    title: Text('${widget.topic} - Konu Özeti'),
-                    leading: IconButton(
-                      icon: const Icon(Icons.close),
-                      onPressed: () => Navigator.pop(context),
-                    ),
-                    actions: [
-                      IconButton(
-                        icon: const Icon(Icons.copy),
-                        onPressed: () {
-                          // Clipboard functionality would need to be added
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                              content: Text('Konu özeti kopyalandı'),
-                            ),
-                          );
-                          Navigator.pop(context);
-                        },
-                        tooltip: 'Kopyala',
-                      ),
-                    ],
-                  ),
-                  Expanded(
-                    child: SingleChildScrollView(
-                      padding: const EdgeInsets.all(16),
-                      child: Container(
-                        height: 600,
-                        width: double.infinity,
-                        padding: const EdgeInsets.only(bottom: 40),
-                        child: Markdown(
-                          data: _cheatSheetContent!,
-                          styleSheet: MarkdownStyleSheet(
-                            h1: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            h2: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                            p: TextStyle(fontSize: 16),
-                            listBullet: TextStyle(fontSize: 16),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-    );
-  }
-
-  void _checkAnswer(int index) {
-    _selectedAnswerIndex = index;
-    _showResult = true;
-    setState(() {});
-
-    // Scroll to bottom after a short delay to allow the widgets to render
-    Future.delayed(const Duration(milliseconds: 300), () {
-      if (_scrollController.hasClients) {
-        _scrollController.animateTo(
-          _scrollController.position.maxScrollExtent,
-          duration: const Duration(milliseconds: 500),
-          curve: Curves.easeOut,
-        );
-      }
-    });
+    _getTopic();
   }
 
   @override
   Widget build(BuildContext context) {
+    if (_isLoading) {
+      return const Center(child: CircularProgressIndicator());
+    }
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(widget.topic),
+          title: Text(widget.topicId),
           actions: [
             IconButton(
               icon: const Icon(Icons.refresh),
-              onPressed: _loadRandomQuestion,
+              onPressed: () {},
               tooltip: 'Yeni Soru',
             ),
           ],
         ),
-        body:
-            _isLoading
-                ? const Center(child: CircularProgressIndicator())
-                : _question == null
-                ? Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text(
-                          'Bu konuda henüz soru bulunmamaktadır',
-                          style: TextStyle(fontSize: 18),
-                          textAlign: TextAlign.center,
-                        ),
-                        const SizedBox(height: 20),
-                        ElevatedButton(
-                          onPressed: () => context.pop(),
-                          child: const Text('Geri Dön'),
-                        ),
-                      ],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text('Sınav için aşağıdaki butona tıklayın:'),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder:
+                          (context) => WebViewPage(
+                            url: examUrl,
+                            title: 'EBA Soru Bankası',
+                          ),
                     ),
-                  ),
-                )
-                : SingleChildScrollView(
-                  controller: _scrollController,
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const SizedBox(height: 16),
-                      Card(
-                        elevation: 4,
-                        margin: const EdgeInsets.only(bottom: 20),
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                _question!.soru,
-                                style: const TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      for (int i = 0; i < _question!.secenekler.length; i++)
-                        AnswerOption(
-                          answer: _question!.secenekler[i],
-                          isSelected: _selectedAnswerIndex == i,
-                          isCorrect: _showResult && i == _question!.cevap,
-                          isWrong:
-                              _showResult &&
-                              _selectedAnswerIndex == i &&
-                              i != _question!.cevap,
-                          onTap: _showResult ? null : () => _checkAnswer(i),
-                        ),
-                      if (_showResult) ...[
-                        const SizedBox(height: 20),
-                        Card(
-                          color: Colors.amber.shade50,
-                          child: Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
-                                  'Açıklama:',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                Text(_question!.aciklama),
-                              ],
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            ElevatedButton(
-                              onPressed: _loadRandomQuestion,
-                              child: const Text('Yeni Soru'),
-                            ),
-                            const SizedBox(width: 16),
-                            ElevatedButton.icon(
-                              onPressed:
-                                  _isGeneratingAiQuestion
-                                      ? null
-                                      : _generateSimilarQuestion,
-                              icon:
-                                  _isGeneratingAiQuestion
-                                      ? const SizedBox(
-                                        width: 16,
-                                        height: 16,
-                                        child: CircularProgressIndicator(
-                                          strokeWidth: 2,
-                                          color: Colors.deepPurple,
-                                        ),
-                                      )
-                                      : const Icon(Icons.psychology),
-                              label: Text(
-                                _isGeneratingAiQuestion
-                                    ? 'Oluşturuluyor...'
-                                    : 'Benzer Soru',
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.deepPurple,
-                                foregroundColor: Colors.white,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ],
-                  ),
-                ),
+                  );
+                },
+                child: const Text('Sınavı Başlat'),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

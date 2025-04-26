@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-class TopicCard extends StatelessWidget {
-  final String topic;
+class CategoryCard extends StatelessWidget {
+  final String categoryName;
+  final String id;
 
-  const TopicCard({super.key, required this.topic});
+  const CategoryCard({super.key, required this.categoryName, required this.id});
 
   @override
   Widget build(BuildContext context) {
@@ -11,13 +13,15 @@ class TopicCard extends StatelessWidget {
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          context.push('/category/$id/lessons');
+        },
         borderRadius: BorderRadius.circular(12),
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              topic,
+              categoryName,
               textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),

@@ -1,9 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../model/question_model.dart';
-import '../service/question_service.dart';
-import '../widgets/topic_card.dart';
+import '../widgets/category_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,35 +12,34 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<Question>? _questions;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  final List<String> _topics = [
-    "Türkçe",
-    "Matematik",
-    "Geometri",
-    "Sözel Mantık",
-    "Sayısal Mantık",
-    "Genel Kültür Deneme",
-    "Tarih",
-    "Coğrafya",
-    "Vatandaşlık",
-  ];
 
-  Future<void> _loadQuestions() async {
-    final questions = await QuestionService.instance.loadQuestions();
-    _questions = questions;
+  List<Map>? _categories;
+
+  Future<void> _getCategories() async {
+    final qs = await FirebaseFirestore.instance.collection('category').get();
+
+    for (final doc in qs.docs) {
+      _categories ??= [];
+      _categories!.add({"id": doc.id, ...doc.data()});
+    }
+
+    _categories!.sort(
+      (a, b) => int.tryParse(a['id'])!.compareTo(int.tryParse(b['id'])!),
+    );
+
     if (mounted) setState(() {});
   }
 
   @override
   void initState() {
+    _getCategories();
     super.initState();
-    _loadQuestions();
   }
 
   @override
   Widget build(BuildContext context) {
-    if (_questions == null) {
+    if (_categories == null) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
     return SafeArea(
@@ -54,7 +52,7 @@ class _HomePageState extends State<HomePage> {
               _scaffoldKey.currentState?.openDrawer();
             },
           ),
-          title: const Text('KPSS AI Asistan'),
+          title: const Text('YKS Asistan'),
         ),
         drawer: Drawer(
           child: ListView(
@@ -63,7 +61,7 @@ class _HomePageState extends State<HomePage> {
               const DrawerHeader(
                 decoration: BoxDecoration(color: Colors.blue),
                 child: Text(
-                  'KPSS AI Asistan',
+                  'YKS Asistan',
                   style: TextStyle(color: Colors.white, fontSize: 24),
                 ),
               ),
@@ -110,9 +108,12 @@ class _HomePageState extends State<HomePage> {
               mainAxisSpacing: 16,
               childAspectRatio: 1.5,
             ),
-            itemCount: _topics.length,
-            itemBuilder: (context, index) {
-              return TopicCard(topic: _topics[index]);
+            itemCount: _categories!.length,
+            itemBuilder: (__, i) {
+              return CategoryCard(
+                categoryName: _categories![i]['name'],
+                id: _categories![i]['id'],
+              );
             },
           ),
         ),

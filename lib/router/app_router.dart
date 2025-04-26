@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 
 import '../auth/auth_page.dart';
 import '../pages/home_page.dart';
+import '../pages/lessons_page.dart';
 import '../pages/my_account_page.dart';
 import '../pages/question_page.dart';
 import '../pages/statistics_page.dart';
@@ -38,6 +39,15 @@ final GoRouter appRouter = GoRouter(
       path: '/statistics',
       name: 'statistics',
       builder: (context, state) => const StatisticsPage(),
+    ),
+    GoRoute(
+      path: '/category/:categoryId/lessons',
+      name: 'lessons',
+      builder: (context, state) {
+        final categoryId = state.pathParameters['categoryId'] ?? '';
+        final categoryName = state.pathParameters['categoryName'] ?? '';
+        return LessonsPage(categoryId: categoryId, categoryName: categoryName);
+      },
     ),
   ],
   errorBuilder:

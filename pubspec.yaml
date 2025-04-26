@@ -19,7 +19,7 @@ dependencies:
   google_sign_in: ^6.3.0 
   go_router: ^14.8.1
   font_awesome_flutter: ^10.8.0
-  flutter_dotenv: ^5.2.1 
+  flutter_dotenv: ^5.2.1  
   flutter_markdown: ^0.7.7
   hive: ^2.2.3
   hive_flutter: ^1.1.0 
@@ -38,7 +38,6 @@ flutter:
   
   assets:
     - assets/
-    - assets/kpss.json
     - assets/lesson_links.json
     - assets/topics_questions.json
     - assets/lesson_topics.json

@@ -6,9 +6,7 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:go_router/go_router.dart';
 
 import '../model/question_model.dart';
-import '../service/auth_service.dart';
 import '../service/open_ai_service.dart';
-import '../service/question_service.dart';
 import '../widgets/answer_option.dart';
 
 class QuestionPage extends StatefulWidget {
@@ -22,13 +20,13 @@ class QuestionPage extends StatefulWidget {
 
 class _QuestionPageState extends State<QuestionPage> {
   Question? _question;
-  bool _isLoading = true;
+  final bool _isLoading = true;
   int? _selectedAnswerIndex;
   bool _showResult = false;
   bool _isGeneratingAiQuestion = false;
   bool _isGeneratingCheatSheet = false;
   String? _cheatSheetContent;
-  List<Question> _questions = [];
+  final List<Question> _questions = [];
   final ScrollController _scrollController = ScrollController();
 
   @override
@@ -37,38 +35,7 @@ class _QuestionPageState extends State<QuestionPage> {
     _loadRandomQuestion();
   }
 
-  Future<void> _loadRandomQuestion() async {
-    _questions = await QuestionService.instance.loadQuestions();
-    _isLoading = true;
-    _selectedAnswerIndex = null;
-    _showResult = false;
-    setState(() {});
-
-    final userId = AuthService().currentUser?.uid;
-
-    final solvedQuestionIds = await QuestionService.instance
-        .getSolvedQuestionIds(userId!);
-
-    final topicQuestions =
-        _questions
-            .where(
-              (q) =>
-                  q.ders.toLowerCase() == widget.topic.toLowerCase() &&
-                  !solvedQuestionIds.contains("${q.id}"),
-            )
-            .toList();
-
-    if (topicQuestions.isEmpty) {
-      _isLoading = false;
-      setState(() {});
-      return;
-    }
-    final random = Random();
-    final randomIndex = random.nextInt(topicQuestions.length);
-    _question = topicQuestions[randomIndex];
-    _isLoading = false;
-    setState(() {});
-  }
+  Future<void> _loadRandomQuestion() async {}
 
   Future<void> _generateSimilarQuestion() async {
     setState(() {
@@ -210,13 +177,6 @@ class _QuestionPageState extends State<QuestionPage> {
     _selectedAnswerIndex = index;
     _showResult = true;
     setState(() {});
-
-    final userId = AuthService().currentUser?.uid;
-    QuestionService.instance.addSolvedQuestion(
-      userId: userId!,
-      question: _question!,
-      answerIndex: index,
-    );
 
     // Scroll to bottom after a short delay to allow the widgets to render
     Future.delayed(const Duration(milliseconds: 300), () {

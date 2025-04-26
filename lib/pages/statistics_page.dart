@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:osym/model/question_model.dart';
 import 'package:osym/service/auth_service.dart';
-import 'package:osym/service/question_service.dart';
 import 'package:osym/utils/date_utils.dart';
 
 import '../model/enums.dart';
@@ -39,7 +38,6 @@ class _StatisticsPageState extends State<StatisticsPage> {
     }
 
     try {
-      _allQuestions = await QuestionService.instance.loadQuestions();
       int? startTimestamp;
       final DateTime now = DateTime.now();
 
@@ -55,8 +53,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
           break;
       }
 
-      final solvedQuestionIds = await QuestionService.instance
-          .getSolvedQuestionIds(userId, startTimestamp);
+      final solvedQuestionIds = [];
       DateTime? earliestSolvedDate;
 
       final Map<String, Map<int, AnswerStats>> lessonAnswersByDay = {};

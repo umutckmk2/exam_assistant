@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class TopicCard extends StatelessWidget {
   final String topic;
@@ -12,9 +11,7 @@ class TopicCard extends StatelessWidget {
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: InkWell(
-        onTap: () {
-          context.push('/question/$topic');
-        },
+        onTap: () {},
         borderRadius: BorderRadius.circular(12),
         child: Center(
           child: Padding(

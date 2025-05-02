@@ -19,12 +19,19 @@ class TopicsPage extends StatefulWidget {
 
 class _TopicsPageState extends State<TopicsPage> {
   List<Map>? _topics;
+  final Map<String, bool> _expandedTopics = {};
   bool _isLoading = true;
 
   Future<void> _getTopics() async {
     final topicService = TopicService(widget.lessonId, widget.categoryId);
     final topics = await topicService.getTopics();
     _topics = topics;
+
+    // Initialize expanded state for all topics
+    for (var topic in topics) {
+      _expandedTopics[topic['id']] = false;
+    }
+
     _isLoading = false;
     setState(() {});
   }
@@ -95,65 +102,156 @@ class _TopicsPageState extends State<TopicsPage> {
           itemCount: _topics!.length,
           itemBuilder: (context, index) {
             final topic = _topics![index];
+            final String topicId = topic['id'];
+            final bool isExpanded = _expandedTopics[topicId] ?? false;
+
             return Card(
               margin: const EdgeInsets.only(bottom: 12),
               elevation: 2,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: InkWell(
-                onTap: () {
-                  context.push(
-                    '/question/${widget.categoryId}/${widget.lessonId}/${topic['id']}',
-                  );
-                },
-                borderRadius: BorderRadius.circular(12),
-                child: Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: Theme.of(
-                            context,
-                          ).primaryColor.withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Center(
-                          child: Text(
-                            '${index + 1}',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Theme.of(context).primaryColor,
+              child: Column(
+                children: [
+                  // Main topic header
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        _expandedTopics[topicId] = !isExpanded;
+                      });
+                    },
+                    borderRadius: BorderRadius.circular(12),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: Theme.of(
+                                context,
+                              ).primaryColor.withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(10),
                             ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 16),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              topic['topic'],
-                              style: const TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
+                            child: Center(
+                              child: Text(
+                                '${index + 1}',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Theme.of(context).primaryColor,
+                                ),
                               ),
                             ),
-                          ],
+                          ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  topic['topic'],
+                                  style: const TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Icon(
+                            isExpanded ? Icons.expand_less : Icons.expand_more,
+                            color: Theme.of(context).primaryColor,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  if (isExpanded)
+                    if (topic['subTopics'] == null ||
+                        topic['subTopics']!.isEmpty)
+                      Padding(
+                        padding: EdgeInsets.all(16.0),
+                        child: Text('Bu konuya ait alt başlık bulunamadı.'),
+                      )
+                    else
+                      Container(
+                        padding: const EdgeInsets.only(
+                          left: 16,
+                          right: 16,
+                          bottom: 16,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade100,
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(12),
+                            bottomRight: Radius.circular(12),
+                          ),
+                        ),
+                        child: ListView.builder(
+                          shrinkWrap: true,
+                          physics: NeverScrollableScrollPhysics(),
+                          itemCount: topic['subTopics']!.length,
+                          itemBuilder: (context, index) {
+                            final subtopic = topic['subTopics']![index];
+                            return Card(
+                              elevation: 0,
+                              margin: EdgeInsets.symmetric(vertical: 4),
+                              color: Theme.of(
+                                context,
+                              ).primaryColor.withOpacity(0.05),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
+                                side: BorderSide(color: Colors.grey.shade50),
+                              ),
+                              child: ListTile(
+                                onTap: () {
+                                  // Navigate to question page with the main topic ID
+                                  context.push(
+                                    '/question/${widget.categoryId}/${widget.lessonId}/${subtopic['id']}',
+                                  );
+                                },
+                                contentPadding: const EdgeInsets.symmetric(
+                                  horizontal: 12,
+                                  vertical: 4,
+                                ),
+                                leading: Container(
+                                  width: 36,
+                                  height: 36,
+                                  decoration: BoxDecoration(
+                                    color: Theme.of(
+                                      context,
+                                    ).primaryColor.withOpacity(0.1),
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  child: Center(
+                                    child: Icon(
+                                      Icons.school_outlined,
+                                      size: 20,
+                                      color: Theme.of(context).primaryColor,
+                                    ),
+                                  ),
+                                ),
+                                title: Text(
+                                  subtopic['text'] ?? '',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black87,
+                                  ),
+                                ),
+                                trailing: const Icon(
+                                  Icons.chevron_right,
+                                  size: 20,
+                                ),
+                              ),
+                            );
+                          },
                         ),
                       ),
-                      Icon(
-                        Icons.chevron_right,
-                        color: Theme.of(context).primaryColor,
-                      ),
-                    ],
-                  ),
-                ),
+                ],
               ),
             );
           },

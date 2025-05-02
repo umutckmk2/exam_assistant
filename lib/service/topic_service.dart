@@ -26,7 +26,7 @@ class TopicService {
   late String _boxName;
 
   Future<void> _openBox() async {
-    _boxName = "$categoryId-$lessonId-topics";
+    _boxName = "$categoryId-$lessonId-mainTopics";
     if (Hive.isBoxOpen(_boxName)) {
       _box = Hive.box<Map>(_boxName);
     } else {
@@ -43,7 +43,7 @@ class TopicService {
             .doc(categoryId)
             .collection('lessons')
             .doc(lessonId)
-            .collection('topics')
+            .collection('mainTopics')
             .get();
     final topics = <Map>[];
 
@@ -56,6 +56,9 @@ class TopicService {
       };
       topics.add(topic);
     }
+
+    // Sort by doc id converted to int
+    topics.sort((a, b) => int.parse(a['id']).compareTo(int.parse(b['id'])));
 
     for (var topic in topics) {
       await _box.put(topic['id'], topic);
@@ -77,7 +80,7 @@ class TopicService {
             .doc(categoryId)
             .collection('lessons')
             .doc(lessonId)
-            .collection('topics')
+            .collection('mainTopics')
             .doc(topicId)
             .get();
     final topic = ds.data();

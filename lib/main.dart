@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
         if (snapshot.hasData && snapshot.data != null) {
           return MaterialApp.router(
             debugShowCheckedModeBanner: false,
-            title: 'KPSS AI Asistan',
+            title: 'Exam Mentor',
             theme: ThemeData(
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
               useMaterial3: true,
@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
         }
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'KPSS AI Asistan',
+          title: 'Exam Mentor',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
             useMaterial3: true,

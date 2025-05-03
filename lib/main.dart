@@ -59,10 +59,13 @@ class MyApp extends StatelessWidget {
           );
         }
         return FutureBuilder(
-          future: Future.wait([
-            UserService().getUserDetails(AuthService().currentUser!.uid),
-            GoalsService.instance.saveMissingRecords(),
-          ]),
+          future: Future.microtask(() async {
+            final user = await UserService().getUserDetails(
+              AuthService().currentUser!.uid,
+            );
+            await GoalsService.instance.saveMissingRecords();
+            return user;
+          }),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return MaterialApp(

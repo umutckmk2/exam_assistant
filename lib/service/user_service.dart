@@ -75,20 +75,27 @@ class UserService {
 
   Future<void> saveSolvedQuestion(String userId, Map question) async {
     final id = "${question['id']}";
-    await FirebaseFirestore.instance
-        .collection('users')
-        .doc(userId)
-        .collection('solvedQuestions')
-        .doc(id)
-        .set({
-          'solvedAt': DateTime.now(),
-          'answerIndex': question['answer'],
-          'correct': question['answer'] == question['answerIndex'],
-        });
+    await FirebaseFirestore.instance.runTransaction((transaction) async {
+      final userRef = FirebaseFirestore.instance
+          .collection('users')
+          .doc(userId);
+      final solvedQuestionRef = userRef.collection('solvedQuestions').doc(id);
+
+      transaction.set(solvedQuestionRef, {
+        'solvedAt': DateTime.now(),
+        'answerIndex': question['answer'],
+        'correct': question['answer'] == question['answerIndex'],
+      });
+
+      transaction.update(userRef, {
+        'updatedAt': DateTime.now().millisecondsSinceEpoch ~/ 1000,
+      });
+    });
+
     final user = await _box.get(userId);
     await _box.put(userId, {
       ...user!,
-      'solvedQuestionIds': [...user!['solvedQuestionIds'], id],
+      'solvedQuestions': [...user!['solvedQuestions'], question],
     });
   }
 

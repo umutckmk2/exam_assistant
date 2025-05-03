@@ -51,17 +51,15 @@ class GoalsService {
         .delete();
   }
 
-  Future<void> saveTodayRecord(DailyGoal goal) async {
+  Future<DailyGoal> saveTodayRecord(DailyGoal goal) async {
     await _openBox();
     final userId = AuthService().currentUser?.uid;
 
-    final record = _dailyGoalRecords.get(todayMidNightAsSeconds);
-    if (record == null) {
-      await _dailyGoalRecords.put(todayMidNightAsSeconds, goal.toJson());
-      await FirebaseDatabase.instance
-          .ref('users/$userId/goals/daily/records/$todayMidNightAsSeconds')
-          .set({...goal.toJson()});
-    }
+    await _dailyGoalRecords.put(todayMidNightAsSeconds, goal.toJson());
+    await FirebaseDatabase.instance
+        .ref('users/$userId/goals/daily/$todayMidNightAsSeconds')
+        .set({...goal.toJson()});
+    return goal;
   }
 
   Future<void> saveMissingRecords() async {
@@ -72,19 +70,17 @@ class GoalsService {
       final dailyGoalSettings = getDailyGoalSettings();
       final lastRecordSnapshot =
           await FirebaseDatabase.instance
-              .ref('users/$userId/goals/daily/records')
+              .ref('users/$userId/goals/daily')
               .orderByKey()
               .limitToLast(1)
               .get();
-
-      if (lastRecordSnapshot.value == null) {
+      final data = lastRecordSnapshot.value as Map?;
+      if (data == null || data.isEmpty) {
         await saveTodayRecord(dailyGoalSettings);
         return;
       }
 
-      final lastRecordTime = int.parse(
-        (lastRecordSnapshot.value as Map).keys.first,
-      );
+      final lastRecordTime = int.parse(data.keys.first);
 
       final lastRecordDate = DateTime.fromMillisecondsSinceEpoch(
         lastRecordTime * 1000,
@@ -94,19 +90,26 @@ class GoalsService {
       );
       final daysBetween = today.difference(lastRecordDate).inDays;
 
-      if (daysBetween <= 1) return;
+      if (daysBetween <= 1) {
+        print("daysBetween: $daysBetween");
+        final recordDate = data.keys.first;
+        final recordMap = data[recordDate]!;
+
+        print("data: $recordMap");
+        await _dailyGoalRecords.put(todayMidNightAsSeconds, recordMap);
+        return;
+      }
 
       for (var i = 1; i < daysBetween; i++) {
         final missingDate = lastRecordDate.add(Duration(days: i));
         final missingTimestamp = missingDate.millisecondsSinceEpoch ~/ 1000;
-
         await _dailyGoalRecords.put(
           missingTimestamp,
           dailyGoalSettings.toJson(),
         );
 
         await FirebaseDatabase.instance
-            .ref('users/$userId/goals/daily/records/$missingTimestamp')
+            .ref('users/$userId/goals/daily/$missingTimestamp')
             .set(dailyGoalSettings.toJson());
       }
     } catch (e) {
@@ -115,14 +118,17 @@ class GoalsService {
   }
 
   Future<void> saveDailyGoalSettings(String userId, DailyGoal goal) async {
-    await settingsBox.put("dailyGoalSettings", goal.toJson());
-    await FirebaseDatabase.instance.ref('users/$userId/goals/daily').set({
-      ...goal.toJson(),
-    });
+    await _openBox();
+    await _dailyGoalRecords.put(todayMidNightAsSeconds, goal.toJson());
+    await FirebaseDatabase.instance
+        .ref('users/$userId/goals/daily/$todayMidNightAsSeconds')
+        .set({...goal.toJson()});
   }
 
   Future<Map<String, DailyGoal>> getThisWeekGoalRecords(String userId) async {
+    await _openBox();
     final dailyGoalSettings = getDailyGoalSettings();
+    print("dailyGoalSettings: ${dailyGoalSettings.toJson()}");
     final thisWeekDatesAsSeconds = [];
     final startOfToday = DateTime.fromMillisecondsSinceEpoch(
       todayMidNightAsSeconds * 1000,
@@ -143,18 +149,21 @@ class GoalsService {
 
     final thisWeekRecords = <String, DailyGoal>{};
     for (final timestamp in thisWeekDatesAsSeconds) {
-      if (timestamp <= todayMidNightAsSeconds) {
-        final record = _dailyGoalRecords.get(
-          timestamp,
-          defaultValue: dailyGoalSettings.toJson(),
-        );
-        thisWeekRecords[timestamp.toString()] = DailyGoal.fromJson(record!);
-      } else {
-        thisWeekRecords[timestamp.toString()] = dailyGoalSettings;
-      }
+      final record = _dailyGoalRecords.get(
+        timestamp,
+        defaultValue: dailyGoalSettings.toJson(),
+      );
+      thisWeekRecords[timestamp.toString()] = DailyGoal.fromJson(record!);
     }
 
     return thisWeekRecords;
+  }
+
+  Future<DailyGoal> getTodayGoal(String userId) async {
+    await _openBox();
+    final today = todayMidNightAsSeconds;
+    final record = _dailyGoalRecords.get(today);
+    return DailyGoal.fromJson(record!);
   }
 
   DailyGoal getDailyGoalSettings() {

@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:osym/service/auth_service.dart';
 
+import '../model/daily_goal.dart';
 import '../model/question_model.dart';
+import '../service/goals_service.dart';
 import '../service/open_ai_service.dart';
 import '../service/questions_service.dart';
 import '../service/topic_service.dart';
@@ -40,6 +42,7 @@ class _QuestionPageState extends State<QuestionPage> {
   List<QuestionModel>? _unsolvedQuestions;
   final ScrollController _scrollController = ScrollController();
   Map? _topic;
+  DailyGoal? _todayGoal;
 
   Future<void> _loadQuestions() async {
     final topicService = TopicService(widget.lessonId, widget.categoryId);
@@ -250,6 +253,12 @@ class _QuestionPageState extends State<QuestionPage> {
     _question = _question!.copyWith(answerIndex: index);
 
     await UserService.instance.saveSolvedQuestion(userId!, _question!.toJson());
+
+    _todayGoal ??= await GoalsService.instance.getTodayGoal(userId);
+
+    _todayGoal!.solvedQuestions = (_todayGoal!.solvedQuestions ?? 0) + 1;
+
+    _todayGoal = await GoalsService.instance.saveTodayRecord(_todayGoal!);
   }
 
   @override

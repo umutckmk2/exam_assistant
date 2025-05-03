@@ -4,8 +4,8 @@ class DailyGoal {
   final int dailyQuestionGoal;
   final int dailyTimeGoal;
   final TimeOfDay notifyTime;
-  final int? solvedQuestions;
-  final int? passTime;
+  int? solvedQuestions;
+  int? passTime;
 
   DailyGoal({
     required this.dailyQuestionGoal,

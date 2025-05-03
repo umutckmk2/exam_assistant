@@ -44,8 +44,8 @@ class _HomePageState extends State<HomePage> {
       return Scaffold(
         appBar: AppBar(title: const Text('YKS Asistan')),
         body: Center(
-          child: const CircularProgressIndicator(
-            color: Colors.blue,
+          child: CircularProgressIndicator(
+            color: Theme.of(context).primaryColor,
             strokeWidth: 5,
           ),
         ),
@@ -58,38 +58,82 @@ class _HomePageState extends State<HomePage> {
           title: const Text('YKS Asistan'),
           actions: [
             IconButton(
-              icon: const Icon(Icons.account_circle, color: Colors.green),
+              icon: Icon(
+                Icons.account_circle,
+                color: Theme.of(context).colorScheme.secondary,
+              ),
               onPressed: () {
                 context.push('/account');
               },
             ),
           ],
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const DailyGoalsWidget(),
-              const SizedBox(height: 16),
-              Expanded(
-                child: GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 16,
-                    mainAxisSpacing: 16,
-                    childAspectRatio: 1.2,
-                  ),
-                  itemCount: _categories!.length,
-                  itemBuilder: (__, i) {
-                    return CategoryCard(
-                      categoryName: _categories![i]['name'],
-                      id: _categories![i]['id'],
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 16),
+                LayoutBuilder(
+                  builder: (context, constraints) {
+                    // Calculate grid dimensions
+                    final int crossAxisCount = 2;
+                    final double spacing = 16.0;
+                    final double aspectRatio = 1.2;
+
+                    // Calculate rows needed
+                    final int rowCount =
+                        (_categories!.length / crossAxisCount).ceil();
+
+                    // Calculate item dimensions
+                    final double itemWidth =
+                        (constraints.maxWidth - spacing) / crossAxisCount;
+                    final double itemHeight = itemWidth / aspectRatio;
+
+                    // Total height for grid
+                    final double gridHeight =
+                        (itemHeight * rowCount) + (spacing * (rowCount - 1));
+
+                    return SizedBox(
+                      height: gridHeight,
+                      child: GridView.builder(
+                        physics: const NeverScrollableScrollPhysics(),
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              crossAxisSpacing: 16,
+                              mainAxisSpacing: 16,
+                              childAspectRatio: 1.2,
+                            ),
+                        itemCount: _categories!.length,
+                        itemBuilder: (context, index) {
+                          return CategoryCard(
+                            categoryName: _categories![index]['name'],
+                            id: _categories![index]['id'],
+                          );
+                        },
+                      ),
                     );
                   },
                 ),
-              ),
-            ],
+                const SizedBox(height: 24),
+                Row(
+                  children: [
+                    Text(
+                      "Günlük Hedefler",
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).primaryColor,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                const DailyGoalsWidget(),
+                const SizedBox(height: 16), // Add padding at the bottom
+              ],
+            ),
           ),
         ),
       ),

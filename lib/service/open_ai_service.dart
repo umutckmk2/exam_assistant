@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
@@ -172,6 +173,123 @@ class OpenAiService {
     
     Format your response in a clear, well-organized structure with headings, bullet points, and tables where appropriate. 
     Write in proper Turkish and optimize for both comprehension and memorization.
+    ''';
+
+    return await _sendRequest(prompt);
+  }
+
+  Future<Map<String, dynamic>> extractAndParaphraseQuestionFromHtml(
+    String htmlContent,
+  ) async {
+    try {
+      // Extract the question and options using OpenAI instead of CSS selectors
+      final extractionResult = await _extractQuestionFromHtmlUsingAI(
+        htmlContent,
+      );
+
+      if (extractionResult == null) {
+        throw Exception('Failed to extract question from HTML');
+      }
+
+      final originalQuestion = extractionResult['question'] as String;
+      final options = extractionResult['options'] as List<String>;
+
+      // Now paraphrase the question using OpenAI
+      final paraphrasedQuestion = await _paraphraseQuestion(
+        originalQuestion,
+        options,
+      );
+      return {'question': paraphrasedQuestion, 'options': options};
+    } catch (e) {
+      throw Exception('Error extracting and paraphrasing question: $e');
+    }
+  }
+
+  Future<Map<String, dynamic>?> _extractQuestionFromHtmlUsingAI(
+    String htmlContent,
+  ) async {
+    try {
+      final prompt = '''
+      You are an expert in extracting exam questions from HTML content.
+      
+      I will provide you with HTML content containing an exam question and its multiple-choice options.
+      Your task is to extract the question text and the options as separate items.
+      
+      HTML content:
+      ```
+      $htmlContent
+      ```
+      
+      Extract and return ONLY in the following JSON format:
+      {
+        "question": "The full question text here",
+        "options": ["Option 1", "Option 2", "Option 3", "Option 4", "Option 5"]
+      }
+      
+      Guidelines:
+      - Extract the complete question text, including any context or paragraphs preceding the actual question
+      - Extract all options exactly as they appear
+      - Return valid JSON only, nothing else
+      - If you cannot find a question or options, return an empty question or options array
+      - Do not include option letters (A, B, C, etc.) in the option text unless they are part of the actual content
+      ''';
+
+      final response = await _sendRequest(prompt);
+
+      try {
+        // Try to parse the JSON response
+        final jsonRegex = RegExp(r'({[\s\S]*})');
+        final match = jsonRegex.firstMatch(response);
+
+        if (match != null) {
+          final jsonStr = match.group(1)!;
+          final Map<String, dynamic> data = jsonDecode(jsonStr);
+
+          if (data.containsKey('question') && data.containsKey('options')) {
+            return {
+              'question': data['question'] as String,
+              'options': (data['options'] as List).cast<String>(),
+            };
+          }
+        }
+
+        return null;
+      } catch (e) {
+        debugPrint('Failed to parse extraction response: $e');
+        return null;
+      }
+    } catch (e) {
+      debugPrint('Error in _extractQuestionFromHtmlUsingAI: $e');
+      return null;
+    }
+  }
+
+  Future<String> _paraphraseQuestion(
+    String question,
+    List<String> options,
+  ) async {
+    final optionsText = options.map((opt) => '- $opt').join('\n');
+
+    final prompt = '''
+    You are an expert in KPSS (Public Personnel Selection Examination) question creation.
+    
+    Paraphrase the following exam question while ensuring the meaning and difficulty remain exactly the same.
+    DO NOT modify the options or change any key terms that would make the original correct answer invalid.
+    
+    Original Question: $question
+    
+    Options:
+    $optionsText
+    
+    Important rules:
+    - Maintain exactly the same meaning and test the same knowledge
+    - Keep the same difficulty level
+    - Don't change the nature of what's being asked
+    - Preserve all key terms that are referenced in the options
+    - Ensure all options remain valid with your new question wording
+    - Use proper Turkish grammar and spelling
+    
+    Return ONLY the paraphrased question text, nothing else.
     ''';
 
     return await _sendRequest(prompt);

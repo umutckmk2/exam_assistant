@@ -116,9 +116,8 @@ class _TopicsPageState extends State<TopicsPage> {
                   // Main topic header
                   InkWell(
                     onTap: () {
-                      setState(() {
-                        _expandedTopics[topicId] = !isExpanded;
-                      });
+                      _expandedTopics[topicId] = !isExpanded;
+                      setState(() {});
                     },
                     borderRadius: BorderRadius.circular(12),
                     child: Padding(
@@ -131,7 +130,7 @@ class _TopicsPageState extends State<TopicsPage> {
                             decoration: BoxDecoration(
                               color: Theme.of(
                                 context,
-                              ).primaryColor.withOpacity(0.2),
+                              ).primaryColor.withAlpha(51),
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Center(
@@ -160,9 +159,29 @@ class _TopicsPageState extends State<TopicsPage> {
                               ],
                             ),
                           ),
-                          Icon(
-                            isExpanded ? Icons.expand_less : Icons.expand_more,
-                            color: Theme.of(context).primaryColor,
+                          Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              IconButton(
+                                onPressed: () {
+                                  // Navigate to question page with this topic
+                                  context.push(
+                                    '/category/${widget.categoryId}/lessons/${widget.lessonId}/topics/$topicId/null',
+                                  );
+                                },
+                                icon: Icon(
+                                  Icons.arrow_forward,
+                                  color: Theme.of(context).primaryColor,
+                                ),
+                                tooltip: 'Bu konuya git',
+                              ),
+                              Icon(
+                                isExpanded
+                                    ? Icons.expand_less
+                                    : Icons.expand_more,
+                                color: Theme.of(context).primaryColor,
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -201,7 +220,7 @@ class _TopicsPageState extends State<TopicsPage> {
                               margin: EdgeInsets.symmetric(vertical: 4),
                               color: Theme.of(
                                 context,
-                              ).primaryColor.withOpacity(0.05),
+                              ).primaryColor.withAlpha(12),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8),
                                 side: BorderSide(color: Colors.grey.shade50),
@@ -210,7 +229,7 @@ class _TopicsPageState extends State<TopicsPage> {
                                 onTap: () {
                                   // Navigate to question page with the main topic ID
                                   context.push(
-                                    '/question/${widget.categoryId}/${widget.lessonId}/${subtopic['id']}',
+                                    '/category/${widget.categoryId}/lessons/${widget.lessonId}/topics/$topicId/${subtopic['value']}',
                                   );
                                 },
                                 contentPadding: const EdgeInsets.symmetric(
@@ -223,7 +242,7 @@ class _TopicsPageState extends State<TopicsPage> {
                                   decoration: BoxDecoration(
                                     color: Theme.of(
                                       context,
-                                    ).primaryColor.withOpacity(0.1),
+                                    ).primaryColor.withAlpha(25),
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                   child: Center(

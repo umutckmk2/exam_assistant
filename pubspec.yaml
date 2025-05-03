@@ -28,6 +28,7 @@ dependencies:
   path_provider: ^2.1.5
   collection: ^1.19.1
   webview_flutter: ^4.11.0 
+  html: ^0.15.6
  
 dev_dependencies:
   flutter_test:
@@ -36,11 +37,11 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  
+   
   assets:
     - assets/
     - assets/lesson_links.json
     - assets/topics_questions.json
     - assets/lesson_topics.json
     - .env 
- 
+  

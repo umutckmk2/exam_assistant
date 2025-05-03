@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../model/kpss_user.dart';
+import '../model/app_user.dart';
 import '../service/auth_service.dart';
-import '../service/kpss_user_service.dart';
+import '../service/user_service.dart';
 
 class MyAccountPage extends StatelessWidget {
   const MyAccountPage({super.key});
@@ -19,13 +19,15 @@ class MyAccountPage extends StatelessWidget {
         ),
         title: const Text('Hesabım'),
       ),
-      body: FutureBuilder<KpssUser?>(
-        future: KpssUserService.instance.getUser(userId!),
+      body: FutureBuilder<AppUser?>(
+        future: UserService.instance.getUser(userId!),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
             return Center(child: Text(snapshot.error.toString()));
+          } else if (snapshot.data == null) {
+            return const Center(child: Text('Kullanıcı bulunamadı'));
           }
 
           final user = snapshot.data!;

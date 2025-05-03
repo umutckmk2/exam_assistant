@@ -5,7 +5,7 @@ import '../auth/auth_page.dart';
 import '../pages/home_page.dart';
 import '../pages/lessons_page.dart';
 import '../pages/my_account_page.dart';
-import '../pages/question_page.dart';
+import '../pages/questions_page.dart';
 import '../pages/statistics_page.dart';
 import '../pages/topics_page.dart';
 
@@ -28,20 +28,7 @@ final GoRouter appRouter = GoRouter(
       name: 'account',
       builder: (context, state) => const MyAccountPage(),
     ),
-    GoRoute(
-      path: '/question/:categoryId/:lessonId/:topicId',
-      name: 'question',
-      builder: (context, state) {
-        final categoryId = state.pathParameters['categoryId'] ?? '';
-        final lessonId = state.pathParameters['lessonId'] ?? '';
-        final topicId = state.pathParameters['topicId'] ?? '';
-        return QuestionPage(
-          categoryId: categoryId,
-          lessonId: lessonId,
-          topicId: topicId,
-        );
-      },
-    ),
+
     GoRoute(
       path: '/statistics',
       name: 'statistics',
@@ -55,15 +42,36 @@ final GoRouter appRouter = GoRouter(
         final categoryName = state.pathParameters['categoryName'] ?? '';
         return LessonsPage(categoryId: categoryId, categoryName: categoryName);
       },
-    ),
-    GoRoute(
-      path: '/category/:categoryId/lessons/:lessonId/topics',
-      name: 'topics',
-      builder: (context, state) {
-        final categoryId = state.pathParameters['categoryId'] ?? '';
-        final lessonId = state.pathParameters['lessonId'] ?? '';
-        return TopicsPage(categoryId: categoryId, lessonId: lessonId);
-      },
+
+      routes: [
+        GoRoute(
+          path: ':lessonId/topics',
+          name: 'topics',
+          builder: (context, state) {
+            final categoryId = state.pathParameters['categoryId'] ?? '';
+            final lessonId = state.pathParameters['lessonId'] ?? '';
+            return TopicsPage(categoryId: categoryId, lessonId: lessonId);
+          },
+          routes: [
+            GoRoute(
+              path: ':topicId/:subTopicId',
+              name: 'question',
+              builder: (context, state) {
+                final categoryId = state.pathParameters['categoryId'] ?? '';
+                final lessonId = state.pathParameters['lessonId'] ?? '';
+                final topicId = state.pathParameters['topicId'] ?? '';
+                final subTopicId = state.pathParameters['subTopicId'] ?? '';
+                return QuestionPage(
+                  categoryId: categoryId,
+                  lessonId: lessonId,
+                  topicId: topicId,
+                  subTopicId: subTopicId == 'null' ? null : subTopicId,
+                );
+              },
+            ),
+          ],
+        ),
+      ],
     ),
   ],
   errorBuilder:

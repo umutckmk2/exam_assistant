@@ -10,6 +10,7 @@ import 'auth/auth_page.dart';
 import 'firebase_options.dart';
 import 'router/app_router.dart';
 import 'service/open_ai_service.dart';
+import 'service/user_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -56,14 +57,22 @@ class MyApp extends StatelessWidget {
             routerConfig: appRouter,
           );
         }
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Exam Mentor',
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-            useMaterial3: true,
-          ),
-          home: const AuthPage(),
+        return FutureBuilder(
+          future: UserService().getUser(AuthService().currentUser!.uid),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              return MaterialApp(
+                debugShowCheckedModeBanner: false,
+                title: 'Exam Mentor',
+                theme: ThemeData(
+                  colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+                  useMaterial3: true,
+                ),
+                home: const AuthPage(),
+              );
+            }
+            return const Center(child: CircularProgressIndicator());
+          },
         );
       },
     );

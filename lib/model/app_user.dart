@@ -1,19 +1,19 @@
-class KpssUser {
+class AppUser {
   final String id;
   final String email;
-  final List<int> solvedQuestionIds;
+  final List solvedQuestionIds;
 
-  KpssUser({
+  AppUser({
     required this.id,
     required this.email,
     required this.solvedQuestionIds,
   });
 
-  factory KpssUser.fromJson(Map<String, dynamic> json) {
-    return KpssUser(
+  factory AppUser.fromJson(Map<String, dynamic> json) {
+    return AppUser(
       id: json['id'],
       email: json['email'],
-      solvedQuestionIds: json['solvedQuestionIds'],
+      solvedQuestionIds: json['solvedQuestionIds'] ?? [],
     );
   }
 

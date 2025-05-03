@@ -124,9 +124,7 @@ class _LessonsPageState extends State<LessonsPage> {
                           width: 56,
                           height: 56,
                           decoration: BoxDecoration(
-                            color: Theme.of(
-                              context,
-                            ).primaryColor.withOpacity(0.1),
+                            color: Theme.of(context).primaryColor.withAlpha(25),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Icon(

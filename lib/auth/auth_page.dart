@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../service/auth_service.dart';
+import '../service/user_service.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({super.key});
@@ -64,18 +65,23 @@ class _AuthPageState extends State<AuthPage> {
       final userDoc = await _usersCol.doc(user?.uid).get();
 
       final createdAt = DateTime.now().millisecondsSinceEpoch ~/ 1000;
-
+      final userData = {
+        'email': user?.email,
+        'updatedAt': createdAt,
+        'createdAt': createdAt,
+        'lastLogin': createdAt,
+      };
       if (!userDoc.exists) {
-        await _usersCol.doc(user?.uid).set({
-          'email': user?.email,
-          'updatedAt': createdAt,
-          'createdAt': createdAt,
-          'lastLogin': createdAt,
-        });
+        await _usersCol.doc(user?.uid).set(userData);
+
+        await UserService.instance.saveUser(user!.uid, userData);
       } else {
-        await _usersCol.doc(user?.uid).update({
+        final updatedData = {
           'lastLogin': DateTime.now().millisecondsSinceEpoch ~/ 1000,
-        });
+        };
+        await _usersCol.doc(user?.uid).update(updatedData);
+
+        await UserService.instance.saveUser(user!.uid, updatedData);
       }
       if (mounted) {
         setState(() => _isLoading = false);

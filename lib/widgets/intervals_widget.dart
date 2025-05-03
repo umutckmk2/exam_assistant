@@ -20,7 +20,7 @@ class IntervalsWidget extends StatelessWidget {
         color: Theme.of(context).colorScheme.surface,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withAlpha(12),
             blurRadius: 2,
             offset: const Offset(0, 1),
           ),
@@ -39,7 +39,7 @@ class IntervalsWidget extends StatelessWidget {
             style: SegmentedButton.styleFrom(
               backgroundColor: Theme.of(
                 context,
-              ).colorScheme.surfaceContainerHighest.withOpacity(0.5),
+              ).colorScheme.surfaceContainerHighest.withAlpha(127),
               selectedBackgroundColor:
                   Theme.of(context).colorScheme.primaryContainer,
               selectedForegroundColor:

@@ -74,4 +74,9 @@ class UserService {
       'solvedQuestionIds': [...user!['solvedQuestionIds'], id],
     });
   }
+
+  Future<List> getSolvedQuestions(String userId) async {
+    final user = await _box.get(userId);
+    return user!['solvedQuestionIds'] ?? [];
+  }
 }

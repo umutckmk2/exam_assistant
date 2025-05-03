@@ -72,7 +72,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                   topicPath: '',
                   url: '',
                   withImage: false,
-                  answerIndex: 0,
+                  answer: 0,
                 ),
           );
 

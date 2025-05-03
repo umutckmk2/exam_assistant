@@ -5,9 +5,9 @@ class QuestionModel {
   final String topicPath;
   final String url;
   final bool withImage;
-  final int answerIndex;
+  final int answer;
   final String? paraphrasedQuestion;
-  final List<String>? options;
+  final List? options;
 
   QuestionModel({
     required this.id,
@@ -16,26 +16,27 @@ class QuestionModel {
     required this.topicPath,
     required this.url,
     required this.withImage,
-    required this.answerIndex,
+    required this.answer,
     this.paraphrasedQuestion,
     this.options,
   });
 
-  factory QuestionModel.fromJson(Map<String, dynamic> json) {
+  factory QuestionModel.fromJson(Map json) {
+    print("json: ${json['id'].runtimeType}");
     return QuestionModel(
-      id: json['id'] ?? 0,
-      questionAsHtml: json['questionAsHtml'] ?? '',
-      questionText: json['questionText'] ?? '',
-      topicPath: json['topicPath'] ?? '',
-      url: json['url'] ?? '',
-      withImage: json['withImage'] ?? false,
-      answerIndex: json['answerIndex'] ?? 0,
-      paraphrasedQuestion: json['paraphrasedQuestion'] ?? '',
-      options: json['options'] ?? [],
+      id: json['id'],
+      questionAsHtml: json['questionAsHtml'],
+      questionText: json['questionText'],
+      topicPath: json['topicPath'],
+      url: json['url'],
+      withImage: json['withImage'],
+      answer: json['answer'],
+      paraphrasedQuestion: json['paraphrasedQuestion'],
+      options: json['options'],
     );
   }
 
-  Map<String, dynamic> toJson() {
+  Map toJson() {
     return {
       'id': id,
       'questionAsHtml': questionAsHtml,
@@ -43,7 +44,7 @@ class QuestionModel {
       'topicPath': topicPath,
       'url': url,
       'withImage': withImage,
-      'answerIndex': answerIndex,
+      'answer': answer,
       'paraphrasedQuestion': paraphrasedQuestion,
       'options': options,
     };
@@ -58,7 +59,9 @@ class QuestionModel {
     bool? withImage,
     int? answerIndex,
     String? paraphrasedQuestion,
-    List<String>? options,
+    List? options,
+    int? answer,
+    DateTime? solvedAt,
   }) {
     return QuestionModel(
       id: id ?? this.id,
@@ -67,9 +70,9 @@ class QuestionModel {
       topicPath: topicPath ?? this.topicPath,
       url: url ?? this.url,
       withImage: withImage ?? this.withImage,
-      answerIndex: answerIndex ?? this.answerIndex,
       paraphrasedQuestion: paraphrasedQuestion ?? this.paraphrasedQuestion,
       options: options ?? this.options,
+      answer: answer ?? this.answer,
     );
   }
 

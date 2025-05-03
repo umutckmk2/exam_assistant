@@ -2,9 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:go_router/go_router.dart';
 import 'package:osym/service/auth_service.dart';
 
+import '../model/question_model.dart';
 import '../service/open_ai_service.dart';
 import '../service/questions_service.dart';
 import '../service/topic_service.dart';
@@ -29,15 +29,15 @@ class QuestionPage extends StatefulWidget {
 }
 
 class _QuestionPageState extends State<QuestionPage> {
-  Map? _question;
+  QuestionModel? _question;
   bool _isLoading = true;
   int? _selectedAnswerIndex;
   bool _showResult = false;
   final bool _isGeneratingAiQuestion = false;
   final bool _isGeneratingCheatSheet = false;
   String? _cheatSheetContent;
-  List<Map>? _questionWithoutImage;
-  List<Map>? _unsolvedQuestions;
+  List<QuestionModel>? _questionWithoutImage;
+  List<QuestionModel>? _unsolvedQuestions;
   final ScrollController _scrollController = ScrollController();
   Map? _topic;
 
@@ -45,7 +45,7 @@ class _QuestionPageState extends State<QuestionPage> {
     final topicService = TopicService(widget.lessonId, widget.categoryId);
     _topic = await topicService.getTopic(widget.topicId);
 
-    final questionsService = QuestionsService.instance;
+    final questionsService = QuestionService.instance;
     final questions = await questionsService.getQuestions(
       categoryId: widget.categoryId,
       lessonId: widget.lessonId,
@@ -54,11 +54,20 @@ class _QuestionPageState extends State<QuestionPage> {
     );
 
     _questionWithoutImage =
-        questions
-            .where((e) => !e['questionAsHtml'].toString().contains('<img'))
-            .toList();
+        questions.where((e) => !e.questionAsHtml.contains('<img')).toList();
+    final userId = AuthService().currentUser?.uid;
+    if (userId == null) return;
+
+    final solvedQuestions = await UserService.instance.getSolvedQuestions(
+      userId,
+    );
     _unsolvedQuestions =
-        questions.where((e) => !e.containsKey('solvedAt')).toList();
+        _questionWithoutImage!
+            .where((e) => !solvedQuestions.contains(e.id))
+            .toList();
+    print("unsolved length: ${_unsolvedQuestions!.length}");
+
+    print("unsolved Questions ids: ${_unsolvedQuestions!.map((e) => e.id)}");
     _loadRandomQuestion();
     _isLoading = false;
     if (mounted) setState(() {});
@@ -201,17 +210,25 @@ class _QuestionPageState extends State<QuestionPage> {
   }
 
   Future<void> _loadRandomQuestion() async {
-    if (_questionWithoutImage == null || _questionWithoutImage!.isEmpty) return;
-    final randomIndex = Random().nextInt(_questionWithoutImage!.length);
-    final htmlQuestion = _questionWithoutImage![randomIndex];
+    if (_unsolvedQuestions == null || _unsolvedQuestions!.isEmpty) return;
+    final randomIndex = Random().nextInt(_unsolvedQuestions!.length);
+    final htmlQuestion = _unsolvedQuestions![randomIndex];
 
     final paraphrasedQuestion = await OpenAiService()
-        .extractAndParaphraseQuestionFromHtml(htmlQuestion['questionAsHtml']);
+        .extractAndParaphraseQuestionFromHtml(htmlQuestion.questionAsHtml);
 
-    _question = {...htmlQuestion, ...paraphrasedQuestion};
+    print("paraphrasedQuestion: $paraphrasedQuestion ");
+    print("options: ${paraphrasedQuestion['options']}");
+    print("id: ${htmlQuestion.id}");
+    _question = htmlQuestion.copyWith(
+      paraphrasedQuestion: paraphrasedQuestion['paraphrasedQuestion'],
+      options: paraphrasedQuestion['options'],
+    );
 
     _showResult = false;
     _selectedAnswerIndex = null;
+
+    await QuestionService.instance.updateQuestion(_question!);
 
     if (mounted) setState(() {});
   }
@@ -233,11 +250,9 @@ class _QuestionPageState extends State<QuestionPage> {
       }
     });
 
-    _question!['answerIndex'] = index;
+    _question = _question!.copyWith(answerIndex: index);
 
-    await UserService.instance.saveSolvedQuestion(userId!, _question!);
-
-    await QuestionsService.instance.saveSolvedQuestion(userId, _question!);
+    await UserService.instance.saveSolvedQuestion(userId!, _question!.toJson());
   }
 
   @override
@@ -255,19 +270,87 @@ class _QuestionPageState extends State<QuestionPage> {
       );
     } else if (_questionWithoutImage!.isEmpty) {
       return Scaffold(
-        appBar: AppBar(
-          title: const Text('Bu konuda henüz soru bulunmamaktadır'),
+        appBar: AppBar(title: Text(_topic!['topic'])),
+        body: Center(
+          child: Container(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(Icons.menu_book, size: 80, color: Colors.grey),
+                const SizedBox(height: 16),
+                Text(
+                  "Henüz Soru Yok 📝",
+                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blueGrey,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  "Bu konuda henüz soru bulunmamaktadır",
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
+                const SizedBox(height: 24),
+                ElevatedButton.icon(
+                  onPressed: () => Navigator.of(context).pop(),
+                  icon: const Icon(Icons.arrow_back),
+                  label: const Text("Konulara Dön"),
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 24,
+                      vertical: 12,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
-        body: const Center(child: Text('Bu konuda henüz soru bulunmamaktadır')),
       );
     } else if (_unsolvedQuestions!.isEmpty) {
       return Scaffold(
-        appBar: AppBar(
-          title: const Text('Bu konuda henüz soru bulunmamaktadır'),
+        appBar: AppBar(title: Text(_topic!['topic'])),
+        body: Center(
+          child: Container(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(Icons.emoji_events, size: 80, color: Colors.amber),
+                const SizedBox(height: 16),
+                Text(
+                  "Tebrikler! 🎉",
+                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.deepPurple,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  "Bu konudaki tüm soruları başarıyla çözdünüz! 👏",
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
+                const SizedBox(height: 24),
+                ElevatedButton.icon(
+                  onPressed: () => Navigator.of(context).pop(),
+                  icon: const Icon(Icons.arrow_back),
+                  label: const Text("Konulara Dön"),
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 24,
+                      vertical: 12,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
-        body: const Center(child: Text('Bu konuda henüz soru bulunmamaktadır')),
       );
-    } else if (_question == null) {
+    } else if (_question == null || _question!.paraphrasedQuestion == null) {
       return Scaffold(
         appBar: AppBar(title: const Text('Yükleniyor...')),
         body: const Center(child: CircularProgressIndicator()),
@@ -275,174 +358,141 @@ class _QuestionPageState extends State<QuestionPage> {
     }
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: Text(_topic!['topic']),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.refresh),
-              onPressed: _loadRandomQuestion,
-              tooltip: 'Yeni Soru',
-            ),
-          ],
-        ),
-        body:
-            _isLoading
-                ? const Center(child: CircularProgressIndicator())
-                : _question == null
-                ? Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text(
-                          'Bu konuda henüz soru bulunmamaktadır',
-                          style: TextStyle(fontSize: 18),
-                          textAlign: TextAlign.center,
-                        ),
-                        const SizedBox(height: 20),
-                        ElevatedButton(
-                          onPressed: () => context.pop(),
-                          child: const Text('Geri Dön'),
-                        ),
-                      ],
+        appBar: AppBar(title: Text(_topic!['topic'])),
+        body: SingleChildScrollView(
+          controller: _scrollController,
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    child: ElevatedButton.icon(
+                      onPressed:
+                          _isGeneratingCheatSheet || _question == null
+                              ? null
+                              : _generateTopicCheatSheet,
+                      icon:
+                          _isGeneratingCheatSheet
+                              ? const SizedBox(
+                                width: 16,
+                                height: 16,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                  color: Colors.amber,
+                                ),
+                              )
+                              : const Icon(Icons.auto_awesome),
+                      label: Text(
+                        _isGeneratingCheatSheet
+                            ? 'Hazırlanıyor...'
+                            : 'Konu Özeti',
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.amber,
+                        foregroundColor: Colors.black87,
+                      ),
                     ),
                   ),
-                )
-                : SingleChildScrollView(
-                  controller: _scrollController,
+                ],
+              ),
+              const SizedBox(height: 16),
+              Card(
+                elevation: 4,
+                margin: const EdgeInsets.only(bottom: 20),
+                child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            child: ElevatedButton.icon(
-                              onPressed:
-                                  _isGeneratingCheatSheet || _question == null
-                                      ? null
-                                      : _generateTopicCheatSheet,
-                              icon:
-                                  _isGeneratingCheatSheet
-                                      ? const SizedBox(
-                                        width: 16,
-                                        height: 16,
-                                        child: CircularProgressIndicator(
-                                          strokeWidth: 2,
-                                          color: Colors.amber,
-                                        ),
-                                      )
-                                      : const Icon(Icons.auto_awesome),
-                              label: Text(
-                                _isGeneratingCheatSheet
-                                    ? 'Hazırlanıyor...'
-                                    : 'Konu Özeti',
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.amber,
-                                foregroundColor: Colors.black87,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 16),
-                      Card(
-                        elevation: 4,
-                        margin: const EdgeInsets.only(bottom: 20),
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                _question!['question'],
-                                style: const TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
+                      Text(
+                        _question!.paraphrasedQuestion!,
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                      for (int i = 0; i < _question!['options'].length; i++)
-                        AnswerOption(
-                          answer: _question!['options'][i],
-                          isSelected: _selectedAnswerIndex == i,
-                          isCorrect: _showResult && i == _question!['answer'],
-                          isWrong:
-                              _showResult &&
-                              _selectedAnswerIndex == i &&
-                              i != _question!['answer'],
-                          onTap: _showResult ? null : () => _checkAnswer(i),
-                        ),
-                      if (_showResult) ...[
-                        const SizedBox(height: 20),
-                        Card(
-                          color: Colors.amber.shade50,
-                          child: Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
-                                  'Açıklama:',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                Text(
-                                  _question!['explanation'] ?? 'Açıklama yok',
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            ElevatedButton(
-                              onPressed: _loadRandomQuestion,
-                              child: const Text('Yeni Soru'),
-                            ),
-                            const SizedBox(width: 16),
-                            ElevatedButton.icon(
-                              onPressed:
-                                  _isGeneratingAiQuestion
-                                      ? null
-                                      : _generateSimilarQuestion,
-                              icon:
-                                  _isGeneratingAiQuestion
-                                      ? const SizedBox(
-                                        width: 16,
-                                        height: 16,
-                                        child: CircularProgressIndicator(
-                                          strokeWidth: 2,
-                                          color: Colors.deepPurple,
-                                        ),
-                                      )
-                                      : const Icon(Icons.psychology),
-                              label: Text(
-                                _isGeneratingAiQuestion
-                                    ? 'Oluşturuluyor...'
-                                    : 'Benzer Soru',
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.deepPurple,
-                                foregroundColor: Colors.white,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
                     ],
                   ),
                 ),
+              ),
+              for (int i = 0; i < _question!.options!.length; i++)
+                AnswerOption(
+                  answer: _question!.options![i],
+                  isSelected: _selectedAnswerIndex == i,
+                  isCorrect: _showResult && (i + 1) == _question!.answer,
+                  isWrong:
+                      _showResult &&
+                      _selectedAnswerIndex == i &&
+                      i + 1 != _question!.answer,
+                  onTap: _showResult ? null : () => _checkAnswer(i),
+                ),
+              if (_showResult) ...[
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed:
+                          _isLoading
+                              ? null
+                              : () async {
+                                setState(() {
+                                  _isLoading = true;
+                                });
+                                _unsolvedQuestions!.removeWhere(
+                                  (e) => e.id == _question!.id,
+                                );
+                                await _loadRandomQuestion();
+                                setState(() {
+                                  _isLoading = false;
+                                });
+                              },
+                      child:
+                          _isLoading
+                              ? const SizedBox(
+                                width: 16,
+                                height: 16,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                ),
+                              )
+                              : const Text('Yeni Soru'),
+                    ),
+                    const SizedBox(width: 16),
+                    ElevatedButton.icon(
+                      onPressed:
+                          _isGeneratingAiQuestion
+                              ? null
+                              : _generateSimilarQuestion,
+                      icon:
+                          _isGeneratingAiQuestion
+                              ? const SizedBox(
+                                width: 16,
+                                height: 16,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                  color: Colors.deepPurple,
+                                ),
+                              )
+                              : const Icon(Icons.psychology),
+                      label: Text(
+                        _isGeneratingAiQuestion
+                            ? 'Oluşturuluyor...'
+                            : 'Benzer Soru',
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.deepPurple,
+                        foregroundColor: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ],
+          ),
+        ),
       ),
     );
   }

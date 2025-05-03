@@ -96,12 +96,7 @@ class OpenAiService {
       final originalQuestion = extractionResult['question'] as String;
       final options = extractionResult['options'] as List<String>;
 
-      // Now paraphrase the question using OpenAI
-      final paraphrasedQuestion = await _paraphraseQuestion(
-        originalQuestion,
-        options,
-      );
-      return {'question': paraphrasedQuestion, 'options': options};
+      return {'paraphrasedQuestion': originalQuestion, 'options': options};
     } catch (e) {
       throw Exception('Error extracting and paraphrasing question: $e');
     }

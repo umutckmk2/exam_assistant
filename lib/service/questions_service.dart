@@ -74,6 +74,12 @@ class QuestionsService {
     }
   }
 
+  Future<void> updateQuestion(String questionId, Map question) async {
+    await _colRef.doc(_boxName).collection('questions').doc(questionId).update({
+      ...question,
+    });
+  }
+
   Future<void> saveSolvedQuestion(String userId, Map question) async {
     await _openBox();
     await _box.put("${question['id']}", {

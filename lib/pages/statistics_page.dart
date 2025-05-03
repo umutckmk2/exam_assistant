@@ -18,7 +18,7 @@ class StatisticsPage extends StatefulWidget {
 class _StatisticsPageState extends State<StatisticsPage> {
   bool _isLoading = true;
   final Map<String, List<AnswerCount>> _lessonData = {};
-  late List<Question> _allQuestions;
+  late List<QuestionModel> _allQuestions;
   TimeInterval _selectedInterval = TimeInterval.week;
 
   @override
@@ -60,23 +60,23 @@ class _StatisticsPageState extends State<StatisticsPage> {
 
       if (solvedQuestionIds.isNotEmpty) {
         for (final id in solvedQuestionIds) {
-          final questionId = int.tryParse(id);
-          if (questionId == null) continue;
+          if (id == null) continue;
 
           final question = _allQuestions.firstWhere(
-            (q) => q.id == questionId,
+            (q) => q.id == id,
             orElse:
-                () => Question(
-                  id: 0,
-                  ders: 'Unknown',
-                  soru: '',
-                  cevap: 0,
-                  aciklama: '',
-                  secenekler: [],
+                () => QuestionModel(
+                  id: '0',
+                  questionAsHtml: 'Unknown',
+                  questionText: '',
+                  topicPath: '',
+                  url: '',
+                  withImage: false,
+                  answerIndex: 0,
                 ),
           );
 
-          if (question.id == 0) continue;
+          if (question.id == '0') continue;
           final doc =
               await FirebaseFirestore.instance
                   .collection("users")
@@ -111,26 +111,26 @@ class _StatisticsPageState extends State<StatisticsPage> {
               ).millisecondsSinceEpoch;
 
           // Initialize map for this lesson if not exists
-          if (!lessonAnswersByDay.containsKey(question.ders)) {
-            lessonAnswersByDay[question.ders] = {};
+          if (!lessonAnswersByDay.containsKey(question.lesson)) {
+            lessonAnswersByDay[question.lesson] = {};
           }
 
           // Initialize or update stats for this day
-          if (!lessonAnswersByDay[question.ders]!.containsKey(dayTimestamp)) {
-            lessonAnswersByDay[question.ders]![dayTimestamp] = AnswerStats(
+          if (!lessonAnswersByDay[question.lesson]!.containsKey(dayTimestamp)) {
+            lessonAnswersByDay[question.lesson]![dayTimestamp] = AnswerStats(
               0,
               0,
             );
           }
 
-          final stats = lessonAnswersByDay[question.ders]![dayTimestamp]!;
+          final stats = lessonAnswersByDay[question.lesson]![dayTimestamp]!;
           if (isCorrect) {
-            lessonAnswersByDay[question.ders]![dayTimestamp] = AnswerStats(
+            lessonAnswersByDay[question.lesson]![dayTimestamp] = AnswerStats(
               stats.correct + 1,
               stats.incorrect,
             );
           } else {
-            lessonAnswersByDay[question.ders]![dayTimestamp] = AnswerStats(
+            lessonAnswersByDay[question.lesson]![dayTimestamp] = AnswerStats(
               stats.correct,
               stats.incorrect + 1,
             );

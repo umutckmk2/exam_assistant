@@ -40,7 +40,6 @@ class _QuestionPageState extends State<QuestionPage> {
   List<Map>? _unsolvedQuestions;
   final ScrollController _scrollController = ScrollController();
   Map? _topic;
-  final List<Map> _loadedQuestions = [];
 
   Future<void> _loadQuestions() async {
     final topicService = TopicService(widget.lessonId, widget.categoryId);
@@ -60,7 +59,7 @@ class _QuestionPageState extends State<QuestionPage> {
             .toList();
     _unsolvedQuestions =
         questions.where((e) => !e.containsKey('solvedAt')).toList();
-    await _loadRandomQuestion();
+    _loadRandomQuestion();
     _isLoading = false;
     if (mounted) setState(() {});
   }
@@ -203,28 +202,13 @@ class _QuestionPageState extends State<QuestionPage> {
 
   Future<void> _loadRandomQuestion() async {
     if (_questionWithoutImage == null || _questionWithoutImage!.isEmpty) return;
+    final randomIndex = Random().nextInt(_questionWithoutImage!.length);
+    final htmlQuestion = _questionWithoutImage![randomIndex];
 
-    // If our loaded questions list is empty, reload up to 10 questions
-    if (_loadedQuestions.isEmpty) {
-      final availableQuestions = _questionWithoutImage!;
-      // Create a shuffled copy of the questions to get random ones
-      final shuffled = List<Map>.from(availableQuestions)..shuffle();
-      // Take up to 10 questions or all if less than 10
-      final questionsToLoad = shuffled.take(min(10, shuffled.length)).toList();
+    final paraphrasedQuestion = await OpenAiService()
+        .extractAndParaphraseQuestionFromHtml(htmlQuestion['questionAsHtml']);
 
-      // Process all selected questions with paraphrasing
-      for (final htmlQuestion in questionsToLoad) {
-        final paraphrasedQuestion = await OpenAiService()
-            .extractAndParaphraseQuestionFromHtml(
-              htmlQuestion['questionAsHtml'],
-            );
-
-        _loadedQuestions.add({...htmlQuestion, ...paraphrasedQuestion});
-      }
-    }
-
-    // Get the first fully processed question from our loaded list
-    _question = _loadedQuestions.removeAt(0);
+    _question = {...htmlQuestion, ...paraphrasedQuestion};
 
     _showResult = false;
     _selectedAnswerIndex = null;

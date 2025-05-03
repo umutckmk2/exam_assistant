@@ -193,20 +193,27 @@ class _HomePageState extends State<HomePage> {
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: GridView.builder(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              crossAxisSpacing: 16,
-              mainAxisSpacing: 16,
-              childAspectRatio: 1.5,
-            ),
-            itemCount: _categories!.length,
-            itemBuilder: (__, i) {
-              return CategoryCard(
-                categoryName: _categories![i]['name'],
-                id: _categories![i]['id'],
-              );
-            },
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16,
+                    childAspectRatio: 1.2,
+                  ),
+                  itemCount: _categories!.length,
+                  itemBuilder: (__, i) {
+                    return CategoryCard(
+                      categoryName: _categories![i]['name'],
+                      id: _categories![i]['id'],
+                    );
+                  },
+                ),
+              ),
+            ],
           ),
         ),
       ),

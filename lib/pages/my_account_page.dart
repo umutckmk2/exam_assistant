@@ -20,7 +20,7 @@ class MyAccountPage extends StatelessWidget {
         title: const Text('Hesabım'),
       ),
       body: FutureBuilder<AppUser?>(
-        future: UserService.instance.getUser(userId!),
+        future: UserService.instance.getUserDetails(userId!),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
@@ -58,7 +58,7 @@ class MyAccountPage extends StatelessWidget {
                       ),
                       const SizedBox(width: 10),
                       Text(
-                        'Çözülen Soru Sayısı: ${user.solvedQuestionIds.length}',
+                        'Çözülen Soru Sayısı: ${user.solvedQuestions.length}',
                         style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,

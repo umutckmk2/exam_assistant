@@ -9,6 +9,7 @@ import 'package:osym/service/auth_service.dart';
 import 'auth/auth_page.dart';
 import 'firebase_options.dart';
 import 'router/app_router.dart';
+import 'service/goals_service.dart';
 import 'service/open_ai_service.dart';
 import 'service/user_service.dart';
 
@@ -58,7 +59,10 @@ class MyApp extends StatelessWidget {
           );
         }
         return FutureBuilder(
-          future: UserService().getUser(AuthService().currentUser!.uid),
+          future: Future.wait([
+            UserService().getUserDetails(AuthService().currentUser!.uid),
+            GoalsService.instance.saveMissingRecords(),
+          ]),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return MaterialApp(

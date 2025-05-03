@@ -29,6 +29,7 @@ dependencies:
   collection: ^1.19.1
   webview_flutter: ^4.11.0 
   html: ^0.15.6
+  firebase_database: ^11.3.5
  
 dev_dependencies:
   flutter_test:

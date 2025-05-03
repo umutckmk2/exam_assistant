@@ -227,7 +227,6 @@ class _TopicsPageState extends State<TopicsPage> {
                               ),
                               child: ListTile(
                                 onTap: () {
-                                  // Navigate to question page with the main topic ID
                                   context.push(
                                     '/category/${widget.categoryId}/lessons/${widget.lessonId}/topics/$topicId/${subtopic['value']}',
                                   );
@@ -254,7 +253,10 @@ class _TopicsPageState extends State<TopicsPage> {
                                   ),
                                 ),
                                 title: Text(
-                                  subtopic['text'] ?? '',
+                                  (subtopic['text'] ?? '')
+                                      .split('.-')
+                                      .last
+                                      .trim(),
                                   style: TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w500,

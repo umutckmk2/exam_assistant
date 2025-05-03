@@ -57,13 +57,13 @@ class _QuestionPageState extends State<QuestionPage> {
         questions.where((e) => !e.questionAsHtml.contains('<img')).toList();
     final userId = AuthService().currentUser?.uid;
     if (userId == null) return;
-
+    print("questionWithoutImage: ${_questionWithoutImage!.length}");
     final solvedQuestions = await UserService.instance.getSolvedQuestions(
       userId,
     );
     _unsolvedQuestions =
         _questionWithoutImage!
-            .where((e) => !solvedQuestions.contains(e.id))
+            .where((e) => !solvedQuestions.any((s) => s['id'] == e.id))
             .toList();
     print("unsolved length: ${_unsolvedQuestions!.length}");
 
@@ -217,9 +217,6 @@ class _QuestionPageState extends State<QuestionPage> {
     final paraphrasedQuestion = await OpenAiService()
         .extractAndParaphraseQuestionFromHtml(htmlQuestion.questionAsHtml);
 
-    print("paraphrasedQuestion: $paraphrasedQuestion ");
-    print("options: ${paraphrasedQuestion['options']}");
-    print("id: ${htmlQuestion.id}");
     _question = htmlQuestion.copyWith(
       paraphrasedQuestion: paraphrasedQuestion['paraphrasedQuestion'],
       options: paraphrasedQuestion['options'],

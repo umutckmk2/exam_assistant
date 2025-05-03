@@ -12,24 +12,41 @@ class UserService {
   UserService._internal();
 
   final _box = Hive.box('settings');
-  Future<AppUser?> getUser(String id) async {
+  Future<AppUser?> getUserDetails(String id) async {
     try {
+      final user = await _box.get(id);
+      final updatedAt = user?['updatedAt'] ?? 0;
       final ds =
           await FirebaseFirestore.instance.collection('users').doc(id).get();
-      final solvedQuestions =
-          await FirebaseFirestore.instance
-              .collection('users')
-              .doc(id)
-              .collection('solvedQuestions')
-              .get();
+      var solvedQuestions = user?['solvedQuestions'] as List? ?? [];
       if (ds.exists) {
+        final fbUpdatedAt = ds.data()?['updatedAt'] ?? 0;
+        if (fbUpdatedAt > updatedAt) {
+          final solvedQuestionQs =
+              await FirebaseFirestore.instance
+                  .collection('users')
+                  .doc(id)
+                  .collection('solvedQuestions')
+                  .get();
+
+          for (final question in solvedQuestionQs.docs) {
+            final questionData = {
+              "answerIndex": question.data()['answerIndex'],
+              "correct": question.data()['correct'],
+              "id": question.id,
+              "solvedAt":
+                  (question.data()['solvedAt'] as Timestamp)
+                      .toDate()
+                      .millisecondsSinceEpoch ~/
+                  1000,
+            };
+            solvedQuestions.add(questionData);
+          }
+        }
         final user = AppUser.fromJson({
           ...ds.data()!,
           'id': id,
-          'solvedQuestionIds':
-              solvedQuestions.docs.isNotEmpty
-                  ? solvedQuestions.docs.map((e) => e.id).toList()
-                  : [],
+          'solvedQuestions': solvedQuestions,
         });
 
         await _box.put(id, user.toJson());
@@ -77,6 +94,6 @@ class UserService {
 
   Future<List> getSolvedQuestions(String userId) async {
     final user = await _box.get(userId);
-    return user!['solvedQuestionIds'] ?? [];
+    return user!['solvedQuestions'] as List? ?? [];
   }
 }

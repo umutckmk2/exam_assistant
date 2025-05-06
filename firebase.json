@@ -1,1 +1,31 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"exam-mentor-6977b","appId":"1:489795040665:android:594d7d234eb1ba5130cf08","fileOutput":"android/app/google-services.json"}},"ios":{"default":{"projectId":"exam-mentor-6977b","appId":"1:489795040665:ios:f2b36fcf0f2f46b330cf08","uploadDebugSymbols":false,"fileOutput":"ios/Runner/GoogleService-Info.plist"}},"dart":{"lib/firebase_options.dart":{"projectId":"exam-mentor-6977b","configurations":{"android":"1:489795040665:android:594d7d234eb1ba5130cf08","ios":"1:489795040665:ios:f2b36fcf0f2f46b330cf08","web":"1:489795040665:web:47c6158f6f581a3330cf08"}}}}}}
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "exam-mentor-6977b",
+                    "appId": "1:489795040665:android:08886030e44c0c9130cf08",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "ios": {
+                "default": {
+                    "projectId": "exam-mentor-6977b",
+                    "appId": "1:489795040665:ios:21f93f664df3414030cf08",
+                    "uploadDebugSymbols": false,
+                    "fileOutput": "ios/Runner/GoogleService-Info.plist"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "exam-mentor-6977b",
+                    "configurations": {
+                        "android": "1:489795040665:android:08886030e44c0c9130cf08",
+                        "ios": "1:489795040665:ios:21f93f664df3414030cf08",
+                        "web": "1:489795040665:web:47c6158f6f581a3330cf08"
+                    }
+                }
+            }
+        }
+    }
+}

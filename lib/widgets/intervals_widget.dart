@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:osym/model/enums.dart';
+
+import '../model/enums.dart';
 
 class IntervalsWidget extends StatelessWidget {
   const IntervalsWidget({

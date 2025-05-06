@@ -2,10 +2,10 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:osym/service/auth_service.dart';
 
 import '../model/daily_goal.dart';
 import '../model/question_model.dart';
+import '../service/auth_service.dart';
 import '../service/goals_service.dart';
 import '../service/open_ai_service.dart';
 import '../service/questions_service.dart';
@@ -60,7 +60,6 @@ class _QuestionPageState extends State<QuestionPage> {
         questions.where((e) => !e.questionAsHtml.contains('<img')).toList();
     final userId = AuthService().currentUser?.uid;
     if (userId == null) return;
-    print("questionWithoutImage: ${_questionWithoutImage!.length}");
     final solvedQuestions = await UserService.instance.getSolvedQuestions(
       userId,
     );
@@ -68,9 +67,6 @@ class _QuestionPageState extends State<QuestionPage> {
         _questionWithoutImage!
             .where((e) => !solvedQuestions.any((s) => s['id'] == e.id))
             .toList();
-    print("unsolved length: ${_unsolvedQuestions!.length}");
-
-    print("unsolved Questions ids: ${_unsolvedQuestions!.map((e) => e.id)}");
     _loadRandomQuestion();
     _isLoading = false;
     if (mounted) setState(() {});

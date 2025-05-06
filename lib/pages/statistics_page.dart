@@ -1,10 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:osym/model/question_model.dart';
-import 'package:osym/service/auth_service.dart';
-import 'package:osym/utils/date_utils.dart';
+import 'package:ykasistan/model/question_model.dart';
 
 import '../model/enums.dart';
+import '../service/auth_service.dart';
+import '../utils/date_utils.dart';
 import '../widgets/intervals_widget.dart';
 import '../widgets/lesson_charts_widget.dart';
 

@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 import 'package:hive/hive.dart';
 
 import '../model/question_model.dart';
@@ -69,7 +70,7 @@ class QuestionService {
             questions.add(QuestionModel.fromJson(data));
           }
         } catch (e) {
-          print("error: $e");
+          debugPrint("error: $e");
           continue;
         }
       }

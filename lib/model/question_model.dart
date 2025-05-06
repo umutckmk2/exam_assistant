@@ -22,7 +22,6 @@ class QuestionModel {
   });
 
   factory QuestionModel.fromJson(Map json) {
-    print("json: ${json['id'].runtimeType}");
     return QuestionModel(
       id: json['id'],
       questionAsHtml: json['questionAsHtml'],

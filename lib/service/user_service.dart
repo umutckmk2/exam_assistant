@@ -16,19 +16,33 @@ class UserService {
     try {
       final user = await _box.get(id);
       final updatedAt = user?['updatedAt'] ?? 0;
-      final ds =
+      var solvedQuestions = [];
+      var ds =
           await FirebaseFirestore.instance.collection('users').doc(id).get();
-      var solvedQuestions = user?['solvedQuestions'] as List? ?? [];
-      if (ds.exists) {
-        final fbUpdatedAt = ds.data()?['updatedAt'] ?? 0;
-        if (fbUpdatedAt > updatedAt) {
-          final solvedQuestionQs =
-              await FirebaseFirestore.instance
-                  .collection('users')
-                  .doc(id)
-                  .collection('solvedQuestions')
-                  .get();
 
+      if (!ds.exists) {
+        final createdAt = DateTime.now().millisecondsSinceEpoch ~/ 1000;
+        await FirebaseFirestore.instance.collection('users').doc(id).set({
+          'id': id,
+          'createdAt': createdAt,
+          'updatedAt': createdAt,
+          'lastLogin': createdAt,
+        });
+
+        ds = await FirebaseFirestore.instance.collection('users').doc(id).get();
+      }
+      final fbUpdatedAt = ds.data()?['updatedAt'] ?? 0;
+      if (fbUpdatedAt > updatedAt) {
+        final solvedQuestionQs =
+            await FirebaseFirestore.instance
+                .collection('users')
+                .doc(id)
+                .collection('solvedQuestions')
+                .get();
+
+        if (solvedQuestionQs.docs.isEmpty) {
+          solvedQuestions = [];
+        } else {
           for (final question in solvedQuestionQs.docs) {
             final questionData = {
               "answerIndex": question.data()['answerIndex'],
@@ -43,16 +57,15 @@ class UserService {
             solvedQuestions.add(questionData);
           }
         }
-        final user = AppUser.fromJson({
-          ...ds.data()!,
-          'id': id,
-          'solvedQuestions': solvedQuestions,
-        });
-
-        await _box.put(id, user.toJson());
-        return user;
       }
-      return null;
+      final appUser = AppUser.fromJson({
+        ...ds.data()!,
+        'id': id,
+        'solvedQuestions': solvedQuestions,
+      });
+
+      await _box.put(id, appUser.toJson());
+      return appUser;
     } catch (e) {
       debugPrint('Error getting user: $e');
       return null;

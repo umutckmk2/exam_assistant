@@ -2,19 +2,24 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:osym/service/auth_service.dart';
 
 import 'auth/auth_page.dart';
 import 'firebase_options.dart';
 import 'router/app_router.dart';
+import 'service/app_usage_service.dart';
+import 'service/auth_service.dart';
 import 'service/goals_service.dart';
 import 'service/open_ai_service.dart';
 import 'service/user_service.dart';
+import 'widgets/app_splash_screen.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  // Preserve splash screen until initialization is complete
+  final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   // Load environment variables
   await dotenv.load(fileName: ".env");
@@ -36,11 +41,55 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
 
+  // Remove splash screen when initialization is done
+  FlutterNativeSplash.remove();
+
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
+  @override
+  void initState() {
+    super.initState();
+    // Register for app lifecycle events
+    WidgetsBinding.instance.addObserver(this);
+    // Start tracking app usage time
+    AppUsageService.instance.startTracking();
+  }
+
+  @override
+  void dispose() {
+    // Remove app lifecycle event observer
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    switch (state) {
+      case AppLifecycleState.resumed:
+        // App came to the foreground, start tracking time
+        AppUsageService.instance.startTracking();
+        break;
+      case AppLifecycleState.paused:
+      case AppLifecycleState.detached:
+      case AppLifecycleState.inactive:
+        // App went to the background, save elapsed time
+        AppUsageService.instance.stopTracking();
+        break;
+      case AppLifecycleState.hidden:
+        // App hidden (newer Flutter versions)
+        AppUsageService.instance.stopTracking();
+        break;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,38 +97,47 @@ class MyApp extends StatelessWidget {
       stream: AuthService().authStateChanges,
       builder: (context, snapshot) {
         if (snapshot.hasData && snapshot.data != null) {
-          return MaterialApp.router(
-            debugShowCheckedModeBanner: false,
-            title: 'Exam Mentor',
-            theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-              useMaterial3: true,
-            ),
-            routerConfig: appRouter,
-          );
-        }
-        return FutureBuilder(
-          future: Future.microtask(() async {
-            final user = await UserService().getUserDetails(
-              AuthService().currentUser!.uid,
-            );
-            await GoalsService.instance.saveMissingRecords();
-            return user;
-          }),
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
+          return FutureBuilder(
+            future: Future.microtask(() async {
+              final user = await UserService().getUserDetails(
+                AuthService().currentUser!.uid,
+              );
+              await GoalsService.instance.saveMissingRecords();
+              return user;
+            }),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return MaterialApp.router(
+                  debugShowCheckedModeBanner: false,
+                  title: 'YKS Asistan AI',
+                  theme: ThemeData(
+                    colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+                    useMaterial3: true,
+                  ),
+                  routerConfig: appRouter,
+                );
+              }
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
-                title: 'Exam Mentor',
+                title: 'YKS Asistan AI',
                 theme: ThemeData(
                   colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
                   useMaterial3: true,
                 ),
-                home: const AuthPage(),
+                home: const AppSplashScreen(),
               );
-            }
-            return const Center(child: CircularProgressIndicator());
-          },
+            },
+          );
+        }
+
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'YKS Asistan AI',
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+            useMaterial3: true,
+          ),
+          home: const AuthPage(),
         );
       },
     );

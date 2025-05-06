@@ -22,7 +22,7 @@ class AuthService {
         final clientId = data?['googleClientId'] as String?;
 
         if (clientId != null) {
-          _googleSignIn = GoogleSignIn(clientId: clientId, scopes: ['email']);
+          _googleSignIn = GoogleSignIn(scopes: ['email']);
           _initialized = true;
         }
       }
@@ -58,6 +58,7 @@ class AuthService {
 
       return await _auth.signInWithCredential(credential);
     } catch (e) {
+      print("ERROR: $e");
       return null;
     }
   }
@@ -67,6 +68,7 @@ class AuthService {
     try {
       return await _auth.signInAnonymously();
     } catch (e) {
+      print("ERROR: $e");
       return null;
     }
   }
@@ -91,6 +93,7 @@ class AuthService {
         _googleSignIn?.signOut() ?? Future.value(),
       ]);
     } catch (e) {
+      print("ERROR: $e");
       rethrow;
     }
   }

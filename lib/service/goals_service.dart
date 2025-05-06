@@ -91,11 +91,9 @@ class GoalsService {
       final daysBetween = today.difference(lastRecordDate).inDays;
 
       if (daysBetween <= 1) {
-        print("daysBetween: $daysBetween");
         final recordDate = data.keys.first;
         final recordMap = data[recordDate]!;
 
-        print("data: $recordMap");
         await _dailyGoalRecords.put(todayMidNightAsSeconds, recordMap);
         return;
       }
@@ -128,7 +126,6 @@ class GoalsService {
   Future<Map<String, DailyGoal>> getThisWeekGoalRecords(String userId) async {
     await _openBox();
     final dailyGoalSettings = getDailyGoalSettings();
-    print("dailyGoalSettings: ${dailyGoalSettings.toJson()}");
     final thisWeekDatesAsSeconds = [];
     final startOfToday = DateTime.fromMillisecondsSinceEpoch(
       todayMidNightAsSeconds * 1000,
@@ -162,7 +159,10 @@ class GoalsService {
   Future<DailyGoal> getTodayGoal(String userId) async {
     await _openBox();
     final today = todayMidNightAsSeconds;
-    final record = _dailyGoalRecords.get(today);
+    final record = _dailyGoalRecords.get(
+      today,
+      defaultValue: DailyGoal.defaultGoal().toJson(),
+    );
     return DailyGoal.fromJson(record!);
   }
 

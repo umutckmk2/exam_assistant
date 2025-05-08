@@ -1,16 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
 
 import '../model/daily_goal.dart';
 import '../model/question_model.dart';
-import '../service/auth_service.dart';
-import '../service/goals_service.dart';
-import '../service/open_ai_service.dart';
-import '../service/questions_service.dart';
-import '../service/topic_service.dart';
-import '../service/user_service.dart';
+import '../service/index.dart';
 import '../widgets/answer_option.dart';
 
 class QuestionPage extends StatefulWidget {
@@ -37,7 +31,6 @@ class _QuestionPageState extends State<QuestionPage> {
   bool _showResult = false;
   final bool _isGeneratingAiQuestion = false;
   final bool _isGeneratingCheatSheet = false;
-  String? _cheatSheetContent;
   List<QuestionModel>? _questionWithoutImage;
   List<QuestionModel>? _unsolvedQuestions;
   final ScrollController _scrollController = ScrollController();
@@ -72,141 +65,9 @@ class _QuestionPageState extends State<QuestionPage> {
     if (mounted) setState(() {});
   }
 
-  Future<void> _generateSimilarQuestion() async {
-    // setState(() {
-    //   _isGeneratingAiQuestion = true;
-    // });
+  Future<void> _generateSimilarQuestion() async {}
 
-    // try {
-    //   final question = await OpenAiService().generateSimilarQuestion(
-    //     _question!,
-    //   );
-
-    //   final questionJson = jsonDecode(question);
-    //   final questionModel = Question.fromJson({
-    //     ...questionJson,
-    //     "id": _question!.id + Random().nextInt(1000000),
-    //     "bolum": "KPSS",
-    //   });
-
-    //   _question = questionModel;
-    //   _selectedAnswerIndex = null;
-    //   _showResult = false;
-    // } catch (e) {
-    //   if (mounted) {
-    //     ScaffoldMessenger.of(
-    //       context,
-    //     ).showSnackBar(SnackBar(content: Text('Soru oluşturulurken hata: $e')));
-    //   }
-    // } finally {
-    //   if (mounted) {
-    //     setState(() {
-    //       _isGeneratingAiQuestion = false;
-    //     });
-    //   }
-    // }
-  }
-
-  Future<void> _generateTopicCheatSheet() async {
-    // if (_question == null) return;
-
-    // setState(() {
-    //   _isGeneratingCheatSheet = true;
-    // });
-
-    // try {
-    //   final cheatSheet = await OpenAiService().getTopicCheatSheet(
-    //     widget.topic,
-    //     relatedQuestion: _question,
-    //   );
-
-    //   setState(() {
-    //     _cheatSheetContent = cheatSheet;
-    //   });
-
-    //   _showCheatSheetDialog();
-    // } catch (e) {
-    //   if (mounted) {
-    //     ScaffoldMessenger.of(context).showSnackBar(
-    //       SnackBar(content: Text('Konu özeti oluşturulurken hata: $e')),
-    //     );
-    //   }
-    // } finally {
-    //   if (mounted) {
-    //     setState(() {
-    //       _isGeneratingCheatSheet = false;
-    //     });
-    //   }
-    // }
-  }
-
-  void _showCheatSheetDialog() {
-    if (_cheatSheetContent == null) return;
-
-    showDialog(
-      context: context,
-      builder:
-          (context) => Dialog(
-            insetPadding: const EdgeInsets.all(16),
-            child: Container(
-              width: double.infinity,
-              constraints: const BoxConstraints(maxHeight: 600),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  AppBar(
-                    title: Text('${_topic!['topic']} - Konu Özeti'),
-                    leading: IconButton(
-                      icon: const Icon(Icons.close),
-                      onPressed: () => Navigator.pop(context),
-                    ),
-                    actions: [
-                      IconButton(
-                        icon: const Icon(Icons.copy),
-                        onPressed: () {
-                          // Clipboard functionality would need to be added
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                              content: Text('Konu özeti kopyalandı'),
-                            ),
-                          );
-                          Navigator.pop(context);
-                        },
-                        tooltip: 'Kopyala',
-                      ),
-                    ],
-                  ),
-                  Expanded(
-                    child: SingleChildScrollView(
-                      padding: const EdgeInsets.all(16),
-                      child: Container(
-                        height: 600,
-                        width: double.infinity,
-                        padding: const EdgeInsets.only(bottom: 40),
-                        child: Markdown(
-                          data: _cheatSheetContent!,
-                          styleSheet: MarkdownStyleSheet(
-                            h1: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            h2: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                            p: TextStyle(fontSize: 16),
-                            listBullet: TextStyle(fontSize: 16),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-    );
-  }
+  Future<void> _generateTopicCheatSheet() async {}
 
   Future<void> _loadRandomQuestion() async {
     if (_unsolvedQuestions == null || _unsolvedQuestions!.isEmpty) return;

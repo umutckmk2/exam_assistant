@@ -1616,7 +1616,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=7&k=704&id=16830&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=7&amp;d=29&amp;ids=16830\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">16830</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(16830); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"17\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %17\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>  <span class=\"math-tex\">\\(\\mathrm{x^{2}-7x-a=0} \\)</span>   denkleminin bir kökü </p>\n<p><span class=\"math-tex\">\\(\\mathrm{x^{2}-5x-a-6=0} \\)</span>   denkleminin kökünün iki katıdır.</p>\n<p><strong>Bu denklemlerin diğer kökleri eşit olduğuna göre a kaçtır?                       </strong>                             </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{-12}\\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{-10}\\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{-8}\\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{-6}\\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{-4}\\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{x^{2}-7x-a=0} \\) denkleminin bir kökü \\(\\mathrm{x^{2}-5x-a-6=0} \\) denkleminin kökünün iki katıdır. Bu denklemlerin diğer kökleri eşit olduğuna göre a kaçtır? A) \\(\\mathrm{-12}\\) B) \\(\\mathrm{-10}\\) C) \\(\\mathrm{-8}\\) D) \\(\\mathrm{-6}\\) E) \\(\\mathrm{-4}\\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "  x²-7x-a=0    denkleminin bir kökü  \nx²-5x-a-6=0    denkleminin kökünün iki katıdır.\nBu denklemlerin diğer kökleri eşit olduğuna göre a kaçtır?                         ",
+    "options": [
+      "-12",
+      "-10",
+      "-8",
+      "-6",
+      "-4"
+    ]
   },
   {
     "topicPath": "category/10/lessons/fl-matematik/topics/3/subtopics/704",
@@ -1625,7 +1633,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=7&k=704&id=16831&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=7&amp;d=29&amp;ids=16831\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">16831</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(16831); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"24\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %24\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>  <span class=\"math-tex\">\\(\\mathrm{x^{2}+ax+4=0} \\)</span>  denkleminin kökleri <span class=\"math-tex\">\\(\\mathrm{x_{1}} \\)</span> ve <span class=\"math-tex\">\\(\\mathrm{x_{2} } \\)</span> dir.</p>\n<p><span class=\"math-tex\">\\(\\mathrm{{( x_{1}+2).( x_{2}+2)=12}} \\)</span>  <strong>olduğuna göre</strong> a<strong> kaçtır? </strong>   </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{-3} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{-2} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{2} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{3} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{6} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{x^{2}+ax+4=0} \\) denkleminin kökleri \\(\\mathrm{x_{1}} \\) ve \\(\\mathrm{x_{2} } \\) dir. \\(\\mathrm{{( x_{1}+2).( x_{2}+2)=12}} \\) olduğuna göre a kaçtır? A) \\(\\mathrm{-3} \\) B) \\(\\mathrm{-2} \\) C) \\(\\mathrm{2} \\) D) \\(\\mathrm{3} \\) E) \\(\\mathrm{6} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "  x² + ax + 4 = 0 denkleminin kökleri x₁ ve x₂ dir. ( x₁ + 2 ) . ( x₂ + 2 ) = 12 olduğuna göre a kaçtır?   ",
+    "options": [
+      "-3",
+      "-2",
+      "2",
+      "3",
+      "6"
+    ]
   },
   {
     "topicPath": "category/10/lessons/fl-matematik/topics/3/subtopics/704",
@@ -1634,7 +1650,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=7&k=704&id=16832&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=7&amp;d=29&amp;ids=16832\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">16832</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(16832); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"21\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %21\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Reel katsayılı ikinci dereceden denklemin bir kökü <span class=\"math-tex\">\\(\\mathrm{2-3i} \\)</span> olduğuna göre bu denklem aşağıdakilerden hangisidir?        </strong>                </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{x^{2}+4x+13=0}\\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{x^{2}-4x-13=0} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{x^{2}- 4x+13=0} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{2x^{2}+4x-13=0} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{-2x^{2}-4x-13=0} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "Reel katsayılı ikinci dereceden denklemin bir kökü \\(\\mathrm{2-3i} \\) olduğuna göre bu denklem aşağıdakilerden hangisidir? A) \\(\\mathrm{x^{2}+4x+13=0}\\) B) \\(\\mathrm{x^{2}-4x-13=0} \\) C) \\(\\mathrm{x^{2}- 4x+13=0} \\) D) \\(\\mathrm{2x^{2}+4x-13=0} \\) E) \\(\\mathrm{-2x^{2}-4x-13=0} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "Reel katsayılı ikinci dereceden denklemin bir kökü <span class=\"math-tex\">\\(\\mathrm{2-3i} \\)</span> olduğuna göre bu denklem aşağıdakilerden hangisidir?        ",
+    "options": [
+      "x^{2}+4x+13=0",
+      "x^{2}-4x-13=0",
+      "x^{2}- 4x+13=0",
+      "2x^{2}+4x-13=0",
+      "-2x^{2}-4x-13=0"
+    ]
   },
   {
     "topicPath": "category/10/lessons/fl-matematik/topics/3/subtopics/704",
@@ -1643,7 +1667,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=7&k=704&id=16833&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=7&amp;d=29&amp;ids=16833\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">16833</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(16833); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"13\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %13\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{2x^{2}+4x+2a+6=0} \\)</span>  <strong>ve</strong> <span class=\"math-tex\">\\(\\mathrm{x^{2}+x+a-1=0} \\)</span>  <strong>denklemlerinin birer kökleri ortak olduğuna göre ortak olmayan köklerin</strong> <strong>toplamı kaçtır? </strong>                                                   </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{5} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{4} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{3} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{2} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{1} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{2x^{2}+4x+2a+6=0} \\) ve \\(\\mathrm{x^{2}+x+a-1=0} \\) denklemlerinin birer kökleri ortak olduğuna göre ortak olmayan köklerin toplamı kaçtır? A) \\(\\mathrm{5} \\) B) \\(\\mathrm{4} \\) C) \\(\\mathrm{3} \\) D) \\(\\mathrm{2} \\) E) \\(\\mathrm{1} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "2x² + 4x + 2a + 6 = 0 ve x² + x + a - 1 = 0 denklemlerinin birer kökleri ortak olduğuna göre ortak olmayan köklerin toplamı kaçtır?",
+    "options": [
+      "5",
+      "4",
+      "3",
+      "2",
+      "1"
+    ]
   },
   {
     "topicPath": "category/10/lessons/fl-matematik/topics/3/subtopics/704",
@@ -1652,7 +1684,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=7&k=704&id=16834&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=7&amp;d=29&amp;ids=16834\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">16834</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(16834); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"24\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %24\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{x^{2}-5x-2=0} \\)</span>  denkleminin kökleri <span class=\"math-tex\">\\(\\mathrm{x_{1}} \\)</span> ve  <span class=\"math-tex\">\\(\\mathrm{x_{2}} \\)</span> dir.</p>\n<p><strong>Kökleri</strong> <span class=\"math-tex\">\\(\\mathrm{x_{1}-2} \\)</span>  <strong>ve </strong><span class=\"math-tex\">\\(\\mathrm{x_{2}-2} \\)</span>  <strong>olan ikinci dereceden denklem aşağıdakilerden hangisidir?                </strong>                      </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{x^{2}+x+8=0} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{x^{2}+9x+12=0} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{2x^{2}-x+8=0} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{x^{2}-x-8=0} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{2x^{2}-9x-12=0} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{x^{2}-5x-2=0} \\) denkleminin kökleri \\(\\mathrm{x_{1}} \\) ve \\(\\mathrm{x_{2}} \\) dir. Kökleri \\(\\mathrm{x_{1}-2} \\) ve \\(\\mathrm{x_{2}-2} \\) olan ikinci dereceden denklem aşağıdakilerden hangisidir? A) \\(\\mathrm{x^{2}+x+8=0} \\) B) \\(\\mathrm{x^{2}+9x+12=0} \\) C) \\(\\mathrm{2x^{2}-x+8=0} \\) D) \\(\\mathrm{x^{2}-x-8=0} \\) E) \\(\\mathrm{2x^{2}-9x-12=0} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "x²-5x-2=0 denkleminin kökleri x₁ ve x₂ dir. Kökleri x₁-2 ve x₂-2 olan ikinci dereceden denklem aşağıdakilerden hangisidir?",
+    "options": [
+      "x²+x+8=0",
+      "x²+9x+12=0",
+      "2x²-x+8=0",
+      "x²-x-8=0",
+      "2x²-9x-12=0"
+    ]
   },
   {
     "topicPath": "category/10/lessons/fl-matematik/topics/5/subtopics/708",
@@ -1661,7 +1701,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=7&k=708&id=16879&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=7&amp;d=29&amp;ids=16879\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">16879</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(16879); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"10\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %10\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p> Bir ayrıtı 3 cm olan bir küpün dış yüzeyleri kırmızıya boyandıktan sonra bir ayrıtı 1cm olan 27 eş küpe ayrılıyor.</p>\n<p><strong>Yalnız bir yüzeyi kırmızı olan kaç küp oluşur?      </strong>      </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{5} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{6} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{7} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{8} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{9} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "Bir ayrıtı 3 cm olan bir küpün dış yüzeyleri kırmızıya boyandıktan sonra bir ayrıtı 1cm olan 27 eş küpe ayrılıyor. Yalnız bir yüzeyi kırmızı olan kaç küp oluşur? A) \\(\\mathrm{5} \\) B) \\(\\mathrm{6} \\) C) \\(\\mathrm{7} \\) D) \\(\\mathrm{8} \\) E) \\(\\mathrm{9} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "Bir ayrıtı 3 cm olan bir küpün dış yüzeyleri kırmızıya boyandıktan sonra bir ayrıtı 1cm olan 27 eş küpe ayrılıyor.\nYalnız bir yüzeyi kırmızı olan kaç küp oluşur?      ",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ]
   },
   {
     "topicPath": "category/10/lessons/fl-matematik/topics/5/subtopics/708",
@@ -1679,7 +1727,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=7&k=708&id=16883&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=7&amp;d=29&amp;ids=16883\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">16883</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(16883); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"5\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %5\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{y=\\sqrt{3}x+6} \\)</span> <strong>doğrusu ile eksenler arasında kalan kısmın <span class=\"math-tex\">\\(\\mathrm{y} \\)</span> ekseni etrafında </strong><span class=\"math-tex\">\\(\\mathrm{180^\\circ} \\)</span> <strong>döndürülmesiyle oluşan cismin yüzey alanı kaç birimkaredir</strong> ?</p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{16\\pi+12\\sqrt{3}} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{18\\pi+12\\sqrt{3}} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{20\\pi+10\\sqrt{3}} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{21\\pi+10\\sqrt{3}} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{21\\pi+8\\sqrt{3}} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{y=\\sqrt{3}x+6} \\) doğrusu ile eksenler arasında kalan kısmın \\(\\mathrm{y} \\) ekseni etrafında \\(\\mathrm{180^\\circ} \\) döndürülmesiyle oluşan cismin yüzey alanı kaç birimkaredir ? A) \\(\\mathrm{16\\pi+12\\sqrt{3}} \\) B) \\(\\mathrm{18\\pi+12\\sqrt{3}} \\) C) \\(\\mathrm{20\\pi+10\\sqrt{3}} \\) D) \\(\\mathrm{21\\pi+10\\sqrt{3}} \\) E) \\(\\mathrm{21\\pi+8\\sqrt{3}} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "y=√3x+6 doğrusu ile eksenler arasında kalan kısmın y ekseni etrafında 180° döndürülmesiyle oluşan cismin yüzey alanı kaç birimkaredir ?",
+    "options": [
+      "16π+12√3",
+      "18π+12√3",
+      "20π+10√3",
+      "21π+10√3",
+      "21π+8√3"
+    ]
   },
   {
     "topicPath": "category/10/lessons/fl-matematik/topics/5/subtopics/708",
@@ -1688,6 +1744,14 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=7&k=708&id=16892&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=7&amp;d=29&amp;ids=16892\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">16892</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(16892); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"13\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %13\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>En az kaç küpü birleştirerek yine bir küp elde edilebilir?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{4} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{6} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{8} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{12} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{16} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "En az kaç küpü birleştirerek yine bir küp elde edilebilir? A) \\(\\mathrm{4} \\) B) \\(\\mathrm{6} \\) C) \\(\\mathrm{8} \\) D) \\(\\mathrm{12} \\) E) \\(\\mathrm{16} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "En az kaç küpü birleştirerek yine bir küp elde edilebilir?",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "12",
+      "16"
+    ]
   }
 ]

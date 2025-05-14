@@ -783,15 +783,6 @@
   },
   {
     "topicPath": "category/9/lessons/fl-matematik/topics/1/subtopics/647",
-    "id": 17973,
-    "answer": 2,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=647&id=17973&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=17973\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17973</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17973); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"17\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %17\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Birbirinden farklı A ve B kümeleri ile ilgili aşağıdaki bilgiler veriliyor.</p>\n<ol style=\"list-style-type:upper-roman\">\n<li>Her iki kümenin elemanları da ardışık pozitif tam sayılardan oluşmaktadır.</li>\n<li>A nın elemanlarından en küçük olanı 5, B nin elemanlarından en büyük olanı 12 dir.</li>\n<li>A ⊂ B dir.</li>\n</ol>\n<p><strong><span class=\"math-tex\">\\(\\mathrm{B-A} \\)</span> kümesinin elemanları toplamının alabileceği<u> en küçük</u> değer x, <u>en büyük</u> değer y olduğuna göre <span class=\"math-tex\">\\(\\mathrm{y-x} \\)</span> değeri kaçtır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(61\\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(63\\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(64\\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(65\\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(69\\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Birbirinden farklı A ve B kümeleri ile ilgili aşağıdaki bilgiler veriliyor. Her iki kümenin elemanları da ardışık pozitif tam sayılardan oluşmaktadır. A nın elemanlarından en küçük olanı 5, B nin elemanlarından en büyük olanı 12 dir. A ⊂ B dir. \\(\\mathrm{B-A} \\) kümesinin elemanları toplamının alabileceği en küçük değer x, en büyük değer y olduğuna göre \\(\\mathrm{y-x} \\) değeri kaçtır? A) \\(61\\) B) \\(63\\) C) \\(64\\) D) \\(65\\) E) \\(69\\) A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/9/lessons/fl-matematik/topics/1/subtopics/647",
     "id": 17974,
     "answer": 1,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=647&id=17974&t=css&ks=0&os=0&zs=0",
@@ -823,15 +814,6 @@
       "5",
       "6"
     ]
-  },
-  {
-    "topicPath": "category/9/lessons/fl-matematik/topics/1/subtopics/647",
-    "id": 17976,
-    "answer": 3,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=647&id=17976&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=17976\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17976</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17976); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"31\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %31\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Aşağıdaki tabloda kullanılan araçların ehliyet sınıfları verilmiştir.</p>\n<table border=\"1\">\n<tbody>\n<tr>\n<td><strong> Araç</strong></td>\n<td><strong>Sınıfı</strong></td>\n</tr>\n<tr>\n<td>35 KW üzeri Motosiklet</td>\n<td>     A</td>\n</tr>\n<tr>\n<td>Otomobil ve Kamyonet</td>\n<td>     B</td>\n</tr>\n<tr>\n<td>Kamyon ve Çekici</td>\n<td>     C</td>\n</tr>\n</tbody>\n</table>\n<p>30 kişilik bir grupta herkesin B sınıfı ehliyeti vardır.</p>\n<p><strong>A sınıfı ehliyeti olan 14, C sınıfı ehliyeti olan 9, hem A hem de C sınıfı ehliyeti olan 3 kişi olduğuna göre <u>yalnız</u> B sınıfı ehliyeti olan kaç kişi vardır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(3\\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(6\\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(10\\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(11\\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(13\\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Aşağıdaki tabloda kullanılan araçların ehliyet sınıfları verilmiştir. Araç Sınıfı 35 KW üzeri Motosiklet A Otomobil ve Kamyonet B Kamyon ve Çekici C 30 kişilik bir grupta herkesin B sınıfı ehliyeti vardır. A sınıfı ehliyeti olan 14, C sınıfı ehliyeti olan 9, hem A hem de C sınıfı ehliyeti olan 3 kişi olduğuna göre yalnız B sınıfı ehliyeti olan kaç kişi vardır? A) \\(3\\) B) \\(6\\) C) \\(10\\) D) \\(11\\) E) \\(13\\) A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/9/lessons/fl-matematik/topics/1/subtopics/647",
@@ -883,24 +865,6 @@
       "\\(\\mathrm{(B ∩ A) ⊆ C}\\)",
       "\\(\\mathrm{(B\\setminus C) ⊆ A}\\)"
     ]
-  },
-  {
-    "topicPath": "category/9/lessons/fl-matematik/topics/1/subtopics/647",
-    "id": 17981,
-    "answer": 5,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=647&id=17981&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=17981\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17981</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17981); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"33\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %33\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Sadece A ve B adaylarının katıldığı bir seçimde, bir seçim sandığına 110 oy atılmıştır. Oy atan 60 erkekten 32 si A adayına oy vermiştir. A adayına oy veren bayan seçmen sayısı, B adayına oy veren erkek seçmen sayısının 1\\4 dür.</p>\n<p><strong>Sandıktan boş oy çıkmadığına ve atılan her oy geçerli olduğuna göre B partisi kaç oy almıştır? </strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(43\\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(51\\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(60\\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(65\\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(71\\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Sadece A ve B adaylarının katıldığı bir seçimde, bir seçim sandığına 110 oy atılmıştır. Oy atan 60 erkekten 32 si A adayına oy vermiştir. A adayına oy veren bayan seçmen sayısı, B adayına oy veren erkek seçmen sayısının 1\\4 dür. Sandıktan boş oy çıkmadığına ve atılan her oy geçerli olduğuna göre B partisi kaç oy almıştır? A) \\(43\\) B) \\(51\\) C) \\(60\\) D) \\(65\\) E) \\(71\\) A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/9/lessons/fl-matematik/topics/1/subtopics/647",
-    "id": 17982,
-    "answer": 5,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=647&id=17982&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=17982\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17982</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17982); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"27\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %27\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Bir dinlenme tesisine giden 45 yolcu ile ilgili aşağıdaki bilgiler verilmiştir.</p>\n<ul>\n<li>35 kişi çay veya kahveden en az birini içmiş, geriye kalanlar meşrubat içmiştir.</li>\n<li>Çay içmeyen 19 kişi, kahve içmeyen 28 kişidir.</li>\n</ul>\n<p><strong>Buna göre hem çay hem de kahve içen kaç kişi vardır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(4\\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(5\\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(6\\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(7\\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(8\\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Bir dinlenme tesisine giden 45 yolcu ile ilgili aşağıdaki bilgiler verilmiştir. 35 kişi çay veya kahveden en az birini içmiş, geriye kalanlar meşrubat içmiştir. Çay içmeyen 19 kişi, kahve içmeyen 28 kişidir. Buna göre hem çay hem de kahve içen kaç kişi vardır? A) \\(4\\) B) \\(5\\) C) \\(6\\) D) \\(7\\) E) \\(8\\) A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/9/lessons/fl-matematik/topics/1/subtopics/647",
@@ -1277,15 +1241,6 @@
     ]
   },
   {
-    "topicPath": "category/9/lessons/fl-matematik/topics/1/subtopics/647",
-    "id": 23638,
-    "answer": 4,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=647&id=23638&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=23638\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">23638</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(23638); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"17\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %17\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Bir sınıftaki öğrencilerden kimya dersinden geçen herkes edebiyat dersinden de geçmiştir. Bu sınıfta matematik ve kimya dersinden geçen öğrenci bulunmamaktadır.<br>\r\n• En çok bir dersten geçen 15 kişi,<br/>\r\n• Edebiyat dersinden geçip kimya dersinden kalan 7 kişi,<br/>\r\n• Kimya dersinden kalan 18 kişi</br></p>\n<p><strong>bulunduğuna göre sadece edebiyat dersinden geçen kaç kişi vardır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(8\\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(7\\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(5\\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(4\\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(3\\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Bir sınıftaki öğrencilerden kimya dersinden geçen herkes edebiyat dersinden de geçmiştir. Bu sınıfta matematik ve kimya dersinden geçen öğrenci bulunmamaktadır. • En çok bir dersten geçen 15 kişi, • Edebiyat dersinden geçip kimya dersinden kalan 7 kişi, • Kimya dersinden kalan 18 kişi bulunduğuna göre sadece edebiyat dersinden geçen kaç kişi vardır? A) \\(8\\) B) \\(7\\) C) \\(5\\) D) \\(4\\) E) \\(3\\) A B C D E",
-    "withImage": false
-  },
-  {
     "topicPath": "category/9/lessons/fl-matematik/topics/1/subtopics/648",
     "id": 17984,
     "answer": 3,
@@ -1338,15 +1293,6 @@
   },
   {
     "topicPath": "category/9/lessons/fl-matematik/topics/1/subtopics/649",
-    "id": 16317,
-    "answer": 2,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=649&id=16317&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=16317\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">16317</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(16317); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"25\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %25\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Gerçek sayılarda tanımlı <span class=\"math-tex\">\\(\\mathrm{\\beta =\\{ \\left( x,y\\right) :3x-5y= 8\\}} \\)</span> bağıntısı için <span class=\"math-tex\">\\(\\mathrm{\\beta\\cap\\beta^{-1}} \\)</span> aşağıdakilerden hangisidir?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\( \\mathrm{ \\beta _ 1 =\\{ (-4, -4),(-4,3)\\}} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\( \\mathrm{ \\beta _ 2 =\\{ (-4, -4)\\}} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\( \\mathrm{ \\beta _ 3 =\\{ (-2 -3),(-4,3)\\}} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\( \\mathrm{ \\beta _ 4 =\\{ (-4, -4),(-2,3),(1,3)\\}} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\( \\mathrm{ \\beta _ 5 =\\{ (-2, -3),(-4,3),(4,2)\\}} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Gerçek sayılarda tanımlı \\(\\mathrm{\\beta =\\{ \\left( x,y\\right) :3x-5y= 8\\}} \\) bağıntısı için \\(\\mathrm{\\beta\\cap\\beta^{-1}} \\) aşağıdakilerden hangisidir? A) \\( \\mathrm{ \\beta _ 1 =\\{ (-4, -4),(-4,3)\\}} \\) B) \\( \\mathrm{ \\beta _ 2 =\\{ (-4, -4)\\}} \\) C) \\( \\mathrm{ \\beta _ 3 =\\{ (-2 -3),(-4,3)\\}} \\) D) \\( \\mathrm{ \\beta _ 4 =\\{ (-4, -4),(-2,3),(1,3)\\}} \\) E) \\( \\mathrm{ \\beta _ 5 =\\{ (-2, -3),(-4,3),(4,2)\\}} \\) A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/9/lessons/fl-matematik/topics/1/subtopics/649",
     "id": 23620,
     "answer": 3,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=649&id=23620&t=css&ks=0&os=0&zs=0",
@@ -1378,15 +1324,6 @@
       "7",
       "6"
     ]
-  },
-  {
-    "topicPath": "category/9/lessons/fl-matematik/topics/1/subtopics/649",
-    "id": 23634,
-    "answer": 4,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=649&id=23634&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=23634\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">23634</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(23634); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"24\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %24\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Tamsayılar kümesinde tanımlı <span class=\"math-tex\">\\(\\mathrm{\\beta =\\{ ( x,y)\\ | \\ y= 2x+m\\}}\\)</span> bağıntısı veriliyor.</p>\n<p><span class=\"math-tex\">\\(\\mathrm{( 3,-5)\\in\\beta ^{-1}} \\)</span> <strong>olduğuna göre m kaçtır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(10\\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(11\\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(12\\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(13\\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(14\\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Tamsayılar kümesinde tanımlı \\(\\mathrm{\\beta =\\{ ( x,y)\\ | \\ y= 2x+m\\}}\\) bağıntısı veriliyor. \\(\\mathrm{( 3,-5)\\in\\beta ^{-1}} \\) olduğuna göre m kaçtır? A) \\(10\\) B) \\(11\\) C) \\(12\\) D) \\(13\\) E) \\(14\\) A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/650",
@@ -1438,15 +1375,6 @@
       "D-\\(\\mathrm{2A} \\)",
       "E-\\(\\mathrm{A-3} \\)"
     ]
-  },
-  {
-    "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/650",
-    "id": 23747,
-    "answer": 1,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=650&id=23747&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=23747\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">23747</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(23747); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"23\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %23\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{a,b,c\\in \\mathbb{N}} \\)</span> <strong>olmak üzere</strong></p>\n<p><strong> <span class=\"math-tex\">\\(\\mathrm{\\dfrac{38}{7}=a+\\dfrac{1}{b+\\dfrac{1}{c}}} \\)</span>        olduğuna göre  <span class=\"math-tex\">\\(\\mathrm{a+b+c} \\)</span>  değeri kaçtır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(10\\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(11\\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(12\\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(13\\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(14\\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "\\(\\mathrm{a,b,c\\in \\mathbb{N}} \\) olmak üzere \\(\\mathrm{\\dfrac{38}{7}=a+\\dfrac{1}{b+\\dfrac{1}{c}}} \\) olduğuna göre \\(\\mathrm{a+b+c} \\) değeri kaçtır? A) \\(10\\) B) \\(11\\) C) \\(12\\) D) \\(13\\) E) \\(14\\) A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/650",
@@ -1617,15 +1545,6 @@
       "7",
       "3"
     ]
-  },
-  {
-    "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/655",
-    "id": 17993,
-    "answer": 2,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=655&id=17993&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=17993\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17993</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17993); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"23\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %23\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Bir geziye katılacaklar arasından 3 kişi son anda katılmaktan vazgeçiyor. Bu durumda katılacaklar arasından oluşturulacak grupların sayısı 112 azalıyor.</p>\n<p><strong>Bu gruptaki kişi sayısı kaçtır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(6 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(7 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(8 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(9 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(10 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Bir geziye katılacaklar arasından 3 kişi son anda katılmaktan vazgeçiyor. Bu durumda katılacaklar arasından oluşturulacak grupların sayısı 112 azalıyor. Bu gruptaki kişi sayısı kaçtır? A) \\(6 \\) B) \\(7 \\) C) \\(8 \\) D) \\(9 \\) E) \\(10 \\) A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/655",
@@ -1833,15 +1752,6 @@
   },
   {
     "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/658",
-    "id": 16395,
-    "answer": 2,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=658&id=16395&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=16395\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">16395</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(16395); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"15\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %15\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>  \"a sayıda işçi , b saatte, c adet ürün elde ediyorsa aynı kapasitedeki  x sayıda işçi, y saatte, z adet ürün elde eder\" <strong>ifadesine ait denklem aşağıdakilerden hangisidir?</strong>                                                                                                                                </p>\n</p>\n<div>\n<div>A)  <span class=\"math-tex\">\\(\\mathrm{a\\cdot b\\cdot c=x\\cdot y\\cdot z} \\)</span>\n</div>\n</div>\n<div>\n<div>B)  <span class=\"math-tex\">\\(\\mathrm{a\\cdot b\\cdot z=x\\cdot y\\cdot c} \\)</span>\n</div>\n</div>\n<div>\n<div>C)  <span class=\"math-tex\">\\(\\mathrm{a\\cdot y\\cdot z=x\\cdot b\\cdot c} \\)</span>\n</div>\n</div>\n<div>\n<div>D)  <span class=\"math-tex\">\\(\\mathrm{a\\cdot y\\cdot c=x\\cdot b\\cdot z} \\)</span>\n</div>\n</div>\n<div>\n<div>E)  <span class=\"math-tex\">\\(\\mathrm{a\\cdot x\\cdot y=b\\cdot c\\cdot z} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "\"a sayıda işçi , b saatte, c adet ürün elde ediyorsa aynı kapasitedeki  x sayıda işçi, y saatte, z adet ürün elde eder\" ifadesine ait denklem aşağıdakilerden hangisidir? A) \\(\\mathrm{a\\cdot b\\cdot c=x\\cdot y\\cdot z} \\) B) \\(\\mathrm{a\\cdot b\\cdot z=x\\cdot y\\cdot c} \\) C) \\(\\mathrm{a\\cdot y\\cdot z=x\\cdot b\\cdot c} \\) D) \\(\\mathrm{a\\cdot y\\cdot c=x\\cdot b\\cdot z} \\) E) \\(\\mathrm{a\\cdot x\\cdot y=b\\cdot c\\cdot z} \\) A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/658",
     "id": 16397,
     "answer": 1,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=658&id=16397&t=css&ks=0&os=0&zs=0",
@@ -1890,15 +1800,6 @@
       "2,5",
       "3"
     ]
-  },
-  {
-    "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/658",
-    "id": 16430,
-    "answer": 2,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=658&id=16430&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=16430\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">16430</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(16430); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"30\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %30\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Aynı çalışma kapasitesindeki 10 işçi, bir işi 10 günde yapmaktadır.</p>\n<p><strong>İşçi sayısı 2 katına çıkarılıp işçilerin çalışma kapasiteleri yarıya düşürüldüğünde aynı iş kaç günde yapılır?                  </strong>                                             </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(7 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(10 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(14 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(19 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(25 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Aynı çalışma kapasitesindeki 10 işçi, bir işi 10 günde yapmaktadır. İşçi sayısı 2 katına çıkarılıp işçilerin çalışma kapasiteleri yarıya düşürüldüğünde aynı iş kaç günde yapılır? A) \\(7 \\) B) \\(10 \\) C) \\(14 \\) D) \\(19 \\) E) \\(25 \\) A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/658",
@@ -1984,15 +1885,6 @@
       "105",
       "120"
     ]
-  },
-  {
-    "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/658",
-    "id": 23783,
-    "answer": 5,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=658&id=23783&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=23783\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">23783</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(23783); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"17\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %17\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Bir benzin tankının içinde bir miktar benzin vardır. Tanka 400 litre benzin ilave edilirse tankın <span class=\"math-tex\">\\(\\large\\mathrm {\\frac{4}{7}}\\)</span> si doluyor. Oysa tanka benzin ilave etmeyip 200 litre benzin boşaltılsaydı tankın <span class=\"math-tex\">\\(\\large\\mathrm {\\frac{1}{7}}\\)</span> si dolu olarak kalacaktı.</p>\n<p><strong>Buna göre tankın tamamı kaç litre benzin alır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(600 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(980\\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(1240 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(1300 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(1400 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Bir benzin tankının içinde bir miktar benzin vardır. Tanka 400 litre benzin ilave edilirse tankın \\(\\large\\mathrm {\\frac{4}{7}}\\) si doluyor. Oysa tanka benzin ilave etmeyip 200 litre benzin boşaltılsaydı tankın \\(\\large\\mathrm {\\frac{1}{7}}\\) si dolu olarak kalacaktı. Buna göre tankın tamamı kaç litre benzin alır? A) \\(600 \\) B) \\(980\\) C) \\(1240 \\) D) \\(1300 \\) E) \\(1400 \\) A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/658",
@@ -2268,15 +2160,6 @@
   },
   {
     "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/659",
-    "id": 23741,
-    "answer": 5,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=659&id=23741&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=23741\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">23741</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(23741); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"35\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %35\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Ardışık 3 çift doğal sayının çarpımı, aşağıdakilerden hangisine daima bölünmez?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(4 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(6 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(12 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(16 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(18 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Ardışık 3 çift doğal sayının çarpımı, aşağıdakilerden hangisine daima bölünmez? A) \\(4 \\) B) \\(6 \\) C) \\(12 \\) D) \\(16 \\) E) \\(18 \\) A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/659",
     "id": 23763,
     "answer": 2,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=659&id=23763&t=css&ks=0&os=0&zs=0",
@@ -2291,15 +2174,6 @@
       "5",
       "4"
     ]
-  },
-  {
-    "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/659",
-    "id": 23764,
-    "answer": 2,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=659&id=23764&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=23764\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">23764</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(23764); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"16\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %16\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Üç basamaklı,  rakamları farklı bir doğal sayının 5 ile bölümünden kalan 3 tür.</p>\n<p><strong>Bu sayı</strong> 36 <strong>ile bölünebildiğine göre yüzler basamağındaki rakam <u>en çok </u>kaç olabilir?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(5 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(6 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(7 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(8 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(9 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Üç basamaklı,  rakamları farklı bir doğal sayının 5 ile bölümünden kalan 3 tür. Bu sayı 36 ile bölünebildiğine göre yüzler basamağındaki rakam en çok kaç olabilir? A) \\(5 \\) B) \\(6 \\) C) \\(7 \\) D) \\(8 \\) E) \\(9 \\) A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/659",
@@ -2353,15 +2227,6 @@
     ]
   },
   {
-    "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/659",
-    "id": 23789,
-    "answer": 1,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=659&id=23789&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=23789\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">23789</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(23789); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"24\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %24\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Rakamları farklı 31x5y sayısı 12 ve 18 ile bölünebilmektedir.</p>\n<p><strong>Buna göre x in alabileceği değer kaçtır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(7 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(6 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(5 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(4 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(3 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Rakamları farklı 31x5y sayısı 12 ve 18 ile bölünebilmektedir. Buna göre x in alabileceği değer kaçtır? A) \\(7 \\) B) \\(6 \\) C) \\(5 \\) D) \\(4 \\) E) \\(3 \\) A B C D E",
-    "withImage": false
-  },
-  {
     "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/660",
     "id": 23769,
     "answer": 1,
@@ -2377,15 +2242,6 @@
       "84",
       "168"
     ]
-  },
-  {
-    "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/660",
-    "id": 23770,
-    "answer": 3,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=660&id=23770&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=23770\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">23770</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(23770); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"16\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %16\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>1500...0 <strong>sayısının asal olmayan tam  sayı bölenlerinin sayısı </strong>285 <strong>olduğuna göre bu sayının sondan kaç basamağı sıfırdır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(5 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(6 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(7 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(8 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(9 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "1500...0 sayısının asal olmayan tam  sayı bölenlerinin sayısı 285 olduğuna göre bu sayının sondan kaç basamağı sıfırdır? A) \\(5 \\) B) \\(6 \\) C) \\(7 \\) D) \\(8 \\) E) \\(9 \\) A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/660",
@@ -2454,15 +2310,6 @@
       "275",
       "286"
     ]
-  },
-  {
-    "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/660",
-    "id": 23791,
-    "answer": 1,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=6&k=660&id=23791&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=6&amp;d=28&amp;ids=23791\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">23791</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(23791); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"15\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %15\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Bir sempozyumda 3 farklı oturum şekli planlanmıştır.</p>\n<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\">\n<tbody>\n<tr>\n<td style=\"text-align:center\"><strong>Oturum</strong></td>\n<td style=\"text-align:center\"><strong>Çalışma</strong></td>\n<td style=\"text-align:center\"><strong>Dinlenme</strong></td>\n</tr>\n<tr>\n<td style=\"text-align:center\">A</td>\n<td style=\"text-align:center\">20 dakika</td>\n<td style=\"text-align:center\">10 dakika</td>\n</tr>\n<tr>\n<td style=\"text-align:center\">B</td>\n<td style=\"text-align:center\">50 dakika</td>\n<td style=\"text-align:center\">10 dakika</td>\n</tr>\n<tr>\n<td style=\"text-align:center\">C</td>\n<td style=\"text-align:center\">80 dakika</td>\n<td style=\"text-align:center\">10 dakika</td>\n</tr>\n</tbody>\n</table>\n<p>09.00 da başlayan sempozyumda 12.00 den sonra öğle yemeği verilecektir.</p>\n<p><strong>Buna göre tüm grupların aynı anda katılabileceği öğle yemeği <u>en erken</u> saat kaçta başlayabilir?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(12.00 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(12.10 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(13.20 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(13.30 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(13.40 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Bir sempozyumda 3 farklı oturum şekli planlanmıştır. Oturum Çalışma Dinlenme A 20 dakika 10 dakika B 50 dakika 10 dakika C 80 dakika 10 dakika 09.00 da başlayan sempozyumda 12.00 den sonra öğle yemeği verilecektir. Buna göre tüm grupların aynı anda katılabileceği öğle yemeği en erken saat kaçta başlayabilir? A) \\(12.00 \\) B) \\(12.10 \\) C) \\(13.20 \\) D) \\(13.30 \\) E) \\(13.40 \\) A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/9/lessons/fl-matematik/topics/2/subtopics/660",

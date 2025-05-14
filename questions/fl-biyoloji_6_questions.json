@@ -1,15 +1,6 @@
 [
   {
     "topicPath": "category/9/lessons/fl-biyoloji/topics/0/subtopics/172",
-    "id": 19797,
-    "answer": 4,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-biyoloji/test?s=6&k=172&id=19797&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-biyoloji/etkilesimli-tahta?s=6&amp;d=16&amp;ids=19797\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">19797</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(19797); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"57\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %57\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p class=\"p1\"><strong>Tüm organizmalarda ortak olarak görülen bazı özellikler bulunmaktadır.</strong></p>\r\n  I. Uyarılara tepki gösterme<br> II. Solunumla ATP üretme<br/>III. Üyeleri ile yer değiştirme<br/>\n<p class=\"p1\"><strong>Buna göre yukarıda verilen özelliklerden hangileri bu ortak özelliklerdendir?</strong></p> </br></p>\n<div>\n<div>A) Yalnız I</div>\n</div>\n<div>\n<div>B) Yalnız II</div>\n</div>\n<div>\n<div>C) Yalnız III</div>\n</div>\n<div>\n<div>D) I ve II</div>\n</div>\n<div>\n<div>E) II ve III</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Tüm organizmalarda ortak olarak görülen bazı özellikler bulunmaktadır. I. Uyarılara tepki gösterme II. Solunumla ATP üretme III. Üyeleri ile yer değiştirme Buna göre yukarıda verilen özelliklerden hangileri bu ortak özelliklerdendir? A) Yalnız I B) Yalnız II C) Yalnız III D) I ve II E) II ve III A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/9/lessons/fl-biyoloji/topics/0/subtopics/172",
     "id": 19798,
     "answer": 5,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-biyoloji/test?s=6&k=172&id=19798&t=css&ks=0&os=0&zs=0",
@@ -449,15 +440,6 @@
       "D) Hava kirliğinin nedenlerini belirlemek için nicel ve nitel gözlemler yapma",
       "E) Hava kirliliği durumu ile ilgili kontrollü deney ortamı oluşturma"
     ]
-  },
-  {
-    "topicPath": "category/9/lessons/fl-biyoloji/topics/1/subtopics/177",
-    "id": 19934,
-    "answer": 5,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-biyoloji/test?s=6&k=177&id=19934&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-biyoloji/etkilesimli-tahta?s=6&amp;d=16&amp;ids=19934\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">19934</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(19934); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"20\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %20\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<strong>Bir bilim insanı yaptığı çalışmada; eğer Mycobacterium tuberculosis (Mikobakteriyum tüberkulosis) verem hastalığının sebebi ise bu hastalığa yakalanmış kimselerde Mycobacterium tuberculosis bulunmalıdır, görüşünü ileri sürmektedir.<br><br/></br></strong>  I. Kontrollü deney<br/> II. Nicel gözlem<br/>III. Hipotez kurma<br/><br/><strong>Bilimsel yöntemin bu basamağına kadar bu bilim insanı, yukarıda yer alan aşamalardan hangilerini </strong><strong>gerçekleştirmiştir?<br/></strong> </p>\n<div>\n<div>A) Yanlız I</div>\n</div>\n<div>\n<div>B) Yalnız II</div>\n</div>\n<div>\n<div>C) Yanlız III</div>\n</div>\n<div>\n<div>D) I ve II</div>\n</div>\n<div>\n<div>E) II ve III</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Bir bilim insanı yaptığı çalışmada; eğer Mycobacterium tuberculosis (Mikobakteriyum tüberkulosis) verem hastalığının sebebi ise bu hastalığa yakalanmış kimselerde Mycobacterium tuberculosis bulunmalıdır, görüşünü ileri sürmektedir. I. Kontrollü deney II. Nicel gözlem III. Hipotez kurma Bilimsel yöntemin bu basamağına kadar bu bilim insanı, yukarıda yer alan aşamalardan hangilerini gerçekleştirmiştir? A) Yanlız I B) Yalnız II C) Yanlız III D) I ve II E) II ve III A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/9/lessons/fl-biyoloji/topics/1/subtopics/178",

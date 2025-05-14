@@ -290,15 +290,6 @@
   },
   {
     "topicPath": "category/11/lessons/kimya/topics/0/subtopics/2931",
-    "id": 23224,
-    "answer": 1,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=8&k=2931&id=23224&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/kimya/etkilesimli-tahta?s=8&amp;d=46&amp;ids=23224\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">23224</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(23224); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"28\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %28\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Aşağıdaki atom ya da taneciklerden hangisinin yarıçapı <u>en büyüktür</u>?</strong></p>\n</p>\n<div>\n<div>A) <sub> 15</sub>P<sup>3-</sup>\n</div>\n</div>\n<div>\n<div>B) <sub> 16</sub>S<sup>2-</sup>\n</div>\n</div>\n<div>\n<div>C) <sub> 19</sub>K<sup>+</sup>\n</div>\n</div>\n<div>\n<div>D) <sub> 18</sub>Q\r\n</div>\n</div>\n<div>\n<div>E) <sub> 20</sub>Ca<sup>2+</sup>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Aşağıdaki atom ya da taneciklerden hangisinin yarıçapı en büyüktür ? A) 15 P 3- B) 16 S 2- C) 19 K + D) 18 Q E) 20 Ca 2+ A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/11/lessons/kimya/topics/0/subtopics/2931",
     "id": 23225,
     "answer": 3,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=8&k=2931&id=23225&t=css&ks=0&os=0&zs=0",
@@ -1081,15 +1072,6 @@
   },
   {
     "topicPath": "category/11/lessons/kimya/topics/0/subtopics/2932",
-    "id": 23224,
-    "answer": 1,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=8&k=2932&id=23224&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/kimya/etkilesimli-tahta?s=8&amp;d=46&amp;ids=23224\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">23224</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(23224); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"28\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %28\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Aşağıdaki atom ya da taneciklerden hangisinin yarıçapı <u>en büyüktür</u>?</strong></p>\n</p>\n<div>\n<div>A) <sub> 15</sub>P<sup>3-</sup>\n</div>\n</div>\n<div>\n<div>B) <sub> 16</sub>S<sup>2-</sup>\n</div>\n</div>\n<div>\n<div>C) <sub> 19</sub>K<sup>+</sup>\n</div>\n</div>\n<div>\n<div>D) <sub> 18</sub>Q\r\n</div>\n</div>\n<div>\n<div>E) <sub> 20</sub>Ca<sup>2+</sup>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Aşağıdaki atom ya da taneciklerden hangisinin yarıçapı en büyüktür ? A) 15 P 3- B) 16 S 2- C) 19 K + D) 18 Q E) 20 Ca 2+ A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/11/lessons/kimya/topics/0/subtopics/2932",
     "id": 23226,
     "answer": 2,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=8&k=2932&id=23226&t=css&ks=0&os=0&zs=0",
@@ -1529,15 +1511,6 @@
       "K2O2",
       "K2SO4"
     ]
-  },
-  {
-    "topicPath": "category/11/lessons/kimya/topics/0/subtopics/2933",
-    "id": 23224,
-    "answer": 1,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=8&k=2933&id=23224&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/kimya/etkilesimli-tahta?s=8&amp;d=46&amp;ids=23224\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">23224</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(23224); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"28\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %28\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Aşağıdaki atom ya da taneciklerden hangisinin yarıçapı <u>en büyüktür</u>?</strong></p>\n</p>\n<div>\n<div>A) <sub> 15</sub>P<sup>3-</sup>\n</div>\n</div>\n<div>\n<div>B) <sub> 16</sub>S<sup>2-</sup>\n</div>\n</div>\n<div>\n<div>C) <sub> 19</sub>K<sup>+</sup>\n</div>\n</div>\n<div>\n<div>D) <sub> 18</sub>Q\r\n</div>\n</div>\n<div>\n<div>E) <sub> 20</sub>Ca<sup>2+</sup>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Aşağıdaki atom ya da taneciklerden hangisinin yarıçapı en büyüktür ? A) 15 P 3- B) 16 S 2- C) 19 K + D) 18 Q E) 20 Ca 2+ A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/11/lessons/kimya/topics/0/subtopics/2933",
@@ -2116,15 +2089,6 @@
       "K2O2",
       "K2SO4"
     ]
-  },
-  {
-    "topicPath": "category/11/lessons/kimya/topics/0/subtopics/2935",
-    "id": 23224,
-    "answer": 1,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=8&k=2935&id=23224&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/kimya/etkilesimli-tahta?s=8&amp;d=46&amp;ids=23224\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">23224</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(23224); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"28\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %28\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Aşağıdaki atom ya da taneciklerden hangisinin yarıçapı <u>en büyüktür</u>?</strong></p>\n</p>\n<div>\n<div>A) <sub> 15</sub>P<sup>3-</sup>\n</div>\n</div>\n<div>\n<div>B) <sub> 16</sub>S<sup>2-</sup>\n</div>\n</div>\n<div>\n<div>C) <sub> 19</sub>K<sup>+</sup>\n</div>\n</div>\n<div>\n<div>D) <sub> 18</sub>Q\r\n</div>\n</div>\n<div>\n<div>E) <sub> 20</sub>Ca<sup>2+</sup>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Aşağıdaki atom ya da taneciklerden hangisinin yarıçapı en büyüktür ? A) 15 P 3- B) 16 S 2- C) 19 K + D) 18 Q E) 20 Ca 2+ A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/11/lessons/kimya/topics/0/subtopics/2935",

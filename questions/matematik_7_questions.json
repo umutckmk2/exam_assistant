@@ -765,15 +765,6 @@
     ]
   },
   {
-    "topicPath": "category/10/lessons/matematik/topics/3/subtopics/2801",
-    "id": 27369,
-    "answer": 3,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/matematik/test?s=7&k=2801&id=27369&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/matematik/etkilesimli-tahta?s=7&amp;d=49&amp;ids=27369\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">27369</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(27369); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"28\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %28\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Uzun kenarı kısa kenarından 4 cm fazla olan bir dikdörtgenin alanı 96 cm<sup>2</sup> olduğuna göre<strong> bu dikdörtgenin çevresi kaç santimetredir?</strong></p>\n</p>\n<div>\n<div>A) 20\r\n</div>\n</div>\n<div>\n<div>B) 28\r\n</div>\n</div>\n<div>\n<div>C) 40\r\n</div>\n</div>\n<div>\n<div>D) 56\r\n</div>\n</div>\n<div>\n<div>E) 60\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Uzun kenarı kısa kenarından 4 cm fazla olan bir dikdörtgenin alanı 96 cm 2 olduğuna göre bu dikdörtgenin çevresi kaç santimetredir? A) 20 B) 28 C) 40 D) 56 E) 60 A B C D E",
-    "withImage": false
-  },
-  {
     "topicPath": "category/10/lessons/matematik/topics/4/subtopics/2804",
     "id": 5128,
     "answer": 5,

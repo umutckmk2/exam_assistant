@@ -137,15 +137,6 @@
   },
   {
     "topicPath": "category/10/lessons/fl-biyoloji/topics/0/subtopics/185",
-    "id": 24,
-    "answer": 2,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-biyoloji/test?s=7&k=185&id=24&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-biyoloji/etkilesimli-tahta?s=7&amp;d=17&amp;ids=24\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">24</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(24); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"58\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %58\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><b>Aşağıdakilerden hangisi insanda gerçekleşen mitoz bölünme ile ilgili <u>yanlış</u> bir ifadedir?</b></p> </p>\n<div>\n<div>A) Döllenme ile başlar, ölüme kadar devam eder.</div>\n</div>\n<div>\n<div>B) Bölünme sonucu oluşan hücreler üremeyi sağlar.</div>\n</div>\n<div>\n<div>C) Bölünme sonucu kromozom sayısı sabit kalır.</div>\n</div>\n<div>\n<div>D) Bölünme sonucu iki hücre oluşur.</div>\n</div>\n<div>\n<div>E) Bölünme sonunda oluşan yavru hücreler ana hücre ile aynı özelliği taşır.</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Aşağıdakilerden hangisi insanda gerçekleşen mitoz bölünme ile ilgili yanlış bir ifadedir? A) Döllenme ile başlar, ölüme kadar devam eder. B) Bölünme sonucu oluşan hücreler üremeyi sağlar. C) Bölünme sonucu kromozom sayısı sabit kalır. D) Bölünme sonucu iki hücre oluşur. E) Bölünme sonunda oluşan yavru hücreler ana hücre ile aynı özelliği taşır. A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/10/lessons/fl-biyoloji/topics/0/subtopics/185",
     "id": 25,
     "answer": 4,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-biyoloji/test?s=7&k=185&id=25&t=css&ks=0&os=0&zs=0",
@@ -1418,15 +1409,6 @@
       "aaBbGGhh",
       "aaBbGgHh"
     ]
-  },
-  {
-    "topicPath": "category/10/lessons/fl-biyoloji/topics/1/subtopics/189",
-    "id": 70,
-    "answer": 2,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-biyoloji/test?s=7&k=189&id=70&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-biyoloji/etkilesimli-tahta?s=7&amp;d=17&amp;ids=70\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">70</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(70); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"31\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %31\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Bir karakterin oluşumunda etkili olan beş alel genin baskınlık ilişkisi; B<sub>1 </sub>&gt;  B<sub>2 </sub>&gt; B<sub>3 </sub>&gt; B<sub>4</sub> = B<sub>5</sub>şeklinde olduğuna göre, bu karakter ile ilgili kaç çeşit genotip ve fenotip yazılabilir?</strong></p>\n</p>\n<div>\n<div>A) 10                   6           \r\n</div>\n</div>\n<div>\n<div>B) 15                   6                 \r\n</div>\n</div>\n<div>\n<div>C) 15                   4                                       \r\n</div>\n</div>\n<div>\n<div>D) 10                   4     \r\n</div>\n</div>\n<div>\n<div>E) 15                   8    \r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Bir karakterin oluşumunda etkili olan beş alel genin baskınlık ilişkisi; B 1 >  B 2 > B 3 > B 4 = B 5 şeklinde olduğuna göre, bu karakter ile ilgili kaç çeşit genotip ve fenotip yazılabilir? A) 10                   6 B) 15                   6 C) 15                   4 D) 10                   4 E) 15                   8 A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/10/lessons/fl-biyoloji/topics/1/subtopics/189",
@@ -4676,15 +4658,6 @@
     ]
   },
   {
-    "topicPath": "category/10/lessons/fl-biyoloji/topics/2/subtopics/199",
-    "id": 20430,
-    "answer": 3,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-biyoloji/test?s=7&k=199&id=20430&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-biyoloji/etkilesimli-tahta?s=7&amp;d=17&amp;ids=20430\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">20430</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(20430); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"32\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %32\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\r\nYeryüzünde yaşayan canlıların oluşturduğu çeşitliliğe biyolojik çeşitlilik denir.<br><br/><strong>Aşağıda yapılan uygulamalardan hangisi biyolojik çeşitliliği olumsuz etkiler?</strong> </br></p>\n<div>\n<div>A) Kuşların tohumları uzak mesafelere taşıması</div>\n</div>\n<div>\n<div>B) Gen bankalarının oluşturulması</div>\n</div>\n<div>\n<div>C) Denizlerde buharlaşmanın artması</div>\n</div>\n<div>\n<div>D) Avlanmaya sınırlamalar getirilmesi</div>\n</div>\n<div>\n<div>E) Botanik ve hayvanat bahçelerinin kurulması</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Yeryüzünde yaşayan canlıların oluşturduğu çeşitliliğe biyolojik çeşitlilik denir. Aşağıda yapılan uygulamalardan hangisi biyolojik çeşitliliği olumsuz etkiler? A) Kuşların tohumları uzak mesafelere taşıması B) Gen bankalarının oluşturulması C) Denizlerde buharlaşmanın artması D) Avlanmaya sınırlamalar getirilmesi E) Botanik ve hayvanat bahçelerinin kurulması A B C D E",
-    "withImage": false
-  },
-  {
     "topicPath": "category/10/lessons/fl-biyoloji/topics/2/subtopics/200",
     "id": 231,
     "answer": 4,
@@ -4700,15 +4673,6 @@
       "Tarımda verimliliği artırmak için böcek öldürücülerin kullanılması",
       "Kanalizasyon sularının arıtılması"
     ]
-  },
-  {
-    "topicPath": "category/10/lessons/fl-biyoloji/topics/2/subtopics/200",
-    "id": 20424,
-    "answer": 3,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-biyoloji/test?s=7&k=200&id=20424&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-biyoloji/etkilesimli-tahta?s=7&amp;d=17&amp;ids=20424\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">20424</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(20424); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"40\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %40\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>İnsan nüfusunun giderek artması; insanlar için gerekli olan besin, ilaç ve sanayi ham maddesinin karşılanmasında biyolojik çeşitliliğin korunmasını gerektirir.<br>\n<strong>Aşağıdakilerden hangisi biyolojik çeşitliliğin korunmasına yönelik önlemlerden <u>değildir</u>?</strong></br></p>\n</p>\n<div>\n<div>A) DNA, hücre ya da tohumların saklanması\r\n</div>\n</div>\n<div>\n<div>B) Kanunlar ile gerekli önlemlerin alınması\r\n</div>\n</div>\n<div>\n<div>C) Tarım ilaçları kullanılarak zararlıların ortadan kaldırılması\r\n</div>\n</div>\n<div>\n<div>D) Millî parklar ve doğal koruma ortamlarının oluşturulması\r\n</div>\n</div>\n<div>\n<div>E) Canlı türlerinin yabani formlarının koruma altına alınması\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "İnsan nüfusunun giderek artması; insanlar için gerekli olan besin, ilaç ve sanayi ham maddesinin karşılanmasında biyolojik çeşitliliğin korunmasını gerektirir. Aşağıdakilerden hangisi biyolojik çeşitliliğin korunmasına yönelik önlemlerden değildir ? A) DNA, hücre ya da tohumların saklanması B) Kanunlar ile gerekli önlemlerin alınması C) Tarım ilaçları kullanılarak zararlıların ortadan kaldırılması D) Millî parklar ve doğal koruma ortamlarının oluşturulması E) Canlı türlerinin yabani formlarının koruma altına alınması A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/10/lessons/fl-biyoloji/topics/2/subtopics/200",

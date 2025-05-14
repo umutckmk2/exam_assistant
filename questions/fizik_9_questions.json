@@ -154,15 +154,6 @@
   },
   {
     "topicPath": "category/12/lessons/fizik/topics/0/subtopics/919",
-    "id": 25764,
-    "answer": 1,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fizik/test?s=9&k=919&id=25764&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fizik/etkilesimli-tahta?s=9&amp;d=35&amp;ids=25764\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">25764</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(25764); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"32\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %32\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Yarıçapı 2 m olan dairesel pistte düzgün çembersel hareket yapan bir aracın periyodu 12 s olduğuna göre, cismin merkezcil ivmesi kaç m/s<sup>2</sup> dir? </strong>(π =3)</p>\n</p>\n<div>\n<div>A) 0,5\r\n</div>\n</div>\n<div>\n<div>B) 2\r\n</div>\n</div>\n<div>\n<div>C) 4\r\n</div>\n</div>\n<div>\n<div>D) 6\r\n</div>\n</div>\n<div>\n<div>E) 12\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Yarıçapı 2 m olan dairesel pistte düzgün çembersel hareket yapan bir aracın periyodu 12 s olduğuna göre, cismin merkezcil ivmesi kaç m/s 2 dir? (π =3) A) 0,5 B) 2 C) 4 D) 6 E) 12 A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/12/lessons/fizik/topics/0/subtopics/919",
     "id": 25778,
     "answer": 5,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fizik/test?s=9&k=919&id=25778&t=css&ks=0&os=0&zs=0",
@@ -364,15 +355,6 @@
       "25",
       "20"
     ]
-  },
-  {
-    "topicPath": "category/12/lessons/fizik/topics/0/subtopics/922",
-    "id": 26123,
-    "answer": 3,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fizik/test?s=9&k=922&id=26123&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fizik/etkilesimli-tahta?s=9&amp;d=35&amp;ids=26123\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">26123</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(26123); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"27\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %27\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Bir araç yatay virajlı bir yolu güneşli havada maksimum sürati 10 m/s olacak şekilde güvenle alıyor.</p>\n<p><strong>Buna göre aracın aynı virajlı yolu yağmurlu havada güvenle alabilmesi için <u>maksimum sürati</u> kaç m/s olur?</strong> (Yağmurlu havadaki sürtünme katsayısını güneşli havadaki sürtünme katsayısını yarısı kadar olduğunu kabul ediniz.)</p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\sqrt5\\)</span>\n</div>\n</div>\n<div>\n<div>B) 5\r\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(5\\sqrt2\\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(10\\sqrt2\\)</span>\n</div>\n</div>\n<div>\n<div>E) 20\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Bir araç yatay virajlı bir yolu güneşli havada maksimum sürati 10 m/s olacak şekilde güvenle alıyor. Buna göre aracın aynı virajlı yolu yağmurlu havada güvenle alabilmesi için maksimum sürati kaç m/s olur? (Yağmurlu havadaki sürtünme katsayısını güneşli havadaki sürtünme katsayısını yarısı kadar olduğunu kabul ediniz.) A) \\(\\sqrt5\\) B) 5 C) \\(5\\sqrt2\\) D) \\(10\\sqrt2\\) E) 20 A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/12/lessons/fizik/topics/0/subtopics/923",
@@ -1073,15 +1055,6 @@
   },
   {
     "topicPath": "category/12/lessons/fizik/topics/1/subtopics/937",
-    "id": 21036,
-    "answer": 4,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fizik/test?s=9&k=937&id=21036&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fizik/etkilesimli-tahta?s=9&amp;d=35&amp;ids=21036\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">21036</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(21036); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"32\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %32\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Saniyeleri vuran bir sarkacın periyodu </strong><strong>kaç s'dir?                                                                                                                                                                                                                     </strong></p>\n</p>\n<div>\n<div>A) 0,5\r\n</div>\n</div>\n<div>\n<div>B) 1\r\n</div>\n</div>\n<div>\n<div>C) 1,5\r\n</div>\n</div>\n<div>\n<div>D) 2\r\n</div>\n</div>\n<div>\n<div>E) 3\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Saniyeleri vuran bir sarkacın periyodu kaç s'dir? A) 0,5 B) 1 C) 1,5 D) 2 E) 3 A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/12/lessons/fizik/topics/1/subtopics/937",
     "id": 21037,
     "answer": 5,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fizik/test?s=9&k=937&id=21037&t=css&ks=0&os=0&zs=0",
@@ -1198,15 +1171,6 @@
       "I ve III",
       "II ve III"
     ]
-  },
-  {
-    "topicPath": "category/12/lessons/fizik/topics/1/subtopics/938",
-    "id": 21036,
-    "answer": 4,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fizik/test?s=9&k=938&id=21036&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fizik/etkilesimli-tahta?s=9&amp;d=35&amp;ids=21036\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">21036</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(21036); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"32\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %32\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Saniyeleri vuran bir sarkacın periyodu </strong><strong>kaç s'dir?                                                                                                                                                                                                                     </strong></p>\n</p>\n<div>\n<div>A) 0,5\r\n</div>\n</div>\n<div>\n<div>B) 1\r\n</div>\n</div>\n<div>\n<div>C) 1,5\r\n</div>\n</div>\n<div>\n<div>D) 2\r\n</div>\n</div>\n<div>\n<div>E) 3\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Saniyeleri vuran bir sarkacın periyodu kaç s'dir? A) 0,5 B) 1 C) 1,5 D) 2 E) 3 A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/12/lessons/fizik/topics/1/subtopics/938",
@@ -1516,15 +1480,6 @@
   },
   {
     "topicPath": "category/12/lessons/fizik/topics/2/subtopics/945",
-    "id": 1898,
-    "answer": 3,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fizik/test?s=9&k=945&id=1898&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fizik/etkilesimli-tahta?s=9&amp;d=35&amp;ids=1898\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">1898</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(1898); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"44\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %44\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Bir elektromanyetik dalgaya ait elektrik alan şiddeti E, manyetik alan şiddeti B, ışık hızı c olduğuna göre E, B ve c arasındaki matematiksel ilişki aşağıdakilerden hangisidir?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(E = {c \\over B}\\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(E = B.\\)</span>c<sup>2</sup>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(E = B.\\)</span>c\r\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(c = {B \\over E}\\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(B = E.\\)</span>c<sup>2</sup>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Bir elektromanyetik dalgaya ait elektrik alan şiddeti E, manyetik alan şiddeti B, ışık hızı c olduğuna göre E, B ve c arasındaki matematiksel ilişki aşağıdakilerden hangisidir? A) \\(E = {c \\over B}\\) B) \\(E = B.\\) c 2 C) \\(E = B.\\) c D) \\(c = {B \\over E}\\) E) \\(B = E.\\) c 2 A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/12/lessons/fizik/topics/2/subtopics/945",
     "id": 1899,
     "answer": 3,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fizik/test?s=9&k=945&id=1899&t=css&ks=0&os=0&zs=0",
@@ -1794,15 +1749,6 @@
       "Altın levha ve beta ışını",
       "Gümüş levha ve alfa ışını"
     ]
-  },
-  {
-    "topicPath": "category/12/lessons/fizik/topics/3/subtopics/947",
-    "id": 1946,
-    "answer": 1,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fizik/test?s=9&k=947&id=1946&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fizik/etkilesimli-tahta?s=9&amp;d=35&amp;ids=1946\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">1946</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(1946); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"53\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %53\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Bohr atom modeline göre,tek elektronlu atomlarda elektronlar bir üst enerji seviyesine çıktığında açısal momentumlar ve yörünge yarıçapları nasıl değişir?</strong></p>\n<p><strong><u>Açısal momentum</u>               <u>Yörünge yarıçapı</u></strong></p>\n</p>\n<div>\n<div>A) Artar                                         Artar\r\n</div>\n</div>\n<div>\n<div>B) Azalır                                       Azalır\r\n</div>\n</div>\n<div>\n<div>C) Değişmez                                Azalır\r\n</div>\n</div>\n<div>\n<div>D) Azalır                                        Artar\r\n</div>\n</div>\n<div>\n<div>E) Değişmez                                Değişmez\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Bohr atom modeline göre,tek elektronlu atomlarda elektronlar bir üst enerji seviyesine çıktığında açısal momentumlar ve yörünge yarıçapları nasıl değişir? Açısal momentum Yörünge yarıçapı A) Artar                                         Artar B) Azalır                                       Azalır C) Değişmez                                Azalır D) Azalır                                        Artar E) Değişmez                                Değişmez A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/12/lessons/fizik/topics/3/subtopics/947",
@@ -3095,15 +3041,6 @@
       "I ve II",
       "II ve III"
     ]
-  },
-  {
-    "topicPath": "category/12/lessons/fizik/topics/4/subtopics/961",
-    "id": 21321,
-    "answer": 5,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fizik/test?s=9&k=961&id=21321&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fizik/etkilesimli-tahta?s=9&amp;d=35&amp;ids=21321\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">21321</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(21321); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"54\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %54\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Einstein’ın E = mc<sup>2</sup> kütle ve enerjinin eşdeğerliği ilkesine göre</strong></p>\n<p>I.   m kütleli bir madde dönüşürse E = mc<sup>2</sup> büyüklüğünde bir enerji ortaya çıkar.</p>\n<p>II.  Çift oluşum tepkimelerinde enerjinin maddeye dönüştüğü gözlemlenir.</p>\n<p>III. Madde ile enerji birbirine dönüşebilir.</p>\n<p><strong>ifadelerinden hangileri doğrudur?</strong></p>\n</p>\n<div>\n<div>A) Yalnız I\r\n</div>\n</div>\n<div>\n<div>B) Yalnız II\r\n</div>\n</div>\n<div>\n<div>C) I ve II\r\n</div>\n</div>\n<div>\n<div>D) I ve III\r\n</div>\n</div>\n<div>\n<div>E) I, II ve III\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Einstein’ın E = mc 2 kütle ve enerjinin eşdeğerliği ilkesine göre I.   m kütleli bir madde dönüşürse E = mc 2 büyüklüğünde bir enerji ortaya çıkar. II.  Çift oluşum tepkimelerinde enerjinin maddeye dönüştüğü gözlemlenir. III. Madde ile enerji birbirine dönüşebilir. ifadelerinden hangileri doğrudur? A) Yalnız I B) Yalnız II C) I ve II D) I ve III E) I, II ve III A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/12/lessons/fizik/topics/4/subtopics/962",

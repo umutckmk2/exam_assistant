@@ -85,15 +85,6 @@
     ]
   },
   {
-    "topicPath": "category/9/lessons/matematik/topics/0/subtopics/2742",
-    "id": 26812,
-    "answer": 4,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/matematik/test?s=6&k=2742&id=26812&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/matematik/etkilesimli-tahta?s=6&amp;d=48&amp;ids=26812\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">26812</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(26812); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"40\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %40\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>p : “4 + 3 = 7\",  q : “4 · 3 ≥ 12\" önermeleri veriliyor.</p>\n<p><strong>Buna göre p ⇒ q önermesinin karşıt tersi aşağıdakilerden hangisidir? </strong></p>\n</p>\n<div>\n<div>A) \"4 + 3 ≠ 7 ise 4 · 3 &lt; 12\"\r\n</div>\n</div>\n<div>\n<div>B) \"4 + 3 ≠ 7 ise 4 · 3 ≥ 12\"\r\n</div>\n</div>\n<div>\n<div>C) \"4 · 3 &lt; 12 ise 4 + 3 = 7\"\r\n</div>\n</div>\n<div>\n<div>D) \"4 · 3 &lt; 12 ise 4 + 3 ≠ 7\"\r\n</div>\n</div>\n<div>\n<div>E) \"4 · 3 ≥ 12 ise 4 + 3 ≠ 7\"\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "p : “4 + 3 = 7\",  q : “4 · 3 ≥ 12\" önermeleri veriliyor. Buna göre p ⇒ q önermesinin karşıt tersi aşağıdakilerden hangisidir? A) \"4 + 3 ≠ 7 ise 4 · 3 < 12\" B) \"4 + 3 ≠ 7 ise 4 · 3 ≥ 12\" C) \"4 · 3 < 12 ise 4 + 3 = 7\" D) \"4 · 3 < 12 ise 4 + 3 ≠ 7\" E) \"4 · 3 ≥ 12 ise 4 + 3 ≠ 7\" A B C D E",
-    "withImage": false
-  },
-  {
     "topicPath": "category/9/lessons/matematik/topics/0/subtopics/2743",
     "id": 26817,
     "answer": 4,
@@ -364,15 +355,6 @@
       "8",
       "10"
     ]
-  },
-  {
-    "topicPath": "category/9/lessons/matematik/topics/2/subtopics/2759",
-    "id": 25716,
-    "answer": 2,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/matematik/test?s=6&k=2759&id=25716&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/matematik/etkilesimli-tahta?s=6&amp;d=48&amp;ids=25716\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">25716</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(25716); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"10\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %10\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>x, sıfırdan farklı bir rakamdır.</p>\n<p><strong>x<sup>x</sup> sayısının 5 ile bölümünden kalan 1 olduğuna göre x sayısının alabileceği <u>en küçük</u> iki değerin toplamı kaçtır?</strong></p>\n</p>\n<div>\n<div>A) 3\r\n</div>\n</div>\n<div>\n<div>B) 5\r\n</div>\n</div>\n<div>\n<div>C) 7\r\n</div>\n</div>\n<div>\n<div>D) 10\r\n</div>\n</div>\n<div>\n<div>E) 12\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "x, sıfırdan farklı bir rakamdır. x x sayısının 5 ile bölümünden kalan 1 olduğuna göre x sayısının alabileceği en küçük iki değerin toplamı kaçtır? A) 3 B) 5 C) 7 D) 10 E) 12 A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/9/lessons/matematik/topics/2/subtopics/2751",
@@ -902,15 +884,6 @@
     ]
   },
   {
-    "topicPath": "category/9/lessons/matematik/topics/2/subtopics/2758",
-    "id": 26938,
-    "answer": 3,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/matematik/test?s=6&k=2758&id=26938&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/matematik/etkilesimli-tahta?s=6&amp;d=48&amp;ids=26938\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">26938</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(26938); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"9\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %9\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Tablo: Bazı ürünlerin KDV Oranları</p>\n<table border=\"1\" style=\"width:500px\">\n<tbody>\n<tr>\n<td style=\"text-align:center\"><strong>Ürün</strong></td>\n<td style=\"text-align:center\"><strong>KDV Oranı</strong></td>\n</tr>\n<tr>\n<td style=\"text-align:center\"><strong>Unlu Mamüller</strong></td>\n<td style=\"text-align:center\"><strong>%1</strong></td>\n</tr>\n<tr>\n<td style=\"text-align:center\"><strong>Diğer Gıda Ürünleri</strong></td>\n<td style=\"text-align:center\"><strong>%8</strong></td>\n</tr>\n<tr>\n<td style=\"text-align:center\"><strong>Bitki Çayları</strong></td>\n<td style=\"text-align:center\"><strong>%18</strong></td>\n</tr>\n</tbody>\n</table>\n<p>Bir markette bazı ürünlere uygulanan KDV oranları yukarıdaki tabloda verilmiştir.</p>\n<p><strong>Buna göre KDV'siz fiyatı 2 TL olan ekmekten 5 tane, kilosu 20 TL olan peynirden 1 kg ve paketi 5 TL olan ıhlamur çayından 3 paket alan bir kişi kaç TL ödeme yapar?</strong></p>\n</p>\n<div>\n<div>A) 49,2\r\n</div>\n</div>\n<div>\n<div>B) 49,3\r\n</div>\n</div>\n<div>\n<div>C) 49,4\r\n</div>\n</div>\n<div>\n<div>D) 49,5\r\n</div>\n</div>\n<div>\n<div>E) 49,6\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Tablo: Bazı ürünlerin KDV Oranları Ürün KDV Oranı Unlu Mamüller %1 Diğer Gıda Ürünleri %8 Bitki Çayları %18 Bir markette bazı ürünlere uygulanan KDV oranları yukarıdaki tabloda verilmiştir. Buna göre KDV'siz fiyatı 2 TL olan ekmekten 5 tane, kilosu 20 TL olan peynirden 1 kg ve paketi 5 TL olan ıhlamur çayından 3 paket alan bir kişi kaç TL ödeme yapar? A) 49,2 B) 49,3 C) 49,4 D) 49,5 E) 49,6 A B C D E",
-    "withImage": false
-  },
-  {
     "topicPath": "category/9/lessons/matematik/topics/3/subtopics/2772",
     "id": 25758,
     "answer": 1,
@@ -926,14 +899,5 @@
       "23",
       "24"
     ]
-  },
-  {
-    "topicPath": "category/9/lessons/matematik/topics/4/subtopics/2778",
-    "id": 20804,
-    "answer": 3,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/matematik/test?s=6&k=2778&id=20804&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/matematik/etkilesimli-tahta?s=6&amp;d=48&amp;ids=20804\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">20804</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(20804); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"5\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %5\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>1, 2, 2, 3, 3, 3, 4, 4, 4, 4 veri grubunun merkezî eğilim ölçülerinin sayısal değerleri A kümesini oluşturmaktadır.</p>\n<p><strong>A kümesi ile ilgili</strong></p>\n<p> I. s(A) = 4 tür. </p>\n<p>II. 1<span class=\"math-tex\">\\(\\in\\)</span>A dır.</p>\n<p>III. Alt küme sayısı 4 tür.</p>\n<p><strong>ifadelerinden hangisi ya da hangileri doğrudur?</strong></p>\n</p>\n<div>\n<div>A) Yalnız I\r\n</div>\n</div>\n<div>\n<div>B) Yalnız II\r\n</div>\n</div>\n<div>\n<div>C) Yalnız III\r\n</div>\n</div>\n<div>\n<div>D) I ve II\r\n</div>\n</div>\n<div>\n<div>E) I ve III\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "1, 2, 2, 3, 3, 3, 4, 4, 4, 4 veri grubunun merkezî eğilim ölçülerinin sayısal değerleri A kümesini oluşturmaktadır. A kümesi ile ilgili I. s(A) = 4 tür. II. 1 \\(\\in\\) A dır. III. Alt küme sayısı 4 tür. ifadelerinden hangisi ya da hangileri doğrudur? A) Yalnız I B) Yalnız II C) Yalnız III D) I ve II E) I ve III A B C D E",
-    "withImage": false
   }
 ]

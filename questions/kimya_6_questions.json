@@ -1071,15 +1071,6 @@
     ]
   },
   {
-    "topicPath": "category/9/lessons/kimya/topics/0/subtopics/2873",
-    "id": 25796,
-    "answer": 4,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=6&k=2873&id=25796&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/kimya/etkilesimli-tahta?s=6&amp;d=44&amp;ids=25796\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">25796</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(25796); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"32\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %32\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Aşağıda bazı bileşiklerin formülleri ve yaygın adları verilmiştir.<br>\r\n   <strong> <u>Bileşik Formülü</u>      <u>Yaygın Adı</u> </strong><br/>\r\n  I. CH<sub>3</sub>COOH              Karınca asidi<br/>\r\n II. NaCl                       Sodyum klorür<br/>\r\nIII. HCl                         Tuz ruhu<br/>\r\nIV. CaO                        Sönmemiş kireç</br></p>\n<p><strong>Buna göre verilen bileşik formüllerinden hangilerinin yaygın adı doğru yazılmıştır?</strong></p>\n</p>\n<div>\n<div>A) Yalnız I.\r\n</div>\n</div>\n<div>\n<div>B) I ve II.\r\n</div>\n</div>\n<div>\n<div>C) II ve III.\r\n</div>\n</div>\n<div>\n<div>D) III ve IV.\r\n</div>\n</div>\n<div>\n<div>E) I, III ve IV.\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Aşağıda bazı bileşiklerin formülleri ve yaygın adları verilmiştir. Bileşik Formülü Yaygın Adı I. CH 3 COOH              Karınca asidi II. NaCl                       Sodyum klorür III. HCl                         Tuz ruhu IV. CaO                        Sönmemiş kireç Buna göre verilen bileşik formüllerinden hangilerinin yaygın adı doğru yazılmıştır? A) Yalnız I. B) I ve II. C) II ve III. D) III ve IV. E) I, III ve IV. A B C D E",
-    "withImage": false
-  },
-  {
     "topicPath": "category/9/lessons/kimya/topics/0/subtopics/2874",
     "id": 6039,
     "answer": 5,
@@ -3104,15 +3095,6 @@
   },
   {
     "topicPath": "category/9/lessons/kimya/topics/2/subtopics/2884",
-    "id": 6168,
-    "answer": 1,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=6&k=2884&id=6168&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/kimya/etkilesimli-tahta?s=6&amp;d=44&amp;ids=6168\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">6168</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(6168); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"16\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %16\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>X elementinin üçüncü, Y elementinin birinci katmanında birer elektron bulunmaktadır.                                                                                                                                 <strong>X ve Y atomlarının arasındaki kimyasal bağ oluşumu ile ilgili olarak;</strong></p>\n<p>I. X ve Y atomları arasında elektron alışverişi gerçekleşir.</p>\n<p>II. Oluşturdukları bileşik molekül yapılıdır.</p>\n<p>III. Bileşik oluşturmazlar.</p>\n<p><strong>Yukarıdaki yargılardan hangisi ya da hangileri doğrudur?</strong></p>\n</p>\n<div>\n<div>A) Yalnız I \r\n</div>\n</div>\n<div>\n<div>B)  I ve II\r\n</div>\n</div>\n<div>\n<div>C)  I ve III\r\n</div>\n</div>\n<div>\n<div>D) II ve III\r\n</div>\n</div>\n<div>\n<div>E)  I, II ve III\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "X elementinin üçüncü, Y elementinin birinci katmanında birer elektron bulunmaktadır. X ve Y atomlarının arasındaki kimyasal bağ oluşumu ile ilgili olarak; I. X ve Y atomları arasında elektron alışverişi gerçekleşir. II. Oluşturdukları bileşik molekül yapılıdır. III. Bileşik oluşturmazlar. Yukarıdaki yargılardan hangisi ya da hangileri doğrudur? A) Yalnız I B)  I ve II C)  I ve III D) II ve III E)  I, II ve III A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/9/lessons/kimya/topics/2/subtopics/2884",
     "id": 6171,
     "answer": 1,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=6&k=2884&id=6171&t=css&ks=0&os=0&zs=0",
@@ -3144,15 +3126,6 @@
       "CS2",
       "H2O"
     ]
-  },
-  {
-    "topicPath": "category/9/lessons/kimya/topics/2/subtopics/2884",
-    "id": 6189,
-    "answer": 3,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=6&k=2884&id=6189&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/kimya/etkilesimli-tahta?s=6&amp;d=44&amp;ids=6189\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">6189</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(6189); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"22\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %22\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>     I.       NaF</p>\n<p>     II.      NO<sub>2</sub></p>\n<p>     III.     HCl</p>\n<p>     IV.     AlF<sub>3</sub> </p>\n<p><strong>Yukarıdaki bileşiklerden hangisi ya da hangileri moleküler yapılıdır? </strong><br>\r\n(<sub>17</sub>Cl, <sub>13</sub>Al, <sub>11</sub>Na, <sub>9</sub>F, <sub>8</sub>O, <sub>7</sub>N, <sub>1</sub>H )</br></p>\n</p>\n<div>\n<div>A) Yalnız I\r\n</div>\n</div>\n<div>\n<div>B) Yalnız II\r\n</div>\n</div>\n<div>\n<div>C) II ve III\r\n</div>\n</div>\n<div>\n<div>D) I ve IV\r\n</div>\n</div>\n<div>\n<div>E) III ve IV\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "I.       NaF II.      NO 2 III.     HCl IV.     AlF 3 Yukarıdaki bileşiklerden hangisi ya da hangileri moleküler yapılıdır? ( 17 Cl, 13 Al, 11 Na, 9 F, 8 O, 7 N, 1 H ) A) Yalnız I B) Yalnız II C) II ve III D) I ve IV E) III ve IV A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/9/lessons/kimya/topics/2/subtopics/2884",
@@ -3326,15 +3299,6 @@
   },
   {
     "topicPath": "category/9/lessons/kimya/topics/2/subtopics/2885",
-    "id": 26385,
-    "answer": 2,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=6&k=2885&id=26385&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/kimya/etkilesimli-tahta?s=6&amp;d=44&amp;ids=26385\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">26385</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(26385); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"22\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %22\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Aşağıda verilen bileşiklerden hangisinin formülü yanlış verilmiştir?</strong></p>\n<p>         <u>    <strong>  Bileşik    </strong>  </u>        <u><strong>    Formülü    </strong></u> </p>\n</p>\n<div>\n<div>A) Berilyum nitrür           Be<sub>3</sub>N<sub>2</sub>\n</div>\n</div>\n<div>\n<div>B) Demir (II) klorür          Fe<sub>2</sub>Cl\r\n</div>\n</div>\n<div>\n<div>C) Kalsiyum oksit            CaO\r\n</div>\n</div>\n<div>\n<div>D) Sodyum karbonat      Na<sub>2</sub>CO<sub>3</sub>\n</div>\n</div>\n<div>\n<div>E)  Bakır (II) florür            CuF<sub>2</sub>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Aşağıda verilen bileşiklerden hangisinin formülü yanlış verilmiştir? Bileşik Formülü A) Berilyum nitrür           Be 3 N 2 B) Demir (II) klorür          Fe 2 Cl C) Kalsiyum oksit            CaO D) Sodyum karbonat      Na 2 CO 3 E)  Bakır (II) florür            CuF 2 A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/9/lessons/kimya/topics/2/subtopics/2885",
     "id": 26388,
     "answer": 1,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=6&k=2885&id=26388&t=css&ks=0&os=0&zs=0",
@@ -3434,15 +3398,6 @@
       "Kovalent bağdaki yük dağılımı farklı ise apolar kovalent bağ oluşur.",
       "Su bir polar moleküldür."
     ]
-  },
-  {
-    "topicPath": "category/9/lessons/kimya/topics/2/subtopics/2886",
-    "id": 6189,
-    "answer": 3,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=6&k=2886&id=6189&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/kimya/etkilesimli-tahta?s=6&amp;d=44&amp;ids=6189\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">6189</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(6189); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"22\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %22\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>     I.       NaF</p>\n<p>     II.      NO<sub>2</sub></p>\n<p>     III.     HCl</p>\n<p>     IV.     AlF<sub>3</sub> </p>\n<p><strong>Yukarıdaki bileşiklerden hangisi ya da hangileri moleküler yapılıdır? </strong><br>\r\n(<sub>17</sub>Cl, <sub>13</sub>Al, <sub>11</sub>Na, <sub>9</sub>F, <sub>8</sub>O, <sub>7</sub>N, <sub>1</sub>H )</br></p>\n</p>\n<div>\n<div>A) Yalnız I\r\n</div>\n</div>\n<div>\n<div>B) Yalnız II\r\n</div>\n</div>\n<div>\n<div>C) II ve III\r\n</div>\n</div>\n<div>\n<div>D) I ve IV\r\n</div>\n</div>\n<div>\n<div>E) III ve IV\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "I.       NaF II.      NO 2 III.     HCl IV.     AlF 3 Yukarıdaki bileşiklerden hangisi ya da hangileri moleküler yapılıdır? ( 17 Cl, 13 Al, 11 Na, 9 F, 8 O, 7 N, 1 H ) A) Yalnız I B) Yalnız II C) II ve III D) I ve IV E) III ve IV A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/9/lessons/kimya/topics/2/subtopics/2886",

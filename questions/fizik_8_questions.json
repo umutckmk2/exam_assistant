@@ -1224,15 +1224,6 @@
     ]
   },
   {
-    "topicPath": "category/11/lessons/fizik/topics/1/subtopics/914",
-    "id": 1596,
-    "answer": 3,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fizik/test?s=8&k=914&id=1596&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fizik/etkilesimli-tahta?s=8&amp;d=34&amp;ids=1596\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">1596</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(1596); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"40\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %40\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Bir alternatif gerilim kaynağının akım denklemi</p>\n<p>i = 20 <span class=\"math-tex\">\\(\\sqrt2\\)</span> sin 50π . t şeklindedir.</p>\n<p><strong>Bu devrede dolaşan akımın etkin değeri kaç amperdir?</strong></p>\n</p>\n<div>\n<div>A) 10\r\n</div>\n</div>\n<div>\n<div>B) 15\r\n</div>\n</div>\n<div>\n<div>C) 20\r\n</div>\n</div>\n<div>\n<div>D) 25\r\n</div>\n</div>\n<div>\n<div>E) 50\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Bir alternatif gerilim kaynağının akım denklemi i = 20 \\(\\sqrt2\\) sin 50π . t şeklindedir. Bu devrede dolaşan akımın etkin değeri kaç amperdir? A) 10 B) 15 C) 20 D) 25 E) 50 A B C D E",
-    "withImage": false
-  },
-  {
     "topicPath": "category/11/lessons/fizik/topics/1/subtopics/915",
     "id": 1593,
     "answer": 5,

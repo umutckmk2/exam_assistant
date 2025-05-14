@@ -2857,15 +2857,6 @@
   },
   {
     "topicPath": "category/10/lessons/kimya/topics/1/subtopics/2912",
-    "id": 6406,
-    "answer": 3,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=7&k=2912&id=6406&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/kimya/etkilesimli-tahta?s=7&amp;d=45&amp;ids=6406\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">6406</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(6406); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"22\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %22\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Aşağıda verilen çözeltilerden hangisinin bileşenlerinin fiziksel halleri doğru verilmiştir?</strong></p>\n<p><br>\r\n      <strong><u>Örnek</u> </strong>                               <strong><u>Çözünen</u></strong>         <strong><u>Çözücü</u></strong></br></p>\n</p>\n<div>\n<div>A) Alkollü su                           Katı               Sıvı\r\n</div>\n</div>\n<div>\n<div>B) Tuzlu su                             Sıvı             Katı\r\n</div>\n</div>\n<div>\n<div>C) Gazoz                                 Gaz               Sıvı\r\n</div>\n</div>\n<div>\n<div>D) Lehim                                 Gaz               Katı\r\n</div>\n</div>\n<div>\n<div>E) Palladyumda hidrojen         Katı              Gaz                                                         <br/>\r\n    \r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Aşağıda verilen çözeltilerden hangisinin bileşenlerinin fiziksel halleri doğru verilmiştir? Örnek Çözünen Çözücü A) Alkollü su                           Katı               Sıvı B) Tuzlu su                             Sıvı             Katı C) Gazoz                                 Gaz               Sıvı D) Lehim                                 Gaz               Katı E) Palladyumda hidrojen         Katı              Gaz A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/10/lessons/kimya/topics/1/subtopics/2912",
     "id": 6407,
     "answer": 1,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=7&k=2912&id=6407&t=css&ks=0&os=0&zs=0",
@@ -3223,15 +3214,6 @@
   },
   {
     "topicPath": "category/10/lessons/kimya/topics/1/subtopics/2913",
-    "id": 6413,
-    "answer": 5,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=7&k=2913&id=6413&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/kimya/etkilesimli-tahta?s=7&amp;d=45&amp;ids=6413\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">6413</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(6413); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"21\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %21\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>  I.    H<sub>2</sub>O  -  CCl<sub>4</sub> </p>\n<p>  II.   I<sub>2</sub>   -    H<sub>2</sub>O</p>\n<p>  III.  CO<sub>2</sub>  -  CH<sub>4</sub> </p>\n<p>  IV.  H<sub>2</sub>O  -  NH<sub>3</sub> </p>\n<p><strong>Yukarıda verilen madde çiftlerinden hangileri çözelti oluşturur?</strong></p>\n</p>\n<div>\n<div>A)  I ve II.\r\n</div>\n</div>\n<div>\n<div>B)  I ve III.\r\n</div>\n</div>\n<div>\n<div>C)  I ve IV.\r\n</div>\n</div>\n<div>\n<div>D) II ve IV.\r\n</div>\n</div>\n<div>\n<div>E) III ve IV.\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "I.    H 2 O  -  CCl 4 II.   I 2 -    H 2 O III.  CO 2 -  CH 4 IV.  H 2 O  -  NH 3 Yukarıda verilen madde çiftlerinden hangileri çözelti oluşturur? A)  I ve II. B)  I ve III. C)  I ve IV. D) II ve IV. E) III ve IV. A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/10/lessons/kimya/topics/1/subtopics/2913",
     "id": 6414,
     "answer": 4,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=7&k=2913&id=6414&t=css&ks=0&os=0&zs=0",
@@ -3246,15 +3228,6 @@
       "I ve II",
       "I ve III"
     ]
-  },
-  {
-    "topicPath": "category/10/lessons/kimya/topics/1/subtopics/2913",
-    "id": 6415,
-    "answer": 2,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=7&k=2913&id=6415&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/kimya/etkilesimli-tahta?s=7&amp;d=45&amp;ids=6415\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">6415</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(6415); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"18\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %18\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<div><strong>Aşağıda verilen maddelerden hangisinin karşısında verilen çözücüde daha iyi çözünmesi beklenir?</strong></div>\n<div>         <strong>   <u>Madde  </u>              <u>Çözücü</u></strong></div>\n</p>\n<div>\n<div>A)    CO<sub>2</sub>                        CS<sub>2</sub>\n</div>\n</div>\n<div>\n<div>B)    NH<sub>3</sub>                        H<sub>2</sub>O\r\n</div>\n</div>\n<div>\n<div>C)    C<sub>6</sub> H<sub>6</sub>                     CCl<sub>4</sub>\n</div>\n</div>\n<div>\n<div>D)    I<sub>2</sub>                           CCl<sub>4</sub>  \r\n</div>\n</div>\n<div>\n<div>E)    H<sub>2</sub>S                        H<sub>2</sub>O\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Aşağıda verilen maddelerden hangisinin karşısında verilen çözücüde daha iyi çözünmesi beklenir? Madde Çözücü A)    CO 2 CS 2 B)    NH 3 H 2 O C)    C 6 H 6 CCl 4 D)    I 2 CCl 4 E)    H 2 S                        H 2 O A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/10/lessons/kimya/topics/1/subtopics/2913",
@@ -3782,15 +3755,6 @@
       "52",
       "54"
     ]
-  },
-  {
-    "topicPath": "category/10/lessons/kimya/topics/1/subtopics/2914",
-    "id": 6477,
-    "answer": 5,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=7&k=2914&id=6477&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/kimya/etkilesimli-tahta?s=7&amp;d=45&amp;ids=6477\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">6477</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(6477); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"10\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %10\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Hacimce %40 X sıvısı içeren bir sulu çözelti kütlece %75 oranında su içerdiğine göre X sıvısının öz kütlesi kaç g/mL’dir?</strong> (d<sub>su</sub>= 1 g/mL  )</p>\n</p>\n<div>\n<div>A) 0,1\r\n</div>\n</div>\n<div>\n<div>B) 0,2\r\n</div>\n</div>\n<div>\n<div>C) 0,3\r\n</div>\n</div>\n<div>\n<div>D) 0,4\r\n</div>\n</div>\n<div>\n<div>E) 0,5\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Hacimce %40 X sıvısı içeren bir sulu çözelti kütlece %75 oranında su içerdiğine göre X sıvısının öz kütlesi kaç g/mL’dir? (d su = 1 g/mL  ) A) 0,1 B) 0,2 C) 0,3 D) 0,4 E) 0,5 A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/10/lessons/kimya/topics/1/subtopics/2914",
@@ -4386,15 +4350,6 @@
       "D)  Mıknatıslanma, suda çözme, buharlaştırma, eleme",
       "E)  Mıknatıslanma, eleme, suda çözme, buharlaştırma"
     ]
-  },
-  {
-    "topicPath": "category/10/lessons/kimya/topics/1/subtopics/2916",
-    "id": 6441,
-    "answer": 3,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/kimya/test?s=7&k=2916&id=6441&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/kimya/etkilesimli-tahta?s=7&amp;d=45&amp;ids=6441\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">6441</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(6441); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"20\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %20\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Aşağıdaki ayırma yöntemlerinden hangisinin eşleştirmesi doğrudur?</strong></p>\n<p>   <strong>  </strong>    <strong> </strong>    <strong><u>Ayırma Yöntemi</u>                <u> Özellik</u></strong></p>\n</p>\n<div>\n<div>A) Ayrımsal kristallendirme     Kaynama noktası\r\n</div>\n</div>\n<div>\n<div>B)  Flotasyon                           Çözünürlük farkı\r\n</div>\n</div>\n<div>\n<div>C) Ayırma hunisi                      Yoğunluk farkı\r\n</div>\n</div>\n<div>\n<div>D) Diyaliz                                 Çözünürlük farkı\r\n</div>\n</div>\n<div>\n<div>E) Dekantasyon                       Manyetik özellik\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Aşağıdaki ayırma yöntemlerinden hangisinin eşleştirmesi doğrudur? Ayırma Yöntemi Özellik A) Ayrımsal kristallendirme     Kaynama noktası B)  Flotasyon                           Çözünürlük farkı C) Ayırma hunisi                      Yoğunluk farkı D) Diyaliz                                 Çözünürlük farkı E) Dekantasyon                       Manyetik özellik A B C D E",
-    "withImage": false
   },
   {
     "topicPath": "category/10/lessons/kimya/topics/1/subtopics/2916",

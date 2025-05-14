@@ -4693,15 +4693,6 @@
   },
   {
     "topicPath": "category/12/lessons/inkilap-tarihi/topics/6/subtopics/2715",
-    "id": 393,
-    "answer": 2,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/inkilap-tarihi/test?s=9&k=2715&id=393&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/inkilap-tarihi/etkilesimli-tahta?s=9&amp;d=63&amp;ids=393\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">393</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(393); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"34\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %34\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p style=\"margin-left:0cm; margin-right:0cm\"><strong>Balfour Deklarasyonu'nun;</strong></p>\n<p style=\"margin-left:0cm; margin-right:0cm\">I. Siyonizm,                                             </p>\n<p style=\"margin-left:0cm; margin-right:0cm\">II. Militarizm,                             </p>\n<p style=\"margin-left:0cm; margin-right:0cm\">III. Liberalizm</p>\n<p style=\"margin-left:0cm; margin-right:0cm\"><strong>hareketlerinden hangilerinin amaçlarına hizmet ettiği söylenebilir?</strong></p>\n</p>\n<div>\n<div>A) Yalnız III\r\n</div>\n</div>\n<div>\n<div>B) Yalnız I\r\n</div>\n</div>\n<div>\n<div>C) Yalnız II\r\n</div>\n</div>\n<div>\n<div>D) II ve III\r\n</div>\n</div>\n<div>\n<div>E) I ve III\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Balfour Deklarasyonu'nun; I. Siyonizm, II. Militarizm, III. Liberalizm hareketlerinden hangilerinin amaçlarına hizmet ettiği söylenebilir? A) Yalnız III B) Yalnız I C) Yalnız II D) II ve III E) I ve III A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/12/lessons/inkilap-tarihi/topics/6/subtopics/2715",
     "id": 397,
     "answer": 5,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/inkilap-tarihi/test?s=9&k=2715&id=397&t=css&ks=0&os=0&zs=0",

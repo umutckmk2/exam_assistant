@@ -5679,15 +5679,6 @@
   },
   {
     "topicPath": "category/9/lessons/ingilizce/topics/8/subtopics/3029",
-    "id": 52527,
-    "answer": 2,
-    "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/ingilizce/test?s=6&k=3029&id=52527&t=css&ks=0&os=0&zs=0",
-    "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/ingilizce/etkilesimli-tahta?s=6&amp;d=40&amp;ids=52527\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">52527</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(52527); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"25\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %25\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p style=\"margin-left:0cm; margin-right:0cm\"><strong>Choose the option that completes the dialogue below.</strong></p>\n<p style=\"margin-left:0cm; margin-right:0cm\"><strong>Father</strong>: I’m busy. Can anyone answer the phone, please?</p>\n<p style=\"margin-left:0cm; margin-right:0cm\"><strong>Jason</strong>: I ...... it!                                                                                                   </p>\n<p style=\"margin-left:0cm; margin-right:0cm\"><strong>Father</strong>: Thanks, Jason.</p>\n<p style=\"margin-left:0cm; margin-right:0cm\"><strong>Jason</strong>: Not at all, dad.</p>\n</p>\n<div>\n<div>A) may get\r\n</div>\n</div>\n<div>\n<div>B) will get\r\n</div>\n</div>\n<div>\n<div>C) won’t get\r\n</div>\n</div>\n<div>\n<div>D) get\r\n</div>\n</div>\n<div>\n<div>E) never get\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
-    "questionText": "Choose the option that completes the dialogue below. Father : I’m busy. Can anyone answer the phone, please? Jason : I ...... it! Father : Thanks, Jason. Jason : Not at all, dad. A) may get B) will get C) won’t get D) get E) never get A B C D E",
-    "withImage": false
-  },
-  {
-    "topicPath": "category/9/lessons/ingilizce/topics/8/subtopics/3029",
     "id": 52528,
     "answer": 1,
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/ingilizce/test?s=6&k=3029&id=52528&t=css&ks=0&os=0&zs=0",

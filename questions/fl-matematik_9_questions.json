@@ -729,7 +729,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=751&id=22751&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=22751\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">22751</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(22751); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"9\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %9\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Analitik düzlemde <span class=\"math-tex\">\\(\\mathrm{A\\left( -1,3\\right)} \\)</span>  noktasının <span class=\"math-tex\">\\(\\mathrm{ax+2y-b=0} \\)</span> doğrusuna göre simetri dönüşümü altındaki görüntüsü <span class=\"math-tex\">\\(\\mathrm{A^{'}\\left( 5,-1\\right)} \\)</span> olduğuna göre <span class=\"math-tex\">\\(\\mathrm{a\\cdot b} \\)</span> değeri kaçtır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(10 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(12 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(15 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(20 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(30 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "Analitik düzlemde \\(\\mathrm{A\\left( -1,3\\right)} \\) noktasının \\(\\mathrm{ax+2y-b=0} \\) doğrusuna göre simetri dönüşümü altındaki görüntüsü \\(\\mathrm{A^{'}\\left( 5,-1\\right)} \\) olduğuna göre \\(\\mathrm{a\\cdot b} \\) değeri kaçtır? A) \\(10 \\) B) \\(12 \\) C) \\(15 \\) D) \\(20 \\) E) \\(30 \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "Analitik düzlemde   noktasının  doğrusuna göre simetri dönüşümü altındaki görüntüsü  olduğuna göre  değeri kaçtır?",
+    "options": [
+      "10",
+      "12",
+      "15",
+      "20",
+      "30"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/3/subtopics/751",
@@ -738,7 +746,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=751&id=22752&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=22752\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">22752</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(22752); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"8\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %8\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Analitik düzlemde <span class=\"math-tex\">\\(\\mathrm{A\\left( 2,-3\\right)} \\)</span>  noktasının <span class=\"math-tex\">\\(\\mathrm{d:3x-4y+2=0}\\)</span> doğrusuna göre simetriği <span class=\"math-tex\">\\(\\mathrm{A^{'}} \\)</span> noktasıdır.</p>\n<p><strong>d doğrusu üzerinde alınan B ve C noktalarıda kullanılarak oluşturulan</strong> <span class=\"math-tex\">\\(\\mathrm{ABA'C } \\)</span><strong> dörtgeninin alanı 20 birimkare olduğuna göre <span class=\"math-tex\">\\(\\mathrm{\\left| BC\\right|} \\)</span> kaçtır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(1 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(2 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(3 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(4 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(5 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "Analitik düzlemde \\(\\mathrm{A\\left( 2,-3\\right)} \\) noktasının \\(\\mathrm{d:3x-4y+2=0}\\) doğrusuna göre simetriği \\(\\mathrm{A^{'}} \\) noktasıdır. d doğrusu üzerinde alınan B ve C noktalarıda kullanılarak oluşturulan \\(\\mathrm{ABA'C } \\) dörtgeninin alanı 20 birimkare olduğuna göre \\(\\mathrm{\\left| BC\\right|} \\) kaçtır? A) \\(1 \\) B) \\(2 \\) C) \\(3 \\) D) \\(4 \\) E) \\(5 \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "Analitik düzlemde   noktasının   doğrusuna göre simetriği   noktasıdır. \nd doğrusu üzerinde alınan B ve C noktalarıda kullanılarak oluşturulan \ndörtgeninin alanı 20 birimkare olduğuna göre \nkaçtır?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/3/subtopics/751",
@@ -747,7 +763,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=751&id=22753&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=22753\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">22753</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(22753); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"12\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %12\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Analitik düzlemde</strong> <span class=\"math-tex\">\\(\\mathrm{2x-3y+a=0} \\)</span> <strong>doğrusunun üzerindeki her noktanın orijin etrafında negatif yönde </strong><span class=\"math-tex\">\\(\\mathrm{270^{\\circ }} \\)</span> <strong>döndürülmesiyle elde edilen doğru</strong> <span class=\"math-tex\">\\(\\mathrm{\\left( -2,5\\right)} \\)</span> <strong>noktasından geçiyorsa a değeri kaçtır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(-1 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(-2 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(-3 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(-4 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(-5 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "Analitik düzlemde \\(\\mathrm{2x-3y+a=0} \\) doğrusunun üzerindeki her noktanın orijin etrafında negatif yönde \\(\\mathrm{270^{\\circ }} \\) döndürülmesiyle elde edilen doğru \\(\\mathrm{\\left( -2,5\\right)} \\) noktasından geçiyorsa a değeri kaçtır? A) \\(-1 \\) B) \\(-2 \\) C) \\(-3 \\) D) \\(-4 \\) E) \\(-5 \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "Analitik düzlemde 2x-3y+a=0 doğrusunun üzerindeki her noktanın orijin etrafında negatif yönde 270° döndürülmesiyle elde edilen doğru (-2,5) noktasından geçiyorsa a değeri kaçtır?",
+    "options": [
+      "-1",
+      "-2",
+      "-3",
+      "-4",
+      "-5"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/3/subtopics/751",
@@ -756,7 +780,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=751&id=22754&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=22754\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">22754</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(22754); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"12\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %12\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{5x+2y-6=0} \\)</span> <strong>doğrusunun <span class=\"math-tex\">\\(\\mathrm{A\\left( -2k,5k\\right)} \\)</span> noktasına göre simetri dönüşümü altındaki görüntüsü olan doğrunun y eksenini kestiği noktanın ordinatı kaçtır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(-1 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(-2 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(-3 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(-4 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(-5 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{5x+2y-6=0} \\) doğrusunun \\(\\mathrm{A\\left( -2k,5k\\right)} \\) noktasına göre simetri dönüşümü altındaki görüntüsü olan doğrunun y eksenini kestiği noktanın ordinatı kaçtır? A) \\(-1 \\) B) \\(-2 \\) C) \\(-3 \\) D) \\(-4 \\) E) \\(-5 \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "5x+2y-6=0 doğrusunun A(-2k,5k) noktasına göre simetri dönüşümü altındaki görüntüsü olan doğrunun y eksenini kestiği noktanın ordinatı kaçtır?",
+    "options": [
+      "-1",
+      "-2",
+      "-3",
+      "-4",
+      "-5"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/755",
@@ -765,7 +797,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=755&id=17234&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17234\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17234</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17234); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"25\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %25\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{\\lim\\limits_{x \\to 3} \\ \\large \\frac{4x+5}{(x-3)^2}} \\)</span><strong> limitinin değeri kaçtır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{-\\infty}\\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{\\infty} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{0}\\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{1}\\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{4}\\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{\\lim\\limits_{x \\to 3} \\ \\large \\frac{4x+5}{(x-3)^2}} \\) limitinin değeri kaçtır? A) \\(\\mathrm{-\\infty}\\) B) \\(\\mathrm{\\infty} \\) C) \\(\\mathrm{0}\\) D) \\(\\mathrm{1}\\) E) \\(\\mathrm{4}\\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": " limitinin değeri kaçtır?",
+    "options": [
+      "−∞",
+      "∞",
+      "0",
+      "1",
+      "4"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/756",
@@ -828,7 +868,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=756&id=17257&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17257\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17257</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17257); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"5\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %5\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>  <span class=\"math-tex\">\\(\\mathrm{\\lim\\limits_{x \\to \\infty}\\dfrac{\\sin \\left( 2\\cdot e^{-x}\\right) }{e^{-x}}}\\)</span> <span class=\"math-tex\">\\(+ \\)</span>  <span class=\"math-tex\">\\(\\mathrm{\\lim\\limits_{x \\to \\infty}\\dfrac{\\sin 3x}{x}} \\)</span>  <strong> limitinin değeri kaçtır?         </strong>             </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(2 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(3 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(4 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(5 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(6 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{\\lim\\limits_{x \\to \\infty}\\dfrac{\\sin \\left( 2\\cdot e^{-x}\\right) }{e^{-x}}}\\) \\(+ \\) \\(\\mathrm{\\lim\\limits_{x \\to \\infty}\\dfrac{\\sin 3x}{x}} \\) limitinin değeri kaçtır? A) \\(2 \\) B) \\(3 \\) C) \\(4 \\) D) \\(5 \\) E) \\(6 \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "  <span class=\"math-tex\">\\(\\mathrm{\\lim\\limits_{x \\to \\infty}\\dfrac{\\sin \\left( 2\\cdot e^{-x}\\right) }{e^{-x}}}\\)</span> <span class=\"math-tex\">\\(+ \\)</span>  <span class=\"math-tex\">\\(\\mathrm{\\lim\\limits_{x \\to \\infty}\\dfrac{\\sin 3x}{x}} \\)</span>  <strong> limitinin değeri kaçtır?         </strong>            ",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/756",
@@ -837,7 +885,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=756&id=17297&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17297\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17297</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17297); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"8\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %8\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{​​I.​​​​}\\mathrm{\\lim\\limits_{x \\to \\infty}\\left( \\log _{2}\\left( x^{2}-6x\\right) -\\log _{2}\\left( 2x^{2}+1\\right) \\right) =-1}\\)</span>   </p>\n<p><span class=\"math-tex\">\\(\\mathrm{II.\\lim\\limits_{x \\to \\infty}\\left( 5^{\\dfrac{1}{x}}+3^{-x}+1\\right) =2} \\)</span></p>\n<p><span class=\"math-tex\">\\(\\mathrm{III. \\lim\\limits_{x \\to 2^{+}}\\left( 3^{\\dfrac{1 }{x-2}}+3^{x-2}\\right) =\\infty} \\)</span>  </p>\n<p><span class=\"math-tex\">\\(\\mathrm{IV. \\lim\\limits_{x \\to \\ -\\infty } \\left( \\dfrac{5}{4}\\right) ^{x}=-\\infty }\\)</span>     </p>\n<p><strong>ifadelerinden hangileri doğrudur?      </strong>                                                                                </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{I\\ ve\\ II} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{II\\ ve\\ III} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{I\\ ve\\ III} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{I\\ ,\\ II \\ ve \\ III}\\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{II,\\ \\ III \\ ve \\ IV}\\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{​​I.​​​​}\\mathrm{\\lim\\limits_{x \\to \\infty}\\left( \\log _{2}\\left( x^{2}-6x\\right) -\\log _{2}\\left( 2x^{2}+1\\right) \\right) =-1}\\) \\(\\mathrm{II.\\lim\\limits_{x \\to \\infty}\\left( 5^{\\dfrac{1}{x}}+3^{-x}+1\\right) =2} \\) \\(\\mathrm{III. \\lim\\limits_{x \\to 2^{+}}\\left( 3^{\\dfrac{1 }{x-2}}+3^{x-2}\\right) =\\infty} \\) \\(\\mathrm{IV. \\lim\\limits_{x \\to \\ -\\infty } \\left( \\dfrac{5}{4}\\right) ^{x}=-\\infty }\\) ifadelerinden hangileri doğrudur? A) \\(\\mathrm{I\\ ve\\ II} \\) B) \\(\\mathrm{II\\ ve\\ III} \\) C) \\(\\mathrm{I\\ ve\\ III} \\) D) \\(\\mathrm{I\\ ,\\ II \\ ve \\ III}\\) E) \\(\\mathrm{II,\\ \\ III \\ ve \\ IV}\\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "I. lim\n\nx→∞\n\n(log\n\n2\n\n(x\n\n2\n\n−6x)−log\n\n2\n\n(2x\n\n2\n\n+1)) =−1\n\n\n\nII.lim\n\nx→∞\n\n(5\n\n1/x\n\n+3\n\n−x\n\n+1) =2\n\n\n\nIII. lim\n\nx→2+\n\n(3\n\n1/(x−2)\n\n+3\n\n(x−2)) =∞\n\n\n\nIV. lim\n\nx→−∞\n\n(5/4)\n\nx\n\n=−∞\n\n\n\nifadelerinden hangileri doğrudur?",
+    "options": [
+      "I ve II",
+      "II ve III",
+      "I ve III",
+      "I , II ve III",
+      "II, III ve IV"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/757",
@@ -855,7 +911,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=758&id=17215&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17215\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17215</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17215); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"41\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %41\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong> Reel sayılarda tanımlı aşağıdaki doğrusal fonksiyonlardan hangisinin değişim oranı (hızı) en büyüktür?                           </strong>                </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{f\\left( x\\right) =3-2x} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{g\\left( x\\right) =x+1} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{h\\left( x\\right) =4x-3} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{k\\left( x\\right) =x-1} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{p\\left( x\\right) =2x-1} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "Reel sayılarda tanımlı aşağıdaki doğrusal fonksiyonlardan hangisinin değişim oranı (hızı) en büyüktür? A) \\(\\mathrm{f\\left( x\\right) =3-2x} \\) B) \\(\\mathrm{g\\left( x\\right) =x+1} \\) C) \\(\\mathrm{h\\left( x\\right) =4x-3} \\) D) \\(\\mathrm{k\\left( x\\right) =x-1} \\) E) \\(\\mathrm{p\\left( x\\right) =2x-1} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "Reel sayılarda tanımlı aşağıdaki doğrusal fonksiyonlardan hangisinin değişim oranı (hızı) en büyüktür? ",
+    "options": [
+      "f( x) =3-2x",
+      "g( x) =x+1",
+      "h( x) =4x-3",
+      "k( x) =x-1",
+      "p( x) =2x-1"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/758",
@@ -864,7 +928,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=758&id=17229&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17229\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17229</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17229); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"14\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %14\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{f\\left( x\\right) =2x^{2}-3x+6} \\)</span>  <strong>fonksiyonunun üzerindeki <span class=\"math-tex\">\\(\\mathrm{x=1} \\)</span>   apsisli noktasından çizilen teğetin y eksenini kestiği noktanın ordinatı kaçtır?                          </strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(-1 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(1 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(2 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(3 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(4 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f\\left( x\\right) =2x^{2}-3x+6} \\) fonksiyonunun üzerindeki \\(\\mathrm{x=1} \\) apsisli noktasından çizilen teğetin y eksenini kestiği noktanın ordinatı kaçtır? A) \\(-1 \\) B) \\(1 \\) C) \\(2 \\) D) \\(3 \\) E) \\(4 \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f(x) = 2x² - 3x + 6 fonksiyonunun üzerindeki x=1 apsisli noktasından çizilen teğetin y eksenini kestiği noktanın ordinatı kaçtır?",
+    "options": [
+      "-1",
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/758",
@@ -873,7 +945,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=758&id=17235&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17235\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17235</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17235); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"16\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %16\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{f\\left( x\\right) =b+\\sqrt{x+a}} \\)</span> <strong> fonksiyonunun <span class=\"math-tex\">\\(\\mathrm{\\left( 3,0\\right)} \\)</span>   noktasındaki teğeti <span class=\"math-tex\">\\(\\mathrm{y=\\dfrac{x}{4}-\\dfrac{3}{4}} \\)</span>   olduğuna göre <span class=\"math-tex\">\\(\\mathrm{a+b} \\)</span>   değeri kaçtır?                         </strong>                 </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(-2 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(-1 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(0 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(1 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(2 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f\\left( x\\right) =b+\\sqrt{x+a}} \\) fonksiyonunun \\(\\mathrm{\\left( 3,0\\right)} \\) noktasındaki teğeti \\(\\mathrm{y=\\dfrac{x}{4}-\\dfrac{3}{4}} \\) olduğuna göre \\(\\mathrm{a+b} \\) değeri kaçtır? A) \\(-2 \\) B) \\(-1 \\) C) \\(0 \\) D) \\(1 \\) E) \\(2 \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f(x) = b + √(x+a) fonksiyonunun (3,0) noktasındaki teğeti y = x/4 - 3/4 olduğuna göre a+b değeri kaçtır?",
+    "options": [
+      "-2",
+      "-1",
+      "0",
+      "1",
+      "2"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/758",
@@ -882,7 +962,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=758&id=17243&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17243\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17243</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17243); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"25\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %25\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{f\\left( x\\right) =x^{2}-2x+5} \\)</span><strong>     fonksiyonuna üzerindeki <span class=\"math-tex\">\\(\\mathrm{A\\left( a,b\\right)} \\)</span>   noktasından çizilen teğet <span class=\"math-tex\">\\(\\mathrm{y=\\dfrac{1}{4}x+3} \\)</span>   doğrusunu dik kesiyor ise, <span class=\"math-tex\">\\(\\mathrm{a+b} \\)</span>  değeri kaçtır?  </strong>                      </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(4 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(5 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(6 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(7 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(8 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f\\left( x\\right) =x^{2}-2x+5} \\) fonksiyonuna üzerindeki \\(\\mathrm{A\\left( a,b\\right)} \\) noktasından çizilen teğet \\(\\mathrm{y=\\dfrac{1}{4}x+3} \\) doğrusunu dik kesiyor ise, \\(\\mathrm{a+b} \\) değeri kaçtır? A) \\(4 \\) B) \\(5 \\) C) \\(6 \\) D) \\(7 \\) E) \\(8 \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f(x) =x²-2x+5 fonksiyonuna üzerindeki A(a,b) noktasından çizilen teğet y=1/4x+3 doğrusunu dik kesiyor ise, a+b değeri kaçtır?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/758",
@@ -891,7 +979,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=758&id=17258&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17258\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17258</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17258); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"10\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %10\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{f( x) =\\ln ( \\sin x) } \\)</span> <strong> ise</strong> <span class=\"math-tex\">\\(\\mathrm{f'( x)} \\)</span>  <strong>aşağıdakilerden hangisidir?  </strong>                </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{ln ( \\tan x)} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{\\ cot x} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{\\ cos x} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{\\ sinx} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{\\ tanx} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f( x) =\\ln ( \\sin x) } \\) ise \\(\\mathrm{f'( x)} \\) aşağıdakilerden hangisidir? A) \\(\\mathrm{ln ( \\tan x)} \\) B) \\(\\mathrm{\\ cot x} \\) C) \\(\\mathrm{\\ cos x} \\) D) \\(\\mathrm{\\ sinx} \\) E) \\(\\mathrm{\\ tanx} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f( x) =ln ( sin x)  ise f'( x)  aşağıdakilerden hangisidir?",
+    "options": [
+      "ln ( tan x)",
+      "cot x",
+      "cos x",
+      "sinx",
+      "tanx"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/758",
@@ -900,7 +996,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=758&id=17265&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17265\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17265</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17265); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"13\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %13\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{f( x) =x^{3}+e^{x^{2}+1}} \\)</span> <strong>fonksiyonu için</strong> <span class=\"math-tex\">\\(\\mathrm{f^{'}( 1)} \\)</span>  <strong>kaçtır?     </strong>                    </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{3} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{e^{2}} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{3+e^{2}} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{3+2e^{2}} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{1+e^{2}} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f( x) =x^{3}+e^{x^{2}+1}} \\) fonksiyonu için \\(\\mathrm{f^{'}( 1)} \\) kaçtır? A) \\(\\mathrm{3} \\) B) \\(\\mathrm{e^{2}} \\) C) \\(\\mathrm{3+e^{2}} \\) D) \\(\\mathrm{3+2e^{2}} \\) E) \\(\\mathrm{1+e^{2}} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f( x) =x³+e^(x²+1) fonksiyonu için f'( 1) kaçtır?",
+    "options": [
+      "3",
+      "e²",
+      "3+e²",
+      "3+2e²",
+      "1+e²"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/758",
@@ -909,7 +1013,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=758&id=17266&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17266\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17266</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17266); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"10\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %10\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p style=\"text-align:justify\"><span class=\"math-tex\">\\(\\mathrm{f( x) =sinx+\\cos 2x+\\sin 3x+...+\\sin 15x+\\cos {16}x} \\)</span> <strong>fonksiyonu için <span class=\"math-tex\">\\(\\mathrm{f'( \\pi )} \\)</span> değeri kaçtır?  </strong>                     </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{72} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{28} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{0} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{-45} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{-64} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f( x) =sinx+\\cos 2x+\\sin 3x+...+\\sin 15x+\\cos {16}x} \\) fonksiyonu için \\(\\mathrm{f'( \\pi )} \\) değeri kaçtır? A) \\(\\mathrm{72} \\) B) \\(\\mathrm{28} \\) C) \\(\\mathrm{0} \\) D) \\(\\mathrm{-45} \\) E) \\(\\mathrm{-64} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f( x) =sinx+\\cos 2x+\\sin 3x+...+\\sin 15x+\\cos {16}x fonksiyonu için f'( \\pi ) değeri kaçtır?",
+    "options": [
+      "72",
+      "28",
+      "0",
+      "-45",
+      "-64"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/758",
@@ -918,7 +1030,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=758&id=17278&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17278\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17278</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17278); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"20\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %20\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>  Bir hareketlinin t saatte aldığı yol, <span class=\"math-tex\">\\(\\mathrm{s( t) =2t^{3}-3t^{2}+5t+6}\\mathrm{ (km)} \\)</span>   fonksiyonu ile veriliyor. </p>\n<p><strong>Bu hareketlinin 3.saatteki hızı kaçtır?          </strong>                             </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{51} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{41} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{36 } \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{30} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{24} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "Bir hareketlinin t saatte aldığı yol, \\(\\mathrm{s( t) =2t^{3}-3t^{2}+5t+6}\\mathrm{ (km)} \\) fonksiyonu ile veriliyor. Bu hareketlinin 3.saatteki hızı kaçtır? A) \\(\\mathrm{51} \\) B) \\(\\mathrm{41} \\) C) \\(\\mathrm{36 } \\) D) \\(\\mathrm{30} \\) E) \\(\\mathrm{24} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "Bir hareketlinin t saatte aldığı yol, s( t) =2t^{3}-3t^{2}+5t+6 (km) fonksiyonu ile veriliyor. Bu hareketlinin 3.saatteki hızı kaçtır?",
+    "options": [
+      "51",
+      "41",
+      "36 ",
+      "30",
+      "24"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/758",
@@ -927,7 +1047,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=758&id=17287&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17287\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17287</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17287); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"6\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %6\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{f( x) =\\ln ( \\dfrac{\\sqrt[3] {x+1}}{\\sqrt{x+5}} )} \\)</span>   <strong>fonksiyonunun <span class=\"math-tex\">\\(\\mathrm{x=1} \\)</span>  apsisli noktasındaki teğetinin eğimi kaçtır?                </strong>   </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{3} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{1} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{\\dfrac{1}{12} }\\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{\\dfrac{1}{16} } \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{\\dfrac{1}{32} }\\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f( x) =\\ln ( \\dfrac{\\sqrt[3] {x+1}}{\\sqrt{x+5}} )} \\) fonksiyonunun \\(\\mathrm{x=1} \\) apsisli noktasındaki teğetinin eğimi kaçtır? A) \\(\\mathrm{3} \\) B) \\(\\mathrm{1} \\) C) \\(\\mathrm{\\dfrac{1}{12} }\\) D) \\(\\mathrm{\\dfrac{1}{16} } \\) E) \\(\\mathrm{\\dfrac{1}{32} }\\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f( x) =ln ( √(x+1) / √(x+5) ) fonksiyonunun x=1 apsisli noktasındaki teğetinin eğimi kaçtır?",
+    "options": [
+      "3",
+      "1",
+      "1/12",
+      "1/16",
+      "1/32"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/758",
@@ -936,7 +1064,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=758&id=17291&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17291\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17291</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17291); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"14\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %14\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p> <span class=\"math-tex\">\\(\\mathrm{y=2x^{2}+1} \\)</span>  <strong>eğrisine üzerindeki <span class=\"math-tex\">\\(\\mathrm{x=-1} \\)</span> ve <span class=\"math-tex\">\\(\\mathrm{x=2} \\)</span> apsisli noktalarından çizilen teğet doğrularının kesiştikleri noktanın apsisi kaçtır?        </strong>                    </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{-1} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{0} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{\\dfrac{1}{2}}\\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{\\dfrac{1}{3}} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{\\dfrac{1}{4}} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{y=2x^{2}+1} \\) eğrisine üzerindeki \\(\\mathrm{x=-1} \\) ve \\(\\mathrm{x=2} \\) apsisli noktalarından çizilen teğet doğrularının kesiştikleri noktanın apsisi kaçtır? A) \\(\\mathrm{-1} \\) B) \\(\\mathrm{0} \\) C) \\(\\mathrm{\\dfrac{1}{2}}\\) D) \\(\\mathrm{\\dfrac{1}{3}} \\) E) \\(\\mathrm{\\dfrac{1}{4}} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "y=2x²+1 eğrisine üzerindeki x=-1 ve x=2 apsisli noktalardan çizilen teğet doğrularının kesiştikleri noktanın apsisi kaçtır?",
+    "options": [
+      "-1",
+      "0",
+      "½",
+      "⅓",
+      "¼"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/760",
@@ -945,7 +1081,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=760&id=18279&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=18279\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">18279</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(18279); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"22\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %22\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>  <span class=\"math-tex\">\\(\\mathrm{f( x) =ax^{3}+2x-b} \\)</span></strong></p>\n<p><span class=\"math-tex\">\\(\\mathrm{f( -1) =3} \\)</span> ve <span class=\"math-tex\">\\(\\mathrm{f^{'}(1) =8}\\)</span></p>\n<p><strong>olduğuna göre a.b kaçtır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{-12}\\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{12} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{14} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{-14} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{-7} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f( x) =ax^{3}+2x-b} \\) \\(\\mathrm{f( -1) =3} \\) ve \\(\\mathrm{f^{'}(1) =8}\\) olduğuna göre a.b kaçtır? A) \\(\\mathrm{-12}\\) B) \\(\\mathrm{12} \\) C) \\(\\mathrm{14} \\) D) \\(\\mathrm{-14} \\) E) \\(\\mathrm{-7} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f( x) =ax³+2x-b\nf( -1) =3\nve\nf'(1) =8\nolduğuna göre a.b kaçtır?",
+    "options": [
+      "-12",
+      "12",
+      "14",
+      "-14",
+      "-7"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/760",
@@ -954,7 +1098,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=760&id=18280&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=18280\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">18280</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(18280); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"8\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %8\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong> <span class=\"math-tex\">\\(\\mathrm{y=f( x)} \\)</span> olmak üzere  <span class=\"math-tex\">\\(\\mathrm{\\dfrac{4}{x}+\\dfrac{2}{y}=1} \\)</span>  olduğuna göre <span class=\"math-tex\">\\(\\mathrm{f'( 3)} \\)</span>kaçtır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{6} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{-8} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{-6} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{8} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{5} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{y=f( x)} \\) olmak üzere \\(\\mathrm{\\dfrac{4}{x}+\\dfrac{2}{y}=1} \\) olduğuna göre \\(\\mathrm{f'( 3)} \\) kaçtır? A) \\(\\mathrm{6} \\) B) \\(\\mathrm{-8} \\) C) \\(\\mathrm{-6} \\) D) \\(\\mathrm{8} \\) E) \\(\\mathrm{5} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "  y=f( x) olmak üzere   4x+2y=1  olduğuna göre f'( 3)kaçtır?",
+    "options": [
+      "6",
+      "-8",
+      "-6",
+      "8",
+      "5"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/760",
@@ -972,7 +1124,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=760&id=18282&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=18282\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">18282</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(18282); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"24\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %24\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{f(x)=x^2 + 3x + 4} \\)</span></p>\n<p><span class=\"math-tex\">\\(\\mathrm{g(x)=2x^3+ 6x^2 + 8} \\)</span></p>\n<p><strong><span class=\"math-tex\">\\(\\mathrm{f( x) +g( x)} \\)</span> toplam fonksiyonunun  <span class=\"math-tex\">\\(\\mathrm{x=1} \\)</span> noktasındaki türevi kaçtır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{23} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{25} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{27} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{29} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{31} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f(x)=x^2 + 3x + 4} \\) \\(\\mathrm{g(x)=2x^3+ 6x^2 + 8} \\) \\(\\mathrm{f( x) +g( x)} \\) toplam fonksiyonunun \\(\\mathrm{x=1} \\) noktasındaki türevi kaçtır? A) \\(\\mathrm{23} \\) B) \\(\\mathrm{25} \\) C) \\(\\mathrm{27} \\) D) \\(\\mathrm{29} \\) E) \\(\\mathrm{31} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f(x)=x^2 + 3x + 4\ng(x)=2x^3+ 6x^2 + 8\nf( x) +g( x) toplam fonksiyonunun  x=1 noktasındaki türevi kaçtır?",
+    "options": [
+      "23",
+      "25",
+      "27",
+      "29",
+      "31"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/760",
@@ -981,7 +1141,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=760&id=18283&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=18283\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">18283</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(18283); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"28\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %28\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{f(x) = 5x^3 + 4x^2 - 9}\\)</span></p>\n<p><span class=\"math-tex\">\\(\\mathrm{ g(x) = 5x^3 + 8x - 1903} \\)</span></p>\n<p><strong><span class=\"math-tex\">\\(\\mathrm{f(x) - g(x)} \\)</span> değerinin  <span class=\"math-tex\">\\(\\mathrm{x=1 }\\)</span> noktasındaki türevi kaçtır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{-3} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{-1} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{0} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{1} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{3} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f(x) = 5x^3 + 4x^2 - 9}\\) \\(\\mathrm{ g(x) = 5x^3 + 8x - 1903} \\) \\(\\mathrm{f(x) - g(x)} \\) değerinin \\(\\mathrm{x=1 }\\) noktasındaki türevi kaçtır? A) \\(\\mathrm{-3} \\) B) \\(\\mathrm{-1} \\) C) \\(\\mathrm{0} \\) D) \\(\\mathrm{1} \\) E) \\(\\mathrm{3} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f(x) = 5x^3 + 4x^2 - 9\ng(x) = 5x^3 + 8x - 1903\nf(x) - g(x) değerinin x=1 noktasındaki türevi kaçtır?",
+    "options": [
+      "-3",
+      "-1",
+      "0",
+      "1",
+      "3"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/760",
@@ -990,7 +1158,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=760&id=18291&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=18291\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">18291</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(18291); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"9\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %9\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{f(x) = 4x^3 - 3x} \\)</span></p>\n<p><span class=\"math-tex\">\\(\\mathrm{g(x) =3x + 1} \\)</span> ve</p>\n<p><span class=\"math-tex\">\\(\\mathrm{h(x) = 7x^2 - 3}\\)</span> fonksiyonları veriliyor.</p>\n<p><strong><span class=\"math-tex\">\\(\\mathrm{[ \\dfrac{f( x) }{g( x) }\\cdot h( x) ]} \\)</span></strong>  <strong>fonksiyonunun</strong> <strong><span class=\"math-tex\">\\(\\mathrm{x = 0} \\)</span> noktasındaki türevi nedir?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{1} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{2} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{4} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{6} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{9 } \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f(x) = 4x^3 - 3x} \\) \\(\\mathrm{g(x) =3x + 1} \\) ve \\(\\mathrm{h(x) = 7x^2 - 3}\\) fonksiyonları veriliyor. \\(\\mathrm{[ \\dfrac{f( x) }{g( x) }\\cdot h( x) ]} \\) fonksiyonunun \\(\\mathrm{x = 0} \\) noktasındaki türevi nedir? A) \\(\\mathrm{1} \\) B) \\(\\mathrm{2} \\) C) \\(\\mathrm{4} \\) D) \\(\\mathrm{6} \\) E) \\(\\mathrm{9 } \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f(x) = 4x³ - 3x\ng(x) =3x + 1 ve\nh(x) = 7x² - 3 fonksiyonları veriliyor. [ f( x) /g( x) ⋅ h( x) ] fonksiyonunun x = 0 noktasındaki türevi nedir?",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "6",
+      "9 "
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/760",
@@ -999,7 +1175,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=760&id=18292&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=18292\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">18292</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(18292); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"19\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %19\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{f( x) =2x^{10}-5x} \\)</span> ve  <span class=\"math-tex\">\\(\\mathrm{g(x) = 3x^2 + 2} \\)</span>  fonksiyonları veriliyor.</p>\n<p><strong>Buna göre  <span class=\"math-tex\">\\(\\mathrm{ f’(0) + g’(1) } \\)</span> değeri kaçtır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{1} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{0} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{-1} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{6} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{-5} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f( x) =2x^{10}-5x} \\) ve \\(\\mathrm{g(x) = 3x^2 + 2} \\) fonksiyonları veriliyor. Buna göre \\(\\mathrm{ f’(0) + g’(1) } \\) değeri kaçtır? A) \\(\\mathrm{1} \\) B) \\(\\mathrm{0} \\) C) \\(\\mathrm{-1} \\) D) \\(\\mathrm{6} \\) E) \\(\\mathrm{-5} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f( x) =2x^{10}-5x ve g(x) = 3x^2 + 2 fonksiyonları veriliyor.\nBuna göre f’(0) + g’(1) değeri kaçtır?",
+    "options": [
+      "1",
+      "0",
+      "-1",
+      "6",
+      "-5"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/760",
@@ -1017,7 +1201,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=761&id=17272&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17272\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17272</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17272); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"6\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %6\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{f:\\left[ 0,\\dfrac{\\pi }{2}\\right] \\rightarrow \\mathbb{R}} \\)</span>  ,   <span class=\"math-tex\">\\(\\mathrm{ f(\\sin x) =\\tan x} \\)</span> <strong> fonksiyonunun <span class=\"math-tex\">\\(\\mathrm{f^{'}\\ ( \\dfrac{3}{5})} \\)</span> değeri kaçtır?     </strong>           </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\dfrac{125}{4} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\dfrac{125}{8} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\dfrac{125}{16} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\dfrac{125}{32} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\dfrac{125}{64}\\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f:\\left[ 0,\\dfrac{\\pi }{2}\\right] \\rightarrow \\mathbb{R}} \\) , \\(\\mathrm{ f(\\sin x) =\\tan x} \\) fonksiyonunun \\(\\mathrm{f^{'}\\ ( \\dfrac{3}{5})} \\) değeri kaçtır? A) \\(\\dfrac{125}{4} \\) B) \\(\\dfrac{125}{8} \\) C) \\(\\dfrac{125}{16} \\) D) \\(\\dfrac{125}{32} \\) E) \\(\\dfrac{125}{64}\\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f:[ 0,π /2 ] → ℝ , f(sin x) =tan x fonksiyonunun f′( 3/5) değeri kaçtır?",
+    "options": [
+      "125/4",
+      "125/8",
+      "125/16",
+      "125/32",
+      "125/64"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/761",
@@ -1026,7 +1218,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=761&id=18290&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=18290\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">18290</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(18290); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"19\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %19\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{y = f(x) = (3x^4 + 2) . (2x^2 - 3x)^4}\\)</span></p>\n<p><strong>olduğuna göre <span class=\"math-tex\">\\(\\mathrm{f’(0)} \\)</span> değeri nedir?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(3 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(-3 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(1 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(-1 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(0 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{y = f(x) = (3x^4 + 2) . (2x^2 - 3x)^4}\\) olduğuna göre \\(\\mathrm{f’(0)} \\) değeri nedir? A) \\(3 \\) B) \\(-3 \\) C) \\(1 \\) D) \\(-1 \\) E) \\(0 \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "y = f(x) = (3x^4 + 2) . (2x^2 - 3x)^4\nolduğuna göre f’(0) değeri nedir?",
+    "options": [
+      "3",
+      "-3",
+      "1",
+      "-1",
+      "0"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/762",
@@ -1035,7 +1235,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=762&id=17267&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17267\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17267</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17267); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"4\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %4\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>   <span class=\"math-tex\">\\(\\mathrm{f( x ) =2^{15}+\\ln x} \\)</span> <strong>fonksiyonunun 18. türev fonksiyonunun <span class=\"math-tex\">\\(\\mathrm{x=1} \\)</span>  apsisli noktasındaki  teğetinin eğimi</strong> <strong>kaçtır? </strong>     </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{16!} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{ - 17!} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{17!} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{- 18!} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{18!} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f( x ) =2^{15}+\\ln x} \\) fonksiyonunun 18. türev fonksiyonunun \\(\\mathrm{x=1} \\) apsisli noktasındaki  teğetinin eğimi kaçtır? A) \\(\\mathrm{16!} \\) B) \\(\\mathrm{ - 17!} \\) C) \\(\\mathrm{17!} \\) D) \\(\\mathrm{- 18!} \\) E) \\(\\mathrm{18!} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "   \n\tf( x ) =215+ln x\n \n \nfonksiyonunun 18. türev fonksiyonunun x=1 apsisli noktasındaki teğetinin eğimi kaçtır? ",
+    "options": [
+      "16!",
+      "- 17!",
+      "17!",
+      "- 18!",
+      "18!"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/762",
@@ -1044,7 +1252,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=762&id=17269&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17269\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17269</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17269); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"8\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %8\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p> <span class=\"math-tex\">\\( \\mathrm{f( x) =\\sin x-\\cos 2x} \\)</span>  <strong>fonksiyonunun </strong>23.<strong>türevi aşağıdakilerden hangisidir?       </strong>                     </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{\\cos x-2^{23}\\cdot \\sin 2x} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{\\ -sin x-2^{23}\\cdot \\cos 2x} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{\\ - sin x+2^{23}\\cdot \\cos2x} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{\\cos x-2^{23}\\cdot \\cos 2x} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{\\ -cos x-2^{23}\\cdot \\sin 2x} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\( \\mathrm{f( x) =\\sin x-\\cos 2x} \\) fonksiyonunun 23. türevi aşağıdakilerden hangisidir? A) \\(\\mathrm{\\cos x-2^{23}\\cdot \\sin 2x} \\) B) \\(\\mathrm{\\ -sin x-2^{23}\\cdot \\cos 2x} \\) C) \\(\\mathrm{\\ - sin x+2^{23}\\cdot \\cos2x} \\) D) \\(\\mathrm{\\cos x-2^{23}\\cdot \\cos 2x} \\) E) \\(\\mathrm{\\ -cos x-2^{23}\\cdot \\sin 2x} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": " f( x) =sin x−cos 2x fonksiyonunun 23.türevi aşağıdakilerden hangisidir?       ",
+    "options": [
+      "cos x−223⋅ sin 2x",
+      "−sin x−223⋅ cos 2x",
+      "− sin x+223⋅ cos2x",
+      "cos x−223⋅ cos 2x",
+      "−cos x−223⋅ sin 2x"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/762",
@@ -1053,7 +1269,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=762&id=17270&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17270\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17270</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17270); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"8\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %8\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{f( x) =e^{x}+e^{2x}+\\ldots +e^{10x} } \\)</span> <strong>fonksiyonu için</strong> <span class=\"math-tex\">\\(\\mathrm{f''( 0 )} \\)</span>  <strong>değeri kaçtır?         </strong>          </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{385} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{412} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{508 } \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{612} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{648} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f( x) =e^{x}+e^{2x}+\\ldots +e^{10x} } \\) fonksiyonu için \\(\\mathrm{f''( 0 )} \\) değeri kaçtır? A) \\(\\mathrm{385} \\) B) \\(\\mathrm{412} \\) C) \\(\\mathrm{508 } \\) D) \\(\\mathrm{612} \\) E) \\(\\mathrm{648} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f( x) =e^(x)+e^(2x}+\\ldots +e^(10x) fonksiyonu için f''( 0 ) değeri kaçtır? ",
+    "options": [
+      "385",
+      "412",
+      "508 ",
+      "612",
+      "648"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/763",
@@ -1071,7 +1295,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=763&id=18285&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=18285\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">18285</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(18285); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"24\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %24\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>İlknur matematik dersinde fonksiyonun türevinin işaret tablosu inceleme konusunda fonksiyonun artan olduğu aralıkta <span class=\"math-tex\">\\(\\mathrm{f^{'}( x)} \\)</span> fonksiyonunun  \"+\" işaretli olduğunu ve <span class=\"math-tex\">\\(\\mathrm{f( x)} \\)</span> için        \" <span class=\"math-tex\">\\(\\nearrow \\)</span>  \"  sembolünü, fonksiyonun azalan olduğu aralıkta <span class=\"math-tex\">\\(\\mathrm{f^{'}( x)} \\)</span> fonksiyonunun   \"-\" işaretli olduğunu <span class=\"math-tex\">\\(\\mathrm{f( x)} \\)</span> için  \" <span class=\"math-tex\">\\(\\searrow \\)</span>\"  sembolü kullanılacağını öğreniyor.</p>\n<p><strong>Bu bilgiye göre; <span class=\"math-tex\">\\(\\mathrm{f:\\mathbb{R} \\rightarrow \\mathbb{R}} \\)</span> ,    <span class=\"math-tex\">\\(\\mathrm{f( x) =\\dfrac{x^{3}}{3}-x+1977} \\)</span>  fonksiyonunun işaret tablosu yapıldığında elde edilen üçlü aşağıdakilerden hangisidir?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{↘ , ↗ , ↗} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(↗, ↘, ↘ \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(↗, ↘, ↗ \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(↘, ↗, ↘ \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(↘, ↗, ↘ \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "İlknur matematik dersinde fonksiyonun türevinin işaret tablosu inceleme konusunda fonksiyonun artan olduğu aralıkta \\(\\mathrm{f^{'}( x)} \\) fonksiyonunun  \"+\" işaretli olduğunu ve \\(\\mathrm{f( x)} \\) için        \" \\(\\nearrow \\) \"  sembolünü, fonksiyonun azalan olduğu aralıkta \\(\\mathrm{f^{'}( x)} \\) fonksiyonunun   \"-\" işaretli olduğunu \\(\\mathrm{f( x)} \\) için  \" \\(\\searrow \\) \"  sembolü kullanılacağını öğreniyor. Bu bilgiye göre; \\(\\mathrm{f:\\mathbb{R} \\rightarrow \\mathbb{R}} \\) , \\(\\mathrm{f( x) =\\dfrac{x^{3}}{3}-x+1977} \\) fonksiyonunun işaret tablosu yapıldığında elde edilen üçlü aşağıdakilerden hangisidir? A) \\(\\mathrm{↘ , ↗ , ↗} \\) B) \\(↗, ↘, ↘ \\) C) \\(↗, ↘, ↗ \\) D) \\(↘, ↗, ↘ \\) E) \\(↘, ↗, ↘ \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "İlknur matematik dersinde fonksiyonun türevinin işaret tablosu inceleme konusunda fonksiyonun artan olduğu aralıkta f'( x) fonksiyonunun  \"+\" işaretli olduğunu ve  f( x) için   \"↗\"   sembolünü, fonksiyonun azalan olduğu aralıkta  f'( x) fonksiyonunun   \"-\" işaretli olduğunu  f( x) için  \"↘\" sembolü kullanılacağını öğreniyor.\n\nBu bilgiye göre; f:ℝ → ℝ ,    f( x) =x³/₃-x+1977  fonksiyonunun işaret tablosu yapıldığında elde edilen üçlü aşağıdakilerden hangisidir?",
+    "options": [
+      "↘ , ↗ , ↗",
+      "↗, ↘, ↘",
+      "↗, ↘, ↗",
+      "↘, ↗, ↘",
+      "↘, ↗, ↘"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/764",
@@ -1080,7 +1312,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=764&id=17290&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17290\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17290</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17290); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"16\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %16\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{f\\left( x\\right) =x^{3}-5x^{2}+6x+9} \\)</span>   <strong> fonksiyonunun x eksenine paralel olan teğetlerinin değme noktalarının apsislerinin çarpımı kaçtır?        </strong>         </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(2 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(3 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(4 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(6 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(9 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f\\left( x\\right) =x^{3}-5x^{2}+6x+9} \\) fonksiyonunun x eksenine paralel olan teğetlerinin değme noktalarının apsislerinin çarpımı kaçtır? A) \\(2 \\) B) \\(3 \\) C) \\(4 \\) D) \\(6 \\) E) \\(9 \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f(x) =x³-5x²+6x+9 fonksiyonunun x eksenine paralel olan teğetlerinin değme noktalarının apsislerinin çarpımı kaçtır?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "6",
+      "9"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/764",
@@ -1089,7 +1329,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=764&id=17296&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17296\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17296</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17296); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"11\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %11\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p> Reel sayılarda tanımlı <span class=\"math-tex\">\\(\\mathrm{f\\left( x\\right) } \\)</span>  fonksiyonu için</p>\n<p> <span class=\"math-tex\">\\(\\mathrm{a &gt;0,\\ c &lt;0}\\)</span>   olmak üzere     <span class=\"math-tex\">\\(\\mathrm{f\\left( x\\right) =ax^{3}+bx^{2}+cx+d} \\)</span>  veriliyor.</p>\n<p>I. <span class=\"math-tex\">\\(\\mathrm{f\\left( x\\right)} \\)</span>  fonksiyonunun iki tane ekstremum noktası vardır.</p>\n<p>II.<span class=\"math-tex\">\\(\\mathrm{f\\left( x\\right) } \\)</span>   fonksiyonu azalan fonksiyondur. </p>\n<p>III. <span class=\"math-tex\">\\(\\mathrm{f\\left( x\\right) } \\)</span>  fonksiyonu reel sayılarda artan bir fonksiyondur.</p>\n<p><span class=\"math-tex\">\\(\\mathrm{f} \\)</span>  <strong>fonksiyonu için yukarıdaki ifadelerden hangileri doğrudur?              </strong>                       </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{Yalnız\\ I} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{Yalnız\\ II} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{Yalnız \\ III}\\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{I \\ ve\\ II}\\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{I \\ ve\\ III}\\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "Reel sayılarda tanımlı \\(\\mathrm{f\\left( x\\right) } \\) fonksiyonu için \\(\\mathrm{a >0,\\ c <0}\\) olmak üzere \\(\\mathrm{f\\left( x\\right) =ax^{3}+bx^{2}+cx+d} \\) veriliyor. I. \\(\\mathrm{f\\left( x\\right)} \\) fonksiyonunun iki tane ekstremum noktası vardır. II. \\(\\mathrm{f\\left( x\\right) } \\) fonksiyonu azalan fonksiyondur. III. \\(\\mathrm{f\\left( x\\right) } \\) fonksiyonu reel sayılarda artan bir fonksiyondur. \\(\\mathrm{f} \\) fonksiyonu için yukarıdaki ifadelerden hangileri doğrudur? A) \\(\\mathrm{Yalnız\\ I} \\) B) \\(\\mathrm{Yalnız\\ II} \\) C) \\(\\mathrm{Yalnız \\ III}\\) D) \\(\\mathrm{I \\ ve\\ II}\\) E) \\(\\mathrm{I \\ ve\\ III}\\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "Reel sayılarda tanımlı \n fonksiyonu için\na >0, c <0 olmak üzere \n veriliyor.\n\nI. \n fonksiyonunun iki tane ekstremum noktası vardır.\n\nII. fonksiyonu azalan fonksiyondur. \n\nIII. fonksiyonu reel sayılarda artan bir fonksiyondur.\n\n fonksiyonu için yukarıdaki ifadelerden hangileri doğrudur?",
+    "options": [
+      "Yalnız I",
+      "Yalnız II",
+      "Yalnız III",
+      "I ve II",
+      "I ve III"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/765",
@@ -1098,7 +1346,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=765&id=17286&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17286\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17286</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17286); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"7\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %7\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p> <span class=\"math-tex\">\\(\\mathrm{f:\\mathbb{R} \\rightarrow \\mathbb{R}} \\)</span>  </p>\n<p><span class=\"math-tex\">\\(\\mathrm{f\\left( x\\right) =x^{3}-3x^{2}+m} \\)</span>  <strong>fonksiyonunun üç farklı reel kökünün olması için m nin alabileceği farklı tam sayı değerlerinin toplamı kaçtır?                       </strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{-3} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(0 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(5 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(6 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(15 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f:\\mathbb{R} \\rightarrow \\mathbb{R}} \\) \\(\\mathrm{f\\left( x\\right) =x^{3}-3x^{2}+m} \\) fonksiyonunun üç farklı reel kökünün olması için m nin alabileceği farklı tam sayı değerlerinin toplamı kaçtır? A) \\(\\mathrm{-3} \\) B) \\(0 \\) C) \\(5 \\) D) \\(6 \\) E) \\(15 \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f:ℝ → ℝ  f(x) =x³-3x²+m fonksiyonunun üç farklı reel kökünün olması için m nin alabileceği farklı tam sayı değerlerinin toplamı kaçtır?",
+    "options": [
+      "-3",
+      "0",
+      "5",
+      "6",
+      "15"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/765",
@@ -1107,7 +1363,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=765&id=17289&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17289\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17289</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17289); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"10\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %10\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{f\\left( x\\right) =-x^{2}+2x+3} \\)</span>  parabolü üzerindeki bir <span class=\"math-tex\">\\(\\mathrm{A\\left( a,b\\right)} \\)</span>  noktası ile <span class=\"math-tex\">\\(\\mathrm{y=4x} \\)</span>   doğrusu üzerindeki <span class=\"math-tex\">\\(\\mathrm{B\\left( a,c\\right)} \\)</span>  noktasının apsisi aynı veriliyor.</p>\n<p><strong>Buna göre <span class=\"math-tex\">\\(\\mathrm{b-c} \\)</span>  ifadesinin<u> en büyük</u> değeri kaçtır?            </strong>        </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(5 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(4 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(3 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(2 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(1 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f\\left( x\\right) =-x^{2}+2x+3} \\) parabolü üzerindeki bir \\(\\mathrm{A\\left( a,b\\right)} \\) noktası ile \\(\\mathrm{y=4x} \\) doğrusu üzerindeki \\(\\mathrm{B\\left( a,c\\right)} \\) noktasının apsisi aynı veriliyor. Buna göre \\(\\mathrm{b-c} \\) ifadesinin en büyük değeri kaçtır? A) \\(5 \\) B) \\(4 \\) C) \\(3 \\) D) \\(2 \\) E) \\(1 \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f(x) = -x² + 2x + 3 parabolü üzerindeki bir A(a,b) noktası ile y = 4x doğrusu üzerindeki B(a,c) noktasının apsisi aynı veriliyor.\n\nBuna göre b - c ifadesinin en büyük değeri kaçtır?",
+    "options": [
+      "5",
+      "4",
+      "3",
+      "2",
+      "1"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/765",
@@ -1116,7 +1380,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=765&id=18284&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=18284\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">18284</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(18284); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"6\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %6\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>İkiz olarak doğan Berat ve Belçim eşit oldukları hissiyle oyuncaklarını ve paralarını eşit olarak paylaşmayı öğreniyorlar.Berat'ın x TL ve Belçim'in y TL parası vardır.</p>\n<p>x ve y tam sayı olmak üzere <strong> <span class=\"math-tex\">\\(\\mathrm{x+y=70} \\)</span></strong> tir<strong>.  <span class=\"math-tex\">\\(\\mathrm{x^{2}\\cdot y^{5}} \\)</span> </strong>ifadesi <u>en büyük</u> değerini aldığında paralarını eşitleme kararı alıyorlar.</p>\n<p><strong>Bu durumda Belçim ve Berat’tan kim diğerine ne kadar para verir?</strong></p>\n</p>\n<div>\n<div>A) Belçim, Berat’a 15 TLverir.\r\n</div>\n</div>\n<div>\n<div>B) Berat, Belçim’e 15TL verir.\r\n</div>\n</div>\n<div>\n<div>C) Berat, Belçim’e 10 TL verir.\r\n</div>\n</div>\n<div>\n<div>D) Belçim, Berat’a 10 TL verir.\r\n</div>\n</div>\n<div>\n<div>E) Belçim, Berat’a 20TL verir.\r\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "İkiz olarak doğan Berat ve Belçim eşit oldukları hissiyle oyuncaklarını ve paralarını eşit olarak paylaşmayı öğreniyorlar.Berat'ın x TL ve Belçim'in y TL parası vardır. x ve y tam sayı olmak üzere \\(\\mathrm{x+y=70} \\) tir . \\(\\mathrm{x^{2}\\cdot y^{5}} \\) ifadesi en büyük değerini aldığında paralarını eşitleme kararı alıyorlar. Bu durumda Belçim ve Berat’tan kim diğerine ne kadar para verir? A) Belçim, Berat’a 15 TLverir. B) Berat, Belçim’e 15TL verir. C) Berat, Belçim’e 10 TL verir. D) Belçim, Berat’a 10 TL verir. E) Belçim, Berat’a 20TL verir. A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "İkiz olarak doğan Berat ve Belçim eşit oldukları hissiyle oyuncaklarını ve paralarını eşit olarak paylaşmayı öğreniyorlar.Berat'ın x TL ve Belçim'in y TL parası vardır.\n\nx ve y tam sayı olmak üzere <span class=\"math-tex\">\\(\\mathrm{x+y=70} \\)</span> tir<strong>.  <span class=\"math-tex\">\\(\\mathrm{x^{2}\\cdot y^{5}} \\)</span> ifadesi <u>en büyük</u> değerini aldığında paralarını eşitleme kararı alıyorlar.\n\nBu durumda Belçim ve Berat’tan kim diğerine ne kadar para verir?",
+    "options": [
+      "Belçim, Berat’a 15 TLverir.",
+      "Berat, Belçim’e 15TL verir.",
+      "Berat, Belçim’e 10 TL verir.",
+      "Belçim, Berat’a 10 TL verir.",
+      "Belçim, Berat’a 20TL verir."
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/765",
@@ -1125,7 +1397,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=765&id=18293&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=18293\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">18293</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(18293); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"11\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %11\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{\\left( n^{2}+2\\right) \\cdot x^{2}-2nx+m+1=0} \\)</span></p>\n<p><strong>denkleminin  kökleri toplamının  <u>en büyük</u>  olabilmesi için n  kaç olabilir?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(2 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(0 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{\\sqrt{2}} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{- \\sqrt{2}} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(-2 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{\\left( n^{2}+2\\right) \\cdot x^{2}-2nx+m+1=0} \\) denkleminin  kökleri toplamının en büyük olabilmesi için n  kaç olabilir? A) \\(2 \\) B) \\(0 \\) C) \\(\\mathrm{\\sqrt{2}} \\) D) \\(\\mathrm{- \\sqrt{2}} \\) E) \\(-2 \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "(\\( \\mathrm{\\left( n^{2}+2\\right) \\cdot x^{2}-2nx+m+1=0} \\) )\n\ndenkleminin  kökleri toplamının  en büyük  olabilmesi için n  kaç olabilir?",
+    "options": [
+      "2",
+      "0",
+      "\\mathrm{\\sqrt{2}}",
+      "\\mathrm{- \\sqrt{2}}",
+      "-2"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/765",
@@ -1152,7 +1432,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=765&id=18310&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=18310\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">18310</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(18310); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"15\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %15\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>Yol çalışması sırasında patlatılan dinamit bir taş parçasını yukarıya doğru fırlatmıştır. Patlamadan t saniye sonra taş parçası <span class=\"math-tex\">\\(\\mathrm{40t-10t^{2}} \\)</span>  yüksekliğe ulaşmıştır.</p>\n<p><strong>Buna göre  taş parçasının çıkabileceği <u>maksimum</u> yükseklik kaç metredir?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(20 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(25 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(30 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(35 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(40 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "Yol çalışması sırasında patlatılan dinamit bir taş parçasını yukarıya doğru fırlatmıştır. Patlamadan t saniye sonra taş parçası \\(\\mathrm{40t-10t^{2}} \\) yüksekliğe ulaşmıştır. Buna göre  taş parçasının çıkabileceği maksimum yükseklik kaç metredir? A) \\(20 \\) B) \\(25 \\) C) \\(30 \\) D) \\(35 \\) E) \\(40 \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "Yol çalışması sırasında patlatılan dinamit bir taş parçasını yukarıya doğru fırlatmıştır. Patlamadan t saniye sonra taş parçası 40t-10t^{2} yüksekliğe ulaşmıştır.\n\nBuna göre  taş parçasının çıkabileceği <u>maksimum</u> yükseklik kaç metredir?",
+    "options": [
+      "20",
+      "25",
+      "30",
+      "35",
+      "40"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/766",
@@ -1161,7 +1449,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=766&id=17271&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17271\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17271</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17271); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"7\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %7\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>   <span class=\"math-tex\">\\(\\mathrm{f\\left( x\\right) =x^{3}-ax^{2}+4} \\)</span>    <strong>fonksiyonunun eğrilik yönü, üzerindeki <span class=\"math-tex\">\\(\\mathrm{\\left( 1,p\\right)}\\)</span> noktasında değiştiğine göre bu fonksiyonun yerel minimum değeri kaçtır?                                </strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{-2} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{0} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{2} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{3 } \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{4} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f\\left( x\\right) =x^{3}-ax^{2}+4} \\) fonksiyonunun eğrilik yönü, üzerindeki \\(\\mathrm{\\left( 1,p\\right)}\\) noktasında değiştiğine göre bu fonksiyonun yerel minimum değeri kaçtır? A) \\(\\mathrm{-2} \\) B) \\(\\mathrm{0} \\) C) \\(\\mathrm{2} \\) D) \\(\\mathrm{3 } \\) E) \\(\\mathrm{4} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "   f(x) =x³-ax²+4   fonksiyonunun eğrilik yönü, üzerindeki (1,p) noktasında değiştiğine göre bu fonksiyonun yerel minimum değeri kaçtır?                               ",
+    "options": [
+      "-2",
+      "0",
+      "2",
+      "3 ",
+      "4"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/766",
@@ -1170,7 +1466,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=766&id=17274&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17274\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17274</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17274); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"6\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %6\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p> <span class=\"math-tex\">\\(\\mathrm{y=2x-1} \\)</span>  <strong> doğrusunun</strong> <span class=\"math-tex\">\\(\\mathrm{y=x^{2}+1} \\)</span>  <strong>parabolüne en yakın noktasının apsisi kaçtır? </strong>       </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{-1} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{0} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{\\dfrac{1}{5}} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{\\dfrac{2}{3}} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{\\dfrac{7}{5}} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{y=2x-1} \\) doğrusunun \\(\\mathrm{y=x^{2}+1} \\) parabolüne en yakın noktasının apsisi kaçtır? A) \\(\\mathrm{-1} \\) B) \\(\\mathrm{0} \\) C) \\(\\mathrm{\\dfrac{1}{5}} \\) D) \\(\\mathrm{\\dfrac{2}{3}} \\) E) \\(\\mathrm{\\dfrac{7}{5}} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "  y=2x-1  doğrusunun  y=x^{2}+1  parabolüne en yakın noktasının apsisi kaçtır?      ",
+    "options": [
+      "-1",
+      "0",
+      "dfrac{1}{5}",
+      "dfrac{2}{3}",
+      "dfrac{7}{5}"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/766",
@@ -1179,7 +1483,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=766&id=17276&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17276\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17276</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17276); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"9\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %9\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{f( x) =x^{2}+2} \\)</span>  <strong>parabolüne</strong> <span class=\"math-tex\">\\(\\mathrm{A( 1,-1)} \\)</span> <strong> noktasından çizilen teğetlerin değme noktaları</strong> B<strong> ve</strong> C<strong> ise</strong> <span class=\"math-tex\">\\(\\mathrm{| BC| } \\)</span>  <strong>kaç</strong> <strong>birimdir?        </strong>                        </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{\\sqrt{5}} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{4\\sqrt{5}} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{9} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{10} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm6{\\sqrt{5}} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f( x) =x^{2}+2} \\) parabolüne \\(\\mathrm{A( 1,-1)} \\) noktasından çizilen teğetlerin değme noktaları B ve C ise \\(\\mathrm{| BC| } \\) kaç birimdir? A) \\(\\mathrm{\\sqrt{5}} \\) B) \\(\\mathrm{4\\sqrt{5}} \\) C) \\(\\mathrm{9} \\) D) \\(\\mathrm{10} \\) E) \\(\\mathrm6{\\sqrt{5}} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f( x) =x^{2}+2 parabolüne A( 1,-1) noktasından çizilen teğetlerin değme noktaları B ve C ise | BC| kaç birimdir?",
+    "options": [
+      "√5",
+      "4√5",
+      "9",
+      "10",
+      "6√5"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/4/subtopics/767",
@@ -1188,7 +1500,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=767&id=17263&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17263\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17263</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17263); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"11\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %11\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>   <span class=\"math-tex\">\\(\\mathrm{f( x) =\\dfrac{2x-6}{x-2}}\\)</span>  <strong>fonksiyonunun asimptotlarının kesim noktası aşağıdakilerden hangisidir? </strong>              </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{( 2,2) } \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{( 2,3) } \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{( 3,2) } \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{( 3,3) } \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{( -2,-3) } \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f( x) =\\dfrac{2x-6}{x-2}}\\) fonksiyonunun asimptotlarının kesim noktası aşağıdakilerden hangisidir? A) \\(\\mathrm{( 2,2) } \\) B) \\(\\mathrm{( 2,3) } \\) C) \\(\\mathrm{( 3,2) } \\) D) \\(\\mathrm{( 3,3) } \\) E) \\(\\mathrm{( -2,-3) } \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "   \n\tf( x) =\\dfrac{2x-6}{x-2}\n\tfonksiyonunun asimptotlarının kesim noktası aşağıdakilerden hangisidir?             ",
+    "options": [
+      "( 2,2 ) ",
+      "( 2,3 ) ",
+      "( 3,2 ) ",
+      "( 3,3 ) ",
+      "( -2,-3 ) "
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/5/subtopics/768",
@@ -1206,7 +1526,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=768&id=17313&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17313\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17313</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17313); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"22\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %22\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p> <span class=\"math-tex\">\\(\\mathrm{y=f( x)} \\)</span>  fonksiyonunun tanımlı olduğu aralıkta <span class=\"math-tex\">\\(\\mathrm{A( x,y)} \\)</span>  noktasındaki teğetinin eğimi <span class=\"math-tex\">\\(\\mathrm{2x-5} \\)</span>  dir. </p>\n<p><span class=\"math-tex\">\\(\\mathrm{y=f( x)} \\)</span>  <strong>fonksiyonu <span class=\"math-tex\">\\(\\mathrm{B( 1,2)} \\)</span>  noktasından geçtiğine göre <span class=\"math-tex\">\\(\\mathrm{f( x)} \\)</span>  fonksiyonu aşağıdakilerden hangisidir?       </strong>       </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{x^{2}+5x+2} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{x^{2}-5x+1} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{x^{2}-5x+6} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{x^{2}+5x-6} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{x^{2}-5x-2} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{y=f( x)} \\) fonksiyonunun tanımlı olduğu aralıkta \\(\\mathrm{A( x,y)} \\) noktasındaki teğetinin eğimi \\(\\mathrm{2x-5} \\) dir. \\(\\mathrm{y=f( x)} \\) fonksiyonu \\(\\mathrm{B( 1,2)} \\) noktasından geçtiğine göre \\(\\mathrm{f( x)} \\) fonksiyonu aşağıdakilerden hangisidir? A) \\(\\mathrm{x^{2}+5x+2} \\) B) \\(\\mathrm{x^{2}-5x+1} \\) C) \\(\\mathrm{x^{2}-5x+6} \\) D) \\(\\mathrm{x^{2}+5x-6} \\) E) \\(\\mathrm{x^{2}-5x-2} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "y=f( x) fonksiyonunun tanımlı olduğu aralıkta A( x,y) noktasındaki teğetinin eğimi 2x-5 dir. \ny=f( x) fonksiyonu B( 1,2) noktasından geçtiğine göre f( x) fonksiyonu aşağıdakilerden hangisidir?",
+    "options": [
+      "x² + 5x + 2",
+      "x² - 5x + 1",
+      "x² - 5x + 6",
+      "x² + 5x - 6",
+      "x² - 5x - 2"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/5/subtopics/768",
@@ -1215,7 +1543,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=768&id=17316&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17316\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17316</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17316); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"20\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %20\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p> <span class=\"math-tex\">\\(\\mathrm{\\int \\cos ^{2}(3x)dx-\\int( 4-\\sin ^{2}( 3x)) dx} \\)</span>   <strong>integralinin eşiti aşağıdakilerden hangisidir?   </strong>                 </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{\\large{x+c}} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{\\large{2x+c}} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{\\large{3 x+c}} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{\\large{-3x+c}} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{\\large{-2x+c}} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{\\int \\cos ^{2}(3x)dx-\\int( 4-\\sin ^{2}( 3x)) dx} \\) integralinin eşiti aşağıdakilerden hangisidir? A) \\(\\mathrm{\\large{x+c}} \\) B) \\(\\mathrm{\\large{2x+c}} \\) C) \\(\\mathrm{\\large{3 x+c}} \\) D) \\(\\mathrm{\\large{-3x+c}} \\) E) \\(\\mathrm{\\large{-2x+c}} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": " ∫ cos ²(3x)dx−∫( 4−sin ²( 3x)) dx integralinin eşiti aşağıdakilerden hangisidir?   ",
+    "options": [
+      "x+c",
+      "2x+c",
+      "3 x+c",
+      "-3x+c",
+      "-2x+c"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/5/subtopics/768",
@@ -1233,7 +1569,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=768&id=17351&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17351\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17351</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17351); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"19\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %19\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><strong>Hız zaman denklemi <span class=\"math-tex\">\\(\\mathrm{V( t) =6t^{2}+8t+2}\\ \\mathrm{m/sn}\\)</span>  olan ve doğrusal olarak hareket eden bir aracın 3.saniye sonunda aldığı yol </strong>100 m<strong> olduğuna göre yol zaman denklemi aşağıdakilerden hangisidir?                   </strong>              </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{2t^{3}+4t^{2}+2t} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{2t^{3}+4t^{2}+2t+2} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{2t^{3}+4t^{2}+2t+4} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{2t^{3}+4t^{2}+2t-2} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{2t^{3}+4t^{2}+2t-4} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "Hız zaman denklemi \\(\\mathrm{V( t) =6t^{2}+8t+2}\\ \\mathrm{m/sn}\\) olan ve doğrusal olarak hareket eden bir aracın 3.saniye sonunda aldığı yol 100 m olduğuna göre yol zaman denklemi aşağıdakilerden hangisidir? A) \\(\\mathrm{2t^{3}+4t^{2}+2t} \\) B) \\(\\mathrm{2t^{3}+4t^{2}+2t+2} \\) C) \\(\\mathrm{2t^{3}+4t^{2}+2t+4} \\) D) \\(\\mathrm{2t^{3}+4t^{2}+2t-2} \\) E) \\(\\mathrm{2t^{3}+4t^{2}+2t-4} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "Hız zaman denklemi  olan ve doğrusal olarak hareket eden bir aracın 3.saniye sonunda aldığı yol 100 m olduğuna göre yol zaman denklemi aşağıdakilerden hangisidir?",
+    "options": [
+      "2t^{3}+4t^{2}+2t",
+      "2t^{3}+4t^{2}+2t+2",
+      "2t^{3}+4t^{2}+2t+4",
+      "2t^{3}+4t^{2}+2t-2",
+      "2t^{3}+4t^{2}+2t-4"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/5/subtopics/769",
@@ -1296,7 +1640,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=769&id=17322&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17322\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17322</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17322); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"2\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %2\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p> <span class=\"math-tex\">\\(\\mathrm{\\int \\dfrac{\\sec ^{2}2\\theta }{4+\\tan 2\\theta }\\ d\\theta} \\)</span> <strong> integralinin eşiti aşağıdakilerden hangisidir?         </strong>                     </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{ ln|4+\\tan 2\\theta | +c }\\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{ ln|4-\\tan 2\\theta | +c }\\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{ -ln|4+\\tan 2\\theta | +c }\\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{ \\dfrac{1}{2}\\ln|4-\\tan 2\\theta | +c } \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{ \\dfrac{1}{2}\\ln|4+\\tan 2\\theta | +c } \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{\\int \\dfrac{\\sec ^{2}2\\theta }{4+\\tan 2\\theta }\\ d\\theta} \\) integralinin eşiti aşağıdakilerden hangisidir? A) \\(\\mathrm{ ln|4+\\tan 2\\theta | +c }\\) B) \\(\\mathrm{ ln|4-\\tan 2\\theta | +c }\\) C) \\(\\mathrm{ -ln|4+\\tan 2\\theta | +c }\\) D) \\(\\mathrm{ \\dfrac{1}{2}\\ln|4-\\tan 2\\theta | +c } \\) E) \\(\\mathrm{ \\dfrac{1}{2}\\ln|4+\\tan 2\\theta | +c } \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": " <span class=\"math-tex\">\\(\\mathrm{\\int \\dfrac{\\sec ^{2}2\\theta }{4+\\tan 2\\theta } \\ d\\theta} \\)</span> <strong> integralinin eşiti aşağıdakilerden hangisidir?         </strong>                     ",
+    "options": [
+      "<span class=\"math-tex\">\\(\\mathrm{ ln|4+\\tan 2\\theta }\\)</span>",
+      "<span class=\"math-tex\">\\(\\mathrm{ ln|4+\\tan 2\\theta }\\)</span>",
+      "<span class=\"math-tex\">\\(\\mathrm{ ln|4+\\tan 2\\theta }\\)</span>",
+      "<span class=\"math-tex\">\\(\\mathrm{ ln|4+\\tan 2\\theta }\\)</span>",
+      "<span class=\"math-tex\">\\(\\mathrm{ ln|4+\\tan 2\\theta }\\)</span>"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/5/subtopics/769",
@@ -1341,7 +1693,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=769&id=17329&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17329\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17329</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17329); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"0\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %0\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>   <span class=\"math-tex\">\\(\\mathrm{\\int 3^{\\sqrt{x}}\\ dx}\\)</span>  <strong> integralinin eşiti aşağıdakilerden hangisidir?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{2\\cdot 3^{\\sqrt{x}}\\cdot \\left( \\dfrac{\\sqrt{x}}{\\ln 3}-\\dfrac{1}{\\ln ^{2}3}\\right) +c }\\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{2\\cdot \\left( \\dfrac{\\sqrt{x}}{\\ln 3}-\\dfrac{1}{\\ln ^{2}3}\\right) +c } \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{ 2\\cdot 3^{\\sqrt{x}}\\left( \\sqrt{x}-1\\right) +c} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{ 3^{\\sqrt{x}}\\left( \\sqrt{x}-1\\right) +c} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{ 3^{\\sqrt{x}}.ln3.\\left( \\sqrt{x}-1\\right) +c} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{\\int 3^{\\sqrt{x}}\\ dx}\\) integralinin eşiti aşağıdakilerden hangisidir? A) \\(\\mathrm{2\\cdot 3^{\\sqrt{x}}\\cdot \\left( \\dfrac{\\sqrt{x}}{\\ln 3}-\\dfrac{1}{\\ln ^{2}3}\\right) +c }\\) B) \\(\\mathrm{2\\cdot \\left( \\dfrac{\\sqrt{x}}{\\ln 3}-\\dfrac{1}{\\ln ^{2}3}\\right) +c } \\) C) \\(\\mathrm{ 2\\cdot 3^{\\sqrt{x}}\\left( \\sqrt{x}-1\\right) +c} \\) D) \\(\\mathrm{ 3^{\\sqrt{x}}\\left( \\sqrt{x}-1\\right) +c} \\) E) \\(\\mathrm{ 3^{\\sqrt{x}}.ln3.\\left( \\sqrt{x}-1\\right) +c} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "   ∫ 3^(√x) dx   integralinin eşiti aşağıdakilerden hangisidir?",
+    "options": [
+      "2⋅ 3^(√x)⋅ ( √(x) / ln 3 - 1 / ln ^2 3) +c",
+      "2⋅ ( √(x) / ln 3 - 1 / ln ^2 3) +c",
+      "2⋅ 3^(√x) ( √(x) - 1) +c",
+      "3^(√x) ( √(x) - 1) +c",
+      "3^(√x).ln3. ( √(x) - 1) +c"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/5/subtopics/769",
@@ -1377,7 +1737,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=769&id=18313&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=18313\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">18313</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(18313); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"10\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %10\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{\\left( x+3\\right) ^{6}} \\)</span> ifadesinin x e göre integralini bulmak isteyen Alper, <span class=\"math-tex\">\\(\\mathrm{\\ x+3} \\)</span> ifadesi yerine yanlışlıkla <span class=\"math-tex\">\\(\\mathrm{\\ 3x+3} \\)</span> yazarak integral almıştır.</p>\n<p><strong>Buna göre </strong><strong>Alper’in bulduğu integralden oluşan polinomun başkatsayısı, verilen ifadenin integralinden oluşan polinomun başkatsayısının kaç katıdır?</strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{\\large{3⁴}} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{\\large{3^5}} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{\\large{3^6}} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{\\large{3^ 7}} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{\\large{3^8}} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{\\left( x+3\\right) ^{6}} \\) ifadesinin x e göre integralini bulmak isteyen Alper, \\(\\mathrm{\\ x+3} \\) ifadesi yerine yanlışlıkla \\(\\mathrm{\\ 3x+3} \\) yazarak integral almıştır. Buna göre Alper’in bulduğu integralden oluşan polinomun başkatsayısı, verilen ifadenin integralinden oluşan polinomun başkatsayısının kaç katıdır? A) \\(\\mathrm{\\large{3⁴}} \\) B) \\(\\mathrm{\\large{3^5}} \\) C) \\(\\mathrm{\\large{3^6}} \\) D) \\(\\mathrm{\\large{3^ 7}} \\) E) \\(\\mathrm{\\large{3^8}} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": " ifadesinin x e göre integralini bulmak isteyen Alper,  ifadesi yerine yanlışlıkla  yazarak integral almıştır.\n\nBuna göre Alper’in bulduğu integralden oluşan polinomun başkatsayısı, verilen ifadenin integralinden oluşan polinomun başkatsayısının kaç katıdır?",
+    "options": [
+      "3⁴",
+      "3⁵",
+      "3⁶",
+      "3⁷",
+      "3⁸"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/5/subtopics/772",
@@ -1386,7 +1754,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=772&id=17331&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17331\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17331</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17331); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"6\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %6\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>  <span class=\"math-tex\">\\(\\mathrm{\\int\\limits_a^b (x^{2}-5x+4) \\ dx =B} \\)</span>  integralinde a, b reel sayılar ve <span class=\"math-tex\">\\(\\mathrm{a &lt;b} \\)</span> dir.</p>\n<p>B <strong>minimum değerini aldığında</strong>  <span class=\"math-tex\">\\(\\mathrm{a+b} \\)</span> <strong> değeri aşağıdakilerden hangisine eşittir?  </strong>                </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{1} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{2} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{3} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{4} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{5} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{\\int\\limits_a^b (x^{2}-5x+4) \\ dx =B} \\) integralinde a, b reel sayılar ve \\(\\mathrm{a <b} \\) dir. B minimum değerini aldığında \\(\\mathrm{a+b} \\) değeri aşağıdakilerden hangisine eşittir? A) \\(\\mathrm{1} \\) B) \\(\\mathrm{2} \\) C) \\(\\mathrm{3} \\) D) \\(\\mathrm{4} \\) E) \\(\\mathrm{5} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "  ∫a b (x2−5x+4) dx =B integralinde a, b reel sayılar ve  a <b dir.\nB minimum değerini aldığında   a+b  değeri aşağıdakilerden hangisine eşittir? ",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/5/subtopics/772",
@@ -1404,7 +1780,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=772&id=17333&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17333\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17333</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17333); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"14\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %14\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p> <span class=\"math-tex\">\\(\\mathrm{\\int\\limits_{-3}^{5} f\\left(2 x+5\\right) dx=K } \\)</span> <strong> olduğuna göre</strong>   <span class=\"math-tex\">\\(\\mathrm{\\int\\limits_{-1}^{15} f\\left( x\\right) dx} \\)</span>  <strong>integralinin</strong> K <strong>cinsinden değeri aşağıdakilerden hangisidir?     </strong>                 </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{3K} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{2K} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{K} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{K+2} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{K+1} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{\\int\\limits_{-3}^{5} f\\left(2 x+5\\right) dx=K } \\) olduğuna göre \\(\\mathrm{\\int\\limits_{-1}^{15} f\\left( x\\right) dx} \\) integralinin K cinsinden değeri aşağıdakilerden hangisidir? A) \\(\\mathrm{3K} \\) B) \\(\\mathrm{2K} \\) C) \\(\\mathrm{K} \\) D) \\(\\mathrm{K+2} \\) E) \\(\\mathrm{K+1} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": " ∫−35 f(2x+5) dx=K olduğuna göre   ∫−115 f(x) dx integralinin K cinsinden değeri aşağıdakilerden hangisidir?",
+    "options": [
+      "∫−35 f(2x+5) dx=K olduğuna göre   ∫−115 f(x) dx integralinin K cinsinden değeri aşağıdakilerden hangisidir?",
+      "∫−35 f(2x+5) dx=K olduğuna göre   ∫−115 f(x) dx integralinin K cinsinden değeri aşağıdakilerden hangisidir?",
+      "∫−35 f(2x+5) dx=K olduğuna göre   ∫−115 f(x) dx integralinin K cinsinden değeri aşağıdakilerden hangisidir?",
+      "∫−35 f(2x+5) dx=K olduğuna göre   ∫−115 f(x) dx integralinin K cinsinden değeri aşağıdakilerden hangisidir?",
+      "∫−35 f(2x+5) dx=K olduğuna göre   ∫−115 f(x) dx integralinin K cinsinden değeri aşağıdakilerden hangisidir?"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/5/subtopics/772",
@@ -1413,7 +1797,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=772&id=17334&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17334\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17334</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17334); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"6\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %6\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p> <span class=\"math-tex\">\\(\\mathrm{\\int\\limits_1^22x\\cdot 3^{x^{2}+1}\\cdot ( \\log _{e}3) \\ dx } \\)</span>  <strong>integralinin sonucu aşağıdakilerden hangisidir?          </strong>                     </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{67} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{84} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{100} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{117} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{234} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{\\int\\limits_1^22x\\cdot 3^{x^{2}+1}\\cdot ( \\log _{e}3) \\ dx } \\) integralinin sonucu aşağıdakilerden hangisidir? A) \\(\\mathrm{67} \\) B) \\(\\mathrm{84} \\) C) \\(\\mathrm{100} \\) D) \\(\\mathrm{117} \\) E) \\(\\mathrm{234} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": " ∫122x⋅3x2+1⋅(loge3)dx  integralinin sonucu aşağıdakilerden hangisidir?          ",
+    "options": [
+      "67",
+      "84",
+      "100",
+      "117",
+      "234"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/5/subtopics/772",
@@ -1422,7 +1814,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=772&id=17335&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17335\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17335</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17335); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"8\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %8\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>   <span class=\"math-tex\">\\(\\mathrm{\\int\\limits_{-\\dfrac{\\pi }{6}}^{\\dfrac{\\pi }{6}}\\tan x\\ dx} \\)</span>   <strong>integralinin değeri aşağıdakilerden hangisidir?         </strong>                                   </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(-2.\\sqrt{3}\\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{-2} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{-1} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{0} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{1} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{\\int\\limits_{-\\dfrac{\\pi }{6}}^{\\dfrac{\\pi }{6}}\\tan x\\ dx} \\) integralinin değeri aşağıdakilerden hangisidir? A) \\(-2.\\sqrt{3}\\) B) \\(\\mathrm{-2} \\) C) \\(\\mathrm{-1} \\) D) \\(\\mathrm{0} \\) E) \\(\\mathrm{1} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "   ∫−π6π6tan x dx integralinin değeri aşağıdakilerden hangisidir?         ",
+    "options": [
+      "-2.√3",
+      "-2",
+      "-1",
+      "0",
+      "1"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/5/subtopics/772",
@@ -1431,7 +1831,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=772&id=17336&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17336\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17336</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17336); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"7\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %7\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p> <span class=\"math-tex\">\\(\\mathrm{f:\\mathbb{R} /\\left\\{ 2\\right\\} \\rightarrow \\mathbb{R} /\\left\\{ 3\\right\\}} \\)</span></p>\n<p><span class=\"math-tex\">\\(\\mathrm{f\\left( x\\right) =\\dfrac{3x+6}{x-2}} \\)</span>  birebir örten fonksiyonu veriliyor.</p>\n<p><strong>Buna göre </strong><span class=\"math-tex\">\\(\\mathrm{\\int\\limits_{-9}^{-3}d( f^{-1}( x) } \\)</span>  <strong>integralinin değeri aşağıdakilerden hangisidir?        </strong>                               </p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{-5} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{-4} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{-3} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{-1} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{1} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{f:\\mathbb{R} /\\left\\{ 2\\right\\} \\rightarrow \\mathbb{R} /\\left\\{ 3\\right\\}} \\) \\(\\mathrm{f\\left( x\\right) =\\dfrac{3x+6}{x-2}} \\) birebir örten fonksiyonu veriliyor. Buna göre \\(\\mathrm{\\int\\limits_{-9}^{-3}d( f^{-1}( x) } \\) integralinin değeri aşağıdakilerden hangisidir? A) \\(\\mathrm{-5} \\) B) \\(\\mathrm{-4} \\) C) \\(\\mathrm{-3} \\) D) \\(\\mathrm{-1} \\) E) \\(\\mathrm{1} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "f:ℝ /{2} → ℝ /{3} fonksiyonu veriliyor.\nf(x) = (3x+6)/(x-2) birebir örten fonksiyonu veriliyor.\nBuna göre ∫−9−3 d( f−1(x) ) integralinin değeri aşağıdakilerden hangisidir?",
+    "options": [
+      "-5",
+      "-4",
+      "-3",
+      "-1",
+      "1"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/5/subtopics/772",
@@ -1476,7 +1884,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=773&id=17344&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17344\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17344</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17344); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"16\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %16\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{y=x+2} \\)</span>  <strong>doğrusu</strong>, <span class=\"math-tex\">\\(\\mathrm{x=3} \\)</span>  <strong>ve <span class=\"math-tex\">\\(\\mathrm{x=5} \\)</span>  doğruları ile x ekseni arasında kalan bölgenin alanı kaç birimkaredir?                            </strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{12} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{14} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{15} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{16} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{18} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{y=x+2} \\) doğrusu , \\(\\mathrm{x=3} \\) ve \\(\\mathrm{x=5} \\) doğruları ile x ekseni arasında kalan bölgenin alanı kaç birimkaredir? A) \\(\\mathrm{12} \\) B) \\(\\mathrm{14} \\) C) \\(\\mathrm{15} \\) D) \\(\\mathrm{16} \\) E) \\(\\mathrm{18} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "y=x+2 doğrusu, x=3 ve x=5 doğruları ile x ekseni arasında kalan bölgenin alanı kaç birimkaredir?",
+    "options": [
+      "12",
+      "14",
+      "15",
+      "16",
+      "18"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/5/subtopics/773",
@@ -1494,7 +1910,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=773&id=17350&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17350\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17350</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17350); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"16\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %16\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p> <span class=\"math-tex\">\\(\\mathrm{y=2x^{2}+6x} \\)</span> <strong> parabolü ile x ekseni arasında kalan bölgenin alanı kaç birimkaredir?   </strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(3 \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(6 \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(8 \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(9 \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(12 \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{y=2x^{2}+6x} \\) parabolü ile x ekseni arasında kalan bölgenin alanı kaç birimkaredir? A) \\(3 \\) B) \\(6 \\) C) \\(8 \\) D) \\(9 \\) E) \\(12 \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "  y=2x² + 6x  parabolü ile x ekseni arasında kalan bölgenin alanı kaç birimkaredir?   ",
+    "options": [
+      "3",
+      "6",
+      "8",
+      "9",
+      "12"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/5/subtopics/773",
@@ -1503,7 +1927,15 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=773&id=17352&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=17352\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">17352</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(17352); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"8\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %8\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p><span class=\"math-tex\">\\(\\mathrm{y=\\dfrac{x^{2}}{3}} \\)</span>  <strong>parabolü  <span class=\"math-tex\">\\(\\mathrm{y=\\dfrac{9}{x}} \\)</span>  eğrisi, <span class=\"math-tex\">\\(\\mathrm{x=6 } \\)</span>  doğrusu  ve x ekseni arasında kalan bölgenin alanı kaç birimkaredir?                    </strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{27+\\ln 2} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{18+3ln 3 } \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{9+\\ln 3} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{9+\\ln 2} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{3+9ln 2} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "\\(\\mathrm{y=\\dfrac{x^{2}}{3}} \\) parabolü \\(\\mathrm{y=\\dfrac{9}{x}} \\) eğrisi, \\(\\mathrm{x=6 } \\) doğrusu  ve x ekseni arasında kalan bölgenin alanı kaç birimkaredir? A) \\(\\mathrm{27+\\ln 2} \\) B) \\(\\mathrm{18+3ln 3 } \\) C) \\(\\mathrm{9+\\ln 3} \\) D) \\(\\mathrm{9+\\ln 2} \\) E) \\(\\mathrm{3+9ln 2} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "y=x²/3 parabolü y=9/x eğrisi, x=6 doğrusu ve x ekseni arasında kalan bölgenin alanı kaç birimkaredir?",
+    "options": [
+      "27+ln 2",
+      "18+3ln 3",
+      "9+ln 3",
+      "9+ln 2",
+      "3+9ln 2"
+    ]
   },
   {
     "topicPath": "category/12/lessons/fl-matematik/topics/6/subtopics/774",
@@ -1530,6 +1962,14 @@
     "url": "https://ogmmateryal.eba.gov.tr/soru-bankasi/fl-matematik/test?s=9&k=774&id=18318&t=css&ks=0&os=0&zs=0",
     "questionAsHtml": "<div class=\"question-item\" id=\"qi-0\">\n<div class=\"row\">\n<div class=\"col-md-6\">\n<a href=\"/soru-bankasi/fl-matematik/etkilesimli-tahta?s=9&amp;d=31&amp;ids=18318\" target=\"_blank\"><span class=\"question-number\">Soru 1:</span></a>\n<span class=\"no-pr\" style=\"color:white\">18318</span>\n</div>\n<div class=\"col-md-6 float-end pe-0 text-end no-pr\" style=\"font-size:20px;\">\n<div class=\"float-end\" style=\"width:30px;\">\n<a class=\"hlBildir\" href=\"#\" onclick=\"gorusBildir(18318); return false;\" style=\"color:#c2c2c2; \"><i class=\"fa fa-exclamation-circle\"></i></a>\n</div>\n<div class=\"float-end\" data-progress=\"18\" data-toggle=\"tooltip\" style=\"margin-top:10px;\" title=\"Doğru cevaplama oranı %18\"></div>\n</div>\n</div>\n<p class=\"question-item-ask\">\n<p>İsmail Bey drone ile çekilmiş resim üzerinde yaşadığı evin metro duraklarından en yakın ikisini araştırmaktadır. Bunun için evinin bulunduğu yeri koordinat ekseninin merkezi olarak kabul etmiştir. Durakların bulunduğu noktalara değecek şekilde 2 birim yarıçaplı bir çember çizmiştir.</p>\n<p>(1 birim=50<span class=\"math-tex\">\\(\\mathrm{\\sqrt{2}} \\)</span> m alınız.)</p>\n<p><strong>Metro yolu <span class=\"math-tex\">\\(\\mathrm{y = x + 2} \\)</span> denklemi ile modellenebildiğine göre duraklar arasındaki uzaklık kaç birimdir? </strong></p>\n</p>\n<div>\n<div>A) <span class=\"math-tex\">\\(\\mathrm{200} \\)</span>\n</div>\n</div>\n<div>\n<div>B) <span class=\"math-tex\">\\(\\mathrm{210} \\)</span>\n</div>\n</div>\n<div>\n<div>C) <span class=\"math-tex\">\\(\\mathrm{220} \\)</span>\n</div>\n</div>\n<div>\n<div>D) <span class=\"math-tex\">\\(\\mathrm{230} \\)</span>\n</div>\n</div>\n<div>\n<div>E) <span class=\"math-tex\">\\(\\mathrm{240} \\)</span>\n</div>\n</div>\n<div class=\"d-flex mt-2 mb-2 justify-content-center mx-auto\" id=\"butonlar-0\" style=\"padding-left:10px;\">\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 0, 0); return false;\">A</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 1, 0); return false;\">B</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 2, 0); return false;\">C</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 3, 0); return false;\">D</a>\n<a class=\"btn btn-secenek btn-mor\" href=\"#\" onclick=\"cevapKaydet(this, 4, 0); return false;\">E</a>\n</div>\n</div>",
     "questionText": "İsmail Bey drone ile çekilmiş resim üzerinde yaşadığı evin metro duraklarından en yakın ikisini araştırmaktadır. Bunun için evinin bulunduğu yeri koordinat ekseninin merkezi olarak kabul etmiştir. Durakların bulunduğu noktalara değecek şekilde 2 birim yarıçaplı bir çember çizmiştir. (1 birim=50 \\(\\mathrm{\\sqrt{2}} \\) m alınız.) Metro yolu \\(\\mathrm{y = x + 2} \\) denklemi ile modellenebildiğine göre duraklar arasındaki uzaklık kaç birimdir? A) \\(\\mathrm{200} \\) B) \\(\\mathrm{210} \\) C) \\(\\mathrm{220} \\) D) \\(\\mathrm{230} \\) E) \\(\\mathrm{240} \\) A B C D E",
-    "withImage": false
+    "withImage": false,
+    "question": "İsmail Bey drone ile çekilmiş resim üzerinde yaşadığı evin metro duraklarından en yakın ikisini araştırmaktadır. Bunun için evinin bulunduğu yeri koordinat ekseninin merkezi olarak kabul etmiştir. Durakların bulunduğu noktalara değecek şekilde 2 birim yarıçaplı bir çember çizmiştir.\n(1 birim=50 §¢¢ m alınız.)\nMetro yolu y = x + 2 denklemi ile modellenebildiğine göre duraklar arasındaki uzaklık kaç birimdir?",
+    "options": [
+      "200",
+      "210",
+      "220",
+      "230",
+      "240"
+    ]
   }
 ]

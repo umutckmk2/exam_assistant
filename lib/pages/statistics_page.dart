@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:yksasistan/model/question_model.dart';
 
 import '../model/enums.dart';
+import '../model/solved_question_model.dart';
 import '../service/auth_service.dart';
 import '../service/questions_service.dart';
 import '../service/user_service.dart';
 import '../widgets/intervals_widget.dart';
-import '../widgets/lesson_charts_widget.dart';
+import 'topic_analysis_page.dart';
 
 class StatisticsPage extends StatefulWidget {
   const StatisticsPage({super.key});
@@ -17,8 +17,7 @@ class StatisticsPage extends StatefulWidget {
 
 class _StatisticsPageState extends State<StatisticsPage> {
   bool _isLoading = true;
-  final Map<String, List<AnswerCount>> _lessonData = {};
-  final List<QuestionModel> _allQuestions = [];
+  final List<SolvedQuestionModel> _allQuestions = [];
   TimeInterval _selectedInterval = TimeInterval.week;
 
   @override
@@ -37,9 +36,16 @@ class _StatisticsPageState extends State<StatisticsPage> {
       final question = await QuestionService.instance.getQuestion(
         solvedQuestion['id'],
       );
-      _allQuestions.add(question);
+      _allQuestions.add(
+        SolvedQuestionModel.fromQuestionModel(
+          question,
+          solvedQuestion['answerIndex'],
+          solvedQuestion['solvedAt'],
+          solvedQuestion['correct'],
+        ),
+      );
     }
-
+    print("all questions: ${_allQuestions.length}");
     if (mounted) {
       _isLoading = false;
       setState(() {});
@@ -55,7 +61,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
       );
     }
 
-    if (_lessonData.isEmpty) {
+    if (_allQuestions.isEmpty) {
       return Scaffold(
         appBar: AppBar(title: const Text('İstatistikler')),
         body: Column(
@@ -78,56 +84,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
 
     return Scaffold(
       appBar: AppBar(title: const Text('İstatistikler')),
-      body: Column(
-        children: [
-          IntervalsWidget(
-            selectedInterval: _selectedInterval,
-            onIntervalChanged: (interval) {
-              setState(() => _selectedInterval = interval);
-            },
-          ),
-          Expanded(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Konulara Göre Çözülen Sorular',
-                    style: Theme.of(context).textTheme.titleLarge,
-                  ),
-                  const SizedBox(height: 20),
-                  for (final entry in _lessonData.entries)
-                    LessonChartsWidget(
-                      lessonName: entry.key,
-                      seletedInterval: _selectedInterval,
-                      data: entry.value,
-                    ),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
+      body: TopicAnalysisPage(solvedQuestions: _allQuestions),
     );
   }
 }
-
-class AnswerStats {
-  final int correct;
-  final int incorrect;
-
-  AnswerStats(this.correct, this.incorrect);
-}
-
-class AnswerCount {
-  final DateTime date;
-  final int correct;
-  final int incorrect;
-
-  AnswerCount(this.date, this.correct, this.incorrect);
-
-  int get total => correct + incorrect;
-}
-
-double max(double a, double b) => a > b ? a : b;

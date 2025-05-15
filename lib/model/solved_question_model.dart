@@ -20,4 +20,28 @@ class SolvedQuestionModel extends QuestionModel {
     required this.answerIndex,
     required this.correct,
   });
+
+  factory SolvedQuestionModel.fromQuestionModel(
+    QuestionModel question,
+    int answerIndex,
+    int solvedAt,
+    bool correct,
+  ) {
+    return SolvedQuestionModel(
+      id: question.id,
+      questionAsHtml: question.questionAsHtml,
+      questionText: question.questionText,
+      sourceFile: question.sourceFile,
+      topicPath: question.topicPath,
+      url: question.url,
+      withImage: question.withImage,
+      answer: question.answer,
+      question: question.question,
+      options: question.options,
+      isAiGenerated: question.isAiGenerated,
+      solvedAt: solvedAt,
+      answerIndex: answerIndex,
+      correct: correct,
+    );
+  }
 }

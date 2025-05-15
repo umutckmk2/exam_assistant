@@ -69,6 +69,7 @@ class _AuthPageState extends State<AuthPage> {
             const SnackBar(content: Text('Failed to sign in with Google')),
           );
         }
+        // ignore: control_flow_in_finally
         return;
       }
 

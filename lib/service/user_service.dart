@@ -48,15 +48,13 @@ class UserService {
               "answerIndex": question.data()['answerIndex'],
               "correct": question.data()['correct'],
               "id": question.id,
-              "solvedAt":
-                  (question.data()['solvedAt'] as Timestamp)
-                      .toDate()
-                      .millisecondsSinceEpoch ~/
-                  1000,
+              "solvedAt": question.data()['solvedAt'],
             };
             solvedQuestions.add(questionData);
           }
         }
+      } else {
+        solvedQuestions = user?['solvedQuestions'] ?? [];
       }
       final appUser = AppUser.fromJson({
         ...ds.data()!,
@@ -95,7 +93,7 @@ class UserService {
       final solvedQuestionRef = userRef.collection('solvedQuestions').doc(id);
 
       transaction.set(solvedQuestionRef, {
-        'solvedAt': DateTime.now(),
+        'solvedAt': DateTime.now().millisecondsSinceEpoch ~/ 1000,
         'answerIndex': question['answer'],
         'correct': question['answer'] == question['answerIndex'],
       });

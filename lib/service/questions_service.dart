@@ -81,6 +81,25 @@ class QuestionService {
     }
   }
 
+  Future<QuestionModel> getQuestion(String id) async {
+    await _openBox();
+    final question = _box.get(id);
+    if (question != null) {
+      return QuestionModel.fromJson(question);
+    } else {
+      final question = await _colRef.doc(id).get();
+      final data = {...question.data()!, 'id': question.id};
+      await _box.put(id, data);
+      return QuestionModel.fromJson(data);
+    }
+  }
+
+  Future<void> saveQuestion(QuestionModel question) async {
+    await _openBox();
+    await _colRef.doc(question.id).set({...question.toJson()});
+    await _box.put(question.id, question.toJson());
+  }
+
   Future<void> updateQuestion(QuestionModel question) async {
     await _openBox();
     await _colRef.doc(question.id).update({...question.toJson()});

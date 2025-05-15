@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:collection/collection.dart';
 import 'package:hive/hive.dart';
 
 class TopicService {
@@ -93,5 +94,19 @@ class TopicService {
     });
 
     return topic;
+  }
+
+  Future<({String topic, String subTopic})> getSubTopic(
+    String subTopicId,
+    String topicId,
+  ) async {
+    final topic = await getTopic(topicId);
+    final subTopic = (topic['subTopics'] as List? ?? []).firstWhereOrNull(
+      (subTopic) => subTopic['value'] == subTopicId,
+    );
+    return (
+      topic: topic['topic'] as String,
+      subTopic: subTopic['text'] as String,
+    );
   }
 }

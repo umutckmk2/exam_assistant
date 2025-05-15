@@ -1,10 +1,10 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:ykasistan/model/question_model.dart';
+import 'package:yksasistan/model/question_model.dart';
 
 import '../model/enums.dart';
 import '../service/auth_service.dart';
-import '../utils/date_utils.dart';
+import '../service/questions_service.dart';
+import '../service/user_service.dart';
 import '../widgets/intervals_widget.dart';
 import '../widgets/lesson_charts_widget.dart';
 
@@ -18,186 +18,41 @@ class StatisticsPage extends StatefulWidget {
 class _StatisticsPageState extends State<StatisticsPage> {
   bool _isLoading = true;
   final Map<String, List<AnswerCount>> _lessonData = {};
-  late List<QuestionModel> _allQuestions;
+  final List<QuestionModel> _allQuestions = [];
   TimeInterval _selectedInterval = TimeInterval.week;
 
   @override
   void initState() {
     super.initState();
-    _loadData();
+    _getSolvedQuestions();
   }
 
-  Future<void> _loadData() async {
-    setState(() => _isLoading = true);
-    _lessonData.clear();
+  Future<void> _getSolvedQuestions() async {
+    final user = await UserService.instance.getUserDetails(
+      AuthService().currentUser!.uid,
+    );
 
-    final userId = AuthService().currentUser?.uid;
-    if (userId == null) {
-      setState(() => _isLoading = false);
-      return;
+    final solvedQuestionIds = user?.solvedQuestions ?? [];
+    for (final solvedQuestion in solvedQuestionIds) {
+      final question = await QuestionService.instance.getQuestion(
+        solvedQuestion['id'],
+      );
+      _allQuestions.add(question);
     }
 
-    try {
-      int? startTimestamp;
-      final DateTime now = DateTime.now();
-
-      switch (_selectedInterval) {
-        case TimeInterval.week:
-          startTimestamp = toSeconds(now.subtract(const Duration(days: 7)));
-          break;
-        case TimeInterval.month:
-          startTimestamp = toSeconds(now.subtract(const Duration(days: 30)));
-          break;
-        case TimeInterval.allTime:
-          startTimestamp = null;
-          break;
-      }
-
-      final solvedQuestionIds = [];
-      DateTime? earliestSolvedDate;
-
-      final Map<String, Map<int, AnswerStats>> lessonAnswersByDay = {};
-
-      if (solvedQuestionIds.isNotEmpty) {
-        for (final id in solvedQuestionIds) {
-          if (id == null) continue;
-
-          final question = _allQuestions.firstWhere(
-            (q) => q.id == id,
-            orElse:
-                () => QuestionModel(
-                  id: '0',
-                  questionAsHtml: 'Unknown',
-                  questionText: '',
-                  topicPath: '',
-                  url: '',
-                  withImage: false,
-                  answer: 0,
-                  sourceFile: '',
-                  question: '',
-                ),
-          );
-
-          if (question.id == '0') continue;
-          final doc =
-              await FirebaseFirestore.instance
-                  .collection("users")
-                  .doc(userId)
-                  .collection("solvedQuestions")
-                  .doc(id)
-                  .get();
-
-          if (!doc.exists) continue;
-
-          final data = doc.data();
-          if (data == null) continue;
-
-          final solvedAt = data['solvedAt'] as int;
-          final answerIndex = data['answerIndex'] as int;
-          final correctAnswer = data['answer'] as int;
-          final isCorrect = answerIndex == correctAnswer;
-
-          final solvedDate = fromSeconds(solvedAt);
-
-          // Track earliest date for all time view
-          if (earliestSolvedDate == null ||
-              solvedDate.isBefore(earliestSolvedDate)) {
-            earliestSolvedDate = solvedDate;
-          }
-
-          final dayTimestamp =
-              DateTime(
-                solvedDate.year,
-                solvedDate.month,
-                solvedDate.day,
-              ).millisecondsSinceEpoch;
-
-          // Initialize map for this lesson if not exists
-          if (!lessonAnswersByDay.containsKey(question.lesson)) {
-            lessonAnswersByDay[question.lesson] = {};
-          }
-
-          // Initialize or update stats for this day
-          if (!lessonAnswersByDay[question.lesson]!.containsKey(dayTimestamp)) {
-            lessonAnswersByDay[question.lesson]![dayTimestamp] = AnswerStats(
-              0,
-              0,
-            );
-          }
-
-          final stats = lessonAnswersByDay[question.lesson]![dayTimestamp]!;
-          if (isCorrect) {
-            lessonAnswersByDay[question.lesson]![dayTimestamp] = AnswerStats(
-              stats.correct + 1,
-              stats.incorrect,
-            );
-          } else {
-            lessonAnswersByDay[question.lesson]![dayTimestamp] = AnswerStats(
-              stats.correct,
-              stats.incorrect + 1,
-            );
-          }
-        }
-      }
-
-      for (final lessonEntry in lessonAnswersByDay.entries) {
-        final lessonName = lessonEntry.key;
-        final dayData = lessonEntry.value;
-
-        final List<AnswerCount> chartData = [];
-
-        if (_selectedInterval == TimeInterval.allTime &&
-            earliestSolvedDate != null) {
-          final DateTime startDate =
-              DateTime.now()
-                      .subtract(const Duration(days: 7))
-                      .isBefore(earliestSolvedDate)
-                  ? DateTime.now().subtract(const Duration(days: 7))
-                  : earliestSolvedDate;
-
-          final int totalDays = DateTime.now().difference(startDate).inDays + 1;
-
-          for (int i = 0; i < totalDays; i++) {
-            final day = startDate.add(Duration(days: i));
-            final dayStart = DateTime(day.year, day.month, day.day);
-            final dayTimestamp = dayStart.millisecondsSinceEpoch;
-
-            final stats = dayData[dayTimestamp] ?? AnswerStats(0, 0);
-            chartData.add(AnswerCount(day, stats.correct, stats.incorrect));
-          }
-        } else if (_selectedInterval == TimeInterval.month) {
-          for (int i = 29; i >= 0; i--) {
-            final day = DateTime.now().subtract(Duration(days: i));
-            final dayStart = DateTime(day.year, day.month, day.day);
-            final dayTimestamp = dayStart.millisecondsSinceEpoch;
-
-            final stats = dayData[dayTimestamp] ?? AnswerStats(0, 0);
-            chartData.add(AnswerCount(day, stats.correct, stats.incorrect));
-          }
-        } else {
-          for (int i = 6; i >= 0; i--) {
-            final day = DateTime.now().subtract(Duration(days: i));
-            final dayStart = DateTime(day.year, day.month, day.day);
-            final dayTimestamp = dayStart.millisecondsSinceEpoch;
-
-            final stats = dayData[dayTimestamp] ?? AnswerStats(0, 0);
-            chartData.add(AnswerCount(day, stats.correct, stats.incorrect));
-          }
-        }
-
-        _lessonData[lessonName] = chartData;
-      }
-
-      setState(() => _isLoading = false);
-    } catch (e) {
-      setState(() => _isLoading = false);
+    if (mounted) {
+      _isLoading = false;
+      setState(() {});
     }
   }
 
   @override
   Widget build(BuildContext context) {
     if (_isLoading) {
-      return const Scaffold(body: Center(child: CircularProgressIndicator()));
+      return Scaffold(
+        appBar: AppBar(title: Text('İstatistikler')),
+        body: Center(child: CircularProgressIndicator()),
+      );
     }
 
     if (_lessonData.isEmpty) {
@@ -209,7 +64,6 @@ class _StatisticsPageState extends State<StatisticsPage> {
               selectedInterval: _selectedInterval,
               onIntervalChanged: (interval) {
                 setState(() => _selectedInterval = interval);
-                _loadData();
               },
             ),
             const Expanded(
@@ -230,7 +84,6 @@ class _StatisticsPageState extends State<StatisticsPage> {
             selectedInterval: _selectedInterval,
             onIntervalChanged: (interval) {
               setState(() => _selectedInterval = interval);
-              _loadData();
             },
           ),
           Expanded(

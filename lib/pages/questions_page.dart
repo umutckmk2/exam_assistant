@@ -1,6 +1,8 @@
+import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 
 import '../model/daily_goal.dart';
 import '../model/question_model.dart';
@@ -29,13 +31,14 @@ class _QuestionPageState extends State<QuestionPage> {
   bool _isLoading = true;
   int? _selectedAnswerIndex;
   bool _showResult = false;
-  final bool _isGeneratingAiQuestion = false;
-  final bool _isGeneratingCheatSheet = false;
+  bool _isGeneratingAiQuestion = false;
+  bool _isGeneratingCheatSheet = false;
   List<QuestionModel>? _questions;
   List<QuestionModel>? _unsolvedQuestions;
   final ScrollController _scrollController = ScrollController();
   Map? _topic;
   DailyGoal? _todayGoal;
+  String? _cheatSheetContent;
 
   Future<void> _loadQuestions() async {
     final topicService = TopicService(widget.lessonId, widget.categoryId);
@@ -63,9 +66,147 @@ class _QuestionPageState extends State<QuestionPage> {
     if (mounted) setState(() {});
   }
 
-  Future<void> _generateSimilarQuestion() async {}
+  Future<void> _generateSimilarQuestion() async {
+    setState(() {
+      _isGeneratingAiQuestion = true;
+    });
 
-  Future<void> _generateTopicCheatSheet() async {}
+    try {
+      final question = await OpenAiService().generateSimilarQuestion(
+        _question!,
+      );
+
+      final questionJson = jsonDecode(question);
+      final questionModel = QuestionModel(
+        answer: questionJson['answer'],
+        options: questionJson['options'],
+        question: questionJson['question'],
+        questionAsHtml: "",
+        questionText: "",
+        id: _question!.id + Random().nextInt(1000000).toString(),
+        sourceFile: "",
+        topicPath: _question!.topicPath,
+        url: "",
+        withImage: false,
+        isAiGenerated: true,
+      );
+
+      await QuestionService.instance.saveQuestion(questionModel);
+
+      _question = questionModel;
+      _selectedAnswerIndex = null;
+      _showResult = false;
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text('Soru oluşturulurken hata: $e')));
+      }
+    } finally {
+      if (mounted) {
+        setState(() {
+          _isGeneratingAiQuestion = false;
+        });
+      }
+    }
+  }
+
+  Future<void> _generateTopicCheatSheet() async {
+    if (_question == null) return;
+
+    setState(() {
+      _isGeneratingCheatSheet = true;
+    });
+
+    setState(() {
+      _cheatSheetContent = null;
+    });
+
+    try {
+      final description = await OpenAiService().createCheatSheet(_question!);
+
+      setState(() {
+        _cheatSheetContent = description;
+        _isGeneratingCheatSheet = false;
+      });
+
+      _showCheatSheetDialog();
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Konu özeti oluşturulurken hata: $e')),
+        );
+      }
+    }
+  }
+
+  void _showCheatSheetDialog() {
+    if (_cheatSheetContent == null) return;
+
+    showDialog(
+      context: context,
+      builder:
+          (context) => Dialog(
+            insetPadding: const EdgeInsets.all(16),
+            child: Container(
+              width: double.infinity,
+              constraints: const BoxConstraints(maxHeight: 600),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  AppBar(
+                    title: Text('${_topic!['topic']} - Konu Özeti'),
+                    leading: IconButton(
+                      icon: const Icon(Icons.close),
+                      onPressed: () => Navigator.pop(context),
+                    ),
+                    actions: [
+                      IconButton(
+                        icon: const Icon(Icons.copy),
+                        onPressed: () {
+                          // Clipboard functionality would need to be added
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('Konu özeti kopyalandı'),
+                            ),
+                          );
+                          Navigator.pop(context);
+                        },
+                        tooltip: 'Kopyala',
+                      ),
+                    ],
+                  ),
+                  Expanded(
+                    child: SingleChildScrollView(
+                      padding: const EdgeInsets.all(16),
+                      child: Container(
+                        height: 600,
+                        width: double.infinity,
+                        padding: const EdgeInsets.only(bottom: 40),
+                        child: Markdown(
+                          data: _cheatSheetContent!,
+                          styleSheet: MarkdownStyleSheet(
+                            h1: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            h2: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            p: TextStyle(fontSize: 16),
+                            listBullet: TextStyle(fontSize: 16),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+    );
+  }
 
   Future<void> _loadRandomQuestion() async {
     if (_unsolvedQuestions == null || _unsolvedQuestions!.isEmpty) return;
@@ -74,8 +215,6 @@ class _QuestionPageState extends State<QuestionPage> {
 
     _showResult = false;
     _selectedAnswerIndex = null;
-
-    await QuestionService.instance.updateQuestion(_question!);
 
     if (mounted) setState(() {});
   }
@@ -270,9 +409,9 @@ class _QuestionPageState extends State<QuestionPage> {
                   ),
                 ),
               ),
-              for (int i = 0; i < _question!.options!.length; i++)
+              for (int i = 0; i < _question!.options.length; i++)
                 AnswerOption(
-                  answer: _question!.options![i],
+                  answer: _question!.options[i],
                   isSelected: _selectedAnswerIndex == i,
                   isCorrect: _showResult && (i + 1) == _question!.answer,
                   isWrong:
@@ -281,38 +420,12 @@ class _QuestionPageState extends State<QuestionPage> {
                       i + 1 != _question!.answer,
                   onTap: _showResult ? null : () => _checkAnswer(i),
                 ),
+
               if (_showResult) ...[
                 const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ElevatedButton(
-                      onPressed:
-                          _isLoading
-                              ? null
-                              : () async {
-                                setState(() {
-                                  _isLoading = true;
-                                });
-                                _unsolvedQuestions!.removeWhere(
-                                  (e) => e.id == _question!.id,
-                                );
-                                await _loadRandomQuestion();
-                                setState(() {
-                                  _isLoading = false;
-                                });
-                              },
-                      child:
-                          _isLoading
-                              ? const SizedBox(
-                                width: 16,
-                                height: 16,
-                                child: CircularProgressIndicator(
-                                  strokeWidth: 2,
-                                ),
-                              )
-                              : const Text('Yeni Soru'),
-                    ),
                     const SizedBox(width: 16),
                     ElevatedButton.icon(
                       onPressed:
@@ -340,8 +453,38 @@ class _QuestionPageState extends State<QuestionPage> {
                         foregroundColor: Colors.white,
                       ),
                     ),
+                    const SizedBox(width: 16),
+                    ElevatedButton(
+                      onPressed:
+                          _isLoading
+                              ? null
+                              : () async {
+                                setState(() {
+                                  _isLoading = true;
+                                });
+                                _unsolvedQuestions!.removeWhere(
+                                  (e) => e.id == _question!.id,
+                                );
+                                await _loadRandomQuestion();
+                                setState(() {
+                                  _isLoading = false;
+                                });
+                              },
+                      child:
+                          _isLoading
+                              ? const SizedBox(
+                                width: 16,
+                                height: 16,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                ),
+                              )
+                              : const Text('Yeni Soru'),
+                    ),
                   ],
                 ),
+
+                const SizedBox(height: 80),
               ],
             ],
           ),

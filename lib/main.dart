@@ -9,7 +9,6 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'auth/auth_page.dart';
 import 'firebase_options.dart';
 import 'router/app_router.dart';
-import 'service/app_usage_service.dart';
 import 'service/auth_service.dart';
 import 'service/goals_service.dart';
 import 'service/open_ai_service.dart';
@@ -58,10 +57,6 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
-    // Register for app lifecycle events
-    WidgetsBinding.instance.addObserver(this);
-    // Start tracking app usage time
-    AppUsageService.instance.startTracking();
   }
 
   @override
@@ -69,26 +64,6 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     // Remove app lifecycle event observer
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
-  }
-
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
-    switch (state) {
-      case AppLifecycleState.resumed:
-        // App came to the foreground, start tracking time
-        AppUsageService.instance.startTracking();
-        break;
-      case AppLifecycleState.paused:
-      case AppLifecycleState.detached:
-      case AppLifecycleState.inactive:
-        // App went to the background, save elapsed time
-        AppUsageService.instance.stopTracking();
-        break;
-      case AppLifecycleState.hidden:
-        // App hidden (newer Flutter versions)
-        AppUsageService.instance.stopTracking();
-        break;
-    }
   }
 
   @override

@@ -77,23 +77,6 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
     }).toList();
   }
 
-  List<ChartData> _getTimeChartData() {
-    if (_weeklyGoals == null) return [];
-
-    return _weeklyGoals!.entries.map((entry) {
-      final timestamp = entry.key;
-      final goal = entry.value;
-      final completed = goal.passTime ?? 0;
-      final target = goal.dailyTimeGoal;
-      final percentage =
-          target > 0
-              ? (completed / target * 100).clamp(0, 100).toDouble()
-              : 0.0;
-
-      return ChartData(_formatDay(timestamp), percentage, completed, target);
-    }).toList();
-  }
-
   @override
   void initState() {
     super.initState();
@@ -105,7 +88,6 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
     final primaryColor = Theme.of(context).primaryColor;
     final primaryColorLight = primaryColor.withOpacity(0.8);
     final textColor = Colors.white;
-    final textColorMuted = Colors.white.withOpacity(0.7);
 
     // Define color scheme for charts
     final successColor = Colors.lightGreenAccent;
@@ -114,7 +96,7 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
 
     if (_isLoadingGoals) {
       return Container(
-        height: 400,
+        height: 450,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [primaryColor, primaryColorLight],
@@ -140,7 +122,7 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
     // If no goals data available
     if (_weeklyGoals == null || _weeklyGoals!.isEmpty) {
       return Container(
-        height: 400,
+        height: 450,
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -194,12 +176,6 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
                 .clamp(0, 100)
                 .toDouble()
             : 0.0;
-    final timePercentage =
-        todayGoal.dailyTimeGoal > 0
-            ? ((todayGoal.passTime ?? 0) / todayGoal.dailyTimeGoal * 100)
-                .clamp(0, 100)
-                .toDouble()
-            : 0.0;
 
     return Container(
       height: 450,
@@ -220,7 +196,6 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
         ],
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 16),
           Padding(
@@ -259,389 +234,182 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
                   color:
                       questionPercentage >= 100 ? successColor : pendingColor,
                 ),
-                const SizedBox(width: 16),
-                DailyGoalPercentageWidget(
-                  title: "Dakika",
-                  value:
-                      "${todayGoal.passTime ?? 0}/${todayGoal.dailyTimeGoal}",
-                  percentage: timePercentage,
-                  color: timePercentage >= 100 ? successColor : pendingColor,
-                ),
               ],
             ),
           ),
-          const SizedBox(height: 16),
-          SizedBox(
-            height: 250,
-            child: DefaultTabController(
-              length: 2,
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TabBar(
-                    dividerColor: Colors.transparent,
-                    indicatorColor: textColor,
-                    indicatorSize: TabBarIndicatorSize.label,
-                    labelColor: textColor,
-                    unselectedLabelColor: textColorMuted,
-                    tabs: [
-                      Tab(
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(
-                              Icons.question_answer,
-                              size: 16,
-                              color: pendingColor,
-                            ),
-                            const SizedBox(width: 4),
-                            const Text("Sorular"),
-                          ],
-                        ),
-                      ),
-                      Tab(
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(Icons.timer, size: 16, color: pendingColor),
-                            const SizedBox(width: 4),
-                            const Text("Zaman"),
-                          ],
-                        ),
-                      ),
-                    ],
+                  Text(
+                    'Haftalık Soru Çözüm Hedefi',
+                    style: TextStyle(
+                      color: textColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
                   ),
+                  const SizedBox(height: 8),
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
-                      child: TabBarView(
-                        children: [
-                          SfCartesianChart(
-                            margin: const EdgeInsets.all(8),
-                            plotAreaBorderWidth: 0,
-                            plotAreaBackgroundColor: Colors.transparent,
-                            primaryXAxis: CategoryAxis(
-                              majorGridLines: const MajorGridLines(width: 0),
-                              labelStyle: TextStyle(
-                                color: textColor,
-                                fontSize: 11,
-                              ),
-                              axisLine: const AxisLine(width: 0),
-                              majorTickLines: const MajorTickLines(size: 0),
-                            ),
-                            primaryYAxis: NumericAxis(
-                              axisLine: const AxisLine(width: 0),
-                              majorGridLines: MajorGridLines(
-                                width: 0.5,
-                                color: chartBaseColor,
-                                dashArray: const <double>[5, 5],
-                              ),
-                              majorTickLines: const MajorTickLines(size: 0),
-                              maximum: 100,
-                              minimum: 0,
-                              interval: 50,
-                              labelStyle: TextStyle(
-                                color: chartBaseColor,
-                                fontSize: 10,
-                              ),
-                              labelFormat: '{value}%',
-                            ),
-                            tooltipBehavior: TooltipBehavior(
-                              enable: true,
-                              format: 'point.y%',
-                              header: '',
-                              canShowMarker: false,
-                              duration: 3000,
-                              textStyle: TextStyle(color: textColor),
-                              builder: (
-                                dynamic data,
-                                dynamic point,
-                                dynamic series,
-                                int pointIndex,
-                                int seriesIndex,
-                              ) {
-                                final ChartData chartData =
-                                    _getQuestionChartData()[pointIndex];
-                                return Container(
-                                  padding: const EdgeInsets.all(10),
-                                  decoration: BoxDecoration(
-                                    color: Colors.black.withOpacity(0.7),
-                                    borderRadius: BorderRadius.circular(5),
-                                  ),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          Icon(
-                                            Icons.check_circle,
-                                            color:
-                                                chartData.completed >=
-                                                        chartData.target
-                                                    ? successColor
-                                                    : pendingColor,
-                                            size: 14,
-                                          ),
-                                          const SizedBox(width: 4),
-                                          Text(
-                                            'Tamamlanan: ${chartData.completed}/${chartData.target}',
-                                            style: TextStyle(
-                                              color:
-                                                  chartData.completed >=
-                                                          chartData.target
-                                                      ? successColor
-                                                      : pendingColor,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(height: 4),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          Icon(
-                                            chartData.percentage >= 100
-                                                ? Icons.emoji_events
-                                                : Icons.trending_up,
-                                            color:
-                                                chartData.percentage >= 100
-                                                    ? successColor
-                                                    : pendingColor,
-                                            size: 14,
-                                          ),
-                                          const SizedBox(width: 4),
-                                          Text(
-                                            'Başarı: ${chartData.percentage.toInt()}%',
-                                            style: TextStyle(
-                                              color:
-                                                  chartData.percentage >= 100
-                                                      ? successColor
-                                                      : pendingColor,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                );
-                              },
-                            ),
-                            series: <CartesianSeries<ChartData, String>>[
-                              ColumnSeries<ChartData, String>(
-                                dataSource: _getQuestionChartData(),
-                                xValueMapper: (ChartData data, _) => data.day,
-                                yValueMapper:
-                                    (ChartData data, _) => data.percentage,
-                                name: 'Sorular',
-                                width: 0.7,
-                                spacing: 0.2,
-                                color: pendingColor,
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4),
-                                  topRight: Radius.circular(4),
-                                ),
-                                dataLabelSettings: DataLabelSettings(
-                                  isVisible: false,
-                                  textStyle: TextStyle(
-                                    color: textColor,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 10,
-                                  ),
-                                  labelAlignment: ChartDataLabelAlignment.top,
-                                  builder: (
-                                    dynamic data,
-                                    dynamic point,
-                                    dynamic series,
-                                    int pointIndex,
-                                    int seriesIndex,
-                                  ) {
-                                    // Show percentage in data label
-                                    return Text(
-                                      '${data.percentage.toInt()}%',
-                                      style: TextStyle(
-                                        color: textColor,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 10,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                pointColorMapper:
-                                    (ChartData data, _) =>
-                                        data.percentage >= 100
-                                            ? successColor
-                                            : pendingColor,
-                              ),
-                            ],
-                          ),
-                          SfCartesianChart(
-                            margin: const EdgeInsets.all(8),
-                            plotAreaBorderWidth: 0,
-                            plotAreaBackgroundColor: Colors.transparent,
-                            primaryXAxis: CategoryAxis(
-                              majorGridLines: const MajorGridLines(width: 0),
-                              labelStyle: TextStyle(
-                                color: textColor,
-                                fontSize: 11,
-                              ),
-                              axisLine: const AxisLine(width: 0),
-                              majorTickLines: const MajorTickLines(size: 0),
-                            ),
-                            primaryYAxis: NumericAxis(
-                              axisLine: const AxisLine(width: 0),
-                              majorGridLines: MajorGridLines(
-                                width: 0.5,
-                                color: chartBaseColor,
-                                dashArray: const <double>[5, 5],
-                              ),
-                              majorTickLines: const MajorTickLines(size: 0),
-                              maximum: 100,
-                              minimum: 0,
-                              interval: 50,
-                              labelStyle: TextStyle(
-                                color: chartBaseColor,
-                                fontSize: 10,
-                              ),
-                              labelFormat: '{value}%',
-                            ),
-                            tooltipBehavior: TooltipBehavior(
-                              enable: true,
-                              format: 'point.y%',
-                              header: '',
-                              canShowMarker: false,
-                              duration: 3000,
-                              textStyle: TextStyle(color: textColor),
-                              builder: (
-                                dynamic data,
-                                dynamic point,
-                                dynamic series,
-                                int pointIndex,
-                                int seriesIndex,
-                              ) {
-                                // Access the data directly from the ChartData object
-                                final ChartData chartData =
-                                    _getTimeChartData()[pointIndex];
-                                return Container(
-                                  padding: const EdgeInsets.all(10),
-                                  decoration: BoxDecoration(
-                                    color: Colors.black.withOpacity(0.7),
-                                    borderRadius: BorderRadius.circular(5),
-                                  ),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          Icon(
-                                            Icons.check_circle,
-                                            color:
-                                                chartData.completed >=
-                                                        chartData.target
-                                                    ? successColor
-                                                    : pendingColor,
-                                            size: 14,
-                                          ),
-                                          const SizedBox(width: 4),
-                                          Text(
-                                            'Tamamlanan: ${chartData.completed}/${chartData.target}',
-                                            style: TextStyle(
-                                              color:
-                                                  chartData.completed >=
-                                                          chartData.target
-                                                      ? successColor
-                                                      : pendingColor,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(height: 4),
-                                      Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          Icon(
-                                            chartData.percentage >= 100
-                                                ? Icons.emoji_events
-                                                : Icons.trending_up,
-                                            color:
-                                                chartData.percentage >= 100
-                                                    ? successColor
-                                                    : pendingColor,
-                                            size: 14,
-                                          ),
-                                          const SizedBox(width: 4),
-                                          Text(
-                                            'Başarı: ${chartData.percentage.toInt()}%',
-                                            style: TextStyle(
-                                              color:
-                                                  chartData.percentage >= 100
-                                                      ? successColor
-                                                      : pendingColor,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                );
-                              },
-                            ),
-                            series: <CartesianSeries<ChartData, String>>[
-                              ColumnSeries<ChartData, String>(
-                                dataSource: _getTimeChartData(),
-                                xValueMapper: (ChartData data, _) => data.day,
-                                yValueMapper:
-                                    (ChartData data, _) => data.percentage,
-                                name: 'Dakika',
-                                width: 0.7,
-                                spacing: 0.2,
-                                color: pendingColor,
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(4),
-                                  topRight: Radius.circular(4),
-                                ),
-                                dataLabelSettings: DataLabelSettings(
-                                  isVisible: false,
-                                  textStyle: TextStyle(
-                                    color: textColor,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 10,
-                                  ),
-                                  labelAlignment: ChartDataLabelAlignment.top,
-                                  builder: (
-                                    dynamic data,
-                                    dynamic point,
-                                    dynamic series,
-                                    int pointIndex,
-                                    int seriesIndex,
-                                  ) {
-                                    // Show percentage in data label
-                                    return Text(
-                                      '${data.percentage.toInt()}%',
-                                      style: TextStyle(
-                                        color: textColor,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 10,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                pointColorMapper:
-                                    (ChartData data, _) =>
-                                        data.percentage >= 100
-                                            ? successColor
-                                            : pendingColor,
-                              ),
-                            ],
-                          ),
-                        ],
+                    child: SfCartesianChart(
+                      margin: const EdgeInsets.all(8),
+                      plotAreaBorderWidth: 0,
+                      plotAreaBackgroundColor: Colors.transparent,
+                      primaryXAxis: CategoryAxis(
+                        majorGridLines: const MajorGridLines(width: 0),
+                        labelStyle: TextStyle(color: textColor, fontSize: 11),
+                        axisLine: const AxisLine(width: 0),
+                        majorTickLines: const MajorTickLines(size: 0),
                       ),
+                      primaryYAxis: NumericAxis(
+                        axisLine: const AxisLine(width: 0),
+                        majorGridLines: MajorGridLines(
+                          width: 0.5,
+                          color: chartBaseColor,
+                          dashArray: const <double>[5, 5],
+                        ),
+                        majorTickLines: const MajorTickLines(size: 0),
+                        maximum: 100,
+                        minimum: 0,
+                        interval: 50,
+                        labelStyle: TextStyle(
+                          color: chartBaseColor,
+                          fontSize: 10,
+                        ),
+                        labelFormat: '{value}%',
+                      ),
+                      tooltipBehavior: TooltipBehavior(
+                        enable: true,
+                        format: 'point.y%',
+                        header: '',
+                        canShowMarker: false,
+                        duration: 3000,
+                        textStyle: TextStyle(color: textColor),
+                        builder: (
+                          dynamic data,
+                          dynamic point,
+                          dynamic series,
+                          int pointIndex,
+                          int seriesIndex,
+                        ) {
+                          final ChartData chartData =
+                              _getQuestionChartData()[pointIndex];
+                          return Container(
+                            padding: const EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Colors.black.withOpacity(0.7),
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Icon(
+                                      Icons.check_circle,
+                                      color:
+                                          chartData.completed >=
+                                                  chartData.target
+                                              ? successColor
+                                              : pendingColor,
+                                      size: 14,
+                                    ),
+                                    const SizedBox(width: 4),
+                                    Text(
+                                      'Tamamlanan: ${chartData.completed}/${chartData.target}',
+                                      style: TextStyle(
+                                        color:
+                                            chartData.completed >=
+                                                    chartData.target
+                                                ? successColor
+                                                : pendingColor,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 4),
+                                Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Icon(
+                                      chartData.percentage >= 100
+                                          ? Icons.emoji_events
+                                          : Icons.trending_up,
+                                      color:
+                                          chartData.percentage >= 100
+                                              ? successColor
+                                              : pendingColor,
+                                      size: 14,
+                                    ),
+                                    const SizedBox(width: 4),
+                                    Text(
+                                      'Başarı: ${chartData.percentage.toInt()}%',
+                                      style: TextStyle(
+                                        color:
+                                            chartData.percentage >= 100
+                                                ? successColor
+                                                : pendingColor,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+                      series: <CartesianSeries<ChartData, String>>[
+                        ColumnSeries<ChartData, String>(
+                          dataSource: _getQuestionChartData(),
+                          xValueMapper: (ChartData data, _) => data.day,
+                          yValueMapper: (ChartData data, _) => data.percentage,
+                          name: 'Sorular',
+                          width: 0.7,
+                          spacing: 0.2,
+                          animationDuration: 100,
+                          color: pendingColor,
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(4),
+                            topRight: Radius.circular(4),
+                          ),
+                          dataLabelSettings: DataLabelSettings(
+                            isVisible: false,
+                            textStyle: TextStyle(
+                              color: textColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 10,
+                            ),
+                            labelAlignment: ChartDataLabelAlignment.top,
+                            builder: (
+                              dynamic data,
+                              dynamic point,
+                              dynamic series,
+                              int pointIndex,
+                              int seriesIndex,
+                            ) {
+                              // Show percentage in data label
+                              return Text(
+                                '${data.percentage.toInt()}%',
+                                style: TextStyle(
+                                  color: textColor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 10,
+                                ),
+                              );
+                            },
+                          ),
+                          pointColorMapper:
+                              (ChartData data, _) =>
+                                  data.percentage >= 100
+                                      ? successColor
+                                      : pendingColor,
+                        ),
+                      ],
                     ),
                   ),
                 ],

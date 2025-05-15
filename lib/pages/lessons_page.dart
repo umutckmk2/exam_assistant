@@ -22,8 +22,6 @@ class _LessonsPageState extends State<LessonsPage>
     with SingleTickerProviderStateMixin {
   List<Map>? _lessons;
   bool _isLoading = true;
-  late AnimationController _animationController;
-  late Animation<double> _fadeAnimation;
 
   Future<void> _getLessons() async {
     final lessonService = LessonService(widget.categoryId);
@@ -54,26 +52,6 @@ class _LessonsPageState extends State<LessonsPage>
   void initState() {
     super.initState();
     _getLessons();
-
-    // Setup animations
-    _animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 600),
-    );
-
-    _fadeAnimation = CurvedAnimation(
-      parent: _animationController,
-      curve: Curves.easeInOut,
-    );
-
-    // Start animations
-    _animationController.forward();
-  }
-
-  @override
-  void dispose() {
-    _animationController.dispose();
-    super.dispose();
   }
 
   @override
@@ -128,136 +106,107 @@ class _LessonsPageState extends State<LessonsPage>
       );
     }
 
-    return FadeTransition(
-      opacity: _fadeAnimation,
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: ListView.builder(
-          itemCount: _lessons!.length,
-          itemBuilder: (__, i) {
-            final lesson = _lessons![i];
-            return AnimatedBuilder(
-              animation: _animationController,
-              builder: (context, child) {
-                final delay = i * 0.2;
-                final value = _animationController.value - delay;
-                final opacity =
-                    value < 0.0
-                        ? 0.0
-                        : value > 1.0
-                        ? 1.0
-                        : value;
-
-                return Opacity(
-                  opacity: opacity,
-                  child: Transform.translate(
-                    offset: Offset(0, 20 * (1 - opacity)),
-                    child: child,
-                  ),
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: ListView.builder(
+        itemCount: _lessons!.length,
+        itemBuilder: (__, i) {
+          final lesson = _lessons![i];
+          return Card(
+            elevation: 3,
+            margin: const EdgeInsets.only(bottom: 16),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: InkWell(
+              onTap: () {
+                HapticFeedback.lightImpact();
+                context.push(
+                  '/category/${widget.categoryId}/lessons/${lesson['id']}/topics',
                 );
               },
-              child: Card(
-                elevation: 3,
-                margin: const EdgeInsets.only(bottom: 16),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: InkWell(
-                  onTap: () {
-                    // Add haptic feedback for a better tactile experience
-                    HapticFeedback.lightImpact();
-                    context.push(
-                      '/category/${widget.categoryId}/lessons/${lesson['id']}/topics',
-                    );
-                  },
-                  borderRadius: BorderRadius.circular(12),
-                  splashFactory: InkRipple.splashFactory,
-                  splashColor: Theme.of(context).primaryColor.withOpacity(0.1),
-                  highlightColor: Theme.of(
-                    context,
-                  ).primaryColor.withOpacity(0.05),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
+              borderRadius: BorderRadius.circular(12),
+              splashFactory: InkRipple.splashFactory,
+              splashColor: Theme.of(context).primaryColor.withAlpha(25),
+              highlightColor: Theme.of(context).primaryColor.withAlpha(12),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              width: 56,
-                              height: 56,
-                              decoration: BoxDecoration(
-                                color: Theme.of(
-                                  context,
-                                ).primaryColor.withAlpha(25),
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Icon(
-                                Icons.book,
-                                size: 32,
-                                color: Theme.of(context).primaryColor,
-                              ),
-                            ),
-                            const SizedBox(width: 16),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    _lessonNames[lesson['id']] ?? lesson['id'],
-                                    style: const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                        Container(
+                          width: 56,
+                          height: 56,
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).primaryColor.withAlpha(25),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Icon(
+                            Icons.book,
+                            size: 32,
+                            color: Theme.of(context).primaryColor,
+                          ),
                         ),
-                        const SizedBox(height: 12),
-                        Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 12,
-                                vertical: 6,
+                        const SizedBox(width: 16),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                _lessonNames[lesson['id']] ?? lesson['id'],
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                              decoration: BoxDecoration(
-                                color: Colors.grey[100],
-                                borderRadius: BorderRadius.circular(16),
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Icon(
-                                    Icons.topic,
-                                    size: 20,
-                                    color: Theme.of(context).primaryColor,
-                                  ),
-                                  const SizedBox(width: 6),
-                                  Text(
-                                    '${lesson['numberOfTopics']} Konu',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black87,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ],
                     ),
-                  ),
+                    const SizedBox(height: 12),
+                    Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 6,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.grey[100],
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(
+                                Icons.topic,
+                                size: 20,
+                                color: Theme.of(context).primaryColor,
+                              ),
+                              const SizedBox(width: 6),
+                              Text(
+                                '${lesson['numberOfTopics']} Konu',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black87,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
-            );
-          },
-        ),
+            ),
+          );
+        },
       ),
     );
   }

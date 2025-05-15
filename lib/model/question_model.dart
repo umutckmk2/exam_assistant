@@ -8,7 +8,8 @@ class QuestionModel {
   final String url;
   final bool withImage;
   final int answer;
-  final List? options;
+  final List options;
+  final bool isAiGenerated;
 
   QuestionModel({
     required this.id,
@@ -20,7 +21,8 @@ class QuestionModel {
     required this.withImage,
     required this.answer,
     required this.question,
-    this.options,
+    required this.options,
+    required this.isAiGenerated,
   });
 
   factory QuestionModel.fromJson(Map json) {
@@ -35,6 +37,7 @@ class QuestionModel {
       question: json['question'],
       sourceFile: json['sourceFile'],
       options: json['options'],
+      isAiGenerated: json['isAiGenerated'] ?? false,
     );
   }
 
@@ -50,6 +53,7 @@ class QuestionModel {
       'question': question,
       'sourceFile': sourceFile,
       'options': options,
+      'isAiGenerated': isAiGenerated,
     };
   }
 
@@ -65,7 +69,7 @@ class QuestionModel {
     String? sourceFile,
     List? options,
     int? answer,
-    DateTime? solvedAt,
+    bool? isAiGenerated,
   }) {
     return QuestionModel(
       id: id ?? this.id,
@@ -78,6 +82,7 @@ class QuestionModel {
       sourceFile: sourceFile ?? this.sourceFile,
       options: options ?? this.options,
       answer: answer ?? this.answer,
+      isAiGenerated: isAiGenerated ?? this.isAiGenerated,
     );
   }
 

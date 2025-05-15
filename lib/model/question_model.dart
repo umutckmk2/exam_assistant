@@ -2,22 +2,24 @@ class QuestionModel {
   final String id;
   final String questionAsHtml;
   final String questionText;
+  final String sourceFile;
+  final String question;
   final String topicPath;
   final String url;
   final bool withImage;
   final int answer;
-  final String? paraphrasedQuestion;
   final List? options;
 
   QuestionModel({
     required this.id,
     required this.questionAsHtml,
     required this.questionText,
+    required this.sourceFile,
     required this.topicPath,
     required this.url,
     required this.withImage,
     required this.answer,
-    this.paraphrasedQuestion,
+    required this.question,
     this.options,
   });
 
@@ -30,7 +32,8 @@ class QuestionModel {
       url: json['url'],
       withImage: json['withImage'],
       answer: json['answer'],
-      paraphrasedQuestion: json['paraphrasedQuestion'],
+      question: json['question'],
+      sourceFile: json['sourceFile'],
       options: json['options'],
     );
   }
@@ -44,7 +47,8 @@ class QuestionModel {
       'url': url,
       'withImage': withImage,
       'answer': answer,
-      'paraphrasedQuestion': paraphrasedQuestion,
+      'question': question,
+      'sourceFile': sourceFile,
       'options': options,
     };
   }
@@ -57,7 +61,8 @@ class QuestionModel {
     String? url,
     bool? withImage,
     int? answerIndex,
-    String? paraphrasedQuestion,
+    String? question,
+    String? sourceFile,
     List? options,
     int? answer,
     DateTime? solvedAt,
@@ -69,7 +74,8 @@ class QuestionModel {
       topicPath: topicPath ?? this.topicPath,
       url: url ?? this.url,
       withImage: withImage ?? this.withImage,
-      paraphrasedQuestion: paraphrasedQuestion ?? this.paraphrasedQuestion,
+      question: question ?? this.question,
+      sourceFile: sourceFile ?? this.sourceFile,
       options: options ?? this.options,
       answer: answer ?? this.answer,
     );

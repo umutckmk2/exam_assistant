@@ -8,6 +8,7 @@ import '../pages/my_account_page.dart';
 import '../pages/questions_page.dart';
 import '../pages/statistics_page.dart';
 import '../pages/topics_page.dart';
+import 'custom_transitions.dart';
 
 final GoRouter appRouter = GoRouter(
   initialLocation: '/',
@@ -16,7 +17,8 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: '/',
       name: 'home',
-      builder: (context, state) => const HomePage(),
+      pageBuilder:
+          (context, state) => FadeTransitionPage(child: const HomePage()),
     ),
     GoRoute(
       path: '/auth',
@@ -26,46 +28,58 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: '/account',
       name: 'account',
-      builder: (context, state) => const MyAccountPage(),
+      pageBuilder:
+          (context, state) => SlideTransitionPage(child: const MyAccountPage()),
     ),
 
     GoRoute(
       path: '/statistics',
       name: 'statistics',
-      builder: (context, state) => const StatisticsPage(),
+      pageBuilder:
+          (context, state) =>
+              SlideTransitionPage(child: const StatisticsPage()),
     ),
     GoRoute(
       path: '/category/:categoryId/lessons',
       name: 'lessons',
-      builder: (context, state) {
+      pageBuilder: (context, state) {
         final categoryId = state.pathParameters['categoryId'] ?? '';
         final categoryName = state.pathParameters['categoryName'] ?? '';
-        return LessonsPage(categoryId: categoryId, categoryName: categoryName);
+        return SlideTransitionPage(
+          child: LessonsPage(
+            categoryId: categoryId,
+            categoryName: categoryName,
+          ),
+        );
       },
 
       routes: [
         GoRoute(
           path: ':lessonId/topics',
           name: 'topics',
-          builder: (context, state) {
+          pageBuilder: (context, state) {
             final categoryId = state.pathParameters['categoryId'] ?? '';
             final lessonId = state.pathParameters['lessonId'] ?? '';
-            return TopicsPage(categoryId: categoryId, lessonId: lessonId);
+            return SlideTransitionPage(
+              child: TopicsPage(categoryId: categoryId, lessonId: lessonId),
+            );
           },
           routes: [
             GoRoute(
               path: ':topicId/:subTopicId',
               name: 'question',
-              builder: (context, state) {
+              pageBuilder: (context, state) {
                 final categoryId = state.pathParameters['categoryId'] ?? '';
                 final lessonId = state.pathParameters['lessonId'] ?? '';
                 final topicId = state.pathParameters['topicId'] ?? '';
                 final subTopicId = state.pathParameters['subTopicId'] ?? '';
-                return QuestionPage(
-                  categoryId: categoryId,
-                  lessonId: lessonId,
-                  topicId: topicId,
-                  subTopicId: subTopicId == 'null' ? null : subTopicId,
+                return ScaleTransitionPage(
+                  child: QuestionPage(
+                    categoryId: categoryId,
+                    lessonId: lessonId,
+                    topicId: topicId,
+                    subTopicId: subTopicId == 'null' ? null : subTopicId,
+                  ),
                 );
               },
             ),

@@ -15,7 +15,7 @@ class QuestionService {
 
   late Box<Map> _box;
 
-  static const String _boxName = "questions";
+  static const String _boxName = "prodQuestions";
 
   final _colRef = FirebaseFirestore.instance.collection(_boxName);
 
@@ -60,11 +60,7 @@ class QuestionService {
             questions.addAll(boxQuestions.map(QuestionModel.fromJson));
             continue;
           }
-          final qs =
-              await _colRef
-                  .where('topicPath', isEqualTo: path)
-                  .where('answer', isLessThan: 6)
-                  .get();
+          final qs = await _colRef.where('topicPath', isEqualTo: path).get();
           for (final question in qs.docs) {
             final data = {...question.data(), 'id': question.id};
             questions.add(QuestionModel.fromJson(data));

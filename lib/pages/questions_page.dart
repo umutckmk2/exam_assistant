@@ -31,7 +31,7 @@ class _QuestionPageState extends State<QuestionPage> {
   bool _showResult = false;
   final bool _isGeneratingAiQuestion = false;
   final bool _isGeneratingCheatSheet = false;
-  List<QuestionModel>? _questionWithoutImage;
+  List<QuestionModel>? _questions;
   List<QuestionModel>? _unsolvedQuestions;
   final ScrollController _scrollController = ScrollController();
   Map? _topic;
@@ -42,22 +42,20 @@ class _QuestionPageState extends State<QuestionPage> {
     _topic = await topicService.getTopic(widget.topicId);
 
     final questionsService = QuestionService.instance;
-    final questions = await questionsService.getQuestions(
+    _questions = await questionsService.getQuestions(
       categoryId: widget.categoryId,
       lessonId: widget.lessonId,
       topic: _topic!,
       subTopicId: widget.subTopicId,
     );
 
-    _questionWithoutImage =
-        questions.where((e) => !e.questionAsHtml.contains('<img')).toList();
     final userId = AuthService().currentUser?.uid;
     if (userId == null) return;
     final solvedQuestions = await UserService.instance.getSolvedQuestions(
       userId,
     );
     _unsolvedQuestions =
-        _questionWithoutImage!
+        _questions!
             .where((e) => !solvedQuestions.any((s) => s['id'] == e.id))
             .toList();
     _loadRandomQuestion();
@@ -72,15 +70,7 @@ class _QuestionPageState extends State<QuestionPage> {
   Future<void> _loadRandomQuestion() async {
     if (_unsolvedQuestions == null || _unsolvedQuestions!.isEmpty) return;
     final randomIndex = Random().nextInt(_unsolvedQuestions!.length);
-    final htmlQuestion = _unsolvedQuestions![randomIndex];
-
-    final paraphrasedQuestion = await OpenAiService()
-        .extractAndParaphraseQuestionFromHtml(htmlQuestion.questionAsHtml);
-
-    _question = htmlQuestion.copyWith(
-      paraphrasedQuestion: paraphrasedQuestion['paraphrasedQuestion'],
-      options: paraphrasedQuestion['options'],
-    );
+    _question = _unsolvedQuestions![randomIndex];
 
     _showResult = false;
     _selectedAnswerIndex = null;
@@ -131,7 +121,7 @@ class _QuestionPageState extends State<QuestionPage> {
         appBar: AppBar(title: const Text('Yükleniyor...')),
         body: const Center(child: CircularProgressIndicator()),
       );
-    } else if (_questionWithoutImage!.isEmpty) {
+    } else if (_questions!.isEmpty) {
       return Scaffold(
         appBar: AppBar(title: Text(_topic!['topic'])),
         body: Center(
@@ -213,7 +203,7 @@ class _QuestionPageState extends State<QuestionPage> {
           ),
         ),
       );
-    } else if (_question == null || _question!.paraphrasedQuestion == null) {
+    } else if (_question == null) {
       return Scaffold(
         appBar: AppBar(title: const Text('Yükleniyor...')),
         body: const Center(child: CircularProgressIndicator()),
@@ -270,7 +260,7 @@ class _QuestionPageState extends State<QuestionPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        _question!.paraphrasedQuestion!,
+                        _question!.question,
                         style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,

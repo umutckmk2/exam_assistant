@@ -73,6 +73,8 @@ class _StatisticsPageState extends State<StatisticsPage> {
                   url: '',
                   withImage: false,
                   answer: 0,
+                  sourceFile: '',
+                  question: '',
                 ),
           );
 

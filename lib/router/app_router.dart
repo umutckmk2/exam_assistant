@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../auth/auth_page.dart';
+import '../pages/cheat_sheets_page.dart';
 import '../pages/home_page.dart';
 import '../pages/lessons_page.dart';
-import '../pages/my_account_page.dart';
 import '../pages/questions_page.dart';
 import '../pages/statistics_page.dart';
 import '../pages/topics_page.dart';
@@ -26,12 +26,11 @@ final GoRouter appRouter = GoRouter(
           (context, state) => const NoTransitionPage(child: AuthPage()),
     ),
     GoRoute(
-      path: '/account',
-      name: 'account',
+      path: '/cheat-sheets',
+      name: 'cheat-sheets',
       pageBuilder:
-          (context, state) => SlideTransitionPage(child: const MyAccountPage()),
+          (context, state) => SlideTransitionPage(child: CheatSheetsPage()),
     ),
-
     GoRoute(
       path: '/statistics',
       name: 'statistics',

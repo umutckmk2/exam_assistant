@@ -35,7 +35,7 @@ class CategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final primaryColor = Theme.of(context).primaryColor;
-    final primaryColorLight = primaryColor.withOpacity(0.8);
+    final primaryColorLight = primaryColor.withAlpha(200);
     final colors = [primaryColor, primaryColorLight];
     final textColor = Colors.white;
     final icon = _getIconForCategory();
@@ -55,8 +55,8 @@ class CategoryCard extends StatelessWidget {
           },
           borderRadius: BorderRadius.circular(16),
           splashFactory: InkRipple.splashFactory,
-          splashColor: Colors.white.withOpacity(0.3),
-          highlightColor: Colors.white.withOpacity(0.1),
+          splashColor: Colors.white.withAlpha(75),
+          highlightColor: Colors.white.withAlpha(25),
           child: Hero(
             tag: 'category_$id',
             child: Container(

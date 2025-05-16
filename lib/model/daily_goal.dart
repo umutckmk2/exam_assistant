@@ -11,16 +11,14 @@ class DailyGoal {
     this.solvedQuestions,
   });
 
-  // Default constructor with preset values
-  factory DailyGoal.defaultGoal() {
-    return DailyGoal(
-      dailyQuestionGoal: 25,
-      notifyTime: const TimeOfDay(hour: 20, minute: 0),
-      solvedQuestions: 0,
-    );
-  }
-
-  factory DailyGoal.fromJson(Map json) {
+  factory DailyGoal.fromJson(Map? json) {
+    if (json == null || json.isEmpty) {
+      return DailyGoal(
+        dailyQuestionGoal: 25,
+        notifyTime: const TimeOfDay(hour: 20, minute: 0),
+        solvedQuestions: 0,
+      );
+    }
     return DailyGoal(
       dailyQuestionGoal: json['dailyQuestionGoal'],
       solvedQuestions: json['solvedQuestions'],

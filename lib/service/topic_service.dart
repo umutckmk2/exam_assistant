@@ -62,7 +62,6 @@ class TopicService {
     String categoryId,
     String lessonId,
   ) async {
-    print("getTopic: $topicId, $categoryId, $lessonId");
     await _openBox(categoryId, lessonId);
 
     if (_box.containsKey(topicId)) {

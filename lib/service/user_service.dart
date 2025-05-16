@@ -58,10 +58,12 @@ class UserService {
       } else {
         solvedQuestions = user?['solvedQuestions'] ?? [];
       }
+      final dailyGoalSettings = ds.data()?['dailyGoalSettings'] ?? {};
       final appUser = AppUser.fromJson({
         ...ds.data()!,
         'id': id,
         'solvedQuestions': solvedQuestions,
+        'dailyGoalSettings': dailyGoalSettings,
       });
 
       await _box.put(id, appUser.toJson());

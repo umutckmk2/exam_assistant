@@ -6,6 +6,7 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 
 import '../model/daily_goal.dart';
 import '../model/question_model.dart';
+import '../service/cheat_sheet_service.dart';
 import '../service/index.dart';
 import '../widgets/answer_option.dart';
 
@@ -94,8 +95,6 @@ class _QuestionPageState extends State<QuestionPage> {
         isAiGenerated: true,
       );
 
-      print("answer: ${questionModel.answer}");
-
       await QuestionService.instance.saveQuestion(questionModel);
 
       _question = questionModel;
@@ -129,11 +128,17 @@ class _QuestionPageState extends State<QuestionPage> {
 
     try {
       final description = await OpenAiService().createCheatSheet(_question!);
-
-      setState(() {
-        _cheatSheetContent = description;
-        _isGeneratingCheatSheet = false;
-      });
+      _cheatSheetContent = description;
+      _isGeneratingCheatSheet = false;
+      final cheatSheet = {
+        'content': description,
+        'topicId': widget.topicId,
+        'lessonId': widget.lessonId,
+        'categoryId': widget.categoryId,
+        'subTopicId': widget.subTopicId,
+      };
+      await CheatSheetService.instance.saveCheatSheet(cheatSheet);
+      if (mounted) setState(() {});
 
       _showCheatSheetDialog();
     } catch (e) {

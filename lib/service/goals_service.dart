@@ -33,22 +33,10 @@ class GoalsService {
 
   Future<void> setDailyGoal(DailyGoal goal) async {
     final userId = AuthService().currentUser?.uid;
-    await FirebaseFirestore.instance
-        .collection('users')
-        .doc(userId)
-        .collection('goals')
-        .doc('daily')
-        .set({...goal.toJson()});
-  }
-
-  Future<void> resetDailyGoal() async {
-    final userId = AuthService().currentUser?.uid;
-    await FirebaseFirestore.instance
-        .collection('users')
-        .doc(userId)
-        .collection('goals')
-        .doc('daily')
-        .delete();
+    await FirebaseFirestore.instance.collection('users').doc(userId).update({
+      'dailyGoalSettings': goal.toJson(),
+    });
+    await settingsBox.put("dailyGoalSettings", goal.toJson());
   }
 
   Future<DailyGoal> saveTodayRecord(DailyGoal goal) async {
@@ -159,18 +147,12 @@ class GoalsService {
   Future<DailyGoal> getTodayGoal(String userId) async {
     await _openBox();
     final today = todayMidNightAsSeconds;
-    final record = _dailyGoalRecords.get(
-      today,
-      defaultValue: DailyGoal.defaultGoal().toJson(),
-    );
+    final record = _dailyGoalRecords.get(today);
     return DailyGoal.fromJson(record!);
   }
 
   DailyGoal getDailyGoalSettings() {
-    final goal = settingsBox.get(
-      "dailyGoalSettings",
-      defaultValue: DailyGoal.defaultGoal().toJson(),
-    );
-    return DailyGoal.fromJson(goal!);
+    final goal = settingsBox.get("dailyGoalSettings");
+    return DailyGoal.fromJson(goal);
   }
 }

@@ -6,6 +6,7 @@ import '../model/daily_goal.dart';
 import '../service/auth_service.dart';
 import '../service/goals_service.dart';
 import 'daily_goal_percentage_widget.dart';
+import 'edit_goal_widget.dart';
 
 class ChartData {
   final String day;
@@ -34,7 +35,6 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
 
       final userId = AuthService().currentUser?.uid;
       if (userId != null) {
-        await GoalsService.instance.saveMissingRecords();
         _weeklyGoals = await GoalsService.instance.getThisWeekGoalRecords(
           userId,
         );
@@ -86,13 +86,13 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
   @override
   Widget build(BuildContext context) {
     final primaryColor = Theme.of(context).primaryColor;
-    final primaryColorLight = primaryColor.withOpacity(0.8);
+    final primaryColorLight = primaryColor.withAlpha(200);
     final textColor = Colors.white;
 
     // Define color scheme for charts
     final successColor = Colors.lightGreenAccent;
     final pendingColor = Colors.amberAccent;
-    final chartBaseColor = Colors.white.withOpacity(0.7);
+    final chartBaseColor = Colors.white.withAlpha(175);
 
     if (_isLoadingGoals) {
       return Container(
@@ -106,7 +106,7 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: primaryColor.withOpacity(0.3),
+              color: primaryColor.withAlpha(75),
               spreadRadius: 1,
               blurRadius: 10,
               offset: const Offset(0, 4),
@@ -133,7 +133,7 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: primaryColor.withOpacity(0.3),
+              color: primaryColor.withAlpha(75),
               spreadRadius: 1,
               blurRadius: 10,
               offset: const Offset(0, 4),
@@ -156,9 +156,9 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
             Text(
               "Hedeflerinizi belirlemek için hesap sayfasını ziyaret edin.",
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: textColor.withOpacity(0.9),
-              ),
+              style: Theme.of(
+                context,
+              ).textTheme.bodyMedium?.copyWith(color: textColor.withAlpha(225)),
             ),
           ],
         ),
@@ -188,7 +188,7 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: primaryColor.withOpacity(0.3),
+            color: primaryColor.withAlpha(75),
             spreadRadius: 1,
             blurRadius: 10,
             offset: const Offset(0, 4),
@@ -201,7 +201,6 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   "Bugünkü İlerleme",
@@ -210,6 +209,23 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
                     fontWeight: FontWeight.bold,
                     color: textColor,
                   ),
+                ),
+                const Spacer(),
+                IconButton(
+                  icon: Icon(Icons.edit, color: textColor),
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder:
+                          (context) => EditGoalWidget(
+                            currentGoal: todayGoal,
+                            onGoalUpdated: (goal) {
+                              _getWeeklyGoals();
+                            },
+                          ),
+                    );
+                  },
+                  tooltip: 'Düzenle',
                 ),
                 IconButton(
                   icon: Icon(Icons.refresh, color: textColor),
@@ -299,7 +315,7 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
                           return Container(
                             padding: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
-                              color: Colors.black.withOpacity(0.7),
+                              color: Colors.black.withAlpha(175),
                               borderRadius: BorderRadius.circular(5),
                             ),
                             child: Column(

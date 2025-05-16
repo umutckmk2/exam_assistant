@@ -47,7 +47,6 @@ class _AuthPageState extends State<AuthPage> {
     setState(() => _isLoading = true);
     try {
       final result = await _authService.signInWithGoogle();
-      print("result: $result");
       if (result == null) {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
@@ -56,7 +55,6 @@ class _AuthPageState extends State<AuthPage> {
         }
       }
     } catch (e) {
-      print("error: $e");
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Error signing in with Google: $e')),
@@ -102,27 +100,27 @@ class _AuthPageState extends State<AuthPage> {
     }
   }
 
-  Future<void> _signInAnonymously() async {
-    setState(() => _isLoading = true);
-    try {
-      final result = await _authService.signInAnonymously();
-      if (result == null && mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Failed to sign in anonymously')),
-        );
-      }
-    } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Error signing in anonymously: $e')),
-        );
-      }
-    } finally {
-      if (mounted) {
-        setState(() => _isLoading = false);
-      }
-    }
-  }
+  // Future<void> _signInAnonymously() async {
+  //   setState(() => _isLoading = true);
+  //   try {
+  //     final result = await _authService.signInAnonymously();
+  //     if (result == null && mounted) {
+  //       ScaffoldMessenger.of(context).showSnackBar(
+  //         const SnackBar(content: Text('Failed to sign in anonymously')),
+  //       );
+  //     }
+  //   } catch (e) {
+  //     if (mounted) {
+  //       ScaffoldMessenger.of(context).showSnackBar(
+  //         SnackBar(content: Text('Error signing in anonymously: $e')),
+  //       );
+  //     }
+  //   } finally {
+  //     if (mounted) {
+  //       setState(() => _isLoading = false);
+  //     }
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -180,24 +178,6 @@ class _AuthPageState extends State<AuthPage> {
                     ),
                   ),
                   const SizedBox(height: 16),
-                  TextButton(
-                    onPressed: _isLoading ? null : _signInAnonymously,
-                    style: TextButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 32,
-                        vertical: 16,
-                      ),
-                      minimumSize: const Size(280, 56),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
-                        side: BorderSide(color: Colors.grey.shade300),
-                      ),
-                    ),
-                    child: const Text(
-                      'Misafir olarak devam et',
-                      style: TextStyle(fontSize: 16),
-                    ),
-                  ),
                 ],
               ),
             ),

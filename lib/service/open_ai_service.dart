@@ -56,10 +56,11 @@ class OpenAiService {
   }
 
   Future<String> createCheatSheet(QuestionModel question) async {
-    final topicService = TopicService(question.lesson, question.category);
-    final topicInfo = await topicService.getSubTopic(
+    final topicInfo = await TopicService.instance.getSubTopic(
       question.subTopicNumber,
       question.topicNumber,
+      question.category,
+      question.lesson,
     );
     final prompt = '''
     You are an expert YKS (Yükseköğretime Geçiş Sınavı) tutor.
@@ -90,10 +91,11 @@ class OpenAiService {
   }
 
   Future<String> generateSimilarQuestion(QuestionModel question) async {
-    final topicService = TopicService(question.lesson, question.category);
-    final topicInfo = await topicService.getSubTopic(
+    final topicInfo = await TopicService.instance.getSubTopic(
       question.subTopicNumber,
       question.topicNumber,
+      question.category,
+      question.lesson,
     );
     final prompt = '''
     You are an expert in KPSS (Public Personnel Selection Examination) question creation.

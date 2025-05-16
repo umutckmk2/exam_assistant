@@ -46,7 +46,9 @@ class UserService {
           for (final question in solvedQuestionQs.docs) {
             final questionData = {
               "answerIndex": question.data()['answerIndex'],
-              "correct": question.data()['correct'],
+              "correct":
+                  question.data()['correctAnswer'] ==
+                  question.data()['answerIndex'],
               "id": question.id,
               "solvedAt": question.data()['solvedAt'],
             };
@@ -70,6 +72,10 @@ class UserService {
     }
   }
 
+  Future<void> deleteUser(String id) async {
+    await _box.delete(id);
+  }
+
   Future<void> saveUser(String id, Map user) async {
     await _box.put(id, user);
   }
@@ -84,7 +90,11 @@ class UserService {
     return AppUser.fromJson({...user.toJson(), ...updateData});
   }
 
-  Future<void> saveSolvedQuestion(String userId, Map question) async {
+  Future<void> saveSolvedQuestion(
+    String userId,
+    Map question,
+    int answerIndex,
+  ) async {
     final id = "${question['id']}";
     await FirebaseFirestore.instance.runTransaction((transaction) async {
       final userRef = FirebaseFirestore.instance
@@ -94,8 +104,8 @@ class UserService {
 
       transaction.set(solvedQuestionRef, {
         'solvedAt': DateTime.now().millisecondsSinceEpoch ~/ 1000,
-        'answerIndex': question['answer'],
-        'correct': question['answer'] == question['answerIndex'],
+        'answerIndex': answerIndex,
+        'correctAnswer': question['answer'],
       });
 
       transaction.update(userRef, {

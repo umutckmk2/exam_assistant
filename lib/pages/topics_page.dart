@@ -23,8 +23,10 @@ class _TopicsPageState extends State<TopicsPage> {
   bool _isLoading = true;
 
   Future<void> _getTopics() async {
-    final topicService = TopicService(widget.lessonId, widget.categoryId);
-    final topics = await topicService.getTopics();
+    final topics = await TopicService.instance.getTopics(
+      widget.categoryId,
+      widget.lessonId,
+    );
     _topics = topics;
 
     // Initialize expanded state for all topics

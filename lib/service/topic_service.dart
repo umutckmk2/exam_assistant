@@ -3,30 +3,19 @@ import 'package:collection/collection.dart';
 import 'package:hive/hive.dart';
 
 class TopicService {
-  final String lessonId;
-  final String categoryId;
-
   static TopicService? _instance;
 
-  TopicService._init(this.lessonId, this.categoryId);
+  TopicService._init();
 
-  factory TopicService(String lessonId, String categoryId) {
-    if (_instance != null) {
-      if (_instance!.lessonId != lessonId ||
-          _instance!.categoryId != categoryId) {
-        _instance = TopicService._init(lessonId, categoryId);
-      }
-    } else {
-      _instance = TopicService._init(lessonId, categoryId);
-    }
-    return _instance!;
+  static TopicService get instance {
+    return _instance ?? TopicService._init();
   }
 
   late Box<Map> _box;
 
   late String _boxName;
 
-  Future<void> _openBox() async {
+  Future<void> _openBox(String categoryId, String lessonId) async {
     _boxName = "$categoryId-$lessonId-mainTopics";
     if (Hive.isBoxOpen(_boxName)) {
       _box = Hive.box<Map>(_boxName);
@@ -35,8 +24,8 @@ class TopicService {
     }
   }
 
-  Future<List<Map>> getTopics() async {
-    await _openBox();
+  Future<List<Map>> getTopics(String categoryId, String lessonId) async {
+    await _openBox(categoryId, lessonId);
 
     final qs =
         await FirebaseFirestore.instance
@@ -68,8 +57,13 @@ class TopicService {
     return topics;
   }
 
-  Future<Map> getTopic(String topicId) async {
-    await _openBox();
+  Future<Map> getTopic(
+    String topicId,
+    String categoryId,
+    String lessonId,
+  ) async {
+    print("getTopic: $topicId, $categoryId, $lessonId");
+    await _openBox(categoryId, lessonId);
 
     if (_box.containsKey(topicId)) {
       return _box.get(topicId)!;
@@ -99,8 +93,10 @@ class TopicService {
   Future<({String topic, String subTopic})> getSubTopic(
     String subTopicId,
     String topicId,
+    String categoryId,
+    String lessonId,
   ) async {
-    final topic = await getTopic(topicId);
+    final topic = await getTopic(topicId, categoryId, lessonId);
     final subTopic = (topic['subTopics'] as List? ?? []).firstWhereOrNull(
       (subTopic) => subTopic['value'] == subTopicId,
     );

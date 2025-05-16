@@ -36,16 +36,15 @@ class _StatisticsPageState extends State<StatisticsPage> {
       final question = await QuestionService.instance.getQuestion(
         solvedQuestion['id'],
       );
-      _allQuestions.add(
-        SolvedQuestionModel.fromQuestionModel(
-          question,
-          solvedQuestion['answerIndex'],
-          solvedQuestion['solvedAt'],
-          solvedQuestion['correct'],
-        ),
+
+      final solvedQuestionModel = SolvedQuestionModel.fromQuestionModel(
+        question,
+        solvedQuestion['answerIndex'],
+        solvedQuestion['solvedAt'],
       );
+
+      _allQuestions.add(solvedQuestionModel);
     }
-    print("all questions: ${_allQuestions.length}");
     if (mounted) {
       _isLoading = false;
       setState(() {});

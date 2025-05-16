@@ -74,6 +74,7 @@ class MyAccountPage extends StatelessWidget {
                   child: ElevatedButton.icon(
                     onPressed: () {
                       context.go('/');
+                      UserService.instance.deleteUser(userId);
                       AuthService().signOut();
                     },
                     icon: const Icon(Icons.logout),

@@ -64,7 +64,6 @@ class QuestionModel {
     String? topicPath,
     String? url,
     bool? withImage,
-    int? answerIndex,
     String? question,
     String? sourceFile,
     List? options,

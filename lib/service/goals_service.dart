@@ -75,6 +75,7 @@ class GoalsService {
               .limitToLast(1)
               .get();
       final data = lastRecordSnapshot.value as Map?;
+
       if (data == null || data.isEmpty) {
         await saveTodayRecord(dailyGoalSettings);
         return;
@@ -89,8 +90,7 @@ class GoalsService {
         todayMidNightAsSeconds * 1000,
       );
       final daysBetween = today.difference(lastRecordDate).inDays;
-
-      if (daysBetween <= 1) {
+      if (daysBetween < 1) {
         final recordDate = data.keys.first;
         final recordMap = data[recordDate]!;
 
@@ -98,7 +98,7 @@ class GoalsService {
         return;
       }
 
-      for (var i = 1; i < daysBetween; i++) {
+      for (var i = 1; i < daysBetween + 1; i++) {
         final missingDate = lastRecordDate.add(Duration(days: i));
         final missingTimestamp = missingDate.millisecondsSinceEpoch ~/ 1000;
         await _dailyGoalRecords.put(

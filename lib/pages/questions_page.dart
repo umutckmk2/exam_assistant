@@ -41,8 +41,11 @@ class _QuestionPageState extends State<QuestionPage> {
   String? _cheatSheetContent;
 
   Future<void> _loadQuestions() async {
-    final topicService = TopicService(widget.lessonId, widget.categoryId);
-    _topic = await topicService.getTopic(widget.topicId);
+    _topic = await TopicService.instance.getTopic(
+      widget.topicId,
+      widget.categoryId,
+      widget.lessonId,
+    );
 
     final questionsService = QuestionService.instance;
     _questions = await questionsService.getQuestions(
@@ -78,7 +81,7 @@ class _QuestionPageState extends State<QuestionPage> {
 
       final questionJson = jsonDecode(question);
       final questionModel = QuestionModel(
-        answer: questionJson['answer'],
+        answer: questionJson['answer'] + 1,
         options: questionJson['options'],
         question: questionJson['question'],
         questionAsHtml: "",
@@ -90,6 +93,8 @@ class _QuestionPageState extends State<QuestionPage> {
         withImage: false,
         isAiGenerated: true,
       );
+
+      print("answer: ${questionModel.answer}");
 
       await QuestionService.instance.saveQuestion(questionModel);
 
@@ -236,9 +241,11 @@ class _QuestionPageState extends State<QuestionPage> {
       }
     });
 
-    _question = _question!.copyWith(answerIndex: index);
-
-    await UserService.instance.saveSolvedQuestion(userId!, _question!.toJson());
+    await UserService.instance.saveSolvedQuestion(
+      userId!,
+      _question!.toJson(),
+      index + 1,
+    );
 
     _todayGoal ??= await GoalsService.instance.getTodayGoal(userId);
 

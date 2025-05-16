@@ -3,7 +3,6 @@ import 'question_model.dart';
 class SolvedQuestionModel extends QuestionModel {
   final int solvedAt;
   final int answerIndex;
-  final bool correct;
   SolvedQuestionModel({
     required super.id,
     required super.questionAsHtml,
@@ -18,14 +17,12 @@ class SolvedQuestionModel extends QuestionModel {
     required super.isAiGenerated,
     required this.solvedAt,
     required this.answerIndex,
-    required this.correct,
   });
 
   factory SolvedQuestionModel.fromQuestionModel(
     QuestionModel question,
     int answerIndex,
     int solvedAt,
-    bool correct,
   ) {
     return SolvedQuestionModel(
       id: question.id,
@@ -41,7 +38,8 @@ class SolvedQuestionModel extends QuestionModel {
       isAiGenerated: question.isAiGenerated,
       solvedAt: solvedAt,
       answerIndex: answerIndex,
-      correct: correct,
     );
   }
+
+  bool get isCorrect => answerIndex == answer;
 }

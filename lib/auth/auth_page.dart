@@ -47,6 +47,7 @@ class _AuthPageState extends State<AuthPage> {
     setState(() => _isLoading = true);
     try {
       final result = await _authService.signInWithGoogle();
+      print("result: $result");
       if (result == null) {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
@@ -55,6 +56,7 @@ class _AuthPageState extends State<AuthPage> {
         }
       }
     } catch (e) {
+      print("error: $e");
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Error signing in with Google: $e')),
@@ -171,7 +173,7 @@ class _AuthPageState extends State<AuthPage> {
                         FaIcon(FontAwesomeIcons.google, size: 24),
                         SizedBox(width: 12),
                         Text(
-                          'Sign in with Google',
+                          'Google ile giriş yap',
                           style: TextStyle(fontSize: 16),
                         ),
                       ],
@@ -192,7 +194,7 @@ class _AuthPageState extends State<AuthPage> {
                       ),
                     ),
                     child: const Text(
-                      'Continue as Guest',
+                      'Misafir olarak devam et',
                       style: TextStyle(fontSize: 16),
                     ),
                   ),

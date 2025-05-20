@@ -6,7 +6,7 @@ class AiResponseModel {
   final String questionId;
   final String userId;
   final String responseText;
-  final DateTime createdAt;
+  final int createdAt; // Seconds since epoch
 
   AiResponseModel({
     required this.id,
@@ -22,7 +22,7 @@ class AiResponseModel {
       'questionId': questionId,
       'userId': userId,
       'responseText': responseText,
-      'createdAt': Timestamp.fromDate(createdAt),
+      'createdAt': createdAt,
     };
   }
 
@@ -34,8 +34,8 @@ class AiResponseModel {
       responseText: map['responseText'] ?? '',
       createdAt:
           map['createdAt'] is Timestamp
-              ? (map['createdAt'] as Timestamp).toDate()
-              : DateTime.fromMillisecondsSinceEpoch(map['createdAt'] ?? 0),
+              ? (map['createdAt'] as Timestamp).seconds
+              : map['createdAt'] ?? 0,
     );
   }
 
@@ -44,7 +44,7 @@ class AiResponseModel {
     String? questionId,
     String? userId,
     String? responseText,
-    DateTime? createdAt,
+    int? createdAt,
   }) {
     return AiResponseModel(
       id: id ?? this.id,
@@ -54,4 +54,7 @@ class AiResponseModel {
       createdAt: createdAt ?? this.createdAt,
     );
   }
+
+  DateTime get createdAtDateTime =>
+      DateTime.fromMillisecondsSinceEpoch(createdAt * 1000);
 }

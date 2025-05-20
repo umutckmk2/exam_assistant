@@ -18,6 +18,7 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
   File? _selectedImage;
   bool _isLoading = false;
   String? _errorMessage;
+  final TextEditingController _titleController = TextEditingController();
   final StudentQuestionService _questionService =
       StudentQuestionService.instance;
 
@@ -40,6 +41,12 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
     }
   }
 
+  void _removeImage() {
+    setState(() {
+      _selectedImage = null;
+    });
+  }
+
   Future<void> _submitQuestion() async {
     if (_selectedImage == null) {
       setState(() {
@@ -55,7 +62,10 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
 
     try {
       // Upload the question image and create a question record
-      final question = await _questionService.createQuestion(_selectedImage!);
+      final question = await _questionService.createQuestion(
+        _selectedImage!,
+        title: _titleController.text.isNotEmpty ? _titleController.text : null,
+      );
 
       // Process the image with AI
       await _questionService.processQuestionImage(question);
@@ -78,9 +88,24 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
   }
 
   @override
+  void dispose() {
+    _titleController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Soru Sor'), elevation: 0),
+      appBar: AppBar(
+        title: const Text('Soru Sor'),
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () {
+            context.go('/');
+          },
+          icon: const Icon(Icons.arrow_back),
+        ),
+      ),
       body:
           _isLoading
               ? const Center(
@@ -101,42 +126,98 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
                     ),
                     const SizedBox(height: 24.0),
                     if (_selectedImage != null) ...[
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(12.0),
-                        child: Image.file(
-                          _selectedImage!,
-                          height: 300,
-                          fit: BoxFit.contain,
+                      Stack(
+                        alignment: Alignment.topRight,
+                        children: [
+                          GestureDetector(
+                            onTap: _pickImage,
+                            child: Container(
+                              width: double.infinity,
+                              constraints: const BoxConstraints(maxHeight: 350),
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(12.0),
+                                child: Image.file(
+                                  _selectedImage!,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            top: 16,
+                            right: 16,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                shape: BoxShape.circle,
+                              ),
+                              child: IconButton(
+                                icon: const Icon(
+                                  Icons.close,
+                                  color: Colors.white,
+                                ),
+                                onPressed: _removeImage,
+                                tooltip: 'Resmi kaldır',
+                                padding: const EdgeInsets.all(8),
+                                constraints: const BoxConstraints(),
+                                iconSize: 20,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 24.0),
+                      TextFormField(
+                        controller: _titleController,
+                        decoration: InputDecoration(
+                          labelText: 'Soru Başlığı (Opsiyonel)',
+                          hintText: 'Sorunuz için bir başlık girin',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12.0),
+                          ),
+                          prefixIcon: const Icon(Icons.title),
                         ),
+                        maxLength: 50,
                       ),
                       const SizedBox(height: 16.0),
                       ElevatedButton.icon(
                         onPressed: _pickImage,
                         icon: const Icon(Icons.photo_library),
-                        label: const Text('Farklı bir resim seç'),
+                        label: const Text('Resmi değiştir'),
                         style: ElevatedButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(vertical: 12.0),
+                          padding: const EdgeInsets.symmetric(vertical: 16.0),
+                          minimumSize: const Size(double.infinity, 50),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
                         ),
                       ),
                     ] else ...[
-                      Container(
-                        height: 200,
-                        decoration: BoxDecoration(
-                          color: Colors.grey[200],
-                          borderRadius: BorderRadius.circular(12.0),
-                          border: Border.all(color: Colors.grey[300]!),
-                        ),
-                        child: const Center(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.image, size: 60, color: Colors.grey),
-                              SizedBox(height: 8),
-                              Text(
-                                'Soru resmi ekleyin',
-                                style: TextStyle(color: Colors.grey),
-                              ),
-                            ],
+                      GestureDetector(
+                        onTap: _pickImage,
+                        child: Container(
+                          height: 200,
+                          decoration: BoxDecoration(
+                            color: Colors.grey[200],
+                            borderRadius: BorderRadius.circular(12.0),
+                            border: Border.all(color: Colors.grey[300]!),
+                          ),
+                          child: const Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.image, size: 60, color: Colors.grey),
+                                SizedBox(height: 8),
+                                Text(
+                                  'Soru resmi ekleyin',
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),

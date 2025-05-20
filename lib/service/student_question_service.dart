@@ -29,6 +29,9 @@ class StudentQuestionService {
   // Get current user ID
   String? get _userId => _auth.currentUser?.uid;
 
+  // Get current time as seconds since epoch
+  int get _currentTimeSeconds => DateTime.now().millisecondsSinceEpoch ~/ 1000;
+
   // Upload image to Firebase Storage
   Future<String> uploadQuestionImage(File imageFile) async {
     if (_userId == null) {
@@ -50,7 +53,10 @@ class StudentQuestionService {
   }
 
   // Create a new student question
-  Future<StudentQuestionModel> createQuestion(File imageFile) async {
+  Future<StudentQuestionModel> createQuestion(
+    File imageFile, {
+    String? title,
+  }) async {
     if (_userId == null) {
       throw Exception('User not authenticated');
     }
@@ -65,7 +71,8 @@ class StudentQuestionService {
         id: questionId,
         userId: _userId!,
         imageUrl: imageUrl,
-        createdAt: DateTime.now(),
+        createdAt: _currentTimeSeconds,
+        title: title ?? 'Soru ${_formatDate(_currentTimeSeconds)}',
       );
 
       // Save to Firestore
@@ -75,6 +82,12 @@ class StudentQuestionService {
     } catch (e) {
       throw Exception('Failed to create question: $e');
     }
+  }
+
+  // Helper function to format date for default title
+  String _formatDate(int timestamp) {
+    final date = DateTime.fromMillisecondsSinceEpoch(timestamp * 1000);
+    return '${date.day}.${date.month}.${date.year}';
   }
 
   // Process the image using OpenAI's API
@@ -109,7 +122,7 @@ class StudentQuestionService {
         questionId: question.id,
         userId: _userId!,
         responseText: responseText,
-        createdAt: DateTime.now(),
+        createdAt: _currentTimeSeconds,
       );
 
       // Save to Firestore

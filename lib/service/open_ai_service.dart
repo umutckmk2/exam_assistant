@@ -65,24 +65,21 @@ class OpenAiService {
     final prompt = '''
     You are an expert YKS (Yükseköğretime Geçiş Sınavı) tutor.
 
-    Provide a detailed explanation of the following YKS topic and question:
-
+    For the given topic:
     Grade: ${question.category}
     Lesson: ${question.lesson}
     Topic: ${topicInfo.topic}
     Subtopic: ${topicInfo.subTopic}
-    Question: ${question.question}
-    Options: ${question.options.map((e) => e).join(', ')}
-    Correct Answer Index: ${question.answer}
 
-    Include:
-    - Core concepts and definitions related to this YKS topic
-    - Detailed explanation of why the correct answer is right
-    - Why each wrong option is incorrect
+    Provide a comprehensive study guide that includes:
+    - Core concepts and definitions related to this topic
+    - Key formulas and principles
     - Important historical context or background information
+    - Common applications and real-world examples
     - Key relationships to other YKS topics
     - Common question patterns in YKS exams on this topic
-    - Memory techniques for remembering critical information
+    - Memory techniques and study tips for mastering this topic
+    - Common mistakes students make and how to avoid them
 
     Format your response in clear, structured Turkish that would be helpful for a YKS candidate.
     ''';

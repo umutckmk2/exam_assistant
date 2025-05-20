@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:go_router/go_router.dart';
 
 import '../model/ai_response_model.dart';
 import '../model/student_question_model.dart';
@@ -97,6 +98,12 @@ class _QuestionResponsePageState extends State<QuestionResponsePage> {
       appBar: AppBar(
         title: const Text('Soru Cevabı'),
         elevation: 0,
+        leading: IconButton(
+          onPressed: () {
+            context.go('/');
+          },
+          icon: const Icon(Icons.arrow_back),
+        ),
         actions: [
           if (_response != null)
             IconButton(
@@ -158,34 +165,38 @@ class _QuestionResponsePageState extends State<QuestionResponsePage> {
           const SizedBox(height: 12),
           ClipRRect(
             borderRadius: BorderRadius.circular(12.0),
-            child: Image.network(
-              _question!.imageUrl,
-              fit: BoxFit.contain,
-              loadingBuilder: (context, child, loadingProgress) {
-                if (loadingProgress == null) return child;
-                return Container(
-                  height: 200,
-                  alignment: Alignment.center,
-                  child: CircularProgressIndicator(
-                    value:
-                        loadingProgress.expectedTotalBytes != null
-                            ? loadingProgress.cumulativeBytesLoaded /
-                                loadingProgress.expectedTotalBytes!
-                            : null,
-                  ),
-                );
-              },
-              errorBuilder: (context, error, stackTrace) {
-                return Container(
-                  height: 200,
-                  alignment: Alignment.center,
-                  color: Colors.grey[300],
-                  child: const Text(
-                    'Resim yüklenemedi',
-                    style: TextStyle(color: Colors.red),
-                  ),
-                );
-              },
+            child: Container(
+              width: double.infinity,
+              constraints: const BoxConstraints(maxHeight: 350),
+              child: Image.network(
+                _question!.imageUrl,
+                fit: BoxFit.contain,
+                loadingBuilder: (context, child, loadingProgress) {
+                  if (loadingProgress == null) return child;
+                  return Container(
+                    height: 200,
+                    alignment: Alignment.center,
+                    child: CircularProgressIndicator(
+                      value:
+                          loadingProgress.expectedTotalBytes != null
+                              ? loadingProgress.cumulativeBytesLoaded /
+                                  loadingProgress.expectedTotalBytes!
+                              : null,
+                    ),
+                  );
+                },
+                errorBuilder: (context, error, stackTrace) {
+                  return Container(
+                    height: 200,
+                    alignment: Alignment.center,
+                    color: Colors.grey[300],
+                    child: const Text(
+                      'Resim yüklenemedi',
+                      style: TextStyle(color: Colors.red),
+                    ),
+                  );
+                },
+              ),
             ),
           ),
           const SizedBox(height: 24),

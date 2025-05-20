@@ -230,8 +230,11 @@ class _HomePageState extends State<HomePage> {
         floatingActionButton: FloatingActionButton.extended(
           onPressed: () => context.push('/ask-question'),
           backgroundColor: Theme.of(context).primaryColor,
-          icon: const Icon(Icons.question_mark, color: Colors.white),
-          label: const Text('Soru Sor'),
+          icon: const Icon(Icons.smart_toy_outlined, color: Colors.white),
+          label: const Text(
+            'Soru Sor',
+            style: TextStyle(fontSize: 13, color: Colors.white),
+          ),
           tooltip: 'Soru Sor',
         ),
         body: SingleChildScrollView(

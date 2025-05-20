@@ -5,14 +5,16 @@ class StudentQuestionModel {
   final String id;
   final String userId;
   final String imageUrl;
-  final DateTime createdAt;
+  final int createdAt; // Seconds since epoch
   final String? responseId; // Reference to the corresponding AI response
+  final String? title; // Question title
 
   StudentQuestionModel({
     required this.id,
     required this.userId,
     required this.imageUrl,
     required this.createdAt,
+    required this.title,
     this.responseId,
   });
 
@@ -21,8 +23,9 @@ class StudentQuestionModel {
       'id': id,
       'userId': userId,
       'imageUrl': imageUrl,
-      'createdAt': Timestamp.fromDate(createdAt),
+      'createdAt': createdAt,
       'responseId': responseId,
+      'title': title,
     };
   }
 
@@ -33,9 +36,10 @@ class StudentQuestionModel {
       imageUrl: map['imageUrl'] ?? '',
       createdAt:
           map['createdAt'] is Timestamp
-              ? (map['createdAt'] as Timestamp).toDate()
-              : DateTime.fromMillisecondsSinceEpoch(map['createdAt'] ?? 0),
+              ? (map['createdAt'] as Timestamp).seconds
+              : map['createdAt'] ?? 0,
       responseId: map['responseId'],
+      title: map['title'],
     );
   }
 
@@ -43,8 +47,9 @@ class StudentQuestionModel {
     String? id,
     String? userId,
     String? imageUrl,
-    DateTime? createdAt,
+    int? createdAt,
     String? responseId,
+    String? title,
   }) {
     return StudentQuestionModel(
       id: id ?? this.id,
@@ -52,6 +57,10 @@ class StudentQuestionModel {
       imageUrl: imageUrl ?? this.imageUrl,
       createdAt: createdAt ?? this.createdAt,
       responseId: responseId ?? this.responseId,
+      title: title ?? this.title,
     );
   }
+
+  DateTime get createdAtDateTime =>
+      DateTime.fromMillisecondsSinceEpoch(createdAt * 1000);
 }

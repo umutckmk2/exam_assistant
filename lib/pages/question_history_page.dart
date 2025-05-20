@@ -57,8 +57,15 @@ class _QuestionHistoryPageState extends State<QuestionHistoryPage> {
         onPressed: () {
           context.push('/ask-question');
         },
-        icon: const Icon(Icons.add_photo_alternate),
-        label: const Text('Yeni Soru'),
+        icon: const Icon(
+          Icons.add_photo_alternate,
+          size: 20,
+          color: Colors.white,
+        ),
+        label: const Text(
+          'Yeni Soru',
+          style: TextStyle(fontSize: 13, color: Colors.white),
+        ),
         backgroundColor: Theme.of(context).primaryColor,
       ),
     );
@@ -173,11 +180,11 @@ class _QuestionHistoryPageState extends State<QuestionHistoryPage> {
               ),
             ),
             title: Text(
-              'Soru ${index + 1}',
+              question.title ?? 'Soru ${index + 1}',
               style: const TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(
-              dateFormat.format(question.createdAt),
+              dateFormat.format(question.createdAtDateTime),
               style: const TextStyle(fontSize: 12),
             ),
             trailing:

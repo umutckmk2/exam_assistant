@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../auth/auth_page.dart';
+import '../pages/ask_question_page.dart';
 import '../pages/cheat_sheets_page.dart';
 import '../pages/home_page.dart';
 import '../pages/lessons_page.dart';
+import '../pages/question_history_page.dart';
+import '../pages/question_response_page.dart';
 import '../pages/questions_page.dart';
 import '../pages/statistics_page.dart';
 import '../pages/topics_page.dart';
@@ -37,6 +40,30 @@ final GoRouter appRouter = GoRouter(
       pageBuilder:
           (context, state) =>
               SlideTransitionPage(child: const StatisticsPage()),
+    ),
+    GoRoute(
+      path: '/question-history',
+      name: 'question-history',
+      pageBuilder:
+          (context, state) =>
+              SlideTransitionPage(child: const QuestionHistoryPage()),
+    ),
+    GoRoute(
+      path: '/ask-question',
+      name: 'ask-question',
+      pageBuilder:
+          (context, state) =>
+              SlideTransitionPage(child: const AskQuestionPage()),
+    ),
+    GoRoute(
+      path: '/question-response/:questionId',
+      name: 'question-response',
+      pageBuilder: (context, state) {
+        final questionId = state.pathParameters['questionId'] ?? '';
+        return SlideTransitionPage(
+          child: QuestionResponsePage(questionId: questionId),
+        );
+      },
     ),
     GoRoute(
       path: '/category/:categoryId/lessons',

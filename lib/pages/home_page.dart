@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         key: _scaffoldKey,
-        appBar: AppBar(title: const Text('YKS Asistan')),
+        appBar: AppBar(title: const Text('YKS Asistan'), elevation: 0),
         drawer: Drawer(
           child: Column(
             children: [
@@ -168,6 +168,29 @@ class _HomePageState extends State<HomePage> {
                       },
                     ),
                     const Divider(height: 1, indent: 70),
+                    ListTile(
+                      leading: Icon(
+                        Icons.question_answer,
+                        color: Colors.green.shade300,
+                      ),
+                      title: const Text('Soru Sor'),
+                      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                      onTap: () {
+                        Navigator.pop(context);
+                        context.push('/ask-question');
+                      },
+                    ),
+                    const Divider(height: 1, indent: 70),
+                    ListTile(
+                      leading: const Icon(Icons.history, color: Colors.teal),
+                      title: const Text('Soru Geçmişim'),
+                      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                      onTap: () {
+                        Navigator.pop(context);
+                        context.push('/question-history');
+                      },
+                    ),
+                    const Divider(height: 1, indent: 70),
                     const SizedBox(height: 16),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -204,72 +227,70 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
+        floatingActionButton: FloatingActionButton.extended(
+          onPressed: () => context.push('/ask-question'),
+          backgroundColor: Theme.of(context).primaryColor,
+          icon: const Icon(Icons.question_mark, color: Colors.white),
+          label: const Text('Soru Sor'),
+          tooltip: 'Soru Sor',
+        ),
         body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 16),
-                LayoutBuilder(
-                  builder: (context, constraints) {
-                    // Calculate grid dimensions
-                    final int crossAxisCount = 2;
-                    final double spacing = 16.0;
-                    final double aspectRatio = 1.2;
-
-                    // Calculate rows needed
-                    final int rowCount =
-                        (_categories!.length / crossAxisCount).ceil();
-
-                    // Calculate item dimensions
-                    final double itemWidth =
-                        (constraints.maxWidth - spacing) / crossAxisCount;
-                    final double itemHeight = itemWidth / aspectRatio;
-
-                    // Total height for grid
-                    final double gridHeight =
-                        (itemHeight * rowCount) + (spacing * (rowCount - 1));
-
-                    return SizedBox(
-                      height: gridHeight,
-                      child: GridView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2,
-                              crossAxisSpacing: 16,
-                              mainAxisSpacing: 16,
-                              childAspectRatio: 1.2,
-                            ),
-                        itemCount: _categories!.length,
-                        itemBuilder: (context, index) {
-                          return CategoryCard(
-                            categoryName: _categories![index]['name'],
-                            id: _categories![index]['id'],
-                          );
-                        },
-                      ),
-                    );
-                  },
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColor.withOpacity(0.05),
+                  borderRadius: BorderRadius.circular(30),
                 ),
-                const SizedBox(height: 24),
-                Row(
+                padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+                margin: const EdgeInsets.symmetric(horizontal: 16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Günlük Hedefler",
+                      "Merhaba, YKS Asistan'a hoş geldiniz!",
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                         color: Theme.of(context).primaryColor,
                       ),
                     ),
+                    const SizedBox(height: 8),
+                    Text(
+                      "AI ile konularınızı pekiştirin!, Sorularınızı sorun ve cevaplayın!",
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        color: Colors.grey.shade600,
+                      ),
+                    ),
                   ],
                 ),
-                const SizedBox(height: 16),
-                const DailyGoalsWidget(),
-                const SizedBox(height: 16), // Add padding at the bottom
-              ],
-            ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        for (int i = 0; i < 4; i++)
+                          SizedBox(
+                            width: (MediaQuery.of(context).size.width - 48) / 4,
+                            child: CategoryCard(
+                              categoryName: _categories![i]['name'],
+                              id: _categories![i]['id'],
+                            ),
+                          ),
+                      ],
+                    ),
+                    const SizedBox(height: 24),
+                    const DailyGoalsWidget(),
+                    const SizedBox(height: 24),
+                    const SizedBox(height: 32),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ),

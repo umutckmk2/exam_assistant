@@ -41,8 +41,8 @@ class CategoryCard extends StatelessWidget {
     final icon = _getIconForCategory();
 
     return Card(
-      elevation: 4,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      elevation: 2,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: Material(
         color: Colors.transparent,
         child: InkWell(
@@ -53,7 +53,7 @@ class CategoryCard extends StatelessWidget {
             // Use push for smooth navigation with transitions
             context.push('/category/$id/lessons');
           },
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(12),
           splashFactory: InkRipple.splashFactory,
           splashColor: Colors.white.withAlpha(75),
           highlightColor: Colors.white.withAlpha(25),
@@ -61,7 +61,7 @@ class CategoryCard extends StatelessWidget {
             tag: 'category_$id',
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(12),
                 gradient: LinearGradient(
                   colors: colors,
                   begin: Alignment.topLeft,
@@ -69,19 +69,19 @@ class CategoryCard extends StatelessWidget {
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(8.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(icon, size: 40, color: textColor),
-                    const SizedBox(height: 12),
+                    Icon(icon, size: 24, color: textColor),
+                    const SizedBox(height: 6),
                     Material(
                       color: Colors.transparent,
                       child: Text(
                         categoryName,
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 12,
                           fontWeight: FontWeight.bold,
                           color: textColor,
                         ),

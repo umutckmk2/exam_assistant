@@ -150,4 +150,51 @@ class OpenAiService {
       throw Exception('Failed to parse JSON response: $e');
     }
   }
+
+  // Method to process image-based questions
+  Future<String> processImageQuestion(String imageUrl, String prompt) async {
+    try {
+      final response = await http.post(
+        Uri.parse(_baseUrl),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer $_apiKey',
+        },
+        body: jsonEncode({
+          'model': 'gpt-4o',
+          'messages': [
+            {
+              'role': 'system',
+              'content':
+                  'You are a helpful assistant specialized in answering student questions.',
+            },
+            {
+              'role': 'user',
+              'content': [
+                {'type': 'text', 'text': prompt},
+                {
+                  'type': 'image_url',
+                  'image_url': {'url': imageUrl},
+                },
+              ],
+            },
+          ],
+          'temperature': 0.7,
+          'max_tokens': 800,
+        }),
+      );
+
+      if (response.statusCode == 200) {
+        final decodedBody = utf8.decode(response.bodyBytes);
+        final data = jsonDecode(decodedBody);
+        return data['choices'][0]['message']['content'];
+      } else {
+        throw Exception(
+          'Failed to process image: ${response.statusCode} ${response.body}',
+        );
+      }
+    } catch (e) {
+      throw Exception('Error processing image with OpenAI: $e');
+    }
+  }
 }

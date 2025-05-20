@@ -31,6 +31,7 @@ dependencies:
   html: ^0.15.6
   firebase_database: ^11.3.5
   flutter_native_splash: ^2.4.6
+  file_picker: ^10.1.9
  
 dev_dependencies:
   flutter_test:

@@ -5,7 +5,6 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 import '../model/daily_goal.dart';
 import '../service/auth_service.dart';
 import '../service/goals_service.dart';
-import 'daily_goal_percentage_widget.dart';
 import 'edit_goal_widget.dart';
 
 class ChartData {
@@ -178,7 +177,7 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
             : 0.0;
 
     return Container(
-      height: 450,
+      height: 350,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [primaryColor, primaryColorLight],
@@ -197,58 +196,75 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
       ),
       child: Column(
         children: [
-          const SizedBox(height: 16),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
+            padding: const EdgeInsets.fromLTRB(16, 16, 8, 0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "Bugünkü İlerleme",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: textColor,
-                  ),
+                Row(
+                  children: [
+                    Text(
+                      "Günlük Soru Hedefi",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                        color: textColor,
+                      ),
+                    ),
+                    const Spacer(),
+                    InkWell(
+                      onTap: () {
+                        showDialog(
+                          context: context,
+                          builder:
+                              (context) => EditGoalWidget(
+                                currentGoal: todayGoal,
+                                onGoalUpdated: (goal) {
+                                  _getWeeklyGoals();
+                                },
+                              ),
+                        );
+                      },
+                      child: Icon(Icons.edit, color: textColor, size: 20),
+                    ),
+                    const SizedBox(width: 8),
+                    InkWell(
+                      onTap: () {
+                        _getWeeklyGoals();
+                      },
+                      child: Icon(Icons.refresh, color: textColor, size: 20),
+                    ),
+                    const SizedBox(width: 8),
+                  ],
                 ),
-                const Spacer(),
-                IconButton(
-                  icon: Icon(Icons.edit, color: textColor),
-                  onPressed: () {
-                    showDialog(
-                      context: context,
-                      builder:
-                          (context) => EditGoalWidget(
-                            currentGoal: todayGoal,
-                            onGoalUpdated: (goal) {
-                              _getWeeklyGoals();
-                            },
-                          ),
-                    );
-                  },
-                  tooltip: 'Düzenle',
-                ),
-                IconButton(
-                  icon: Icon(Icons.refresh, color: textColor),
-                  onPressed: () {
-                    _getWeeklyGoals();
-                  },
-                  tooltip: 'Verileri yenile',
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 16),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              children: [
-                DailyGoalPercentageWidget(
-                  title: "Soru",
-                  value:
+                const SizedBox(height: 12),
+                Row(
+                  children: [
+                    Text(
                       "${todayGoal.solvedQuestions ?? 0}/${todayGoal.dailyQuestionGoal}",
-                  percentage: questionPercentage,
-                  color:
-                      questionPercentage >= 100 ? successColor : pendingColor,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: textColor,
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: LinearProgressIndicator(
+                          value: questionPercentage / 100,
+                          backgroundColor: textColor.withOpacity(0.2),
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                            questionPercentage >= 100
+                                ? successColor
+                                : pendingColor,
+                          ),
+                          minHeight: 8,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

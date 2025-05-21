@@ -493,10 +493,7 @@ class _QuestionPageState extends State<QuestionPage> {
                               )
                               : const Text(
                                 'Yeni Soru',
-                                style: TextStyle(
-                                  fontSize: 13,
-                                  color: Colors.white,
-                                ),
+                                style: TextStyle(color: Colors.black),
                               ),
                     ),
                   ],

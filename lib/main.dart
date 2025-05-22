@@ -9,12 +9,15 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'auth/auth_page.dart';
 import 'firebase_options.dart';
 import 'router/app_router.dart';
+import 'service/ad_service.dart';
 import 'service/auth_service.dart';
 import 'service/goals_service.dart';
 import 'service/open_ai_service.dart';
 import 'service/user_service.dart';
 import 'widgets/app_splash_screen.dart';
 
+///ca-app-pub-5309874269430815~9068794476
+///ca-app-pub-5309874269430815/7235696418
 void main() async {
   // Preserve splash screen until initialization is complete
   final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -26,7 +29,11 @@ void main() async {
   // Initialize OpenAI service
   await OpenAiService().initialize();
 
+  // Initialize Firebase
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  // Initialize Google Mobile Ads
+  await AdService.instance.initialize();
 
   await Hive.initFlutter();
 

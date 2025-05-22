@@ -27,5 +27,14 @@
                 }
             }
         }
+    },
+    "hosting": {
+        "site": "yks-asistan",
+        "public": "developer_web_site",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ]
     }
 }

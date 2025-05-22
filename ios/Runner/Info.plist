@@ -62,5 +62,18 @@
 		<true />
 		<key>UIViewControllerBasedStatusBarAppearance</key>
 		<false />
+		<!-- AdMob App ID -->
+		<key>GADApplicationIdentifier</key>
+		<string>ca-app-pub-3940256099942544~1458002511</string>
+		<!-- App Tracking Transparency -->
+		<key>NSUserTrackingUsageDescription</key>
+		<string>Bu tanımlayıcı, size kişiselleştirilmiş reklamlar sunmak için kullanılacaktır.</string>
+		<key>SKAdNetworkItems</key>
+		<array>
+			<dict>
+				<key>SKAdNetworkIdentifier</key>
+				<string>cstr6suwn9.skadnetwork</string>
+			</dict>
+		</array>
 	</dict>
 </plist>

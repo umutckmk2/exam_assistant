@@ -28,6 +28,7 @@ final GoRouter appRouter = GoRouter(
       pageBuilder:
           (context, state) => const NoTransitionPage(child: AuthPage()),
     ),
+
     GoRoute(
       path: '/cheat-sheets',
       name: 'cheat-sheets',

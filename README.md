@@ -45,6 +45,11 @@ The primary aim of the Exam Assistant app is to provide a structured, organized,
 - WebView integration for external resources
 - Structured approach to comprehensive exam preparation
 
+### 7. Monetization
+- Google Mobile Ads integration for various ad formats
+- Banner ads for non-intrusive revenue generation
+- Interstitial ads at natural transition points
+
 ## Technology Stack
 - **Frontend**: Flutter
 - **Backend**: Firebase (Authentication, Firestore, Storage)

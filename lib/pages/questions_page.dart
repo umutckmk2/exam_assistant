@@ -362,7 +362,16 @@ class _QuestionPageState extends State<QuestionPage> {
     }
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: Text(_topic!['topic'])),
+        appBar: AppBar(
+          title: Text(_topic!['topic']),
+          // bottom: PreferredSize(
+          //   preferredSize: const Size.fromHeight(60),
+          //   child: Container(
+          //     padding: const EdgeInsets.only(bottom: 8),
+          //     child: const BannerAdWidget(),
+          //   ),
+          // ),
+        ),
         body: SingleChildScrollView(
           controller: _scrollController,
           padding: const EdgeInsets.all(16.0),
@@ -501,6 +510,7 @@ class _QuestionPageState extends State<QuestionPage> {
 
                 const SizedBox(height: 80),
               ],
+              const SizedBox(height: 20),
             ],
           ),
         ),

@@ -191,6 +191,7 @@ class _HomePageState extends State<HomePage> {
                       },
                     ),
                     const Divider(height: 1, indent: 70),
+
                     const SizedBox(height: 16),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),

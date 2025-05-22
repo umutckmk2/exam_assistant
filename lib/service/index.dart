@@ -1,3 +1,4 @@
+export 'ad_service.dart';
 export 'auth_service.dart';
 export 'goals_service.dart';
 export 'lesson_service.dart';

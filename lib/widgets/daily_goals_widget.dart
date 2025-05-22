@@ -214,11 +214,13 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
                     const Spacer(),
                     InkWell(
                       onTap: () {
+                        final goal =
+                            GoalsService.instance.getDailyGoalSettings();
                         showDialog(
                           context: context,
                           builder:
                               (context) => EditGoalWidget(
-                                currentGoal: todayGoal,
+                                currentGoal: goal,
                                 onGoalUpdated: (goal) {
                                   _getWeeklyGoals();
                                 },

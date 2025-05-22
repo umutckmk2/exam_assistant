@@ -5,6 +5,7 @@ import 'package:hive/hive.dart';
 
 import '../model/daily_goal.dart';
 import 'auth_service.dart';
+import 'notification_service.dart';
 
 class GoalsService {
   static final GoalsService _instance = GoalsService._internal();
@@ -37,6 +38,20 @@ class GoalsService {
       'dailyGoalSettings': goal.toJson(),
     });
     await settingsBox.put("dailyGoalSettings", goal.toJson());
+
+    final todayGoal = await getTodayGoal();
+
+    final updatedTodayGoal = DailyGoal.fromJson({
+      ...todayGoal.toJson(),
+      'dailyQuestionGoal': goal.dailyQuestionGoal,
+      'notifyTime': {
+        'hour': goal.notifyTime.hour,
+        'minute': goal.notifyTime.minute,
+      },
+    });
+
+    // Schedule notification based on the set goal
+    await NotificationService().scheduleDailyGoalReminder(updatedTodayGoal);
   }
 
   Future<DailyGoal> saveTodayRecord(DailyGoal goal) async {
@@ -114,7 +129,7 @@ class GoalsService {
   Future<Map<String, DailyGoal>> getThisWeekGoalRecords(String userId) async {
     await _openBox();
     final dailyGoalSettings = getDailyGoalSettings();
-    final thisWeekDatesAsSeconds = [];
+    final thisWeekDatesAsSeconds = <int>[];
     final startOfToday = DateTime.fromMillisecondsSinceEpoch(
       todayMidNightAsSeconds * 1000,
     );
@@ -134,21 +149,21 @@ class GoalsService {
 
     final thisWeekRecords = <String, DailyGoal>{};
     for (final timestamp in thisWeekDatesAsSeconds) {
-      final record = _dailyGoalRecords.get(
-        timestamp,
-        defaultValue: dailyGoalSettings.toJson(),
+      final record = _dailyGoalRecords.get(timestamp);
+
+      thisWeekRecords[timestamp.toString()] = DailyGoal.fromJson(
+        record ?? dailyGoalSettings.toJson(),
       );
-      thisWeekRecords[timestamp.toString()] = DailyGoal.fromJson(record!);
     }
 
     return thisWeekRecords;
   }
 
-  Future<DailyGoal> getTodayGoal(String userId) async {
+  Future<DailyGoal> getTodayGoal() async {
     await _openBox();
     final today = todayMidNightAsSeconds;
     final record = _dailyGoalRecords.get(today);
-    return DailyGoal.fromJson(record!);
+    return DailyGoal.fromJson(record);
   }
 
   DailyGoal getDailyGoalSettings() {

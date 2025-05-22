@@ -36,10 +36,11 @@ class _EditGoalWidgetState extends State<EditGoalWidget> {
     super.dispose();
   }
 
-  Future<void> _selectTime(BuildContext context) async {
+  Future<void> _selectTime(BuildContext context, TimeOfDay? initialTime) async {
+    print("initialTime: $initialTime");
     final TimeOfDay? picked = await showTimePicker(
       context: context,
-      initialTime: _selectedTime,
+      initialTime: initialTime ?? _selectedTime,
     );
     if (picked != null && picked != _selectedTime) {
       setState(() {
@@ -87,7 +88,7 @@ class _EditGoalWidgetState extends State<EditGoalWidget> {
                 _selectedTime.format(context),
                 style: const TextStyle(fontSize: 16),
               ),
-              onTap: () => _selectTime(context),
+              onTap: () => _selectTime(context, widget.currentGoal.notifyTime),
             ),
             const SizedBox(height: 24),
             Row(

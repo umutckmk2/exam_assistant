@@ -252,7 +252,7 @@ class _QuestionPageState extends State<QuestionPage> {
       index + 1,
     );
 
-    _todayGoal ??= await GoalsService.instance.getTodayGoal(userId);
+    _todayGoal ??= await GoalsService.instance.getTodayGoal();
 
     _todayGoal!.solvedQuestions = (_todayGoal!.solvedQuestions ?? 0) + 1;
 

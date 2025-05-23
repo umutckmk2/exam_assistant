@@ -216,12 +216,9 @@ class _QuestionResponsePageState extends State<QuestionResponsePage> {
           if (_response != null) ...[
             Container(
               decoration: BoxDecoration(
-                color: Colors.blue.withOpacity(0.05),
+                color: Colors.blue.withAlpha(12),
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(
-                  color: Colors.blue.withOpacity(0.3),
-                  width: 1,
-                ),
+                border: Border.all(color: Colors.blue.withAlpha(75), width: 1),
               ),
               padding: const EdgeInsets.all(16),
               child: MarkdownBody(
@@ -243,7 +240,7 @@ class _QuestionResponsePageState extends State<QuestionResponsePage> {
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Colors.orange.withOpacity(0.1),
+                color: Colors.orange.withAlpha(25),
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: Colors.orange, width: 1),
               ),

@@ -1,14 +1,16 @@
 import 'dart:async';
 
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 
+import '../main.dart';
+import '../model/app_user.dart';
 import 'user_service.dart';
 
 class PremiumService {
   static const String _kPremiumId = 'premium_monthly';
   final InAppPurchase _inAppPurchase = InAppPurchase.instance;
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+
   final UserService _userService = UserService.instance;
 
   StreamSubscription<List<PurchaseDetails>>? _subscription;
@@ -32,7 +34,7 @@ class PremiumService {
         .queryProductDetails({_kPremiumId});
 
     if (response.notFoundIDs.isNotEmpty) {
-      print('Products not found: ${response.notFoundIDs}');
+      debugPrint('Products not found: ${response.notFoundIDs}');
     }
 
     _products = response.productDetails;
@@ -48,7 +50,7 @@ class PremiumService {
         // Handle error
       } else if (purchaseDetails.status == PurchaseStatus.purchased ||
           purchaseDetails.status == PurchaseStatus.restored) {
-        await _verifyPurchase(purchaseDetails);
+        await _verifyPurchase(purchaseDetails, userNotifier.value!);
       }
 
       if (purchaseDetails.pendingCompletePurchase) {
@@ -57,12 +59,12 @@ class PremiumService {
     }
   }
 
-  Future<void> _verifyPurchase(PurchaseDetails purchaseDetails) async {
-    final User? user = _auth.currentUser;
-    if (user == null) return;
-
+  Future<void> _verifyPurchase(
+    PurchaseDetails purchaseDetails,
+    AppUser user,
+  ) async {
     await _userService.updatePremiumStatus(
-      userId: user.uid,
+      userId: user.id,
       isPremium: true,
       subscriptionId: purchaseDetails.purchaseID,
     );
@@ -81,13 +83,6 @@ class PremiumService {
 
   Future<void> restorePurchases() async {
     await _inAppPurchase.restorePurchases();
-  }
-
-  Future<bool> isPremiumUser() async {
-    final User? user = _auth.currentUser;
-    if (user == null) return false;
-
-    return _userService.isPremiumUser(user.uid);
   }
 
   void dispose() {

@@ -8,6 +8,7 @@ import 'package:intl/date_symbol_data_local.dart';
 
 import 'auth/auth_page.dart';
 import 'firebase_options.dart';
+import 'model/app_user.dart';
 import 'router/app_router.dart';
 import 'service/ad_service.dart';
 import 'service/auth_service.dart';
@@ -31,11 +32,11 @@ void main() async {
 
   await Hive.openBox("settings");
 
-  // Initialize OpenAI service
-  await OpenAiService().initialize();
-
   // Initialize Firebase
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  // Initialize OpenAI service
+  await OpenAiService().initialize();
 
   // Initialize Google Mobile Ads
   await AdService.instance.initialize();
@@ -56,6 +57,8 @@ void main() async {
 
   runApp(const MyApp());
 }
+
+final userNotifier = ValueNotifier<AppUser?>(null);
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -120,14 +123,21 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
             }),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return MaterialApp.router(
-                  debugShowCheckedModeBanner: false,
-                  title: 'YKS Asistan',
-                  theme: ThemeData(
-                    colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-                    useMaterial3: true,
-                  ),
-                  routerConfig: appRouter,
+                return ValueListenableBuilder(
+                  valueListenable: userNotifier,
+                  builder: (_, user, __) {
+                    return MaterialApp.router(
+                      debugShowCheckedModeBanner: false,
+                      title: 'YKS Asistan',
+                      theme: ThemeData(
+                        colorScheme: ColorScheme.fromSeed(
+                          seedColor: Colors.green,
+                        ),
+                        useMaterial3: true,
+                      ),
+                      routerConfig: appRouter,
+                    );
+                  },
                 );
               }
               return MaterialApp(

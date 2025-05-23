@@ -3,7 +3,9 @@ import 'dart:convert';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
+import '../main.dart';
 import '../model/question_model.dart';
+import 'generation_limit_service.dart';
 import 'topic_service.dart';
 
 class OpenAiService {
@@ -24,6 +26,19 @@ class OpenAiService {
   }
 
   Future<String> _sendRequest(String prompt) async {
+    final userId = userNotifier.value!.id;
+    final generationLimitService = GenerationLimitService.instance;
+    final canGenerate = await generationLimitService.canGenerateMore(userId);
+    if (!canGenerate) {
+      final remainingGenerations = await generationLimitService
+          .getRemainingGenerations(userId);
+      if (remainingGenerations <= 0) {
+        throw Exception(
+          'Daily generation limit reached. Please upgrade to premium for more generations.',
+        );
+      }
+    }
+
     try {
       final response = await http.post(
         Uri.parse(_baseUrl),
@@ -42,6 +57,9 @@ class OpenAiService {
       );
 
       if (response.statusCode == 200) {
+        // Increment the generation count only on successful requests
+        await generationLimitService.incrementGenerationCount(userId);
+
         final decodedBody = utf8.decode(response.bodyBytes);
         final data = jsonDecode(decodedBody);
         return data['choices'][0]['message']['content'];

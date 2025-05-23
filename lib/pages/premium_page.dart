@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../main.dart';
 import '../service/premium_service.dart';
 
 class PremiumPage extends StatefulWidget {
@@ -23,9 +24,8 @@ class _PremiumPageState extends State<PremiumPage> {
   Future<void> _initializePremiumStatus() async {
     setState(() => _isLoading = true);
     await _premiumService.initialize();
-    final isPremium = await _premiumService.isPremiumUser();
     setState(() {
-      _isPremium = isPremium;
+      _isPremium = userNotifier.value?.isPremium ?? false;
       _isLoading = false;
     });
   }

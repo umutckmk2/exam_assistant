@@ -80,48 +80,51 @@ class NotificationService {
   }
 
   Future<void> scheduleDailyGoalReminder(DailyGoal goal) async {
-    // Cancel any existing reminders first
-    await cancelNotification(0);
+    try {
+      // Cancel any existing reminders first
+      await cancelNotification(0);
 
-    // Get the notification time from the goal
-    final now = DateTime.now();
+      // Get the notification time from the goal
+      final now = DateTime.now();
 
-    // Create a DateTime for today with the notification time
-    final scheduledDate = DateTime(
-      now.year,
-      now.month,
-      now.day,
-      goal.notifyTime.hour,
-      goal.notifyTime.minute,
-    );
+      // Create a DateTime for today with the notification time
+      final scheduledDate = DateTime(
+        now.year,
+        now.month,
+        now.day,
+        goal.notifyTime.hour,
+        goal.notifyTime.minute,
+      );
 
-    // If the time has already passed today, schedule for tomorrow
-    final effectiveDate =
-        scheduledDate.isBefore(now)
-            ? scheduledDate.add(const Duration(days: 1))
-            : scheduledDate;
+      // If the time has already passed today, schedule for tomorrow
+      final effectiveDate =
+          scheduledDate.isBefore(now)
+              ? scheduledDate.add(const Duration(days: 1))
+              : scheduledDate;
 
-    final goalJson = goal.toJson();
+      final goalJson = goal.toJson();
 
-    print("goalJson: $goalJson");
-    // Schedule the notification
-    await _notificationsPlugin.zonedSchedule(
-      0, // Notification ID
-      'Günlük Hedef Hatırlatıcısı',
-      'Bugün ${goalJson['solvedQuestions']}/${goalJson['dailyQuestionGoal']} soru çözdünüz. Hedefinize ulaşmak için çalışmaya devam edin!',
-      tz.TZDateTime.from(effectiveDate, tz.local),
-      const NotificationDetails(
-        android: AndroidNotificationDetails(
-          'goal_reminder_channel',
-          'Goal Reminders',
-          channelDescription: 'Daily goal reminder notifications',
-          importance: Importance.high,
-          priority: Priority.high,
+      // Schedule the notification
+      await _notificationsPlugin.zonedSchedule(
+        0, // Notification ID
+        'Günlük Hedef Hatırlatıcısı',
+        'Bugün ${goalJson['solvedQuestions']}/${goalJson['dailyQuestionGoal']} soru çözdünüz. Hedefinize ulaşmak için çalışmaya devam edin!',
+        tz.TZDateTime.from(effectiveDate, tz.local),
+        const NotificationDetails(
+          android: AndroidNotificationDetails(
+            'goal_reminder_channel',
+            'Goal Reminders',
+            channelDescription: 'Daily goal reminder notifications',
+            importance: Importance.high,
+            priority: Priority.high,
+          ),
         ),
-      ),
-      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
-      matchDateTimeComponents:
-          DateTimeComponents.time, // Daily recurring at the same time
-    );
+        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+        matchDateTimeComponents:
+            DateTimeComponents.time, // Daily recurring at the same time
+      );
+    } catch (e) {
+      print("error: $e");
+    }
   }
 }

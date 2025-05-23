@@ -104,6 +104,11 @@ class NotificationService {
 
       final goalJson = goal.toJson();
 
+      print("effectiveDate: $effectiveDate");
+      print(
+        "goalJson: ${goalJson['solvedQuestions']}/${goalJson['dailyQuestionGoal']}",
+      );
+
       // Schedule the notification
       await _notificationsPlugin.zonedSchedule(
         0, // Notification ID
@@ -119,7 +124,7 @@ class NotificationService {
             priority: Priority.high,
           ),
         ),
-        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+        androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
         matchDateTimeComponents:
             DateTimeComponents.time, // Daily recurring at the same time
       );

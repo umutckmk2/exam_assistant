@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="YKS Asistan AI"
+        android:label="YKS Asistan"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -144,7 +144,7 @@ class _AuthPageState extends State<AuthPage> {
                   ),
                   const SizedBox(height: 16),
                   const Text(
-                    'YKS Asistan AI',
+                    'YKS Asistan',
                     style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 48),

@@ -104,17 +104,12 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     return StreamBuilder(
       stream: AuthService().authStateChanges,
       builder: (context, snapshot) {
-        print("snapshot.hasData: ${snapshot.data}");
         if (snapshot.hasData && snapshot.data != null) {
           return FutureBuilder(
             future: Future.microtask(() async {
-              print(
-                "AuthService().currentUser!.uid: ${AuthService().currentUser!.uid}",
-              );
               final user = await UserService().getUserDetails(
                 AuthService().currentUser!.uid,
               );
-              print("user: $user");
               await GoalsService.instance.saveMissingRecords();
 
               // Schedule notification for daily goal
@@ -124,11 +119,10 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
               return user;
             }),
             builder: (context, snapshot) {
-              print("snapshot.hasData: ${snapshot.data}");
               if (snapshot.hasData) {
                 return MaterialApp.router(
                   debugShowCheckedModeBanner: false,
-                  title: 'YKS Asistan AI',
+                  title: 'YKS Asistan',
                   theme: ThemeData(
                     colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
                     useMaterial3: true,
@@ -138,7 +132,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
               }
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
-                title: 'YKS Asistan AI',
+                title: 'YKS Asistan',
                 theme: ThemeData(
                   colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
                   useMaterial3: true,
@@ -151,7 +145,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'YKS Asistan AI',
+          title: 'YKS Asistan',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
             useMaterial3: true,

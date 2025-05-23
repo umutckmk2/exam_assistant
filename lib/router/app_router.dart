@@ -6,6 +6,7 @@ import '../pages/ask_question_page.dart';
 import '../pages/cheat_sheets_page.dart';
 import '../pages/home_page.dart';
 import '../pages/lessons_page.dart';
+import '../pages/premium_page.dart';
 import '../pages/question_history_page.dart';
 import '../pages/question_response_page.dart';
 import '../pages/questions_page.dart';
@@ -28,7 +29,12 @@ final GoRouter appRouter = GoRouter(
       pageBuilder:
           (context, state) => const NoTransitionPage(child: AuthPage()),
     ),
-
+    GoRoute(
+      path: '/premium',
+      name: 'premium',
+      pageBuilder:
+          (context, state) => SlideTransitionPage(child: const PremiumPage()),
+    ),
     GoRoute(
       path: '/cheat-sheets',
       name: 'cheat-sheets',

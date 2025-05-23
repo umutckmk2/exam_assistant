@@ -202,6 +202,15 @@ class _HomePageState extends State<HomePage> {
                     ),
                     const Divider(height: 1, indent: 70),
                     ListTile(
+                      leading: const Icon(Icons.star, color: Colors.amber),
+                      title: const Text('Premium Üyelik'),
+                      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                      onTap: () {
+                        Navigator.pop(context);
+                        context.push('/premium');
+                      },
+                    ),
+                    ListTile(
                       leading: const Icon(Icons.history, color: Colors.teal),
                       title: const Text('Soru Geçmişim'),
                       trailing: const Icon(Icons.arrow_forward_ios, size: 16),

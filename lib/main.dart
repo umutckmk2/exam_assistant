@@ -27,6 +27,10 @@ void main() async {
   // Load environment variables
   await dotenv.load(fileName: ".env");
 
+  await Hive.initFlutter();
+
+  await Hive.openBox("settings");
+
   // Initialize OpenAI service
   await OpenAiService().initialize();
 
@@ -38,10 +42,6 @@ void main() async {
 
   // Initialize notifications
   await NotificationService().initialize();
-
-  await Hive.initFlutter();
-
-  await Hive.openBox("settings");
 
   initializeDateFormatting('tr_TR');
 

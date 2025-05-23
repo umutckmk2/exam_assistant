@@ -12,6 +12,41 @@ class UserService {
   UserService._internal();
 
   final _box = Hive.box('settings');
+
+  Future<void> updatePremiumStatus({
+    required String userId,
+    required bool isPremium,
+    String? subscriptionId,
+  }) async {
+    final now = DateTime.now().millisecondsSinceEpoch ~/ 1000;
+    final updateData = {
+      'isPremium': isPremium,
+      'subscriptionId': subscriptionId,
+      'subscriptionStart': isPremium ? now : null,
+      'updatedAt': now,
+    };
+
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(userId)
+        .update(updateData);
+
+    final user = await _box.get(userId);
+    if (user != null) {
+      await _box.put(userId, {...user, ...updateData});
+    }
+  }
+
+  Future<bool> isPremiumUser(String userId) async {
+    try {
+      final user = await getUserDetails(userId);
+      return user?.isPremium ?? false;
+    } catch (e) {
+      debugPrint('Error checking premium status: $e');
+      return false;
+    }
+  }
+
   Future<AppUser?> getUserDetails(String id) async {
     try {
       final user = await _box.get(id);
@@ -27,6 +62,9 @@ class UserService {
           'createdAt': createdAt,
           'updatedAt': createdAt,
           'lastLogin': createdAt,
+          'isPremium': false,
+          'subscriptionId': null,
+          'subscriptionStart': null,
         });
 
         ds = await FirebaseFirestore.instance.collection('users').doc(id).get();

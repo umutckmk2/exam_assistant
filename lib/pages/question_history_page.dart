@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 
 import '../model/student_question_model.dart';
 import '../service/student_question_service.dart';
+import '../widgets/banner_ad_widget.dart';
 import '../widgets/loading_indicator.dart';
 
 class QuestionHistoryPage extends StatefulWidget {
@@ -51,7 +52,17 @@ class _QuestionHistoryPageState extends State<QuestionHistoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Soru Geçmişim'), elevation: 0),
+      appBar: AppBar(
+        title: const Text('Soru Geçmişim'),
+        elevation: 0,
+        bottom: const PreferredSize(
+          preferredSize: Size.fromHeight(60),
+          child: Padding(
+            padding: EdgeInsets.only(bottom: 8),
+            child: BannerAdWidget(),
+          ),
+        ),
+      ),
       body: _buildBody(),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {

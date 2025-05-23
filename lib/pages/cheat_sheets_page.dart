@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../service/cheat_sheet_service.dart';
 import '../service/topic_service.dart';
 import '../utils/lesson_utils.dart';
+import '../widgets/banner_ad_widget.dart';
 import '../widgets/cheat_sheets/cheat_sheet_card_widget.dart';
 import '../widgets/statistics/grade_filter_widget.dart';
 
@@ -104,7 +105,16 @@ class _CheatSheetsPageState extends State<CheatSheetsPage> {
     }
 
     return Scaffold(
-      appBar: AppBar(title: const Text('AI Konu Özetlerim')),
+      appBar: AppBar(
+        title: const Text('AI Konu Özetlerim'),
+        bottom: const PreferredSize(
+          preferredSize: Size.fromHeight(60),
+          child: Padding(
+            padding: EdgeInsets.only(bottom: 8),
+            child: BannerAdWidget(),
+          ),
+        ),
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

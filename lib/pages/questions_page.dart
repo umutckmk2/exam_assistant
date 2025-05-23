@@ -9,6 +9,7 @@ import '../model/question_model.dart';
 import '../service/cheat_sheet_service.dart';
 import '../service/index.dart';
 import '../widgets/answer_option.dart';
+import '../widgets/banner_ad_widget.dart';
 
 class QuestionPage extends StatefulWidget {
   final String topicId;
@@ -252,7 +253,7 @@ class _QuestionPageState extends State<QuestionPage> {
       index + 1,
     );
 
-    _todayGoal ??= await GoalsService.instance.getTodayGoal(userId);
+    _todayGoal ??= await GoalsService.instance.getTodayGoal();
 
     _todayGoal!.solvedQuestions = (_todayGoal!.solvedQuestions ?? 0) + 1;
 
@@ -364,13 +365,13 @@ class _QuestionPageState extends State<QuestionPage> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(_topic!['topic']),
-          // bottom: PreferredSize(
-          //   preferredSize: const Size.fromHeight(60),
-          //   child: Container(
-          //     padding: const EdgeInsets.only(bottom: 8),
-          //     child: const BannerAdWidget(),
-          //   ),
-          // ),
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(60),
+            child: Container(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: const BannerAdWidget(),
+            ),
+          ),
         ),
         body: SingleChildScrollView(
           controller: _scrollController,

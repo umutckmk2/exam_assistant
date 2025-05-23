@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../service/auth_service.dart';
 import '../service/user_service.dart';
+import '../widgets/banner_ad_widget.dart';
 import '../widgets/category_card.dart';
 import '../widgets/daily_goals_widget.dart';
 
@@ -51,7 +52,16 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     if (_categories == null) {
       return Scaffold(
-        appBar: AppBar(title: const Text('YKS Asistan')),
+        appBar: AppBar(
+          title: const Text('YKS Asistan'),
+          bottom: const PreferredSize(
+            preferredSize: Size.fromHeight(60),
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 8),
+              child: BannerAdWidget(),
+            ),
+          ),
+        ),
         body: Center(
           child: CircularProgressIndicator(
             color: Theme.of(context).primaryColor,
@@ -63,7 +73,17 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         key: _scaffoldKey,
-        appBar: AppBar(title: const Text('YKS Asistan'), elevation: 0),
+        appBar: AppBar(
+          title: const Text('YKS Asistan'),
+          elevation: 0,
+          bottom: const PreferredSize(
+            preferredSize: Size.fromHeight(60),
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 8),
+              child: BannerAdWidget(),
+            ),
+          ),
+        ),
         drawer: Drawer(
           child: Column(
             children: [

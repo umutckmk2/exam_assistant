@@ -27,6 +27,10 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
   Map<String, DailyGoal>? _weeklyGoals;
   bool _isLoadingGoals = true;
 
+  bool _isMonday() {
+    return DateTime.now().weekday == DateTime.monday;
+  }
+
   Future<void> _getWeeklyGoals() async {
     try {
       _isLoadingGoals = true;
@@ -214,11 +218,13 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
                     const Spacer(),
                     InkWell(
                       onTap: () {
+                        final goal =
+                            GoalsService.instance.getDailyGoalSettings();
                         showDialog(
                           context: context,
                           builder:
                               (context) => EditGoalWidget(
-                                currentGoal: todayGoal,
+                                currentGoal: goal,
                                 onGoalUpdated: (goal) {
                                   _getWeeklyGoals();
                                 },

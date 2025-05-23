@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class AdService {
@@ -37,12 +38,9 @@ class AdService {
             : 'ca-app-pub-XXXXX/XXXXX', // Replace with actual production ID
   };
 
-  // Use test ads during development
-  final bool _useTestAds = true;
-
   // Get ad unit ID based on ad type
   String getAdUnitId(String adType) {
-    final adUnitIds = _useTestAds ? _testAdUnitIds : _productionAdUnitIds;
+    final adUnitIds = kDebugMode ? _testAdUnitIds : _productionAdUnitIds;
     return adUnitIds[adType] ?? '';
   }
 

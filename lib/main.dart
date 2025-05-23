@@ -12,6 +12,7 @@ import 'router/app_router.dart';
 import 'service/ad_service.dart';
 import 'service/auth_service.dart';
 import 'service/goals_service.dart';
+import 'service/notification_service.dart';
 import 'service/open_ai_service.dart';
 import 'service/user_service.dart';
 import 'widgets/app_splash_screen.dart';
@@ -34,6 +35,9 @@ void main() async {
 
   // Initialize Google Mobile Ads
   await AdService.instance.initialize();
+
+  // Initialize notifications
+  await NotificationService().initialize();
 
   await Hive.initFlutter();
 
@@ -64,6 +68,8 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
+    // Register app lifecycle events observer
+    WidgetsBinding.instance.addObserver(this);
   }
 
   @override
@@ -71,6 +77,26 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     // Remove app lifecycle event observer
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      // Check if the user is authenticated
+      if (AuthService().currentUser != null) {
+        // Reschedule notification when app is resumed
+        _rescheduleNotification();
+      }
+    }
+  }
+
+  Future<void> _rescheduleNotification() async {
+    try {
+      final dailyGoal = await GoalsService.instance.getTodayGoal();
+      await NotificationService().scheduleDailyGoalReminder(dailyGoal);
+    } catch (e) {
+      debugPrint('Error rescheduling notification: $e');
+    }
   }
 
   @override
@@ -85,13 +111,18 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                 AuthService().currentUser!.uid,
               );
               await GoalsService.instance.saveMissingRecords();
+
+              // Schedule notification for daily goal
+              final dailyGoal = await GoalsService.instance.getTodayGoal();
+              await NotificationService().scheduleDailyGoalReminder(dailyGoal);
+
               return user;
             }),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
                 return MaterialApp.router(
                   debugShowCheckedModeBanner: false,
-                  title: 'YKS Asistan AI',
+                  title: 'YKS Asistan',
                   theme: ThemeData(
                     colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
                     useMaterial3: true,
@@ -101,7 +132,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
               }
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
-                title: 'YKS Asistan AI',
+                title: 'YKS Asistan',
                 theme: ThemeData(
                   colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
                   useMaterial3: true,
@@ -114,7 +145,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'YKS Asistan AI',
+          title: 'YKS Asistan',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
             useMaterial3: true,

@@ -4,6 +4,7 @@ import '../model/solved_question_model.dart';
 import '../service/auth_service.dart';
 import '../service/questions_service.dart';
 import '../service/user_service.dart';
+import '../widgets/banner_ad_widget.dart';
 import 'topic_analysis_page.dart';
 
 class StatisticsPage extends StatefulWidget {
@@ -58,6 +59,13 @@ class _StatisticsPageState extends State<StatisticsPage> {
         ),
         elevation: 0,
         centerTitle: true,
+        bottom: const PreferredSize(
+          preferredSize: Size.fromHeight(60),
+          child: Padding(
+            padding: EdgeInsets.only(bottom: 8),
+            child: BannerAdWidget(),
+          ),
+        ),
       ),
       body:
           _isLoading

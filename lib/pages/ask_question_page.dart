@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../service/student_question_service.dart';
+import '../widgets/banner_ad_widget.dart';
 import '../widgets/loading_indicator.dart';
 
 class AskQuestionPage extends StatefulWidget {
@@ -104,6 +105,13 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
             context.go('/');
           },
           icon: const Icon(Icons.arrow_back),
+        ),
+        bottom: const PreferredSize(
+          preferredSize: Size.fromHeight(60),
+          child: Padding(
+            padding: EdgeInsets.only(bottom: 8),
+            child: BannerAdWidget(),
+          ),
         ),
       ),
       body:

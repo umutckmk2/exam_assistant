@@ -6,6 +6,7 @@ import 'package:go_router/go_router.dart';
 import '../model/ai_response_model.dart';
 import '../model/student_question_model.dart';
 import '../service/student_question_service.dart';
+import '../widgets/banner_ad_widget.dart';
 import '../widgets/loading_indicator.dart';
 
 class QuestionResponsePage extends StatefulWidget {
@@ -96,8 +97,15 @@ class _QuestionResponsePageState extends State<QuestionResponsePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Soru Cevabı'),
+        title: Text(_question?.title ?? 'Soru Detayı'),
         elevation: 0,
+        bottom: const PreferredSize(
+          preferredSize: Size.fromHeight(60),
+          child: Padding(
+            padding: EdgeInsets.only(bottom: 8),
+            child: BannerAdWidget(),
+          ),
+        ),
         leading: IconButton(
           onPressed: () {
             context.go('/');

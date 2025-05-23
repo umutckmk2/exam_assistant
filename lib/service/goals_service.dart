@@ -40,18 +40,23 @@ class GoalsService {
     await settingsBox.put("dailyGoalSettings", goal.toJson());
 
     final todayGoal = await getTodayGoal();
-
-    final updatedTodayGoal = DailyGoal.fromJson({
+    final updatedTodayGoal = {
       ...todayGoal.toJson(),
       'dailyQuestionGoal': goal.dailyQuestionGoal,
       'notifyTime': {
         'hour': goal.notifyTime.hour,
         'minute': goal.notifyTime.minute,
       },
-    });
+    };
+
+    await FirebaseDatabase.instance
+        .ref('users/$userId/goals/daily/$todayMidNightAsSeconds')
+        .set(updatedTodayGoal);
 
     // Schedule notification based on the set goal
-    await NotificationService().scheduleDailyGoalReminder(updatedTodayGoal);
+    await NotificationService().scheduleDailyGoalReminder(
+      DailyGoal.fromJson(updatedTodayGoal),
+    );
   }
 
   Future<DailyGoal> saveTodayRecord(DailyGoal goal) async {
@@ -69,49 +74,42 @@ class GoalsService {
     await _openBox();
     try {
       final userId = AuthService().currentUser?.uid;
-
       final dailyGoalSettings = getDailyGoalSettings();
-      final lastRecordSnapshot =
+
+      // Get today and Monday timestamps
+      final today = DateTime.fromMillisecondsSinceEpoch(
+        todayMidNightAsSeconds * 1000,
+      );
+      final monday = today.subtract(Duration(days: today.weekday - 1));
+      final mondayTimestamp = monday.millisecondsSinceEpoch ~/ 1000;
+
+      // Get this week's records from Firebase
+      final weekRecordsSnapshot =
           await FirebaseDatabase.instance
               .ref('users/$userId/goals/daily')
               .orderByKey()
-              .limitToLast(1)
+              .startAt(mondayTimestamp.toString())
+              .endAt(todayMidNightAsSeconds.toString())
               .get();
-      final data = lastRecordSnapshot.value as Map?;
+
+      final data = weekRecordsSnapshot.value as Map?;
 
       if (data == null || data.isEmpty) {
+        // If no records exist, save today's record
         await saveTodayRecord(dailyGoalSettings);
         return;
       }
 
-      final lastRecordTime = int.parse(data.keys.first);
-
-      final lastRecordDate = DateTime.fromMillisecondsSinceEpoch(
-        lastRecordTime * 1000,
-      );
-      final today = DateTime.fromMillisecondsSinceEpoch(
-        todayMidNightAsSeconds * 1000,
-      );
-      final daysBetween = today.difference(lastRecordDate).inDays;
-      if (daysBetween < 1) {
-        final recordDate = data.keys.first;
-        final recordMap = data[recordDate]!;
-
-        await _dailyGoalRecords.put(todayMidNightAsSeconds, recordMap);
-        return;
+      // Save records to local box
+      for (final entry in data.entries) {
+        final timestamp = int.parse(entry.key);
+        final recordMap = entry.value as Map;
+        await _dailyGoalRecords.put(timestamp, recordMap);
       }
 
-      for (var i = 1; i < daysBetween + 1; i++) {
-        final missingDate = lastRecordDate.add(Duration(days: i));
-        final missingTimestamp = missingDate.millisecondsSinceEpoch ~/ 1000;
-        await _dailyGoalRecords.put(
-          missingTimestamp,
-          dailyGoalSettings.toJson(),
-        );
-
-        await FirebaseDatabase.instance
-            .ref('users/$userId/goals/daily/$missingTimestamp')
-            .set(dailyGoalSettings.toJson());
+      // If today's record doesn't exist, create it
+      if (!data.containsKey(todayMidNightAsSeconds.toString())) {
+        await saveTodayRecord(dailyGoalSettings);
       }
     } catch (e) {
       debugPrint(e.toString());

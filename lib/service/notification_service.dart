@@ -81,13 +81,10 @@ class NotificationService {
 
   Future<void> scheduleDailyGoalReminder(DailyGoal goal) async {
     try {
-      // Cancel any existing reminders first
       await cancelNotification(0);
 
-      // Get the notification time from the goal
       final now = DateTime.now();
 
-      // Create a DateTime for today with the notification time
       final scheduledDate = DateTime(
         now.year,
         now.month,
@@ -96,19 +93,12 @@ class NotificationService {
         goal.notifyTime.minute,
       );
 
-      // If the time has already passed today, schedule for tomorrow
       final effectiveDate =
           scheduledDate.isBefore(now)
               ? scheduledDate.add(const Duration(days: 1))
               : scheduledDate;
 
       final goalJson = goal.toJson();
-
-      print("effectiveDate: $effectiveDate");
-      print(
-        "goalJson: ${goalJson['solvedQuestions']}/${goalJson['dailyQuestionGoal']}",
-      );
-
       // Schedule the notification
       await _notificationsPlugin.zonedSchedule(
         0, // Notification ID

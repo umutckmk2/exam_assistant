@@ -59,7 +59,7 @@ class PremiumUsageCard extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            'Günlük limitiniz yenilenmesine 24 saat kaldı',
+            'Günlük limitiniz 00:00\'de yenilenir',
             style: TextStyle(fontSize: 12, color: Colors.grey[600]),
           ),
         ],

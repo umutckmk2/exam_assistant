@@ -54,7 +54,6 @@ class PremiumService {
   Future<void> _handlePurchaseUpdates(
     List<PurchaseDetails> purchaseDetailsList,
   ) async {
-    print("purchaseDetailsList: $purchaseDetailsList");
     for (final PurchaseDetails purchaseDetails in purchaseDetailsList) {
       if (purchaseDetails.status == PurchaseStatus.pending) {
         // Show loading UI

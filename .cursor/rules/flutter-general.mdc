@@ -19,3 +19,4 @@ alwaysApply: true
 - Avoid using relative imports; use package imports instead.
 - Don't use `.withOpacity` for colors instead of use `.withAlpha`. It is equal to `.withOpacity` value ~/ 255. 
 - In a ui page always will return just a `Widget`. If need to split ui components create widget at `lib/widgets/` directory for each component.
+- check widget is mounted or not before using `setState`.

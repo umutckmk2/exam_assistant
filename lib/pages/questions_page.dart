@@ -92,15 +92,17 @@ class _QuestionPageState extends State<QuestionPage> {
               ? GenerationLimitService.premiumDailyLimit
               : GenerationLimitService.nonPremiumDailyLimit;
 
-      await showDialog(
-        context: context,
-        builder:
-            (context) => LimitExceededDialog(
-              isPremium: isPremium,
-              remainingGenerations: remainingGenerations,
-              dailyLimit: limit,
-            ),
-      );
+      if (mounted) {
+        await showDialog(
+          context: context,
+          builder:
+              (context) => LimitExceededDialog(
+                isPremium: isPremium,
+                remainingGenerations: remainingGenerations,
+                dailyLimit: limit,
+              ),
+        );
+      }
       return false;
     }
     return true;
@@ -306,8 +308,6 @@ class _QuestionPageState extends State<QuestionPage> {
         );
       }
     });
-
-    print("question id: ${_question!.id}");
 
     await UserService.instance.saveSolvedQuestion(
       userId!,

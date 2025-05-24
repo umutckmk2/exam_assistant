@@ -28,24 +28,19 @@ class _PremiumPageState extends State<PremiumPage> {
   }
 
   Future<void> _initializePremiumStatus() async {
-    setState(() => _isLoading = true);
+    if (mounted) setState(() => _isLoading = true);
     await _premiumService.initialize();
     final userId = userNotifier.value?.id;
     if (userId != null) {
       final remaining = await _generationService.getRemainingGenerations(
         userId,
       );
-
-      print("userNotifier.value?.isPremium: ${userNotifier.value?.isPremium}");
-      print("userNotifier.value?.isPremium: ${userNotifier.value?.email}");
-      setState(() {
-        _remainingGenerations = remaining;
-      });
+      _remainingGenerations = remaining;
+      if (mounted) setState(() {});
     }
-    setState(() {
-      _isPremium = userNotifier.value?.isPremium ?? false;
-      _isLoading = false;
-    });
+    _isPremium = userNotifier.value?.isPremium ?? false;
+    _isLoading = false;
+    if (mounted) setState(() {});
   }
 
   @override

@@ -36,15 +36,6 @@ class GenerationLimitService {
     );
     final now = DateTime.now();
 
-    print('lastResetDate: $lastResetDate');
-    print('now: $now');
-    print('isSameDay: ${_isSameDay(lastResetDate, now)}');
-    print('isPremium: $isPremium');
-    print('generationData: $generationData');
-    print('count: ${generationData['count']}');
-    print('limit: ${isPremium ? premiumDailyLimit : nonPremiumDailyLimit}');
-    print('currentCount: ${generationData['count']}');
-
     // Reset counter if it's a new day
     if (!_isSameDay(lastResetDate, now)) {
       await _resetGenerationCount(userId);

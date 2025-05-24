@@ -218,7 +218,6 @@ class _LessonsPageState extends State<LessonsPage>
                         ),
                         IconButton(
                           onPressed: () {
-                            // TODO: Implement test generation
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
                                 content: Text('Test oluşturma yakında!'),

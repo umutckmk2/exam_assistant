@@ -147,7 +147,7 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
                         borderRadius: BorderRadius.circular(16),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black.withOpacity(0.1),
+                            color: Colors.black.withAlpha(26),
                             blurRadius: 10,
                             offset: const Offset(0, 4),
                           ),
@@ -183,7 +183,7 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
                               borderRadius: BorderRadius.circular(16),
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.black.withOpacity(0.1),
+                                  color: Colors.black.withAlpha(26),
                                   blurRadius: 10,
                                   offset: const Offset(0, 4),
                                 ),
@@ -269,7 +269,7 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
                             border: Border.all(color: const Color(0xFFFFD700)),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.black.withOpacity(0.05),
+                                color: Colors.black.withAlpha(13),
                                 blurRadius: 10,
                                 offset: const Offset(0, 4),
                               ),

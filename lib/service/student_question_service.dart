@@ -116,15 +116,17 @@ class StudentQuestionService {
               ? GenerationLimitService.premiumDailyLimit
               : GenerationLimitService.nonPremiumDailyLimit;
 
-      await showDialog(
-        context: context,
-        builder:
-            (context) => LimitExceededDialog(
-              isPremium: isPremium,
-              remainingGenerations: remainingGenerations,
-              dailyLimit: limit,
-            ),
-      );
+      if (context.mounted) {
+        await showDialog(
+          context: context,
+          builder:
+              (context) => LimitExceededDialog(
+                isPremium: isPremium,
+                remainingGenerations: remainingGenerations,
+                dailyLimit: limit,
+              ),
+        );
+      }
 
       return null;
     }
@@ -132,12 +134,18 @@ class StudentQuestionService {
     try {
       // Create prompt for OpenAI with the image context
       final prompt = '''
-      This is an image of a student's question. First, identify what subject and topic this question is about.
-      Then, provide a detailed and helpful explanation for the answer. 
-      If there's text in the image, interpret it carefully and make sure to address the exact question being asked.
-      If the image contains math equations or diagrams, explain the concepts involved step by step.
-      
-      Format your response in clear, structured Turkish that would be helpful for a YKS candidate.
+      First, analyze if this image contains a multiple choice exam question with options (A, B, C, D, E).
+
+      If it IS an exam question:
+      1. Identify the subject and topic
+      2. Explain the correct answer step by step
+      3. Indicate which option is correct and why
+      4. Format the response in clear Turkish suitable for a YKS candidate
+
+      If it is NOT an exam question:
+      Respond with: "Bu görsel bir sınav sorusu değil. Sadece YKS sınavına yönelik test sorularını yanıtlayabilirim." 
+
+      Remember: Only provide academic analysis for actual exam questions with options.
       ''';
 
       // Get AI response from OpenAI service

@@ -127,9 +127,6 @@ class _QuestionPageState extends State<QuestionPage> {
         withImage: false,
         isAiGenerated: true,
       );
-
-      print("question id: ${questionModel.id}");
-
       await QuestionService.instance.saveQuestion(questionModel);
       await GenerationLimitService.instance.incrementGenerationCount(userId);
 

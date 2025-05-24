@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../main.dart';
 import '../service/auth_service.dart';
 import '../service/user_service.dart';
 import '../widgets/category_card.dart';
@@ -51,7 +50,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    print("userNotifier.value!.isPremium: ${userNotifier.value!.isPremium}");
     if (_categories == null) {
       return Scaffold(
         appBar: AppBar(

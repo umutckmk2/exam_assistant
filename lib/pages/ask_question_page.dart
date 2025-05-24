@@ -4,6 +4,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../model/ai_response_model.dart';
 import '../service/auth_service.dart';
 import '../service/generation_limit_service.dart';
 import '../service/student_question_service.dart';
@@ -70,11 +71,13 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
         title: _titleController.text.isNotEmpty ? _titleController.text : null,
       );
 
-      // Process the image with AI
-      final response = await _questionService.processQuestionImage(
-        question,
-        context,
-      );
+      AiResponseModel? response;
+      if (mounted) {
+        response = await _questionService.processQuestionImage(
+          question,
+          context,
+        );
+      }
 
       if (!mounted) return;
 
@@ -89,9 +92,9 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
       await GenerationLimitService.instance.incrementGenerationCount(
         AuthService().currentUser!.uid,
       );
-
-      // Navigate to response page
-      GoRouter.of(context).push('/question-response/${question.id}');
+      if (mounted) {
+        context.push('/question-response/${question.id}');
+      }
     } catch (e) {
       setState(() {
         _errorMessage = 'Soru işlenirken bir hata oluştu: $e';

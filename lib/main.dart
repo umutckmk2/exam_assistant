@@ -143,8 +143,6 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                         userSnapshot.data!.uid,
                       ),
                       builder: (_, premiumSnapshot) {
-                        print("premiumSnapshot: ${premiumSnapshot.data}");
-
                         return MaterialApp.router(
                           debugShowCheckedModeBanner: false,
                           title: 'YKS Asistan',

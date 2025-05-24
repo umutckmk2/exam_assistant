@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+import '../main.dart';
+
 class AdService {
   static final AdService _instance = AdService._internal();
 
@@ -70,6 +72,10 @@ class AdService {
   }) async {
     if (!_isInitialized) await initialize();
 
+    // Check for premium status
+    final isPremium = userNotifier.value?.isPremium ?? false;
+    if (isPremium) return null;
+
     final bannerAd = BannerAd(
       adUnitId: getAdUnitId('banner'),
       size: size,
@@ -100,6 +106,8 @@ class AdService {
     void Function()? onAdDismissedFullScreen,
   }) async {
     if (!_isInitialized) await initialize();
+
+    if (userNotifier.value?.isPremium ?? false) return null;
 
     InterstitialAd? interstitialAd;
 

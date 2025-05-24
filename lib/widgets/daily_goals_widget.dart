@@ -27,10 +27,6 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
   Map<String, DailyGoal>? _weeklyGoals;
   bool _isLoadingGoals = true;
 
-  bool _isMonday() {
-    return DateTime.now().weekday == DateTime.monday;
-  }
-
   Future<void> _getWeeklyGoals() async {
     try {
       _isLoadingGoals = true;
@@ -260,7 +256,7 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
                         borderRadius: BorderRadius.circular(10),
                         child: LinearProgressIndicator(
                           value: questionPercentage / 100,
-                          backgroundColor: textColor.withOpacity(0.2),
+                          backgroundColor: textColor.withAlpha(50),
                           valueColor: AlwaysStoppedAnimation<Color>(
                             questionPercentage >= 100
                                 ? successColor

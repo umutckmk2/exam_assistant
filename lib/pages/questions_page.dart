@@ -4,12 +4,15 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
+import '../main.dart';
 import '../model/daily_goal.dart';
 import '../model/question_model.dart';
 import '../service/cheat_sheet_service.dart';
+import '../service/generation_limit_service.dart';
 import '../service/index.dart';
 import '../widgets/answer_option.dart';
-import '../widgets/banner_ad_widget.dart';
+import '../widgets/limit_exceeded_dialog.dart';
+import '../widgets/premium_banner_widget.dart';
 
 class QuestionPage extends StatefulWidget {
   final String topicId;
@@ -71,16 +74,61 @@ class _QuestionPageState extends State<QuestionPage> {
     if (mounted) setState(() {});
   }
 
+  /// Checks if the user can generate more questions and shows a dialog if the limit is exceeded.
+  /// Returns true if generation can proceed, false otherwise.
+  Future<bool> _checkGenerationLimit() async {
+    final userId = AuthService().currentUser?.uid;
+    if (userId == null) return false;
+
+    final generationLimitService = GenerationLimitService.instance;
+    final canGenerate = await generationLimitService.canGenerateMore(userId);
+
+    if (!canGenerate && mounted) {
+      final remainingGenerations = await generationLimitService
+          .getRemainingGenerations(userId);
+      final isPremium = userNotifier.value?.isPremium ?? false;
+      final limit =
+          isPremium
+              ? GenerationLimitService.premiumDailyLimit
+              : GenerationLimitService.nonPremiumDailyLimit;
+
+      await showDialog(
+        context: context,
+        builder:
+            (context) => LimitExceededDialog(
+              isPremium: isPremium,
+              remainingGenerations: remainingGenerations,
+              dailyLimit: limit,
+            ),
+      );
+      return false;
+    }
+    return true;
+  }
+
   Future<void> _generateSimilarQuestion() async {
     setState(() {
       _isGeneratingAiQuestion = true;
     });
 
     try {
+      final canProceed = await _checkGenerationLimit();
+      if (!canProceed) {
+        setState(() {
+          _isGeneratingAiQuestion = false;
+        });
+        return;
+      }
+
+      final userId = AuthService().currentUser?.uid;
+      if (userId == null) return;
+
+      final generationLimitService = GenerationLimitService.instance;
+      await generationLimitService.incrementGenerationCount(userId);
+
       final question = await OpenAiService().generateSimilarQuestion(
         _question!,
       );
-
       final questionJson = jsonDecode(question);
       final questionModel = QuestionModel(
         answer: questionJson['answer'] + 1,
@@ -88,14 +136,13 @@ class _QuestionPageState extends State<QuestionPage> {
         question: questionJson['question'],
         questionAsHtml: "",
         questionText: "",
-        id: _question!.id + Random().nextInt(1000000).toString(),
+        id: Random().nextInt(pow(2, 32).toInt() - 1).toString(),
         sourceFile: "",
         topicPath: _question!.topicPath,
         url: "",
         withImage: false,
         isAiGenerated: true,
       );
-
       await QuestionService.instance.saveQuestion(questionModel);
 
       _question = questionModel;
@@ -128,6 +175,20 @@ class _QuestionPageState extends State<QuestionPage> {
     });
 
     try {
+      final canProceed = await _checkGenerationLimit();
+      if (!canProceed) {
+        setState(() {
+          _isGeneratingCheatSheet = false;
+        });
+        return;
+      }
+
+      final userId = AuthService().currentUser?.uid;
+      if (userId == null) return;
+
+      final generationLimitService = GenerationLimitService.instance;
+      await generationLimitService.incrementGenerationCount(userId);
+
       final description = await OpenAiService().createCheatSheet(_question!);
       _cheatSheetContent = description;
       _isGeneratingCheatSheet = false;
@@ -139,7 +200,6 @@ class _QuestionPageState extends State<QuestionPage> {
         'subTopicId': widget.subTopicId,
       };
       await CheatSheetService.instance.saveCheatSheet(cheatSheet);
-      if (mounted) setState(() {});
 
       _showCheatSheetDialog();
     } catch (e) {
@@ -246,6 +306,8 @@ class _QuestionPageState extends State<QuestionPage> {
         );
       }
     });
+
+    print("question id: ${_question!.id}");
 
     await UserService.instance.saveSolvedQuestion(
       userId!,
@@ -365,13 +427,7 @@ class _QuestionPageState extends State<QuestionPage> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(_topic!['topic']),
-          bottom: PreferredSize(
-            preferredSize: const Size.fromHeight(60),
-            child: Container(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: const BannerAdWidget(),
-            ),
-          ),
+          bottom: const PremiumBannerWidget(),
         ),
         body: SingleChildScrollView(
           controller: _scrollController,
@@ -394,7 +450,7 @@ class _QuestionPageState extends State<QuestionPage> {
                                 height: 16,
                                 child: CircularProgressIndicator(
                                   strokeWidth: 2,
-                                  color: Colors.amber,
+                                  color: Color(0xFFFFD700),
                                 ),
                               )
                               : const Icon(Icons.auto_awesome),
@@ -404,8 +460,12 @@ class _QuestionPageState extends State<QuestionPage> {
                             : 'Konu Özeti',
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.amber,
+                        backgroundColor: const Color(0xFFFFD700),
                         foregroundColor: Colors.black87,
+                        elevation: 2,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
                       ),
                     ),
                   ),
@@ -415,6 +475,9 @@ class _QuestionPageState extends State<QuestionPage> {
               Card(
                 elevation: 4,
                 margin: const EdgeInsets.only(bottom: 20),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
@@ -461,7 +524,7 @@ class _QuestionPageState extends State<QuestionPage> {
                                 height: 16,
                                 child: CircularProgressIndicator(
                                   strokeWidth: 2,
-                                  color: Colors.deepPurple,
+                                  color: Colors.white,
                                 ),
                               )
                               : const Icon(Icons.psychology),
@@ -471,8 +534,12 @@ class _QuestionPageState extends State<QuestionPage> {
                             : 'Benzer Soru',
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.deepPurple,
-                        foregroundColor: Colors.white,
+                        backgroundColor: const Color(0xFFFFD700),
+                        foregroundColor: Colors.black87,
+                        elevation: 2,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
                       ),
                     ),
                     const SizedBox(width: 16),
@@ -492,6 +559,18 @@ class _QuestionPageState extends State<QuestionPage> {
                                   _isLoading = false;
                                 });
                               },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        foregroundColor: Colors.black87,
+                        elevation: 2,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          side: const BorderSide(
+                            color: Color(0xFFFFD700),
+                            width: 2,
+                          ),
+                        ),
+                      ),
                       child:
                           _isLoading
                               ? const SizedBox(
@@ -499,11 +578,12 @@ class _QuestionPageState extends State<QuestionPage> {
                                 height: 16,
                                 child: CircularProgressIndicator(
                                   strokeWidth: 2,
+                                  color: Colors.white,
                                 ),
                               )
                               : const Text(
                                 'Yeni Soru',
-                                style: TextStyle(color: Colors.black),
+                                style: TextStyle(color: Colors.black87),
                               ),
                     ),
                   ],

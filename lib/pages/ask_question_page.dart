@@ -36,6 +36,7 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
       if (result != null && result.files.single.path != null) {
         setState(() {
           _selectedImage = File(result.files.single.path!);
+          _errorMessage = null;
         });
       }
     } catch (e) {
@@ -65,7 +66,6 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
     });
 
     try {
-      // Upload the question image and create a question record
       final question = await _questionService.createQuestion(
         _selectedImage!,
         title: _titleController.text.isNotEmpty ? _titleController.text : null,
@@ -82,7 +82,6 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
       if (!mounted) return;
 
       if (response == null) {
-        // User hit the generation limit, don't navigate
         setState(() {
           _isLoading = false;
         });
@@ -92,6 +91,7 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
       await GenerationLimitService.instance.incrementGenerationCount(
         AuthService().currentUser!.uid,
       );
+
       if (mounted) {
         context.push('/question-response/${question.id}');
       }
@@ -116,6 +116,8 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
 
   @override
   Widget build(BuildContext context) {
+    final primaryColor = Theme.of(context).primaryColor;
+
     return Scaffold(
       appBar: DhAppBar(
         title: const Text('Soru Sor'),
@@ -125,7 +127,6 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
         ),
         elevation: 0,
       ),
-
       body:
           _isLoading
               ? const Center(
@@ -136,162 +137,241 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Container(
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [Color(0xFFFFD700), Color(0xFFFFA500)],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
+                    Card(
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withAlpha(26),
-                            blurRadius: 10,
-                            offset: const Offset(0, 4),
-                          ),
-                        ],
+                        side: BorderSide(
+                          color: primaryColor.withAlpha(50),
+                          width: 1,
+                        ),
                       ),
-                      child: Column(
-                        children: [
-                          const Icon(
-                            Icons.question_answer,
-                            size: 48,
-                            color: Colors.white,
+                      child: Container(
+                        padding: const EdgeInsets.all(24),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16),
+                          gradient: LinearGradient(
+                            colors: [primaryColor.withAlpha(15), Colors.white],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
                           ),
-                          const SizedBox(height: 16),
-                          const Text(
-                            'AI asistanınıza sormak istediğiniz sorunun görselini yükleyin',
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
+                        ),
+                        child: Column(
+                          children: [
+                            Icon(
+                              Icons.question_answer,
+                              size: 48,
+                              color: primaryColor,
                             ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+                            const SizedBox(height: 16),
+                            Text(
+                              'AI asistanınıza sormak istediğiniz sorunun görselini yükleyin',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: primaryColor,
+                                fontWeight: FontWeight.w500,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(height: 24),
                     if (_selectedImage != null) ...[
-                      Stack(
-                        alignment: Alignment.topRight,
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withAlpha(26),
-                                  blurRadius: 10,
-                                  offset: const Offset(0, 4),
-                                ),
-                              ],
-                            ),
-                            child: GestureDetector(
-                              onTap: _pickImage,
-                              child: ClipRRect(
+                      Card(
+                        elevation: 4,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                          side: BorderSide(
+                            color: primaryColor.withAlpha(50),
+                            width: 1,
+                          ),
+                        ),
+                        child: Stack(
+                          alignment: Alignment.topRight,
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(16),
-                                child: Image.file(
-                                  _selectedImage!,
-                                  fit: BoxFit.contain,
+                                gradient: LinearGradient(
+                                  colors: [
+                                    primaryColor.withAlpha(15),
+                                    Colors.white,
+                                  ],
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                ),
+                              ),
+                              child: GestureDetector(
+                                onTap: _pickImage,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(16),
+                                  child: Image.file(
+                                    _selectedImage!,
+                                    fit: BoxFit.contain,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          Positioned(
-                            top: 8,
-                            right: 8,
-                            child: Container(
-                              decoration: const BoxDecoration(
-                                color: Colors.black54,
-                                shape: BoxShape.circle,
-                              ),
-                              child: IconButton(
-                                icon: const Icon(
-                                  Icons.close,
-                                  color: Colors.white,
+                            Positioned(
+                              top: 8,
+                              right: 8,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.black54,
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.white,
+                                    width: 2,
+                                  ),
                                 ),
-                                onPressed: _removeImage,
-                                tooltip: 'Resmi kaldır',
-                                padding: const EdgeInsets.all(8),
-                                constraints: const BoxConstraints(),
-                                iconSize: 20,
+                                child: IconButton(
+                                  icon: const Icon(
+                                    Icons.close,
+                                    color: Colors.white,
+                                  ),
+                                  onPressed: _removeImage,
+                                  tooltip: 'Resmi kaldır',
+                                  padding: const EdgeInsets.all(8),
+                                  constraints: const BoxConstraints(),
+                                  iconSize: 20,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                       const SizedBox(height: 24),
-                      TextFormField(
-                        controller: _titleController,
-                        decoration: InputDecoration(
-                          labelText: 'Soru Başlığı (Opsiyonel)',
-                          hintText: 'Sorunuz için bir başlık girin',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
+                      Card(
+                        elevation: 4,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                          side: BorderSide(
+                            color: primaryColor.withAlpha(50),
+                            width: 1,
                           ),
-                          prefixIcon: const Icon(Icons.title),
-                          filled: true,
-                          fillColor: Colors.grey[50],
                         ),
-                        maxLength: 50,
-                      ),
-                      const SizedBox(height: 16),
-                      ElevatedButton.icon(
-                        onPressed: _pickImage,
-                        icon: const Icon(Icons.photo_library),
-                        label: const Text('Resmi değiştir'),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                          foregroundColor: Colors.black87,
-                          elevation: 2,
-                          padding: const EdgeInsets.symmetric(vertical: 16),
-                          minimumSize: const Size(double.infinity, 50),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                            side: const BorderSide(
-                              color: Color(0xFFFFD700),
-                              width: 2,
+                        child: Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            gradient: LinearGradient(
+                              colors: [
+                                primaryColor.withAlpha(15),
+                                Colors.white,
+                              ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
                             ),
+                          ),
+                          child: Column(
+                            children: [
+                              TextFormField(
+                                controller: _titleController,
+                                decoration: InputDecoration(
+                                  labelText: 'Soru Başlığı (Opsiyonel)',
+                                  hintText: 'Sorunuz için bir başlık girin',
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: BorderSide(
+                                      color: primaryColor.withAlpha(75),
+                                    ),
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: BorderSide(
+                                      color: primaryColor.withAlpha(75),
+                                    ),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: BorderSide(color: primaryColor),
+                                  ),
+                                  prefixIcon: Icon(
+                                    Icons.title,
+                                    color: primaryColor,
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                ),
+                                maxLength: 50,
+                              ),
+                              const SizedBox(height: 16),
+                              ElevatedButton.icon(
+                                onPressed: _pickImage,
+                                icon: Icon(
+                                  Icons.photo_library,
+                                  color: primaryColor,
+                                ),
+                                label: Text(
+                                  'Resmi değiştir',
+                                  style: TextStyle(color: primaryColor),
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.white,
+                                  elevation: 2,
+                                  padding: const EdgeInsets.symmetric(
+                                    vertical: 16,
+                                  ),
+                                  minimumSize: const Size(double.infinity, 50),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                    side: BorderSide(
+                                      color: primaryColor,
+                                      width: 2,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
                     ] else ...[
-                      GestureDetector(
-                        onTap: _pickImage,
-                        child: Container(
-                          height: 200,
-                          decoration: BoxDecoration(
-                            color: Colors.grey[50],
-                            borderRadius: BorderRadius.circular(16),
-                            border: Border.all(color: const Color(0xFFFFD700)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withAlpha(13),
-                                blurRadius: 10,
-                                offset: const Offset(0, 4),
-                              ),
-                            ],
+                      Card(
+                        elevation: 4,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                          side: BorderSide(
+                            color: primaryColor.withAlpha(50),
+                            width: 1,
                           ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.image,
-                                size: 64,
-                                color: Colors.grey[400],
+                        ),
+                        child: GestureDetector(
+                          onTap: _pickImage,
+                          child: Container(
+                            height: 200,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(16),
+                              gradient: LinearGradient(
+                                colors: [
+                                  primaryColor.withAlpha(15),
+                                  Colors.white,
+                                ],
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
                               ),
-                              const SizedBox(height: 16),
-                              Text(
-                                'Soru resmi ekleyin',
-                                style: TextStyle(
-                                  color: Colors.grey[600],
-                                  fontSize: 16,
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.add_photo_alternate,
+                                  size: 64,
+                                  color: primaryColor.withAlpha(150),
                                 ),
-                              ),
-                            ],
+                                const SizedBox(height: 16),
+                                Text(
+                                  'Soru resmi ekleyin',
+                                  style: TextStyle(
+                                    color: primaryColor,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -305,32 +385,40 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(color: Colors.red[300]!),
                         ),
-                        child: Text(
-                          _errorMessage!,
-                          style: TextStyle(color: Colors.red[700]),
-                          textAlign: TextAlign.center,
+                        child: Row(
+                          children: [
+                            Icon(Icons.error_outline, color: Colors.red[700]),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Text(
+                                _errorMessage!,
+                                style: TextStyle(color: Colors.red[700]),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       const SizedBox(height: 16),
                     ],
                     if (_selectedImage != null)
-                      ElevatedButton(
+                      ElevatedButton.icon(
                         onPressed: _submitQuestion,
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFFFFD700),
-                          foregroundColor: Colors.black87,
-                          padding: const EdgeInsets.symmetric(vertical: 16),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          elevation: 2,
-                        ),
-                        child: const Text(
+                        icon: const Icon(Icons.send),
+                        label: const Text(
                           'Soru Gönder',
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: primaryColor,
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(vertical: 16),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          elevation: 4,
                         ),
                       ),
                   ],

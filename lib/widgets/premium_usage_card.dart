@@ -37,10 +37,10 @@ class PremiumUsageCard extends StatelessWidget {
               ),
               Text(
                 '$remainingGenerations/$totalGenerations',
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFFFFD700),
+                  color: Theme.of(context).primaryColor,
                 ),
               ),
             ],
@@ -51,8 +51,8 @@ class PremiumUsageCard extends StatelessWidget {
             child: LinearProgressIndicator(
               value: remainingGenerations / totalGenerations,
               backgroundColor: Colors.grey[200],
-              valueColor: const AlwaysStoppedAnimation<Color>(
-                Color(0xFFFFD700),
+              valueColor: AlwaysStoppedAnimation<Color>(
+                Theme.of(context).primaryColor,
               ),
               minHeight: 8,
             ),

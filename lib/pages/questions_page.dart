@@ -202,6 +202,7 @@ class _QuestionPageState extends State<QuestionPage> {
         'subTopicId': widget.subTopicId,
       };
       await CheatSheetService.instance.saveCheatSheet(cheatSheet);
+      if (mounted) setState(() {});
 
       _showCheatSheetDialog();
     } catch (e) {

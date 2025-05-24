@@ -5,7 +5,7 @@ import '../main.dart';
 class GenerationLimitService {
   static final GenerationLimitService instance =
       GenerationLimitService._internal();
-  static const int nonPremiumDailyLimit = 5;
+  static const int nonPremiumDailyLimit = 10;
   static const int premiumDailyLimit = 50;
 
   GenerationLimitService._internal();
@@ -18,7 +18,10 @@ class GenerationLimitService {
             .get();
 
     if (!doc.exists) {
-      return {'count': 0, 'lastResetDate': DateTime.now().toIso8601String()};
+      return {
+        'count': 0,
+        'lastResetDate': DateTime.now().millisecondsSinceEpoch ~/ 1000,
+      };
     }
 
     return doc.data() as Map<String, dynamic>;
@@ -28,8 +31,19 @@ class GenerationLimitService {
     final isPremium = userNotifier.value?.isPremium ?? false;
     final generationData = await getUserGenerationData(userId);
 
-    final lastResetDate = DateTime.parse(generationData['lastResetDate']);
+    final lastResetDate = DateTime.fromMillisecondsSinceEpoch(
+      (generationData['lastResetDate'] as int) * 1000,
+    );
     final now = DateTime.now();
+
+    print('lastResetDate: $lastResetDate');
+    print('now: $now');
+    print('isSameDay: ${_isSameDay(lastResetDate, now)}');
+    print('isPremium: $isPremium');
+    print('generationData: $generationData');
+    print('count: ${generationData['count']}');
+    print('limit: ${isPremium ? premiumDailyLimit : nonPremiumDailyLimit}');
+    print('currentCount: ${generationData['count']}');
 
     // Reset counter if it's a new day
     if (!_isSameDay(lastResetDate, now)) {
@@ -45,7 +59,9 @@ class GenerationLimitService {
 
   Future<void> incrementGenerationCount(String userId) async {
     final generationData = await getUserGenerationData(userId);
-    final lastResetDate = DateTime.parse(generationData['lastResetDate']);
+    final lastResetDate = DateTime.fromMillisecondsSinceEpoch(
+      (generationData['lastResetDate'] as int) * 1000,
+    );
     final now = DateTime.now();
 
     if (!_isSameDay(lastResetDate, now)) {
@@ -66,7 +82,9 @@ class GenerationLimitService {
     final isPremium = userNotifier.value?.isPremium ?? false;
     final generationData = await getUserGenerationData(userId);
 
-    final lastResetDate = DateTime.parse(generationData['lastResetDate']);
+    final lastResetDate = DateTime.fromMillisecondsSinceEpoch(
+      (generationData['lastResetDate'] as int) * 1000,
+    );
     final now = DateTime.now();
 
     if (!_isSameDay(lastResetDate, now)) {
@@ -84,7 +102,10 @@ class GenerationLimitService {
     await FirebaseFirestore.instance
         .collection('user_generations')
         .doc(userId)
-        .set({'count': 0, 'lastResetDate': DateTime.now().toIso8601String()});
+        .set({
+          'count': 0,
+          'lastResetDate': DateTime.now().millisecondsSinceEpoch ~/ 1000,
+        });
   }
 
   bool _isSameDay(DateTime date1, DateTime date2) {

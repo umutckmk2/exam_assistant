@@ -123,6 +123,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
             }),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
+                userNotifier.value = snapshot.data;
                 return ValueListenableBuilder(
                   valueListenable: userNotifier,
                   builder: (_, user, __) {

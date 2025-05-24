@@ -2,11 +2,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../main.dart';
 import '../service/auth_service.dart';
 import '../service/user_service.dart';
-import '../widgets/banner_ad_widget.dart';
 import '../widgets/category_card.dart';
 import '../widgets/daily_goals_widget.dart';
+import '../widgets/premium_banner_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -50,17 +51,12 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    print("userNotifier.value!.isPremium: ${userNotifier.value!.isPremium}");
     if (_categories == null) {
       return Scaffold(
         appBar: AppBar(
           title: const Text('YKS Asistan'),
-          bottom: const PreferredSize(
-            preferredSize: Size.fromHeight(60),
-            child: Padding(
-              padding: EdgeInsets.only(bottom: 8),
-              child: BannerAdWidget(),
-            ),
-          ),
+          bottom: const PremiumBannerWidget(),
         ),
         body: Center(
           child: CircularProgressIndicator(
@@ -76,13 +72,7 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: const Text('YKS Asistan'),
           elevation: 0,
-          bottom: const PreferredSize(
-            preferredSize: Size.fromHeight(60),
-            child: Padding(
-              padding: EdgeInsets.only(bottom: 8),
-              child: BannerAdWidget(),
-            ),
-          ),
+          bottom: const PremiumBannerWidget(),
         ),
         drawer: Drawer(
           child: Column(

@@ -16,7 +16,7 @@ class AppUser {
     required this.solvedQuestions,
     required this.updatedAt,
     required this.dailyGoalSettings,
-    this.isPremium = false,
+    required this.isPremium,
     this.subscriptionId,
     this.subscriptionStart,
   });

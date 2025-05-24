@@ -11,8 +11,8 @@ import '../service/cheat_sheet_service.dart';
 import '../service/generation_limit_service.dart';
 import '../service/index.dart';
 import '../widgets/answer_option.dart';
-import '../widgets/banner_ad_widget.dart';
 import '../widgets/limit_exceeded_dialog.dart';
+import '../widgets/premium_banner_widget.dart';
 
 class QuestionPage extends StatefulWidget {
   final String topicId;
@@ -433,13 +433,7 @@ class _QuestionPageState extends State<QuestionPage> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(_topic!['topic']),
-          bottom: PreferredSize(
-            preferredSize: const Size.fromHeight(60),
-            child: Container(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: const BannerAdWidget(),
-            ),
-          ),
+          bottom: const PremiumBannerWidget(),
         ),
         body: SingleChildScrollView(
           controller: _scrollController,

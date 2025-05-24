@@ -15,6 +15,7 @@ import 'service/auth_service.dart';
 import 'service/goals_service.dart';
 import 'service/notification_service.dart';
 import 'service/open_ai_service.dart';
+import 'service/premium_service.dart';
 import 'service/user_service.dart';
 import 'widgets/app_splash_screen.dart';
 
@@ -86,19 +87,28 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
       // Check if the user is authenticated
-      if (AuthService().currentUser != null) {
-        // Reschedule notification when app is resumed
-        _rescheduleNotification();
+      final currentUser = AuthService().currentUser;
+      if (currentUser != null) {
+        // Verify subscription status and reschedule notification
+        _verifySubscriptionAndRescheduleNotification(currentUser.uid);
       }
     }
   }
 
-  Future<void> _rescheduleNotification() async {
+  Future<void> _verifySubscriptionAndRescheduleNotification(
+    String userId,
+  ) async {
     try {
+      // Verify subscription status
+      await PremiumService.instance.verifySubscriptionStatus(userId);
+
+      // Reschedule notification
       final dailyGoal = await GoalsService.instance.getTodayGoal();
       await NotificationService().scheduleDailyGoalReminder(dailyGoal);
     } catch (e) {
-      debugPrint('Error rescheduling notification: $e');
+      debugPrint(
+        'Error verifying subscription and rescheduling notification: $e',
+      );
     }
   }
 
@@ -106,13 +116,14 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     return StreamBuilder(
       stream: AuthService().authStateChanges,
-      builder: (context, snapshot) {
-        if (snapshot.hasData && snapshot.data != null) {
+      builder: (context, userSnapshot) {
+        if (userSnapshot.hasData && userSnapshot.data != null) {
           return FutureBuilder(
             future: Future.microtask(() async {
-              final user = await UserService().getUserDetails(
-                AuthService().currentUser!.uid,
-              );
+              final userId = AuthService().currentUser!.uid;
+
+              final user = await UserService().getUserDetails(userId);
+
               await GoalsService.instance.saveMissingRecords();
 
               // Schedule notification for daily goal
@@ -127,16 +138,25 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                 return ValueListenableBuilder(
                   valueListenable: userNotifier,
                   builder: (_, user, __) {
-                    return MaterialApp.router(
-                      debugShowCheckedModeBanner: false,
-                      title: 'YKS Asistan',
-                      theme: ThemeData(
-                        colorScheme: ColorScheme.fromSeed(
-                          seedColor: Colors.green,
-                        ),
-                        useMaterial3: true,
+                    return FutureBuilder(
+                      future: PremiumService.instance.verifySubscriptionStatus(
+                        userSnapshot.data!.uid,
                       ),
-                      routerConfig: appRouter,
+                      builder: (_, premiumSnapshot) {
+                        print("premiumSnapshot: ${premiumSnapshot.data}");
+
+                        return MaterialApp.router(
+                          debugShowCheckedModeBanner: false,
+                          title: 'YKS Asistan',
+                          theme: ThemeData(
+                            colorScheme: ColorScheme.fromSeed(
+                              seedColor: Colors.green,
+                            ),
+                            useMaterial3: true,
+                          ),
+                          routerConfig: appRouter,
+                        );
+                      },
                     );
                   },
                 );

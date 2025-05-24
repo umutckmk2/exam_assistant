@@ -7,8 +7,8 @@ import 'package:go_router/go_router.dart';
 import '../service/auth_service.dart';
 import '../service/generation_limit_service.dart';
 import '../service/student_question_service.dart';
-import '../widgets/banner_ad_widget.dart';
 import '../widgets/loading_indicator.dart';
+import '../widgets/premium_banner_widget.dart';
 
 class AskQuestionPage extends StatefulWidget {
   const AskQuestionPage({super.key});
@@ -121,13 +121,7 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
           onPressed: () => context.go('/'),
           icon: const Icon(Icons.arrow_back),
         ),
-        bottom: const PreferredSize(
-          preferredSize: Size.fromHeight(60),
-          child: Padding(
-            padding: EdgeInsets.only(bottom: 8),
-            child: BannerAdWidget(),
-          ),
-        ),
+        bottom: const PremiumBannerWidget(),
       ),
       body:
           _isLoading

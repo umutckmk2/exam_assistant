@@ -13,20 +13,31 @@ class PremiumService {
 
   final UserService _userService = UserService.instance;
 
+  // Make PremiumService a singleton
+  static final PremiumService instance = PremiumService._internal();
+  factory PremiumService() => instance;
+  PremiumService._internal();
+
   StreamSubscription<List<PurchaseDetails>>? _subscription;
   bool _isAvailable = false;
   List<ProductDetails> _products = [];
 
-  Future<void> initialize() async {
-    final bool available = await _inAppPurchase.isAvailable();
-    _isAvailable = available;
+  Future<bool> initialize() async {
+    try {
+      final bool available = await _inAppPurchase.isAvailable();
+      _isAvailable = available;
 
-    if (_isAvailable) {
-      await _loadProducts();
-      _subscription = _inAppPurchase.purchaseStream.listen(
-        _handlePurchaseUpdates,
-      );
+      if (_isAvailable) {
+        await _loadProducts();
+        _subscription = _inAppPurchase.purchaseStream.listen(
+          _handlePurchaseUpdates,
+        );
+      }
+    } catch (e) {
+      debugPrint('Error initializing premium service: $e');
+      return false;
     }
+    return true;
   }
 
   Future<void> _loadProducts() async {
@@ -43,6 +54,7 @@ class PremiumService {
   Future<void> _handlePurchaseUpdates(
     List<PurchaseDetails> purchaseDetailsList,
   ) async {
+    print("purchaseDetailsList: $purchaseDetailsList");
     for (final PurchaseDetails purchaseDetails in purchaseDetailsList) {
       if (purchaseDetails.status == PurchaseStatus.pending) {
         // Show loading UI
@@ -68,6 +80,55 @@ class PremiumService {
       isPremium: true,
       subscriptionId: purchaseDetails.purchaseID,
     );
+  }
+
+  Future<bool> verifySubscriptionStatus(String userId) async {
+    if (!_isAvailable) {
+      await initialize();
+    }
+    try {
+      // Get current user's subscription details
+      final user = await _userService.getUserDetails(userId);
+
+      if (user == null || user.subscriptionId == null) {
+        // No subscription found
+        if (user?.isPremium == true) {
+          // User was marked as premium but has no subscription - update status
+          await _userService.updatePremiumStatus(
+            userId: userId,
+            isPremium: false,
+            subscriptionId: null,
+          );
+        }
+        return false;
+      }
+      bool hasActiveSubscription = false;
+
+      await for (final purchaseList in _inAppPurchase.purchaseStream) {
+        for (final purchase in purchaseList) {
+          if (purchase.purchaseID == user.subscriptionId &&
+              purchase.status == PurchaseStatus.purchased) {
+            hasActiveSubscription = true;
+            break;
+          }
+        }
+        break; // Only check the first update from the stream
+      }
+
+      if (!hasActiveSubscription && user.isPremium) {
+        // Subscription expired or cancelled - update status
+        await _userService.updatePremiumStatus(
+          userId: userId,
+          isPremium: false,
+          subscriptionId: null,
+        );
+        return true;
+      }
+    } catch (e) {
+      print("error: $e");
+      debugPrint('Error verifying subscription status: $e');
+    }
+    return false;
   }
 
   Future<void> purchasePremium() async {

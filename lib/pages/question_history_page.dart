@@ -4,8 +4,8 @@ import 'package:intl/intl.dart';
 
 import '../model/student_question_model.dart';
 import '../service/student_question_service.dart';
-import '../widgets/banner_ad_widget.dart';
 import '../widgets/loading_indicator.dart';
+import '../widgets/premium_banner_widget.dart';
 
 class QuestionHistoryPage extends StatefulWidget {
   const QuestionHistoryPage({super.key});
@@ -55,13 +55,7 @@ class _QuestionHistoryPageState extends State<QuestionHistoryPage> {
       appBar: AppBar(
         title: const Text('Soru Geçmişim'),
         elevation: 0,
-        bottom: const PreferredSize(
-          preferredSize: Size.fromHeight(60),
-          child: Padding(
-            padding: EdgeInsets.only(bottom: 8),
-            child: BannerAdWidget(),
-          ),
-        ),
+        bottom: const PremiumBannerWidget(),
       ),
       body: _buildBody(),
       floatingActionButton: FloatingActionButton.extended(

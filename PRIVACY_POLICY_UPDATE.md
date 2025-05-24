@@ -2,7 +2,7 @@
 
 ## Advertising
 
-YKS Asistan AI uses Google AdMob to serve advertisements within the application. Google AdMob may collect and process personal data such as device identifiers, location data, and other information to provide personalized advertisements.
+YKS Asistan uses Google AdMob to serve advertisements within the application. Google AdMob may collect and process personal data such as device identifiers, location data, and other information to provide personalized advertisements.
 
 ### Information Collected
 

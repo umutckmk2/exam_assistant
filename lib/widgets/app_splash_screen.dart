@@ -64,7 +64,7 @@ class _AppSplashScreenState extends State<AppSplashScreen>
 
                   // App name
                   const Text(
-                    'YKS Asistan AI',
+                    'YKS Asistan',
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,

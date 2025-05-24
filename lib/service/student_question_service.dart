@@ -3,9 +3,13 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter/material.dart';
 
+import '../main.dart';
 import '../model/ai_response_model.dart';
 import '../model/student_question_model.dart';
+import '../widgets/limit_exceeded_dialog.dart';
+import 'generation_limit_service.dart';
 import 'open_ai_service.dart';
 
 class StudentQuestionService {
@@ -91,11 +95,38 @@ class StudentQuestionService {
   }
 
   // Process the image using OpenAI's API
-  Future<AiResponseModel> processQuestionImage(
+  Future<AiResponseModel?> processQuestionImage(
     StudentQuestionModel question,
+    BuildContext context,
   ) async {
     if (_userId == null) {
       throw Exception('User not authenticated');
+    }
+
+    // Check generation limits before calling the service
+    final generationLimitService = GenerationLimitService.instance;
+    final canGenerate = await generationLimitService.canGenerateMore(_userId!);
+
+    if (!canGenerate) {
+      final remainingGenerations = await generationLimitService
+          .getRemainingGenerations(_userId!);
+      final isPremium = userNotifier.value?.isPremium ?? false;
+      final limit =
+          isPremium
+              ? GenerationLimitService.premiumDailyLimit
+              : GenerationLimitService.nonPremiumDailyLimit;
+
+      await showDialog(
+        context: context,
+        builder:
+            (context) => LimitExceededDialog(
+              isPremium: isPremium,
+              remainingGenerations: remainingGenerations,
+              dailyLimit: limit,
+            ),
+      );
+
+      return null;
     }
 
     try {

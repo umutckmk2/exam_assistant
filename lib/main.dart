@@ -8,11 +8,14 @@ import 'package:intl/date_symbol_data_local.dart';
 
 import 'auth/auth_page.dart';
 import 'firebase_options.dart';
+import 'model/app_user.dart';
 import 'router/app_router.dart';
 import 'service/ad_service.dart';
 import 'service/auth_service.dart';
 import 'service/goals_service.dart';
+import 'service/notification_service.dart';
 import 'service/open_ai_service.dart';
+import 'service/premium_service.dart';
 import 'service/user_service.dart';
 import 'widgets/app_splash_screen.dart';
 
@@ -26,18 +29,21 @@ void main() async {
   // Load environment variables
   await dotenv.load(fileName: ".env");
 
-  // Initialize OpenAI service
-  await OpenAiService().initialize();
+  await Hive.initFlutter();
+
+  await Hive.openBox("settings");
 
   // Initialize Firebase
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
+  // Initialize OpenAI service
+  await OpenAiService().initialize();
+
   // Initialize Google Mobile Ads
   await AdService.instance.initialize();
 
-  await Hive.initFlutter();
-
-  await Hive.openBox("settings");
+  // Initialize notifications
+  await NotificationService().initialize();
 
   initializeDateFormatting('tr_TR');
 
@@ -53,6 +59,8 @@ void main() async {
   runApp(const MyApp());
 }
 
+final userNotifier = ValueNotifier<AppUser?>(null);
+
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
@@ -64,6 +72,8 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
+    // Register app lifecycle events observer
+    WidgetsBinding.instance.addObserver(this);
   }
 
   @override
@@ -74,34 +84,84 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   }
 
   @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      // Check if the user is authenticated
+      final currentUser = AuthService().currentUser;
+      if (currentUser != null) {
+        // Verify subscription status and reschedule notification
+        _verifySubscriptionAndRescheduleNotification(currentUser.uid);
+      }
+    }
+  }
+
+  Future<void> _verifySubscriptionAndRescheduleNotification(
+    String userId,
+  ) async {
+    try {
+      // Verify subscription status
+      await PremiumService.instance.verifySubscriptionStatus(userId);
+
+      // Reschedule notification
+      final dailyGoal = await GoalsService.instance.getTodayGoal();
+      await NotificationService().scheduleDailyGoalReminder(dailyGoal);
+    } catch (e) {
+      debugPrint(
+        'Error verifying subscription and rescheduling notification: $e',
+      );
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return StreamBuilder(
       stream: AuthService().authStateChanges,
-      builder: (context, snapshot) {
-        if (snapshot.hasData && snapshot.data != null) {
+      builder: (context, userSnapshot) {
+        if (userSnapshot.hasData && userSnapshot.data != null) {
           return FutureBuilder(
             future: Future.microtask(() async {
-              final user = await UserService().getUserDetails(
-                AuthService().currentUser!.uid,
-              );
+              final userId = AuthService().currentUser!.uid;
+
+              final user = await UserService().getUserDetails(userId);
+
               await GoalsService.instance.saveMissingRecords();
+
+              // Schedule notification for daily goal
+              final dailyGoal = await GoalsService.instance.getTodayGoal();
+              await NotificationService().scheduleDailyGoalReminder(dailyGoal);
+
               return user;
             }),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return MaterialApp.router(
-                  debugShowCheckedModeBanner: false,
-                  title: 'YKS Asistan AI',
-                  theme: ThemeData(
-                    colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-                    useMaterial3: true,
-                  ),
-                  routerConfig: appRouter,
+                userNotifier.value = snapshot.data;
+                return ValueListenableBuilder(
+                  valueListenable: userNotifier,
+                  builder: (_, user, __) {
+                    return FutureBuilder(
+                      future: PremiumService.instance.verifySubscriptionStatus(
+                        userSnapshot.data!.uid,
+                      ),
+                      builder: (_, premiumSnapshot) {
+                        return MaterialApp.router(
+                          debugShowCheckedModeBanner: false,
+                          title: 'YKS Asistan',
+                          theme: ThemeData(
+                            colorScheme: ColorScheme.fromSeed(
+                              seedColor: Colors.green,
+                            ),
+                            useMaterial3: true,
+                          ),
+                          routerConfig: appRouter,
+                        );
+                      },
+                    );
+                  },
                 );
               }
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
-                title: 'YKS Asistan AI',
+                title: 'YKS Asistan',
                 theme: ThemeData(
                   colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
                   useMaterial3: true,
@@ -114,7 +174,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'YKS Asistan AI',
+          title: 'YKS Asistan',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
             useMaterial3: true,

@@ -4,6 +4,7 @@ import '../model/solved_question_model.dart';
 import '../service/auth_service.dart';
 import '../service/questions_service.dart';
 import '../service/user_service.dart';
+import '../widgets/premium_banner_widget.dart';
 import 'topic_analysis_page.dart';
 
 class StatisticsPage extends StatefulWidget {
@@ -58,6 +59,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
         ),
         elevation: 0,
         centerTitle: true,
+        bottom: const PremiumBannerWidget(),
       ),
       body:
           _isLoading

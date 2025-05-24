@@ -7,6 +7,7 @@ import '../model/ai_response_model.dart';
 import '../model/student_question_model.dart';
 import '../service/student_question_service.dart';
 import '../widgets/loading_indicator.dart';
+import '../widgets/premium_banner_widget.dart';
 
 class QuestionResponsePage extends StatefulWidget {
   final String questionId;
@@ -96,8 +97,9 @@ class _QuestionResponsePageState extends State<QuestionResponsePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Soru Cevabı'),
+        title: Text(_question?.title ?? 'Soru Detayı'),
         elevation: 0,
+        bottom: const PremiumBannerWidget(),
         leading: IconButton(
           onPressed: () {
             context.go('/');
@@ -208,12 +210,9 @@ class _QuestionResponsePageState extends State<QuestionResponsePage> {
           if (_response != null) ...[
             Container(
               decoration: BoxDecoration(
-                color: Colors.blue.withOpacity(0.05),
+                color: Colors.blue.withAlpha(12),
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(
-                  color: Colors.blue.withOpacity(0.3),
-                  width: 1,
-                ),
+                border: Border.all(color: Colors.blue.withAlpha(75), width: 1),
               ),
               padding: const EdgeInsets.all(16),
               child: MarkdownBody(
@@ -235,7 +234,7 @@ class _QuestionResponsePageState extends State<QuestionResponsePage> {
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Colors.orange.withOpacity(0.1),
+                color: Colors.orange.withAlpha(25),
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: Colors.orange, width: 1),
               ),

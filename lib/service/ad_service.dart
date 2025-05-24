@@ -1,6 +1,9 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+
+import '../main.dart';
 
 class AdService {
   static final AdService _instance = AdService._internal();
@@ -37,12 +40,9 @@ class AdService {
             : 'ca-app-pub-XXXXX/XXXXX', // Replace with actual production ID
   };
 
-  // Use test ads during development
-  final bool _useTestAds = true;
-
   // Get ad unit ID based on ad type
   String getAdUnitId(String adType) {
-    final adUnitIds = _useTestAds ? _testAdUnitIds : _productionAdUnitIds;
+    final adUnitIds = kDebugMode ? _testAdUnitIds : _productionAdUnitIds;
     return adUnitIds[adType] ?? '';
   }
 
@@ -71,6 +71,10 @@ class AdService {
     void Function(LoadAdError)? onAdFailedToLoad,
   }) async {
     if (!_isInitialized) await initialize();
+
+    // Check for premium status
+    final isPremium = userNotifier.value?.isPremium ?? false;
+    if (isPremium) return null;
 
     final bannerAd = BannerAd(
       adUnitId: getAdUnitId('banner'),
@@ -102,6 +106,8 @@ class AdService {
     void Function()? onAdDismissedFullScreen,
   }) async {
     if (!_isInitialized) await initialize();
+
+    if (userNotifier.value?.isPremium ?? false) return null;
 
     InterstitialAd? interstitialAd;
 

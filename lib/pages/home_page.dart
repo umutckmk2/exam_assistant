@@ -6,6 +6,7 @@ import '../service/auth_service.dart';
 import '../service/user_service.dart';
 import '../widgets/category_card.dart';
 import '../widgets/daily_goals_widget.dart';
+import '../widgets/premium_banner_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -51,7 +52,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     if (_categories == null) {
       return Scaffold(
-        appBar: AppBar(title: const Text('YKS Asistan')),
+        appBar: AppBar(
+          title: const Text('YKS Asistan'),
+          bottom: const PremiumBannerWidget(),
+        ),
         body: Center(
           child: CircularProgressIndicator(
             color: Theme.of(context).primaryColor,
@@ -63,7 +67,11 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         key: _scaffoldKey,
-        appBar: AppBar(title: const Text('YKS Asistan'), elevation: 0),
+        appBar: AppBar(
+          title: const Text('YKS Asistan'),
+          elevation: 0,
+          bottom: const PremiumBannerWidget(),
+        ),
         drawer: Drawer(
           child: Column(
             children: [
@@ -182,6 +190,15 @@ class _HomePageState extends State<HomePage> {
                     ),
                     const Divider(height: 1, indent: 70),
                     ListTile(
+                      leading: const Icon(Icons.star, color: Colors.amber),
+                      title: const Text('Premium Üyelik'),
+                      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                      onTap: () {
+                        Navigator.pop(context);
+                        context.push('/premium');
+                      },
+                    ),
+                    ListTile(
                       leading: const Icon(Icons.history, color: Colors.teal),
                       title: const Text('Soru Geçmişim'),
                       trailing: const Icon(Icons.arrow_forward_ios, size: 16),
@@ -244,7 +261,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor.withOpacity(0.05),
+                  color: Theme.of(context).primaryColor.withAlpha(12),
                   borderRadius: BorderRadius.circular(30),
                 ),
                 padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),

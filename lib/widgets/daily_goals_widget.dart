@@ -214,11 +214,13 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
                     const Spacer(),
                     InkWell(
                       onTap: () {
+                        final goal =
+                            GoalsService.instance.getDailyGoalSettings();
                         showDialog(
                           context: context,
                           builder:
                               (context) => EditGoalWidget(
-                                currentGoal: todayGoal,
+                                currentGoal: goal,
                                 onGoalUpdated: (goal) {
                                   _getWeeklyGoals();
                                 },
@@ -254,7 +256,7 @@ class _DailyGoalsWidgetState extends State<DailyGoalsWidget> {
                         borderRadius: BorderRadius.circular(10),
                         child: LinearProgressIndicator(
                           value: questionPercentage / 100,
-                          backgroundColor: textColor.withOpacity(0.2),
+                          backgroundColor: textColor.withAlpha(50),
                           valueColor: AlwaysStoppedAnimation<Color>(
                             questionPercentage >= 100
                                 ? successColor

@@ -105,10 +105,7 @@ class _CheatSheetsPageState extends State<CheatSheetsPage> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AI Konu Özetlerim'),
-        bottom: const PremiumBannerWidget(),
-      ),
+      appBar: DhAppBar(title: const Text('AI Konu Özetlerim')),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

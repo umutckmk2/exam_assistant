@@ -117,15 +117,15 @@ class _AskQuestionPageState extends State<AskQuestionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: DhAppBar(
         title: const Text('Soru Sor'),
-        elevation: 0,
         leading: IconButton(
           onPressed: () => context.go('/'),
           icon: const Icon(Icons.arrow_back),
         ),
-        bottom: const PremiumBannerWidget(),
+        elevation: 0,
       ),
+
       body:
           _isLoading
               ? const Center(

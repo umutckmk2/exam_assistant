@@ -425,10 +425,7 @@ class _QuestionPageState extends State<QuestionPage> {
     }
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: Text(_topic!['topic']),
-          bottom: const PremiumBannerWidget(),
-        ),
+        appBar: DhAppBar(title: Text(_topic!['topic'])),
         body: SingleChildScrollView(
           controller: _scrollController,
           padding: const EdgeInsets.all(16.0),

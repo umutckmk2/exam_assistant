@@ -52,11 +52,7 @@ class _QuestionHistoryPageState extends State<QuestionHistoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Soru Geçmişim'),
-        elevation: 0,
-        bottom: const PremiumBannerWidget(),
-      ),
+      appBar: DhAppBar(title: const Text('Soru Geçmişim'), elevation: 0),
       body: _buildBody(),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {

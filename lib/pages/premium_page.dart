@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../main.dart';
+import '../service/generation_limit_service.dart';
 import '../service/premium_service.dart';
+import '../widgets/premium_usage_card.dart';
 
 class PremiumPage extends StatefulWidget {
   const PremiumPage({super.key});
@@ -12,8 +14,12 @@ class PremiumPage extends StatefulWidget {
 
 class _PremiumPageState extends State<PremiumPage> {
   final PremiumService _premiumService = PremiumService();
+  final GenerationLimitService _generationService =
+      GenerationLimitService.instance;
   bool _isLoading = false;
   bool _isPremium = false;
+  int _remainingGenerations = 0;
+  static const int _totalGenerations = GenerationLimitService.premiumDailyLimit;
 
   @override
   void initState() {
@@ -24,6 +30,18 @@ class _PremiumPageState extends State<PremiumPage> {
   Future<void> _initializePremiumStatus() async {
     setState(() => _isLoading = true);
     await _premiumService.initialize();
+    final userId = userNotifier.value?.id;
+    if (userId != null) {
+      final remaining = await _generationService.getRemainingGenerations(
+        userId,
+      );
+
+      print("userNotifier.value?.isPremium: ${userNotifier.value?.isPremium}");
+      print("userNotifier.value?.isPremium: ${userNotifier.value?.email}");
+      setState(() {
+        _remainingGenerations = remaining;
+      });
+    }
     setState(() {
       _isPremium = userNotifier.value?.isPremium ?? false;
       _isLoading = false;
@@ -47,113 +65,18 @@ class _PremiumPageState extends State<PremiumPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Container(
-                      margin: const EdgeInsets.all(16),
-                      padding: const EdgeInsets.all(24),
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [Color(0xFFFFD700), Color(0xFFFFA500)],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        borderRadius: BorderRadius.circular(16),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.1),
-                            blurRadius: 10,
-                            offset: const Offset(0, 4),
-                          ),
-                        ],
+                    if (_isPremium) ...[
+                      PremiumUsageCard(
+                        remainingGenerations: _remainingGenerations,
+                        totalGenerations: _totalGenerations,
                       ),
-                      child: Column(
-                        children: [
-                          const Icon(Icons.star, size: 64, color: Colors.white),
-                          const SizedBox(height: 16),
-                          const Text(
-                            "Premium'a Yükselt",
-                            style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          ),
-                          const SizedBox(height: 8),
-                          const Text(
-                            'Daha fazla özellik için şimdi yükseltin',
-                            style: TextStyle(fontSize: 16, color: Colors.white),
-                          ),
-                          const SizedBox(height: 24),
-                          ElevatedButton.icon(
-                            onPressed: () async {
-                              // Premium upgrade logic
-                            },
-                            icon: const Icon(
-                              Icons.star,
-                              color: Color(0xFFFFD700),
-                            ),
-                            label: const Text("Premium'a Yükselt"),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white,
-                              foregroundColor: Colors.black87,
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 32,
-                                vertical: 16,
-                              ),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.all(16),
-                      child: Text(
-                        'Premium Özellikleri',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    GridView.count(
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      crossAxisCount: 2,
-                      padding: const EdgeInsets.all(16),
-                      mainAxisSpacing: 16,
-                      crossAxisSpacing: 16,
-                      children: [
-                        _buildFeatureCard(
-                          icon: Icons.auto_awesome,
-                          title: 'Günlük 50 AI\nÜretimi',
-                          subtitle: 'Daha fazla soru ve\nkonu özeti oluşturun',
-                        ),
-                        _buildFeatureCard(
-                          icon: Icons.block,
-                          title: 'Reklamsız\nDeneyim',
-                          subtitle: 'Kesintisiz öğrenme\ndeneyimi',
-                        ),
-                        _buildFeatureCard(
-                          icon: Icons.speed,
-                          title: 'Öncelikli İşlem',
-                          subtitle: 'Daha hızlı AI yanıtları',
-                        ),
-                        _buildFeatureCard(
-                          icon: Icons.analytics,
-                          title: 'Gelişmiş\nİstatistikler',
-                          subtitle: 'Detaylı öğrenme\nanalizi',
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 16),
-                    if (_isPremium)
                       Padding(
                         padding: const EdgeInsets.all(16),
                         child: OutlinedButton.icon(
-                          onPressed: () {
-                            // Restore purchases logic
+                          onPressed: () async {
+                            setState(() => _isLoading = true);
+                            await _premiumService.restorePurchases();
+                            setState(() => _isLoading = false);
                           },
                           icon: const Icon(Icons.restore),
                           label: const Text('Satın Alımları Geri Yükle'),
@@ -162,6 +85,118 @@ class _PremiumPageState extends State<PremiumPage> {
                           ),
                         ),
                       ),
+                    ] else ...[
+                      Container(
+                        margin: const EdgeInsets.all(16),
+                        padding: const EdgeInsets.all(24),
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [Color(0xFFFFD700), Color(0xFFFFA500)],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          borderRadius: BorderRadius.circular(16),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withAlpha(25),
+                              blurRadius: 10,
+                              offset: const Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            const Icon(
+                              Icons.star,
+                              size: 64,
+                              color: Colors.white,
+                            ),
+                            const SizedBox(height: 16),
+                            const Text(
+                              "Premium'a Yükselt",
+                              style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Daha fazla özellik için şimdi yükseltin',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
+                            ),
+                            const SizedBox(height: 24),
+                            ElevatedButton.icon(
+                              onPressed: () async {
+                                setState(() => _isLoading = true);
+                                await _premiumService.purchasePremium();
+                                setState(() => _isLoading = false);
+                              },
+                              icon: const Icon(
+                                Icons.star,
+                                color: Color(0xFFFFD700),
+                              ),
+                              label: const Text("Premium'a Yükselt"),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.white,
+                                foregroundColor: Colors.black87,
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 32,
+                                  vertical: 16,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(16),
+                        child: Text(
+                          'Premium Özellikleri',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      GridView.count(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        crossAxisCount: 2,
+                        padding: const EdgeInsets.all(16),
+                        mainAxisSpacing: 16,
+                        crossAxisSpacing: 16,
+                        children: [
+                          _buildFeatureCard(
+                            icon: Icons.auto_awesome,
+                            title: 'Günlük 50 AI\nÜretimi',
+                            subtitle:
+                                'Daha fazla soru ve\nkonu özeti oluşturun',
+                          ),
+                          _buildFeatureCard(
+                            icon: Icons.block,
+                            title: 'Reklamsız\nDeneyim',
+                            subtitle: 'Kesintisiz öğrenme\ndeneyimi',
+                          ),
+                          _buildFeatureCard(
+                            icon: Icons.speed,
+                            title: 'Öncelikli İşlem',
+                            subtitle: 'Daha hızlı AI yanıtları',
+                          ),
+                          _buildFeatureCard(
+                            icon: Icons.analytics,
+                            title: 'Gelişmiş\nİstatistikler',
+                            subtitle: 'Detaylı öğrenme\nanalizi',
+                          ),
+                        ],
+                      ),
+                    ],
                   ],
                 ),
               ),
@@ -180,7 +215,7 @@ class _PremiumPageState extends State<PremiumPage> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withAlpha(13),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),

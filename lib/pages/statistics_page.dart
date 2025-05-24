@@ -52,14 +52,13 @@ class _StatisticsPageState extends State<StatisticsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: DhAppBar(
         title: const Text(
           'İstatistikler',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         elevation: 0,
         centerTitle: true,
-        bottom: const PremiumBannerWidget(),
       ),
       body:
           _isLoading

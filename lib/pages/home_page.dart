@@ -52,10 +52,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     if (_categories == null) {
       return Scaffold(
-        appBar: AppBar(
-          title: const Text('YKS Asistan'),
-          bottom: const PremiumBannerWidget(),
-        ),
+        appBar: DhAppBar(title: const Text('YKS Asistan')),
         body: Center(
           child: CircularProgressIndicator(
             color: Theme.of(context).primaryColor,
@@ -67,11 +64,7 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         key: _scaffoldKey,
-        appBar: AppBar(
-          title: const Text('YKS Asistan'),
-          elevation: 0,
-          bottom: const PremiumBannerWidget(),
-        ),
+        appBar: DhAppBar(title: const Text('YKS Asistan')),
         drawer: Drawer(
           child: Column(
             children: [

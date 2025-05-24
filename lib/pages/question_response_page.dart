@@ -96,10 +96,9 @@ class _QuestionResponsePageState extends State<QuestionResponsePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: DhAppBar(
         title: Text(_question?.title ?? 'Soru Detayı'),
         elevation: 0,
-        bottom: const PremiumBannerWidget(),
         leading: IconButton(
           onPressed: () {
             context.go('/');

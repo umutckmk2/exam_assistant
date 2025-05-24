@@ -43,7 +43,7 @@ class _LessonsPageState extends State<LessonsPage>
     }
 
     _isLoading = false;
-    setState(() {});
+    if (mounted) setState(() {});
   }
 
   final _lessonNames = {

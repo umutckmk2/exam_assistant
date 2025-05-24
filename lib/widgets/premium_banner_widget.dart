@@ -3,14 +3,32 @@ import 'package:flutter/material.dart';
 import '../main.dart';
 import 'banner_ad_widget.dart';
 
-class PremiumBannerWidget extends StatelessWidget
-    implements PreferredSizeWidget {
-  const PremiumBannerWidget({super.key});
+class DhAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const DhAppBar({
+    super.key,
+    this.actions = const [],
+    this.title,
+    this.leading,
+    this.elevation,
+    this.centerTitle,
+  });
+
+  final List<Widget> actions;
+  final Widget? title;
+  final Widget? leading;
+  final double? elevation;
+  final bool? centerTitle;
 
   @override
   Widget build(BuildContext context) {
     if (userNotifier.value!.isPremium) {
-      return const SizedBox.shrink();
+      return AppBar(
+        title: title,
+        actions: actions,
+        leading: leading,
+        centerTitle: centerTitle,
+        elevation: elevation,
+      );
     }
 
     return PreferredSize(

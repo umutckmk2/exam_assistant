@@ -74,41 +74,57 @@ class _QuestionPageState extends State<QuestionPage> {
     if (mounted) setState(() {});
   }
 
+  /// Checks if the user can generate more questions and shows a dialog if the limit is exceeded.
+  /// Returns true if generation can proceed, false otherwise.
+  Future<bool> _checkGenerationLimit() async {
+    final userId = AuthService().currentUser?.uid;
+    if (userId == null) return false;
+
+    final generationLimitService = GenerationLimitService.instance;
+    final canGenerate = await generationLimitService.canGenerateMore(userId);
+
+    if (!canGenerate && mounted) {
+      final remainingGenerations = await generationLimitService
+          .getRemainingGenerations(userId);
+      final isPremium = userNotifier.value?.isPremium ?? false;
+      final limit =
+          isPremium
+              ? GenerationLimitService.premiumDailyLimit
+              : GenerationLimitService.nonPremiumDailyLimit;
+
+      await showDialog(
+        context: context,
+        builder:
+            (context) => LimitExceededDialog(
+              isPremium: isPremium,
+              remainingGenerations: remainingGenerations,
+              dailyLimit: limit,
+            ),
+      );
+      return false;
+    }
+    return true;
+  }
+
   Future<void> _generateSimilarQuestion() async {
     setState(() {
       _isGeneratingAiQuestion = true;
     });
 
     try {
-      // Check generation limits before calling the service
+      final canProceed = await _checkGenerationLimit();
+      if (!canProceed) {
+        setState(() {
+          _isGeneratingAiQuestion = false;
+        });
+        return;
+      }
+
       final userId = AuthService().currentUser?.uid;
       if (userId == null) return;
 
       final generationLimitService = GenerationLimitService.instance;
-      final canGenerate = await generationLimitService.canGenerateMore(userId);
-
-      if (!canGenerate) {
-        final remainingGenerations = await generationLimitService
-            .getRemainingGenerations(userId);
-        final isPremium = userNotifier.value?.isPremium ?? false;
-        final limit =
-            isPremium
-                ? GenerationLimitService.premiumDailyLimit
-                : GenerationLimitService.nonPremiumDailyLimit;
-
-        if (mounted) {
-          await showDialog(
-            context: context,
-            builder:
-                (context) => LimitExceededDialog(
-                  isPremium: isPremium,
-                  remainingGenerations: remainingGenerations,
-                  dailyLimit: limit,
-                ),
-          );
-        }
-        return;
-      }
+      await generationLimitService.incrementGenerationCount(userId);
 
       final question = await OpenAiService().generateSimilarQuestion(
         _question!,
@@ -128,7 +144,6 @@ class _QuestionPageState extends State<QuestionPage> {
         isAiGenerated: true,
       );
       await QuestionService.instance.saveQuestion(questionModel);
-      await GenerationLimitService.instance.incrementGenerationCount(userId);
 
       _question = questionModel;
       _selectedAnswerIndex = null;
@@ -160,35 +175,19 @@ class _QuestionPageState extends State<QuestionPage> {
     });
 
     try {
-      // Check generation limits before calling the service
+      final canProceed = await _checkGenerationLimit();
+      if (!canProceed) {
+        setState(() {
+          _isGeneratingCheatSheet = false;
+        });
+        return;
+      }
+
       final userId = AuthService().currentUser?.uid;
       if (userId == null) return;
 
       final generationLimitService = GenerationLimitService.instance;
-      final canGenerate = await generationLimitService.canGenerateMore(userId);
-
-      if (!canGenerate) {
-        final remainingGenerations = await generationLimitService
-            .getRemainingGenerations(userId);
-        final isPremium = userNotifier.value?.isPremium ?? false;
-        final limit =
-            isPremium
-                ? GenerationLimitService.premiumDailyLimit
-                : GenerationLimitService.nonPremiumDailyLimit;
-
-        if (mounted) {
-          await showDialog(
-            context: context,
-            builder:
-                (context) => LimitExceededDialog(
-                  isPremium: isPremium,
-                  remainingGenerations: remainingGenerations,
-                  dailyLimit: limit,
-                ),
-          );
-        }
-        return;
-      }
+      await generationLimitService.incrementGenerationCount(userId);
 
       final description = await OpenAiService().createCheatSheet(_question!);
       _cheatSheetContent = description;
@@ -201,8 +200,6 @@ class _QuestionPageState extends State<QuestionPage> {
         'subTopicId': widget.subTopicId,
       };
       await CheatSheetService.instance.saveCheatSheet(cheatSheet);
-      await GenerationLimitService.instance.incrementGenerationCount(userId);
-      if (mounted) setState(() {});
 
       _showCheatSheetDialog();
     } catch (e) {

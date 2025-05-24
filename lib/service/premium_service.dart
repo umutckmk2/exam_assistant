@@ -82,12 +82,15 @@ class PremiumService {
     );
   }
 
-  Future<bool> verifySubscriptionStatus(String userId) async {
+  /// Verifies if a user has an active subscription and updates their premium status accordingly.
+  /// Returns a SubscriptionVerificationResult containing both the verification status and whether an update was performed.
+  Future<SubscriptionVerificationResult> verifySubscriptionStatus(
+    String userId,
+  ) async {
     if (!_isAvailable) {
       await initialize();
     }
     try {
-      // Get current user's subscription details
       final user = await _userService.getUserDetails(userId);
 
       if (user == null || user.subscriptionId == null) {
@@ -99,11 +102,18 @@ class PremiumService {
             isPremium: false,
             subscriptionId: null,
           );
+          return SubscriptionVerificationResult(
+            hasActiveSubscription: false,
+            statusUpdated: true,
+          );
         }
-        return false;
+        return SubscriptionVerificationResult(
+          hasActiveSubscription: false,
+          statusUpdated: false,
+        );
       }
-      bool hasActiveSubscription = false;
 
+      bool hasActiveSubscription = false;
       await for (final purchaseList in _inAppPurchase.purchaseStream) {
         for (final purchase in purchaseList) {
           if (purchase.purchaseID == user.subscriptionId &&
@@ -116,19 +126,30 @@ class PremiumService {
       }
 
       if (!hasActiveSubscription && user.isPremium) {
-        // Subscription expired or cancelled - update status
+        // Subscription expired, update status
         await _userService.updatePremiumStatus(
           userId: userId,
           isPremium: false,
           subscriptionId: null,
         );
-        return true;
+        return SubscriptionVerificationResult(
+          hasActiveSubscription: false,
+          statusUpdated: true,
+        );
       }
+
+      return SubscriptionVerificationResult(
+        hasActiveSubscription: hasActiveSubscription,
+        statusUpdated: false,
+      );
     } catch (e) {
-      print("error: $e");
       debugPrint('Error verifying subscription status: $e');
+      return SubscriptionVerificationResult(
+        hasActiveSubscription: false,
+        statusUpdated: false,
+        error: e.toString(),
+      );
     }
-    return false;
   }
 
   Future<void> purchasePremium() async {
@@ -149,4 +170,17 @@ class PremiumService {
   void dispose() {
     _subscription?.cancel();
   }
+}
+
+/// Result class for subscription verification to provide clear status information
+class SubscriptionVerificationResult {
+  final bool hasActiveSubscription;
+  final bool statusUpdated;
+  final String? error;
+
+  SubscriptionVerificationResult({
+    required this.hasActiveSubscription,
+    required this.statusUpdated,
+    this.error,
+  });
 }

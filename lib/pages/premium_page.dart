@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../main.dart';
 import '../service/generation_limit_service.dart';
 import '../service/premium_service.dart';
+import '../widgets/premium_banner_widget.dart';
 import '../widgets/premium_usage_card.dart';
 
 class PremiumPage extends StatefulWidget {
@@ -51,8 +52,10 @@ class _PremiumPageState extends State<PremiumPage> {
 
   @override
   Widget build(BuildContext context) {
+    final primaryColor = Theme.of(context).primaryColor;
+
     return Scaffold(
-      appBar: AppBar(title: const Text('Premium Üyelik'), elevation: 0),
+      appBar: DhAppBar(title: const Text('Premium Üyelik'), elevation: 0),
       body:
           _isLoading
               ? const Center(child: CircularProgressIndicator())
@@ -77,6 +80,8 @@ class _PremiumPageState extends State<PremiumPage> {
                           label: const Text('Satın Alımları Geri Yükle'),
                           style: OutlinedButton.styleFrom(
                             padding: const EdgeInsets.symmetric(vertical: 16),
+                            foregroundColor: primaryColor,
+                            side: BorderSide(color: primaryColor),
                           ),
                         ),
                       ),
@@ -85,8 +90,8 @@ class _PremiumPageState extends State<PremiumPage> {
                         margin: const EdgeInsets.all(16),
                         padding: const EdgeInsets.all(24),
                         decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                            colors: [Color(0xFFFFD700), Color(0xFFFFA500)],
+                          gradient: LinearGradient(
+                            colors: [primaryColor, primaryColor.withAlpha(200)],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ),
@@ -130,10 +135,7 @@ class _PremiumPageState extends State<PremiumPage> {
                                 await _premiumService.purchasePremium();
                                 setState(() => _isLoading = false);
                               },
-                              icon: const Icon(
-                                Icons.star,
-                                color: Color(0xFFFFD700),
-                              ),
+                              icon: Icon(Icons.star, color: primaryColor),
                               label: const Text("Premium'a Yükselt"),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.white,
@@ -173,21 +175,25 @@ class _PremiumPageState extends State<PremiumPage> {
                             title: 'Günlük 50 AI\nÜretimi',
                             subtitle:
                                 'Daha fazla soru ve\nkonu özeti oluşturun',
+                            color: primaryColor,
                           ),
                           _buildFeatureCard(
                             icon: Icons.block,
                             title: 'Reklamsız\nDeneyim',
                             subtitle: 'Kesintisiz öğrenme\ndeneyimi',
+                            color: primaryColor,
                           ),
                           _buildFeatureCard(
                             icon: Icons.speed,
                             title: 'Öncelikli İşlem',
                             subtitle: 'Daha hızlı AI yanıtları',
+                            color: primaryColor,
                           ),
                           _buildFeatureCard(
                             icon: Icons.analytics,
                             title: 'Gelişmiş\nİstatistikler',
                             subtitle: 'Detaylı öğrenme\nanalizi',
+                            color: primaryColor,
                           ),
                         ],
                       ),
@@ -202,6 +208,7 @@ class _PremiumPageState extends State<PremiumPage> {
     required IconData icon,
     required String title,
     required String subtitle,
+    required Color color,
   }) {
     return Container(
       padding: const EdgeInsets.all(16),
@@ -215,11 +222,12 @@ class _PremiumPageState extends State<PremiumPage> {
             offset: const Offset(0, 2),
           ),
         ],
+        border: Border.all(color: color.withAlpha(50), width: 1),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(icon, size: 32, color: const Color(0xFFFFD700)),
+          Icon(icon, size: 32, color: color),
           const SizedBox(height: 12),
           Text(
             title,

@@ -11,6 +11,7 @@ import '../pages/question_history_page.dart';
 import '../pages/question_response_page.dart';
 import '../pages/questions_page.dart';
 import '../pages/statistics_page.dart';
+import '../widgets/safe_area_wrapper.dart';
 import 'custom_transitions.dart';
 
 final GoRouter appRouter = GoRouter(
@@ -21,45 +22,55 @@ final GoRouter appRouter = GoRouter(
       path: '/',
       name: 'home',
       pageBuilder:
-          (context, state) => FadeTransitionPage(child: const HomePage()),
+          (context, state) => FadeTransitionPage(
+            child: SafeAreaWrapper(child: const HomePage()),
+          ),
     ),
     GoRoute(
       path: '/auth',
       pageBuilder:
-          (context, state) => const NoTransitionPage(child: AuthPage()),
+          (context, state) =>
+              NoTransitionPage(child: SafeAreaWrapper(child: const AuthPage())),
     ),
     GoRoute(
       path: '/premium',
       name: 'premium',
       pageBuilder:
-          (context, state) => SlideTransitionPage(child: const PremiumPage()),
+          (context, state) => SlideTransitionPage(
+            child: SafeAreaWrapper(child: const PremiumPage()),
+          ),
     ),
     GoRoute(
       path: '/cheat-sheets',
       name: 'cheat-sheets',
       pageBuilder:
-          (context, state) => SlideTransitionPage(child: CheatSheetsPage()),
+          (context, state) => SlideTransitionPage(
+            child: SafeAreaWrapper(child: CheatSheetsPage()),
+          ),
     ),
     GoRoute(
       path: '/statistics',
       name: 'statistics',
       pageBuilder:
-          (context, state) =>
-              SlideTransitionPage(child: const StatisticsPage()),
+          (context, state) => SlideTransitionPage(
+            child: SafeAreaWrapper(child: const StatisticsPage()),
+          ),
     ),
     GoRoute(
       path: '/question-history',
       name: 'question-history',
       pageBuilder:
-          (context, state) =>
-              SlideTransitionPage(child: const QuestionHistoryPage()),
+          (context, state) => SlideTransitionPage(
+            child: SafeAreaWrapper(child: const QuestionHistoryPage()),
+          ),
     ),
     GoRoute(
       path: '/ask-question',
       name: 'ask-question',
       pageBuilder:
-          (context, state) =>
-              SlideTransitionPage(child: const AskQuestionPage()),
+          (context, state) => SlideTransitionPage(
+            child: SafeAreaWrapper(child: const AskQuestionPage()),
+          ),
     ),
     GoRoute(
       path: '/question-response/:questionId',
@@ -67,7 +78,9 @@ final GoRouter appRouter = GoRouter(
       pageBuilder: (context, state) {
         final questionId = state.pathParameters['questionId'] ?? '';
         return SlideTransitionPage(
-          child: QuestionResponsePage(questionId: questionId),
+          child: SafeAreaWrapper(
+            child: QuestionResponsePage(questionId: questionId),
+          ),
         );
       },
     ),
@@ -78,9 +91,11 @@ final GoRouter appRouter = GoRouter(
         final categoryId = state.pathParameters['categoryId'] ?? '';
         final categoryName = state.pathParameters['categoryName'] ?? '';
         return SlideTransitionPage(
-          child: LessonsPage(
-            categoryId: categoryId,
-            categoryName: categoryName,
+          child: SafeAreaWrapper(
+            child: LessonsPage(
+              categoryId: categoryId,
+              categoryName: categoryName,
+            ),
           ),
         );
       },
@@ -94,11 +109,13 @@ final GoRouter appRouter = GoRouter(
             final topicId = state.pathParameters['topicId'] ?? '';
             final subTopicId = state.pathParameters['subTopicId'] ?? '';
             return ScaleTransitionPage(
-              child: QuestionPage(
-                categoryId: categoryId,
-                lessonId: lessonId,
-                topicId: topicId,
-                subTopicId: subTopicId == 'null' ? null : subTopicId,
+              child: SafeAreaWrapper(
+                child: QuestionPage(
+                  categoryId: categoryId,
+                  lessonId: lessonId,
+                  topicId: topicId,
+                  subTopicId: subTopicId == 'null' ? null : subTopicId,
+                ),
               ),
             );
           },
@@ -107,22 +124,24 @@ final GoRouter appRouter = GoRouter(
     ),
   ],
   errorBuilder:
-      (context, state) => Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text('Sayfa bulunamadı!', style: TextStyle(fontSize: 24)),
-              const SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () => context.go('/'),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
-                  foregroundColor: Colors.white,
+      (context, state) => SafeAreaWrapper(
+        child: Scaffold(
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text('Sayfa bulunamadı!', style: TextStyle(fontSize: 24)),
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () => context.go('/'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                    foregroundColor: Colors.white,
+                  ),
+                  child: const Text('Ana Sayfaya Dön'),
                 ),
-                child: const Text('Ana Sayfaya Dön'),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

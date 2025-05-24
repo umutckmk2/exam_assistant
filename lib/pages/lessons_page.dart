@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../service/lesson_service.dart';
 import '../service/topic_service.dart';
+import '../widgets/premium_banner_widget.dart';
 
 class LessonsPage extends StatefulWidget {
   final String categoryId;
@@ -73,7 +74,7 @@ class _LessonsPageState extends State<LessonsPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: DhAppBar(
         title: Text(widget.categoryName),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),

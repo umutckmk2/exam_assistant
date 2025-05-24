@@ -19,8 +19,6 @@ import 'service/premium_service.dart';
 import 'service/user_service.dart';
 import 'widgets/app_splash_screen.dart';
 
-///ca-app-pub-5309874269430815~9068794476
-///ca-app-pub-5309874269430815/7235696418
 void main() async {
   // Preserve splash screen until initialization is complete
   final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();

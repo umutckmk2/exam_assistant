@@ -6,7 +6,7 @@ class GenerationLimitService {
   static final GenerationLimitService instance =
       GenerationLimitService._internal();
   static const int nonPremiumDailyLimit = 10;
-  static const int premiumDailyLimit = 50;
+  static const int premiumDailyLimit = 100;
 
   GenerationLimitService._internal();
 

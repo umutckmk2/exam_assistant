@@ -330,34 +330,44 @@ class _QuestionPageState extends State<QuestionPage> {
 
   @override
   Widget build(BuildContext context) {
+    final primaryColor = Theme.of(context).primaryColor;
+
     if (_topic == null) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Yükleniyor...')),
-        body: const Center(child: CircularProgressIndicator()),
+        appBar: DhAppBar(title: const Text('Yükleniyor...')),
+        body: Center(
+          child: CircularProgressIndicator(color: primaryColor, strokeWidth: 3),
+        ),
       );
     } else if (_questions!.isEmpty) {
       return Scaffold(
-        appBar: AppBar(title: Text(_topic!['topic'])),
+        appBar: DhAppBar(title: Text(_topic!['topic'])),
         body: Center(
           child: Container(
             padding: const EdgeInsets.all(24),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(Icons.menu_book, size: 80, color: Colors.grey),
+                Icon(
+                  Icons.menu_book,
+                  size: 80,
+                  color: primaryColor.withAlpha(125),
+                ),
                 const SizedBox(height: 16),
                 Text(
                   "Henüz Soru Yok 📝",
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                     fontWeight: FontWeight.bold,
-                    color: Colors.blueGrey,
+                    color: primaryColor,
                   ),
                 ),
                 const SizedBox(height: 8),
                 Text(
                   "Bu konuda henüz soru bulunmamaktadır",
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.titleMedium,
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleMedium?.copyWith(color: Colors.grey[600]),
                 ),
                 const SizedBox(height: 24),
                 ElevatedButton.icon(
@@ -365,9 +375,14 @@ class _QuestionPageState extends State<QuestionPage> {
                   icon: const Icon(Icons.arrow_back),
                   label: const Text("Konulara Dön"),
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: primaryColor,
+                    foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(
                       horizontal: 24,
                       vertical: 12,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
                     ),
                   ),
                 ),
@@ -378,27 +393,29 @@ class _QuestionPageState extends State<QuestionPage> {
       );
     } else if (_unsolvedQuestions!.isEmpty) {
       return Scaffold(
-        appBar: AppBar(title: Text(_topic!['topic'])),
+        appBar: DhAppBar(title: Text(_topic!['topic'])),
         body: Center(
           child: Container(
             padding: const EdgeInsets.all(24),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(Icons.emoji_events, size: 80, color: Colors.amber),
+                Icon(Icons.emoji_events, size: 80, color: primaryColor),
                 const SizedBox(height: 16),
                 Text(
                   "Tebrikler! 🎉",
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                     fontWeight: FontWeight.bold,
-                    color: Colors.deepPurple,
+                    color: primaryColor,
                   ),
                 ),
                 const SizedBox(height: 8),
                 Text(
                   "Bu konudaki tüm soruları başarıyla çözdünüz! 👏",
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.titleMedium,
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleMedium?.copyWith(color: Colors.grey[600]),
                 ),
                 const SizedBox(height: 24),
                 ElevatedButton.icon(
@@ -406,9 +423,14 @@ class _QuestionPageState extends State<QuestionPage> {
                   icon: const Icon(Icons.arrow_back),
                   label: const Text("Konulara Dön"),
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: primaryColor,
+                    foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(
                       horizontal: 24,
                       vertical: 12,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
                     ),
                   ),
                 ),
@@ -419,61 +441,73 @@ class _QuestionPageState extends State<QuestionPage> {
       );
     } else if (_question == null) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Yükleniyor...')),
-        body: const Center(child: CircularProgressIndicator()),
+        appBar: DhAppBar(title: const Text('Yükleniyor...')),
+        body: Center(
+          child: CircularProgressIndicator(color: primaryColor, strokeWidth: 3),
+        ),
       );
     }
-    return SafeArea(
-      child: Scaffold(
-        appBar: DhAppBar(title: Text(_topic!['topic'])),
-        body: SingleChildScrollView(
-          controller: _scrollController,
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Expanded(
-                    child: ElevatedButton.icon(
-                      onPressed:
-                          _isGeneratingCheatSheet || _question == null
-                              ? null
-                              : _generateTopicCheatSheet,
-                      icon:
-                          _isGeneratingCheatSheet
-                              ? const SizedBox(
-                                width: 16,
-                                height: 16,
-                                child: CircularProgressIndicator(
-                                  strokeWidth: 2,
-                                  color: Color(0xFFFFD700),
-                                ),
-                              )
-                              : const Icon(Icons.auto_awesome),
-                      label: Text(
+
+    return Scaffold(
+      appBar: DhAppBar(title: Text(_topic!['topic'])),
+      body: SingleChildScrollView(
+        controller: _scrollController,
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton.icon(
+                    onPressed:
+                        _isGeneratingCheatSheet || _question == null
+                            ? null
+                            : _generateTopicCheatSheet,
+                    icon:
                         _isGeneratingCheatSheet
-                            ? 'Hazırlanıyor...'
-                            : 'Konu Özeti',
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFFFD700),
-                        foregroundColor: Colors.black87,
-                        elevation: 2,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
+                            ? SizedBox(
+                              width: 16,
+                              height: 16,
+                              child: CircularProgressIndicator(
+                                strokeWidth: 2,
+                                color: primaryColor,
+                              ),
+                            )
+                            : const Icon(Icons.auto_awesome),
+                    label: Text(
+                      _isGeneratingCheatSheet
+                          ? 'Hazırlanıyor...'
+                          : 'Konu Özeti',
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: primaryColor,
+                      foregroundColor: Colors.white,
+                      elevation: 2,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
                       ),
                     ),
                   ),
-                ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 16),
+            Card(
+              elevation: 4,
+              margin: const EdgeInsets.only(bottom: 20),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+                side: BorderSide(color: primaryColor.withAlpha(50), width: 1),
               ),
-              const SizedBox(height: 16),
-              Card(
-                elevation: 4,
-                margin: const EdgeInsets.only(bottom: 20),
-                shape: RoundedRectangleBorder(
+              child: Container(
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
+                  gradient: LinearGradient(
+                    colors: [primaryColor.withAlpha(15), Colors.white],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
@@ -491,32 +525,32 @@ class _QuestionPageState extends State<QuestionPage> {
                   ),
                 ),
               ),
-              for (int i = 0; i < _question!.options.length; i++)
-                AnswerOption(
-                  answer: _question!.options[i],
-                  isSelected: _selectedAnswerIndex == i,
-                  isCorrect: _showResult && (i + 1) == _question!.answer,
-                  isWrong:
-                      _showResult &&
-                      _selectedAnswerIndex == i &&
-                      i + 1 != _question!.answer,
-                  onTap: _showResult ? null : () => _checkAnswer(i),
-                ),
-
-              if (_showResult) ...[
-                const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const SizedBox(width: 16),
-                    ElevatedButton.icon(
+            ),
+            for (int i = 0; i < _question!.options.length; i++)
+              AnswerOption(
+                answer: _question!.options[i],
+                isSelected: _selectedAnswerIndex == i,
+                isCorrect: _showResult && (i + 1) == _question!.answer,
+                isWrong:
+                    _showResult &&
+                    _selectedAnswerIndex == i &&
+                    i + 1 != _question!.answer,
+                onTap: _showResult ? null : () => _checkAnswer(i),
+              ),
+            if (_showResult) ...[
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: ElevatedButton.icon(
                       onPressed:
                           _isGeneratingAiQuestion
                               ? null
                               : _generateSimilarQuestion,
                       icon:
                           _isGeneratingAiQuestion
-                              ? const SizedBox(
+                              ? SizedBox(
                                 width: 16,
                                 height: 16,
                                 child: CircularProgressIndicator(
@@ -531,16 +565,18 @@ class _QuestionPageState extends State<QuestionPage> {
                             : 'Benzer Soru',
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFFFD700),
-                        foregroundColor: Colors.black87,
+                        backgroundColor: primaryColor,
+                        foregroundColor: Colors.white,
                         elevation: 2,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
                         ),
                       ),
                     ),
-                    const SizedBox(width: 16),
-                    ElevatedButton(
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: ElevatedButton.icon(
                       onPressed:
                           _isLoading
                               ? null
@@ -556,41 +592,35 @@ class _QuestionPageState extends State<QuestionPage> {
                                   _isLoading = false;
                                 });
                               },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        foregroundColor: Colors.black87,
-                        elevation: 2,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          side: const BorderSide(
-                            color: Color(0xFFFFD700),
-                            width: 2,
-                          ),
-                        ),
-                      ),
-                      child:
+                      icon:
                           _isLoading
-                              ? const SizedBox(
+                              ? SizedBox(
                                 width: 16,
                                 height: 16,
                                 child: CircularProgressIndicator(
                                   strokeWidth: 2,
-                                  color: Colors.white,
+                                  color: primaryColor,
                                 ),
                               )
-                              : const Text(
-                                'Yeni Soru',
-                                style: TextStyle(color: Colors.black87),
-                              ),
+                              : const Icon(Icons.refresh),
+                      label: const Text('Yeni Soru'),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        foregroundColor: primaryColor,
+                        elevation: 2,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          side: BorderSide(color: primaryColor, width: 2),
+                        ),
+                      ),
                     ),
-                  ],
-                ),
-
-                const SizedBox(height: 80),
-              ],
-              const SizedBox(height: 20),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 80),
             ],
-          ),
+            const SizedBox(height: 20),
+          ],
         ),
       ),
     );
